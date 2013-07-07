@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Thailand SE Academy Developer</title>
+	<meta name="author" content="ZERGE">
+	<meta name="keywords" content="Software Enginereer, Agile, Video Tutorial, Project Management">
+	<meta name="description" content="Thailand SE Academy Developer">
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- CSS -->
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/camera.css" />
+	<link rel="stylesheet" type="text/css" href="css/mediaelementplayer.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>	
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<!-- JS -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>	
+	<script type="text/javascript" src="js/superfish.js"></script>
+	<script type="text/javascript" src="js/camera.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile.customized.min.js"></script>	
+	<script type="text/javascript" src="js/jcarousel.min.js"></script>
+	<script type="text/javascript" src="js/mediaelement-and-player.min.js"></script>
+	<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+</head>
+<body>
+
+
+
+<!-- Primary Page Layout -->
+
+	<!-- START TOP PANEL -->
+	<div id="top-panel">
+		<div class="container panel">
+			<div class="four columns location-map">
+				<h6>About</h6>
+				<div class="gray-dash-3px"></div>
+				<p>Photomin is an American multinational compane that designs and markets consumer electronics, computer software, and personal computers.</p>
+			</div><!-- .four -->		
+			<div class="four columns">
+				<h6>Contact Info</h6>
+				<div class="gray-dash-3px"></div>
+				<ul id="contact-info" class="widget clearfix">
+					<li class="location">12345 / Some Street<br>Portland, USA</li>
+					<li class="phone">phone: +1 (44)  123-45-67<br/>fax: +1 (44)  123-45-63</li>
+					<li class="skype"><a href="skype:echo123?call">Skype Me</a></li>
+					<li class="email"><a href="mailto:support@color-theme.com">support@color-theme.com</a></li>
+				</ul>
+			</div><!-- .four -->
+			<div class="eight columns">
+				<h6>Get In Touch</h6>
+				<div class="gray-dash-3px"></div>
+	        <fieldset class="info_fieldset_top">
+	            <div id="note-top"></div>
+	            <div id="contacts-form">
+		            <form id="ajax-contact-form" action="javascript:alert('Was send!');">
+		            	<input type="text" name="name" required placeholder="Your Name" class="required" />
+		                <input type="email" name="email" required  placeholder="Your Email" class="last-item required" />
+		             	<input type="text" name="url" placeholder="http://" style="display:none;" />
+		                <input type="text" name="subject" placeholder="Subject" class="last-item required" style="display:none;" />	                
+		                <div class="clear"></div>
+		                <textarea name="message" id="message" required placeholder="Type your questions here..."></textarea>
+		                <input type="submit" class="submit no-margin-bottom"  value="Send Message"/>
+		                <span></span>
+		            </form>
+					<div class="clear"></div>
+				</div> <!-- end #contact-form -->
+			</fieldset>
+			</div><!-- .eight -->
+		</div><!-- .container -->
+		<div class="toggle colored-bg">
+			<a href="#" title="Pandora's Box!"></a>
+		</div><!-- .toggle -->
+	</div><!-- #top-panel -->
+	<!-- END TOP PANEL -->
+
+
+	<!-- START MENU WRAPPER -->
+	<div id="menu-wrapper">
+		<div class="container">
+			<div class="four columns">
+				<div id="logo">
+					<a href="./"><img src="images/logo.png" alt="Logo" /></a>
+				</div><!-- .logo -->
+			</div><!-- four columns -->
+			<div class="twelve columns navigation">
+				<div id="menu" class="fix-fish-menu">
+					<ul id="nav" class="sf-menu">
+						<li class="active"><a href="index.html">Home</a></li>
+		                <li><a href="blog.html">Blog</a>
+			   				<ul>
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="blog-post.html">Blog Post</a></li>
+								<li><a href="blog-post-video.html">Blog Post + Video</a></li>
+							</ul>
+			            </li>
+				 		<li> <a href="#">Portfolio</a>
+							<ul>
+								<li><a href="portfolio-3.html">3 Columns</a></li>
+								<li><a href="portfolio-4.html">4 Columns</a></li>
+								<li><a href="gallery.html">Gallery</a></li>
+								<li><a href="item.html">Portfolio Item</a></li>
+								<li><a href="item-slideshow.html">Portfolio Item + Slideshow</a></li>
+								<li><a href="item-video.html">Portfolio Item + Video</a></li>
+							</ul>
+					    </li>
+				 		<li> <a href="typography.html">Typography</a></li>
+				 		<li> <a href="shortcodes.html">Shortcodes</a></li>
+					 	<li> <a href="#">Pages</a>
+							<ul>
+								<li><a href="left-content.html">Left + Content</a></li>
+								<li><a href="content-right.html">Content + Right</a></li>
+								<li><a href="full-width.html">Full Width Page</a></li>
+								<li><a href="#">Submenu</a>
+								<ul>
+									<li><a href="#">Item #1</a></li>
+									<li><a href="#">Item #2</a></li>
+								</ul>
+								</li>
+							</ul>
+						</li>
+		 				<li><a href="contacts.html">Contacts</a></li>
+		 				<li><a href="http://themeforest.net/item/photomin-responsive-html-template/2430382?ref=zerge"><i class="icon-purchase"></i>Purchase</a></li>
+				 	</ul>  <!-- end #nav  -->
+			 	</div>	<!-- end #menu  -->	
+			</div><!-- .twelve columns -->
+		</div><!-- .container -->
+	</div><!-- #slider-wraper -->
+	<!-- END MENU WRAPPER -->
+
+
+	<!-- START SLIDER WRAPPER -->
+	<div id="slider-wrapper">
+		<div class="btop-1px"></div>
+		<div class="container">
+			<div class="sixteen columns" id="cta-block">
+				<h5>Photo.Min — Clean and Minimalist Responsive Template!</h5>
+			</div><!-- #cta-block -->
+
+			<!-- start slider -->
+			<div class="sixteen columns camera_wrap camera_burgundy_skin clearfix" id="camera_wrap_1">
+				<div data-src="images/sliders/camera/slide03.jpg"></div>			
+				<div data-src="images/sliders/camera/slide00.jpg"></div>
+				<div data-src="images/sliders/camera/slide01.jpg">
+					<div class="camera_caption fadeFromBottom">
+						Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>
+					</div>
+				</div>
+				<div data-src="images/sliders/camera/slide02.jpg">
+					<div class="camera_caption fadeFromBottom">
+						It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
+					</div>
+				</div>
+			</div><!-- #camera_wrap_1 -->
+			<!-- end slider -->
+
+		</div><!-- .container -->
+		<div class="bbottom-1px"></div>
+	</div><!-- #slider-wraper -->
+	<!-- END SLIDER WRAPPER -->	
+
+
+
+	<!-- -============== START CONTENT WRAPPER =================- -->
+
+	<!-- INFO-BLOCK -->
+	<div id="info-block" class="container">
+		<div class="eleven columns">
+			<ul>
+				<li>
+					<div>
+						<h4><i class="icon-big-polaroid"></i>1000 Exclusive Photos</h4>
+						<p>In-depth video and written training from leaders in your industry.</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h4><i class="icon-big-film"></i>Raw Format Photography Tips</h4>
+						<p>Multi-week courses that teach you skills from top to bottom, inside out.</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h4><i class="icon-big-lamp"></i>Unique Lighting Techniques</h4>
+						<p>Your own personal library of popular educational eBooks worth over $540.</p>
+					</div>
+				</li>
+				<li>
+					<div>
+						<h4><i class="icon-big-lightbulb"></i>10 Lightroom Tricks</h4>
+						<p>New content will be added every week for the lifetime of your membership.</p>
+					</div>
+				</li>
+			</ul>	
+		</div><!-- eleven columns -->
+		<div id="testimonials-block" class="five columns">
+			<div class="content">
+        	    <p>I would not have minded to have Tuts+ available back in the day when I started designing, as I just might’ve been a better designer…</p>
+			</div>
+			<div class="content-author">
+				<h4>
+		            <a href="http://color-theme.com">Sergey Kij</a> <span>Color Theme</span>
+	          </h4>
+			</div>
+			<a href="#" class="button view-testimonials">Read all</a>
+		</div><!-- five columns -->
+	</div><!-- info-block -->
+	<!-- END INFO-BLOCK -->
+
+
+
+	<!-- LATEST PROJECTS -->
+	<div class="container header-block">
+		<!-- start header -->
+		<div class="sixteen columns lp-header">
+			<h6>Latest Projects</h6>
+			<div class="nav-projects">
+				<a href="portfolio-4.html" class="button viewall">View all</a>
+			</div><!-- .nav-projects -->
+		</div><!-- .sixteen  -->
+		<!-- end header -->
+	</div><!-- .container -->
+
+	<div id="latest-projects" class="container">
+		<ul id="projects-carousel" class="jcarousel-skin-tango" >
+			<!-- start carousel -->
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="item.html">Design War</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="item.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<img src="images/projects/latest/img01.jpg" alt="" />
+					<div class="mask"><a href="item.html"></a></div>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>
+
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="item.html">Design Axioms</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="item.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<img src="images/projects/latest/img02.jpg" alt="" />
+					<div class="mask"><a href="item.html"></a></div>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>
+
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="item.html">Make Things</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="item.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<img src="images/projects/latest/img03.jpg" alt="" />
+					<div class="mask"><a href="item.html"></a></div>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>
+
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="item.html">Design is Not My Job</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="item.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<img src="images/projects/latest/img04.jpg" alt="" />
+					<div class="mask"><a href="item.html"></a></div>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>
+
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="item.html">In Particles</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="item.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<iframe src="http://player.vimeo.com/video/40255993?title=0&amp;byline=0&amp;portrait=0&amp;color=ff7e00"></iframe>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>
+
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="item.html">Typography</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="item.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<img src="images/projects/latest/img004.jpg" alt="" />
+					<div class="mask"><a href="item.html"></a></div>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>			
+		</ul><!-- #projects-carousel -->
+	</div><!-- .container -->
+	<!-- END LATEST PROJECTS -->
+
+
+	<!-- LATEST POSTS -->
+	<div class="container header-block">
+		<!-- start header -->
+		<div class="sixteen columns lp-header">
+			<h6>Latest Posts</h6>
+			<div class="nav-projects">
+				<a href="blog.html" class="button viewall">View all</a>
+			</div><!-- .nav-projects -->
+		</div><!-- .sixteen  -->
+		<!-- end header -->
+	</div><!-- .container -->
+
+	<div id="latest-posts" class="container">
+		<ul id="posts-carousel" class="jcarousel-skin-tango" >
+			<!-- start carousel -->
+			
+			<!--  IMAGE  -->			
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="blog-post.html">Responsive Web Design</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="blog-post.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<img src="images/blog/latest/img01.jpg" alt="" />
+					<div class="mask"></div>
+				</div><!-- block -->
+				<div class="ribbon-wrapper">
+					<div class="ribbon-front format-image">
+						<!-- ribbon text goes here -->
+						<a href="blog-post.html" title="Image Post Type"><span class="post-format"></span></a>
+					</div>
+					<div class="ribbon-edge-topleft"></div>
+					<div class="ribbon-edge-topright"></div>
+					<div class="ribbon-edge-bottomleft"></div>
+					<div class="ribbon-edge-bottomright"></div>
+					<div class="ribbon-back-left"></div>
+					<div class="ribbon-back-right"></div>
+				</div><!-- ribbon-wrapper -->
+			</div><!-- .four  --></li>
+
+
+			<!--  IMAGE -->
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="blog-post.html">Another Image Post</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="blog-post.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<img src="images/blog/latest/img02.jpg" alt="" />
+					<div class="mask"></div>
+				</div><!-- block -->
+				<div class="ribbon-wrapper">
+					<div class="ribbon-front format-image">
+						<!-- ribbon text goes here -->
+						<a href="blog-post.html" title="Image Post Type"><span class="post-format"></span></a>
+					</div>
+					<div class="ribbon-edge-topleft"></div>
+					<div class="ribbon-edge-topright"></div>
+					<div class="ribbon-edge-bottomleft"></div>
+					<div class="ribbon-edge-bottomright"></div>
+					<div class="ribbon-back-left"></div>
+					<div class="ribbon-back-right"></div>
+				</div><!-- ribbon-wrapper -->
+			</div><!-- .four  --></li>
+
+
+			<!-- GALLERY -->
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="blog-post.html">Gallery</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="blog-post.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<img src="images/blog/latest/img04.jpg" alt="" />
+					<div class="mask"></div>
+				</div><!-- block -->
+				<div class="ribbon-wrapper">
+					<div class="ribbon-front format-gallery">
+						<!-- ribbon text goes here -->
+						<a href="blog-post.html" title="Gallery Post Type"><span class="post-format"></span></a>
+					</div>
+					<div class="ribbon-edge-topleft"></div>
+					<div class="ribbon-edge-topright"></div>
+					<div class="ribbon-edge-bottomleft"></div>
+					<div class="ribbon-edge-bottomright"></div>
+					<div class="ribbon-back-left"></div>
+					<div class="ribbon-back-right"></div>
+				</div><!-- ribbon-wrapper -->
+			</div><!-- .four  --></li>
+			
+			
+			<!-- AUDIO -->
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="blog-post.html">Motivation Audio Theme</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="blog-post.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<img src="images/blog/latest/audio.jpg" alt="" />
+					<div class="content">
+						<p class="text">Motivational and inspiring tune. Many atmospheric sounds, pads, bells guitar, piano, bass and light rock drums. Useful for successful corporate visuals.<br/>
+						<a href="http://audiojungle.net/item/corporate-motivation-theme-15/493544?ref=zerge">Download it for free!</a></p>
+						<audio id="player2"  src="http://color-theme.com/assets/audio/preview.mp3" controls="controls"></audio>
+					</div><!-- content -->
+				</div><!-- block -->
+				<div class="ribbon-wrapper">
+					<div class="ribbon-front format-audio">
+						<!-- ribbon text goes here -->
+						<a href="blog-post.html" title="Audio Post Type"><span class="post-format"></span></a>
+					</div>
+					<div class="ribbon-edge-topleft"></div>
+					<div class="ribbon-edge-topright"></div>
+					<div class="ribbon-edge-bottomleft"></div>
+					<div class="ribbon-edge-bottomright"></div>
+					<div class="ribbon-back-left"></div>
+					<div class="ribbon-back-right"></div>
+				</div><!-- ribbon-wrapper -->
+			</div><!-- .four  --></li>
+
+
+			<!-- VIDEO -->
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="blog-post.html">In Particles</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="blog-post.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<iframe src="http://player.vimeo.com/video/40255993?title=0&amp;byline=0&amp;portrait=0&amp;color=ff7e00"></iframe>
+				</div><!-- block -->
+				<div class="ribbon-wrapper">
+					<div class="ribbon-front format-video">
+						<!-- ribbon text goes here -->
+						<a href="blog-post.html" title="Video Post Type"><span class="post-format"></span></a>
+					</div>
+					<div class="ribbon-edge-topleft"></div>
+					<div class="ribbon-edge-topright"></div>
+					<div class="ribbon-edge-bottomleft"></div>
+					<div class="ribbon-edge-bottomright"></div>
+					<div class="ribbon-back-left"></div>
+					<div class="ribbon-back-right"></div>
+				</div><!-- ribbon-wrapper -->
+			</div><!-- .four  --></li>
+			
+
+			<!-- ASIDE -->
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="blog-post.html">Simple Text Post</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="blog-post.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<div class="content">
+						<p class="title bold">Simple Text Post</p>
+						<p class="text">The Envato Marketplaces allow anyone to buy or sell digital goods like
+						<a href="http://themeforest.net/?ref=zerge">WordPress themes</a>, <a href="http://audiojungle.net/?ref=zerge">background music</a>, 
+						<a href="http://videohive.net/?ref=zerge">After Effects project files</a> ...</p>					
+					</div><!-- content -->
+				</div><!-- block -->
+				<div class="ribbon-wrapper">
+					<div class="ribbon-front format-aside">
+						<!-- ribbon text goes here -->
+						<a href="blog-post.html" title="Aside Post Type"><span class="post-format"></span></a>
+					</div>
+					<div class="ribbon-edge-topleft"></div>
+					<div class="ribbon-edge-topright"></div>
+					<div class="ribbon-edge-bottomleft"></div>
+					<div class="ribbon-edge-bottomright"></div>
+					<div class="ribbon-back-left"></div>
+					<div class="ribbon-back-right"></div>
+				</div><!-- ribbon-wrapper -->
+			</div><!-- .four  --></li>
+
+			<!-- LINK -->
+			<li><div class="four columns">
+				<div class="stack">
+					<div class="title"><a href="blog-post.html">Link Post Format</a></div>
+					<div class="cta-arrow">
+						<a class="bg-arrow" href="blog-post.html"><img src="images/icons/pixel-arrow-right.png" alt="" /></a>
+						<span class="rd-arrow"></span>
+					</div><!-- .cta-arrow -->
+				</div><!-- stack -->
+				<div class="block">
+					<div class="content">
+						<p class="title bold">
+						<a href="http://www.color-theme.com/">Freebie Resources!</a></p>
+						<p class="text">Vivamus nec ante eros, non dictum lorem. Sed nisl nulla, sodales nec ultrices a, accumsan quis nulla. Cras in ipsum eget urna mattis consequat. Suspendisse potenti.  </p>
+					</div><!-- content -->
+				</div><!-- block -->
+				<div class="ribbon-wrapper">
+					<div class="ribbon-front format-link">
+						<!-- ribbon text goes here -->
+						<a href="blog-post.html" title="Link Post Format"><span class="post-format"></span></a>
+					</div>
+					<div class="ribbon-edge-topleft"></div>
+					<div class="ribbon-edge-topright"></div>
+					<div class="ribbon-edge-bottomleft"></div>
+					<div class="ribbon-edge-bottomright"></div>
+					<div class="ribbon-back-left"></div>
+					<div class="ribbon-back-right"></div>
+				</div><!-- ribbon-wrapper -->
+			</div><!-- .four  --></li>
+			
+		</ul><!-- #projects-carousel -->
+	</div><!-- .container -->
+	<!-- END LATEST POSTS  -->
+
+
+	<!-- CLIENTS -->
+	<div class="container header-block">
+		<!-- start header -->
+		<div class="sixteen columns lp-header">
+			<h6>Our Clients</h6>
+			<div class="nav-projects">
+				<a href="#" class="button viewall">View all</a>
+			</div><!-- .nav-projects -->
+		</div><!-- .sixteen  -->
+		<!-- end header -->
+	</div><!-- .container -->
+
+	<div id="clients" class="container">
+		<ul id="clients-carousel" class="jcarousel-skin-tango" >
+			<!-- start carousel -->
+			<li><div class="four columns">
+				<div class="block">
+					<a href="#"><img src="images/clients/envato.png" alt="" /></a>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>
+
+			<li><div class="four columns">
+				<div class="block">
+					<a href="#"><img src="images/clients/rockablepress.png" alt="" /></a>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>
+
+			<li><div class="four columns">
+				<div class="block">
+					<a href="#"><img src="images/clients/audiojungle.png" alt="" /></a>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>
+
+			<li><div class="four columns">
+				<div class="block">
+					<a href="#"><img src="images/clients/photodune.png" alt="" /></a>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>
+
+			<li><div class="four columns">
+				<div class="block">
+					<a href="#"><img src="images/clients/themeforest.png" alt="" /></a>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>
+
+			<li><div class="four columns">
+				<div class="block">
+					<a href="#"><img src="images/clients/tutorials.png" alt="" /></a>
+				</div><!-- block -->  
+			</div><!-- .four  --></li>			
+		</ul><!-- #clients-carousel -->
+	</div><!-- .container -->
+	<!-- END CLIENTS -->
+		
+	<!-- -============== END CONTENT WRAPPER =================- -->
+
+
+	
+	<!-- START FOOTER -->
+	<div id="footer">
+		<div class="btop-1px"></div>
+		<div class="container">
+			<div class="four columns copyright">
+				<img src="images/logo-footer.png" alt="" />
+				<p class="last">@ 2012 All Rights Reserved.<br>Designed by <a href="http://themeforest.net/user/ZERGE">ZERGE</a> for <a href="http://themeforest.net">Themeforest</a>.</p>
+			</div><!-- .copyright -->
+			<div class="twelve columns">
+				<div id="secondary-nav" class="clearfix">
+					<ul class="clearfix">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<div class="gray-dash-3px"></div>
+				</div><!-- #secondary-nav -->
+				<ul id="footer-social">
+	    			<li class="twitter"><a href="http://twitter.com"></a></li>
+	    			<li class="dribbble"><a href="http://dribbble.com"></a></li>
+	    			<li class="facebook"><a href="http://facebook.com"></a></li>
+	    			<li class="google"><a href="http://plus.google.com"></a></li>
+	    			<li class="linkedin"><a href="http://linkedin.com"></a></li>
+	    			<li class="behance"><a href="http://behance.net"></a></li>
+	    			<li class="rss"><a href="#"></a></li>
+	    		</ul><!-- footer-social -->
+			</div><!-- twelve columns -->
+		</div><!-- container -->
+	</div><!-- #footer -->
+	<!-- END FOOTER -->
+
+<div class="resize" title="Try resizing the window!"></div>
+<script type="text/javascript" src="js/contact.js"></script>
+
+<script type="text/javascript" src="js/custom.js"></script>	
+
+<script type="text/javascript">
+/***************************************************
+			Camera Slider
+***************************************************/
+jQuery.noConflict()(function($){
+			$('#camera_wrap_1').camera({
+				thumbnails: false,
+				pagination: false,
+				loader: 'bar',
+				loaderPadding: 0,
+				loaderStroke: 3,
+				pagination: true,
+				loaderColor: '#7d7d7d'
+			});
+		});
+</script>
+
+<script>
+jQuery.noConflict()(function($){
+		// create player
+    $('#player2').mediaelementplayer({
+        // add desired features in order
+        // I've put the loop function second,
+        features: ['playpause','loop','current','progress','duration']
+    });
+});
+</script>
+
+	
+<!-- End Document
+================================================== -->
+</body>
+</html>

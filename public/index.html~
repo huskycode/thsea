@@ -111,22 +111,39 @@
                 <!-- start carousel -->
                 <li><div class="four columns">
                         <div class="block">
-                            <a href="http://www.agile66.com/"><img src="images/clients/Agile66.jpg" alt="" /></a>
+                            <a href="#"><img src="images/clients/Agile66.jpg" alt="" /></a>
                         </div><!-- block -->  
                     </div><!-- .four  --></li>
 
                 <li><div class="four columns">
                         <div class="block">
-                            <a href="http://www.welovebug.com/"><img src="images/clients/WeLoveBug.png" alt="" /></a>
+                            <a href="#"><img src="images/clients/WeLoveBug.png" alt="" /></a>
                         </div><!-- block -->  
                     </div><!-- .four  --></li>
 
                 <li><div class="four columns">
                         <div class="block">
-                            <a href="http://www.swpark.or.th/"><img src="images/clients/SoftwarePark.jpg" alt="" /></a>
+                            <a href="#"><img src="images/clients/SoftwarePark.jpg" alt="" /></a>
                         </div><!-- block -->  
                     </div><!-- .four  --></li>
 
+                <li><div class="four columns">
+                        <div class="block">
+                            <a href="#"><img src="images/clients/photodune.png" alt="" /></a>
+                        </div><!-- block -->  
+                    </div><!-- .four  --></li>
+
+                <li><div class="four columns">
+                        <div class="block">
+                            <a href="#"><img src="images/clients/themeforest.png" alt="" /></a>
+                        </div><!-- block -->  
+                    </div><!-- .four  --></li>
+
+                <li><div class="four columns">
+                        <div class="block">
+                            <a href="#"><img src="images/clients/tutorials.png" alt="" /></a>
+                        </div><!-- block -->  
+                    </div><!-- .four  --></li>			
             </ul><!-- #clients-carousel -->
         </div><!-- .container -->
         <!-- END CLIENTS -->

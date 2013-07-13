@@ -610,18 +610,8 @@ ul.sf-menu li.active { border: 1px solid #cacbcb; -webkit-box-shadow:  2px 2px 0
 
 
 /******************* CLIENTS ****************/
-#clients .block { 
-	background-color:white; 
-	border: 1px 
-	solid #e7e7e7; 
-	position: relative; 
-	width:218px; 
-}
-#clients .block img { 
-	display:block; 
-	/*width:218px;*/
-	margin: auto;
-}
+#clients .block { background-color:white; border: 1px solid #e7e7e7; position: relative; width:218px; }
+#clients .block img { display:block; width:218px; }
 #clients .block {
 	-webkit-transition: background-color 0.3s ease;
 	-moz-transition: background-color 0.3s ease;

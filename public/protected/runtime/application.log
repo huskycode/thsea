@@ -1,0 +1,150 @@
+2013/07/30 17:59:50 [error] [exception.CException] exception 'CException' with message 'Property "CMenu.class" is not defined.' in C:\xampp\htdocs\thsea\public\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\thsea\public\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('class', 'sf-menu')
+#1 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'zii.widgets.CMe...', Array)
+#2 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CMe...', Array)
+#3 C:\xampp\htdocs\thsea\public\protected\views\layouts\main.php(106): CBaseController->widget('zii.widgets.CMe...', Array)
+#4 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\thsea\public\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\thsea\public\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 C:\xampp\htdocs\thsea\public\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\thsea\public\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#12 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\thsea\public\protected\controllers\SiteController.php(32): CController->render('index')
+#16 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#21 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#22 C:\xampp\htdocs\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\thsea\public\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/thsea/public/index.php?r=site/index
+HTTP_REFERER=http://localhost/thsea/public/index.php?r=site/contact
+---
+2013/07/30 18:00:38 [error] [exception.CException] exception 'CException' with message 'Property "CMenu.className" is not defined.' in C:\xampp\htdocs\thsea\public\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\thsea\public\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('className', 'sf-menu')
+#1 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(SiteController), 'zii.widgets.CMe...', Array)
+#2 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CMe...', Array)
+#3 C:\xampp\htdocs\thsea\public\protected\views\layouts\main.php(106): CBaseController->widget('zii.widgets.CMe...', Array)
+#4 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\thsea\public\yii\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\thsea\public\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#8 C:\xampp\htdocs\thsea\public\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#9 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\thsea\public\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#12 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\thsea\public\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\thsea\public\protected\controllers\SiteController.php(32): CController->render('index')
+#16 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#17 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#21 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#22 C:\xampp\htdocs\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\thsea\public\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/thsea/public/index.php?r=site/index
+HTTP_REFERER=http://localhost/thsea/public/index.php?r=site/contact
+---
+2013/07/30 18:04:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "video" was not found.' in C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('video')
+#1 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/thsea/public/index.php?r=site/page&view=video
+HTTP_REFERER=http://localhost/thsea/public/index.php?r=site/index
+---
+2013/07/30 18:04:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "contributor" was not found.' in C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('contributor')
+#1 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/thsea/public/index.php?r=site/page&view=contributor
+HTTP_REFERER=http://localhost/thsea/public/index.php?r=site/page&view=about
+---
+2013/07/30 18:04:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "video" was not found.' in C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('video')
+#1 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/thsea/public/index.php?r=site/page&view=video
+HTTP_REFERER=http://localhost/thsea/public/index.php?r=site/page&view=contributor
+---
+2013/07/30 18:04:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "video" was not found.' in C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('video')
+#1 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/thsea/public/index.php?r=site/page&view=video
+HTTP_REFERER=http://localhost/thsea/public/index.php?r=site/index
+---
+2013/07/30 18:09:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "contributor" was not found.' in C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('contributor')
+#1 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/thsea/public/index.php?r=site/page&view=contributor
+HTTP_REFERER=http://localhost/thsea/public/index.php?r=site/page&view=about
+---
+2013/07/30 18:09:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "contributor" was not found.' in C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('contributor')
+#1 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/thsea/public/index.php?r=site/page&view=contributor
+HTTP_REFERER=http://localhost/thsea/public/index.php?r=site/page&view=contributor
+---

@@ -1,4 +1,12 @@
-<?php /* @var $this Controller */ ?>
+<?php
+/* @var $this Controller */
+$navItems = array(
+    array('label' => 'Home', 'url' => array('/site/index')),
+    array('label' => 'Video', 'url' => array('/site/page', 'view' => 'video')),
+    array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
+    array('label' => 'Contributor', 'url' => array('/site/page', 'view' => 'contributor'))
+);
+?>
 ﻿<!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -57,14 +65,7 @@
                         $this->widget('zii.widgets.CMenu', array(
                             'id' => 'nav',
                             'htmlOptions' => array('class' => 'sf-menu'),
-                            'items' => array(
-                                array('label' => 'Home', 'url' => array('/site/index')),
-                                array('label' => 'Video', 'url' => array('/site/page', 'view' => 'video')),
-                                array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-                                array('label' => 'Contributor', 'url' => array('/site/page', 'view' => 'contributor'))
-                            //array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
-                            //array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
-                            ),
+                            'items' => $navItems,
                         ));
                         ?>
                     </div>	<!-- end #menu  -->	
@@ -72,7 +73,7 @@
             </div><!-- .container -->
         </div><!-- #slider-wraper -->
         <!-- END MENU WRAPPER -->
-        <?php echo $content; ?>
+<?php echo $content; ?>
         <!-- -============== END CONTENT WRAPPER =================- -->
         <!-- START FOOTER -->
         <div id="footer">
@@ -87,14 +88,7 @@
                         <?php
                         $this->widget('zii.widgets.CMenu', array(
                             'htmlOptions' => array('class' => 'clearfix'),
-                            'items' => array(
-                                array('label' => 'Home', 'url' => array('/site/index')),
-                                array('label' => 'Video', 'url' => array('/site/page', 'view' => 'video')),
-                                array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-                                array('label' => 'Contributor', 'url' => array('/site/page', 'view' => 'contributor'))
-                            //array('label' => 'Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
-                            //array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
-                            ),
+                            'items' => $navItems,
                         ));
                         ?>
                         <div class="gray-dash-3px"></div>

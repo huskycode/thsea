@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!-- A Color Theme design by ZERGE (http://www.color-theme.com) -->
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs -->
+	<meta charset="utf-8">
+	<title>Photomin - Responsive HTML Template</title>
+	<meta name="author" content="ZERGE">
+	<meta name="keywords" content="responsive html template, portfolio, creative, clean, minimal, white">
+	<meta name="description" content="Responsive HTML Template - Contacts Page">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS -->
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/colorbox.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<!-- JS -->
+
+</head>
+<body>
+
+
+
+<!-- Primary Page Layout -->
+
+	<!-- START TOP PANEL -->
+	<div id="top-panel">
+		<div class="container panel">
+			<div class="four columns location-map">
+				<h6>About</h6>
+				<div class="gray-dash-3px"></div>
+				<p>Photomin is an American multinational compane that designs and markets consumer electronics, computer software, and personal computers.</p>
+			</div><!-- .four -->		
+			<div class="four columns">
+				<h6>Contact Info</h6>
+				<div class="gray-dash-3px"></div>
+				<ul id="contact-info" class="widget clearfix">
+					<li class="location">12345 / Some Street<br>Portland, USA</li>
+					<li class="phone">phone: +1 (44)  123-45-67<br/>fax: +1 (44)  123-45-63</li>
+					<li class="skype"><a href="skype:echo123?call">Skype Me</a></li>
+					<li class="email"><a href="mailto:support@color-theme.com">support@color-theme.com</a></li>
+				</ul>
+			</div><!-- .four -->
+			<div class="eight columns">
+				<h6>Get In Touch</h6>
+				<div class="gray-dash-3px"></div>
+	        <fieldset class="info_fieldset_top">
+	            <div id="note-top"></div>
+	            <div id="contacts-form">
+		            <form id="ajax-contact-form" action="javascript:alert('Was send!');">
+		            	<input type="text" name="name" required placeholder="Your Name" class="required" />
+		                <input type="email" name="email" required  placeholder="Your Email" class="last-item required" />
+		             	<input type="text" name="url" placeholder="http://" style="display:none;" />
+		                <input type="text" name="subject" placeholder="Subject" class="last-item required" style="display:none;" />	                
+		                <div class="clear"></div>
+		                <textarea name="message" id="message" required placeholder="Type your questions here..."></textarea>
+		                <input type="submit" class="submit no-margin-bottom"  value="Send Message"/>
+		                <span></span>
+		            </form>
+					<div class="clear"></div>
+				</div> <!-- end #contact-form -->
+			</fieldset>
+			</div><!-- .eight -->
+		</div><!-- .container -->
+		<div class="toggle colored-bg">
+			<a href="#" title="Pandora's Box!"></a>
+		</div><!-- .toggle -->
+	</div><!-- #top-panel -->
+	<!-- END TOP PANEL -->
+
+
+	<!-- START MENU WRAPPER -->
+	<div id="menu-wrapper">
+		<div class="container">
+			<div class="four columns">
+				<div id="logo">
+					<a href="./"><img src="images/logo.png" alt="Logo" /></a>
+				</div><!-- .logo -->
+			</div><!-- four columns -->
+			<div class="twelve columns navigation">
+				<div id="menu" class="fix-fish-menu">
+					<ul id="nav" class="sf-menu">
+						<li><a href="index.html">Home</a></li>
+		                <li><a href="blog.html">Blog</a>
+			   				<ul>
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="blog-post.html">Blog Post</a></li>
+								<li><a href="blog-post-video.html">Blog Post + Video</a></li>
+							</ul>
+			            </li>
+				 		<li> <a href="#">Portfolio</a>
+							<ul>
+								<li><a href="portfolio-3.html">3 Columns</a></li>
+								<li><a href="portfolio-4.html">4 Columns</a></li>
+								<li><a href="gallery.html">Gallery</a></li>
+								<li><a href="item.html">Portfolio Item</a></li>
+								<li><a href="item-slideshow.html">Portfolio Item + Slideshow</a></li>
+								<li><a href="item-video.html">Portfolio Item + Video</a></li>
+							</ul>
+					    </li>
+				 		<li><a href="typography.html">Typography</a></li>
+				 		<li><a href="shortcodes.html">Shortcodes</a></li>
+					 	<li><a href="#">Pages</a>
+							<ul>
+								<li><a href="left-content.html">Left + Content</a></li>
+								<li><a href="content-right.html">Content + Right</a></li>
+								<li><a href="full-width.html">Full Width Page</a></li>
+								<li><a href="#">Submenu</a>
+								<ul>
+									<li><a href="#">Item #1</a></li>
+									<li><a href="#">Item #2</a></li>
+								</ul>
+								</li>
+							</ul>
+						</li>
+		 				<li class="active"><a href="contacts.html">Contacts</a></li>
+		 				<li><a href="http://themeforest.net/item/photomin-responsive-html-template/2430382?ref=zerge"><i class="icon-purchase"></i>Purchase</a></li>
+				 	</ul>  <!-- end #nav  -->
+			 	</div>	<!-- end #menu  -->	
+			</div><!-- .twelve columns -->
+		</div><!-- .container -->
+	</div><!-- #slider-wraper -->
+	<!-- END MENU WRAPPER -->
+
+
+	<!-- START SEPARATOR  -->
+	<div id="separator">
+		<div class="btop-1px"></div>
+		<div class="container">
+			<!-- start separator -->
+			<div class="sixteen columns">
+				<h4 class="page-title">Contacts Page</h4>
+			</div><!-- sixteen columns -->
+		</div><!-- .container -->
+		<div class="bbottom-1px"></div>
+	</div><!-- #separator -->
+	<!-- END SEPARATOR -->	
+
+
+
+	<!-- START PAGE WRAPPER -->
+	<div class="container main-wrapper">
+		<div id="main-content" class="twelve columns">
+			<div class="google-map">
+				<iframe class="border" width="686" height="350" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Sydney,+New+South+Wales,+Australia&amp;aq=0&amp;oq=sydne&amp;sll=3.128518,101.635895&amp;sspn=0.266364,0.308647&amp;t=m&amp;ie=UTF8&amp;hq=&amp;hnear=Sydney+New+South+Wales,+Australia&amp;ll=-33.873694,151.206894&amp;spn=0.049884,0.11776&amp;z=13&amp;iwloc=A&amp;output=embed"></iframe>
+			</div>
+
+
+			<div class="contacts-block">
+			<h5>Do you need help, support or advise?</h5>
+			<p>Lorem ipsum dolor sit amet, verenam operibus furiam conclusoque sponte profundo. Conservus mihi esse haec aliquam inlido laetare quod eam ad per. Antiochia videns quia quod non ait est Apollonius non dum animae tertio eam ad te princeps ea docentur Hellenicus ut diem finito convocatis secessit.</p>
+			
+            <fieldset class="info_fieldset">
+            <div id="note"></div>            
+            <div id="contacts-form-main">		
+	            <form id="ajax-contact-form-main" action="javascript:alert('Was send!');">
+	            	<input type="text" name="name" required placeholder="Your Name" class="required" title="Your Name" />
+	                <input type="email" name="email" required  placeholder="Your Email" class="last-item required" title="Your Email" />
+	             	<input type="text" name="url" placeholder="http://" title="Web site" />
+	                <input type="text" name="subject" required placeholder="Subject" class="last-item required" title="Subject" />               
+	                <div class="clear"></div>
+	                <textarea name="message" required placeholder="Type your questions here..."></textarea>
+	                <input type="submit" class="submit no-margin-bottom"  value="Send Message"/>
+	                <span></span>
+	            </form>
+				<div class="clear"></div>
+			</div> <!-- end #contact-form -->
+			</fieldset>
+		    <div class="clear"></div>
+		    </div><!-- .contacts-block -->
+			
+		</div><!-- main-content -->
+
+
+	
+		<!-- START SIDEBAR -->
+		<div id="sidebar" class="four columns">
+			<div class="widget">
+				<form method="get" id="searchform" action="http://html.color-theme.com/linkup">
+					<fieldset>
+						<input type="text" name="s" id="s" value="To search type and hit enter" onFocus="if(this.value=='To search type and hit enter')this.value='';" onBlur="if(this.value=='')this.value='To search type and hit enter';">
+					</fieldset>
+				</form>
+			</div><!-- widget -->
+
+			<div class="widget">
+				<h6>About</h6>
+				<div class="gray-dash-3px"></div>
+				<p>Welcome to PhotoDune! Read our Getting Started Guide, visit the Blog for recent news and make yourself at home! You can find information about PhotoDune in our Knowledgebase.</p>
+			</div><!-- widget -->
+
+			<div class="widget">
+				<h6>Contact Info</h6>
+				<div class="gray-dash-3px"></div>
+				<div id="accordion">
+					<h3><a href="#">Sydney Office</a></h3>
+					<div>
+						<span>
+						Macquarie Street<br/>
+						Sydney NSW<br/>
+						(02)1234 5678 
+					</span>
+					</div>
+					<h3><a href="#">Kuala Lumpur</a></h3>
+					<div>
+						<span>
+							Kuala Lumpur City Centre<br/>
+							Kuala Lumpur<br/>
+							03-55555-1234 
+						</span>
+					</div>
+					<h3><a href="#">London</a></h3>
+					<div>
+						<span>
+							222 Gray's Inn Rd<br/>
+							Camden Town, Greater London<br/>
+							020 1212 9876						
+						</span>
+					</div>
+					<h3><a href="#">Additional Information</a></h3>
+					<div>
+						<p>
+							Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+							et malesuada fames ac turpis egestas. 
+						</p>
+					</div>
+				</div><!-- #accordion -->
+			</div><!-- widget -->
+			
+		</div><!-- sidebar -->
+	</div><!-- .container -->
+
+		
+	<!-- END BLOG WRAPPER -->
+
+
+	
+	<!-- START FOOTER -->
+	<div id="footer">
+		<div class="btop-1px"></div>
+		<div class="container">
+			<div class="four columns copyright">
+				<img src="images/logo-footer.png" alt="" />
+				<p class="last">@ 2012 All Rights Reserved.<br>Designed by <a href="http://themeforest.net/user/ZERGE">ZERGE</a> for <a href="http://themeforest.net">Themeforest</a>.</p>
+			</div><!-- .copyright -->
+			<div class="twelve columns">
+				<div id="secondary-nav" class="clearfix">
+					<ul class="clearfix">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Portfolio</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<div class="gray-dash-3px"></div>
+				</div><!-- #secondary-nav -->
+				<ul id="footer-social">
+	    			<li class="twitter"><a href="http://twitter.com"></a></li>
+	    			<li class="dribbble"><a href="http://dribbble.com"></a></li>
+	    			<li class="facebook"><a href="http://facebook.com"></a></li>
+	    			<li class="google"><a href="http://plus.google.com"></a></li>
+	    			<li class="linkedin"><a href="http://linkedin.com"></a></li>
+	    			<li class="behance"><a href="http://behance.net"></a></li>
+	    			<li class="rss"><a href="#"></a></li>
+	    		</ul><!-- footer-social -->
+			</div><!-- twelve columns -->
+		</div><!-- container -->
+	</div><!-- #footer -->
+	<!-- END FOOTER -->
+
+<div class="resize" title="Try resizing the window!"></div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>	
+<script type="text/javascript" src="js/superfish.js"></script>
+<script type="text/javascript" src="js/scrolltopcontrol.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/contact.js"></script>
+
+<script>
+/*******************************
+			ACCORDION
+********************************/
+jQuery.noConflict()(function($){
+	$(document).ready(function() {
+		$("#accordion").accordion({ autoHeight: false });;
+	});
+});  
+</script>
+	
+
+<script type="text/javascript" src="js/custom.js"></script>
+
+
+
+<!-- End Document
+================================================== -->
+</body>
+</html>

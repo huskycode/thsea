@@ -148,3 +148,93 @@ Stack trace:
 REQUEST_URI=/thsea/public/index.php?r=site/page&view=contributor
 HTTP_REFERER=http://localhost/thsea/public/index.php?r=site/page&view=contributor
 ---
+2013/08/02 17:31:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "contributor" was not found.' in D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('contributor')
+#1 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 D:\xampp\htdocs\Git\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\Git\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/git/thsea/public/index.php?r=site/page&view=contributor
+HTTP_REFERER=http://localhost/git/thsea/public/index.php?r=site/page&view=about
+---
+2013/08/02 17:45:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "contributor" was not found.' in D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('contributor')
+#1 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 D:\xampp\htdocs\Git\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\Git\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/git/thsea/public/index.php?r=site/page&view=contributor
+HTTP_REFERER=http://localhost/git/thsea/public/index.php?r=site/index
+---
+2013/08/02 17:45:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "contributor" was not found.' in D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('contributor')
+#1 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 D:\xampp\htdocs\Git\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\Git\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/git/thsea/public/index.php?r=site/page&view=contributor
+HTTP_REFERER=http://localhost/git/thsea/public/index.php?r=site/index
+---
+2013/08/02 17:46:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "contributor" was not found.' in D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('contributor')
+#1 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 D:\xampp\htdocs\Git\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\Git\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/git/thsea/public/index.php?r=site/page&view=contributor
+HTTP_REFERER=http://localhost/git/thsea/public/index.php?r=site/page&view=contributor
+---
+2013/08/02 17:46:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "contributor" was not found.' in D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('contributor')
+#1 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 D:\xampp\htdocs\Git\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\Git\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/git/thsea/public/index.php?r=site/page&view=contributor
+HTTP_REFERER=http://localhost/git/thsea/public/index.php?r=site/page&view=about
+---
+2013/08/02 17:57:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "contributor" was not found.' in D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('contributor')
+#1 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 D:\xampp\htdocs\Git\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 D:\xampp\htdocs\Git\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\Git\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/git/thsea/public/index.php?r=site/page&view=contributor
+HTTP_REFERER=http://localhost/git/thsea/public/index.php?r=site/page&view=contributor
+---

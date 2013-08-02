@@ -47,7 +47,7 @@ $this->breadcrumbs=array(
 				   	</div>
 				   	<div class="four-column column-last">
 				   		<a class="zoom" href="./images/contributor/roong.jpg"><img src="./images/contributor/roong.jpg" alt="" class="border " /></a>
-				   		<p class="description">พิษณุ (รุ่ง)</p>
+				   		<p class="description">พิษณุ สว่างแผ้ว(รุ่ง)</p>
 				   		<p class="description">Pitsanu Swangpheaw (Roong)</p>
 				   		<p class="description">Technical Consultant</p>
 				   	</div>

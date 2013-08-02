@@ -39,13 +39,18 @@ $this->breadcrumbs=array(
 				   		<p class="description">Adisorn Chockaumnuai (Arm)</p>
 				   		<p class="description">Scrum Master</p>
 				   	</div>
-				   	<div class="four-column column-last ">
+				   	<div class="four-column">
 				   		<a class="zoom" href="./images/contributor/bomb.jpg"><img src="./images/contributor/bomb.jpg" alt="" class="border " /></a>
 				   		<p class="description">กรัณย์ ศิวารัตน์ (บอมบ์)</p>
 				   		<p class="description">Karan Sivarat (Bomb)</p>
 				   		<p class="description">Scrum Master</p>
 				   	</div>
-				   	<p>
+				   	<div class="four-column column-last">
+				   		<a class="zoom" href="./images/contributor/roong.jpg"><img src="./images/contributor/roong.jpg" alt="" class="border " /></a>
+				   		<p class="description">พิษณุ (รุ่ง)</p>
+				   		<p class="description">Pitsanu Swangpheaw (Roong)</p>
+				   		<p class="description">Technical Consultant</p>
+				   	</div>
 				   	
 			</div>
 			<div class="row">
@@ -64,7 +69,7 @@ $this->breadcrumbs=array(
 				   	<div class="four-column ">
 				   		<a class="zoom" href="./images/contributor/pla.jpg"><img src="./images/contributor/pla.jpg" alt="" class="border " /></a>
 				   		<p class="description">เจนจิรา วงศ์บุญสิน (ปลา)</p>
-				   		<p class="description">Jenjiar Wongboonsin (Pla)</p>
+				   		<p class="description">Jenjira Wongboonsin (Pla)</p>
 				   		<p class="description">Developer</p>
 				   	</div>
 				   	<div class="four-column column-last ">

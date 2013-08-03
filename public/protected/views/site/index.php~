@@ -7,7 +7,7 @@ $this->pageTitle = Yii::app()->name;
     <div class="btop-1px"></div>
     <div class="container">
         <div class="sixteen columns" id="cta-block">
-            <h5>แหล่งรวบรวม Video ที่เกี่ยวข้องกับด้านการพัฒนาซอฟต์แวร์ในประเทศไทย</h5>
+            <h5>แหล่งรวบรวม Video ที่เกี่ยวข้องกับด้านการพัฒนาซอร์ฟแวร์ในประเทศไทย</h5>
         </div><!-- #cta-block -->
 
         <!-- start slider -->

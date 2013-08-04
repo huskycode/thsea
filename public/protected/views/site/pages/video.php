@@ -1,3 +1,11 @@
+<?php
+/* @var $this SiteController */
+
+$this->pageTitle = Yii::app()->name . ' - Video';
+$this->breadcrumbs = array(
+    'Video',
+);
+?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -8,14 +16,6 @@
         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=416497271802249";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-<?php
-/* @var $this SiteController */
-
-$this->pageTitle = Yii::app()->name . ' - Video';
-$this->breadcrumbs = array(
-    'Video',
-);
-?>
 <!-- START SEPARATOR  -->
 <div id="separator">
     <div class="btop-1px"></div>

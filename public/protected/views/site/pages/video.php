@@ -1,3 +1,13 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id))
+            return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=416497271802249";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 <?php
 /* @var $this SiteController */
 
@@ -31,6 +41,7 @@ $this->breadcrumbs = array(
                 <div class="meta-post">
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
+                    <div class="comments" title="Comments"><span><a href="#video1"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video1"/></fb:comments-count></a></span></div>
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
@@ -41,7 +52,8 @@ $this->breadcrumbs = array(
                     <h6><a href="blog-post.html">Agile Thailand 2013 : วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล์</a></h6>	
                 </div>
                 <p>จาก "แบไต๋ไฮเทค: Special Report - วิกฤตการณ์โปรแกรมเมอร์ไทย" ได้เกิดการถกเถียงกันอย่างมากใน Facebook Group ของ Agile66 ถึงสาเหตุที่แท้จริงของปัญหา รวมไปถึงหนทางที่จะแก้ไข เราจึงพูดคุยกันว่าเราจะเอาเรื่องนี้มาคุย­กันใน กิจกรรมประจำปีของชาว Agile ที่มีชื่อว่า Agile Thailand 2013 ทำให้เกิดเป็น Panel Discussion Session ดราม่าแห่งปี ในชื่อ "วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล์"</p>
-            </div><!-- text-post -->				
+            </div><!-- text-post -->
+            <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video1" data-width="470"></div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
 
@@ -54,6 +66,7 @@ $this->breadcrumbs = array(
                 <div class="meta-post">
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
+                    <div class="comments" title="Comments"><span><a href="#video1"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video2"/></fb:comments-count></a></span></div>
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
@@ -65,6 +78,7 @@ $this->breadcrumbs = array(
                 </div>
                 <p>No description avaiable</a>
             </div><!-- text-post -->				
+            <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video2" data-width="470"></div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
 
@@ -78,6 +92,7 @@ $this->breadcrumbs = array(
                 <div class="meta-post">
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
+                    <div class="comments" title="Comments"><span><a href="#video1"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video3"/></fb:comments-count></a></span></div>
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
@@ -89,6 +104,7 @@ $this->breadcrumbs = array(
                 </div>
                 <p>Welcome to the lean entrepreneur</a>
             </div><!-- text-post -->				
+            <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video3" data-width="470"></div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
 
@@ -101,6 +117,7 @@ $this->breadcrumbs = array(
                 <div class="meta-post">
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
+                    <div class="comments" title="Comments"><span><a href="#video1"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video4"/></fb:comments-count></a></span></div>
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
@@ -112,6 +129,7 @@ $this->breadcrumbs = array(
                 </div>
                 <p>สร้างกฏไว้เยอะเกินจนงง ดู NCIS แล้วเค้ามี Gibbs' Rules เลยคิดว่าต้องทำบ้างแล้ว http://korn4d.wordpress.com/kamon-rules/</a>
             </div><!-- text-post -->				
+            <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video4" data-width="470"></div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
 

@@ -38,16 +38,7 @@ $navItems = array(
         <link rel="apple-touch-icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/apple-touch-icon.png">
         <link rel="apple-touch-icon" sizes="72x72" href="<?php echo Yii::app()->request->baseUrl; ?>/images/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="<?php echo Yii::app()->request->baseUrl; ?>/images/apple-touch-icon-114x114.png">
-
-        <!-- JS -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.easing.1.3.js"></script>	
-        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/superfish.js"></script>
-        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/camera.min.js"></script>
-        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile.customized.min.js"></script>	
-        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jcarousel.min.js"></script>
-        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/mediaelement-and-player.min.js"></script>
-        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/scrolltopcontrol.js"></script>
     </head>
     <body>
         <!-- Primary Page Layout -->
@@ -73,7 +64,7 @@ $navItems = array(
             </div><!-- .container -->
         </div><!-- #slider-wraper -->
         <!-- END MENU WRAPPER -->
-<?php echo $content; ?>
+        <?php echo $content; ?>
         <!-- -============== END CONTENT WRAPPER =================- -->
         <!-- START FOOTER -->
         <div id="footer">
@@ -96,27 +87,21 @@ $navItems = array(
                 </div><!-- container -->
             </div><!-- #footer -->
             <!-- END FOOTER -->
-            <script type="text/javascript" src="js/contact.js"></script>
 
-            <script type="text/javascript" src="js/custom.js"></script>	
-
-            <script type="text/javascript">
-                /***************************************************
-                 Camera Slider
-                 ***************************************************/
-                jQuery.noConflict()(function($) {
-                    $('#camera_wrap_1').camera({
-                        thumbnails: false,
-                        pagination: false,
-                        loader: 'bar',
-                        loaderPadding: 0,
-                        loaderStroke: 3,
-                        pagination: true,
-                                loaderColor: '#7d7d7d'
-                    });
-                });
-            </script>
-
+            <!-- JS -->
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.easing.1.3.js"></script>	
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/superfish.js"></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/camera.min.js"></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile.customized.min.js"></script>	
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jcarousel.min.js"></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/mediaelement-and-player.min.js"></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/scrolltopcontrol.js"></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.colorbox-min.js"></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.isotope.min.js"></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jflickrfeed.min.js"></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.tweet.js"></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/contact.js"></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js"></script>	
             <script>
                 jQuery.noConflict()(function($) {
                     // create player

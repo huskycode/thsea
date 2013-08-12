@@ -1,6 +1,5 @@
 <?php
 /* @var $this SiteController */
-
 $this->pageTitle = Yii::app()->name . ' - Video';
 $this->breadcrumbs = array(
     'Video',
@@ -41,7 +40,7 @@ $this->breadcrumbs = array(
                 <div class="meta-post">
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
-                    <div class="comments" title="Comments"><span><a href="#video1"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video1"/></fb:comments-count></a></span></div>
+                    <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-1"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video1"/></fb:comments-count></a></span></div>
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
@@ -53,7 +52,9 @@ $this->breadcrumbs = array(
                 </div>
                 <p>จาก "แบไต๋ไฮเทค: Special Report - วิกฤตการณ์โปรแกรมเมอร์ไทย" ได้เกิดการถกเถียงกันอย่างมากใน Facebook Group ของ Agile66 ถึงสาเหตุที่แท้จริงของปัญหา รวมไปถึงหนทางที่จะแก้ไข เราจึงพูดคุยกันว่าเราจะเอาเรื่องนี้มาคุย­กันใน กิจกรรมประจำปีของชาว Agile ที่มีชื่อว่า Agile Thailand 2013 ทำให้เกิดเป็น Panel Discussion Session ดราม่าแห่งปี ในชื่อ "วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล์"</p>
             </div><!-- text-post -->
-            <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video1" data-width="470"></div>
+            <div class="hidden">
+                <div id="fb-comment-1" class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video1"></div>
+            </div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
 
@@ -66,7 +67,7 @@ $this->breadcrumbs = array(
                 <div class="meta-post">
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
-                    <div class="comments" title="Comments"><span><a href="#video1"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video2"/></fb:comments-count></a></span></div>
+                    <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-2"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video2"/></fb:comments-count></a></span></div>
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
@@ -77,8 +78,10 @@ $this->breadcrumbs = array(
                     <h6><a href="blog-post.html">Agile Thailand 2013 : Agile in Startup</a></h6>	
                 </div>
                 <p>No description avaiable</a>
-            </div><!-- text-post -->				
-            <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video2" data-width="470"></div>
+            </div><!-- text-post -->		
+            <div class="hidden">		
+                <div id="fb-comment-2" class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video2"></div>
+            </div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
 
@@ -92,7 +95,7 @@ $this->breadcrumbs = array(
                 <div class="meta-post">
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
-                    <div class="comments" title="Comments"><span><a href="#video1"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video3"/></fb:comments-count></a></span></div>
+                    <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-3"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video3"/></fb:comments-count></a></span></div>
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
@@ -104,7 +107,9 @@ $this->breadcrumbs = array(
                 </div>
                 <p>Welcome to the lean entrepreneur</a>
             </div><!-- text-post -->				
-            <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video3" data-width="470"></div>
+            <div class="hidden">
+                <div id="fb-comment-3" class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video3" data-width="470"></div>
+            </div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
 
@@ -117,7 +122,7 @@ $this->breadcrumbs = array(
                 <div class="meta-post">
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
-                    <div class="comments" title="Comments"><span><a href="#video1"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video4"/></fb:comments-count></a></span></div>
+                    <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-4"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video4"/></fb:comments-count></a></span></div>
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
@@ -129,7 +134,9 @@ $this->breadcrumbs = array(
                 </div>
                 <p>สร้างกฏไว้เยอะเกินจนงง ดู NCIS แล้วเค้ามี Gibbs' Rules เลยคิดว่าต้องทำบ้างแล้ว http://korn4d.wordpress.com/kamon-rules/</a>
             </div><!-- text-post -->				
-            <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video4" data-width="470"></div>
+            <div class="hidden">
+                <div id="fb-comment-4" class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video4" data-width="470"></div>
+            </div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
 
@@ -188,5 +195,11 @@ $this->breadcrumbs = array(
     <div id="sidebar" class="four columns">	
     </div><!-- sidebar -->
 </div><!-- .container -->
-
+<script type="text/javascript">
+    jQuery.noConflict()(function($) {
+        $(document).ready(function() {
+            $('.fb-comment-count').colorbox({inline: true, maxWidth:700, width:"100%", height: "90%"});
+        });
+    });
+</script>
 <!-- END BLOG WRAPPER -->

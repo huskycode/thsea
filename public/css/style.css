@@ -885,6 +885,7 @@ div.column-last { margin-right: 0; }
 }
 .format-image .image-post img:hover { opacity: 0.8; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=80);filter: alpha(opacity=80);  }
 .single-post .image-post:hover { border-bottom: 1px solid #E7E7E7; }
+.image-post img { display: block; width: 100%; max-height: 337px; }
 .image-post iframe { display: block; width: 100%; height: 380px; }
 
 .format-gallery .image-post { height: 337px; }
@@ -1635,6 +1636,7 @@ padding-left: 23px !important;*/ }
     .meta-post .tags { display: none; }		
     .meta-post { width: 94%; }
     .image-post iframe { height: 295px; }
+    .image-post img { height: 265px;}
     .format-video .stack { height: 278px; }		
     .format-audio .stack { height: 61px; }
     .format-quote .stack { height: 122px; }
@@ -1732,6 +1734,7 @@ padding-left: 23px !important;*/ }
     .meta-post .tags { display: none; }		
     .meta-post { width: 92%; }
     .image-post iframe { height: 225px; }
+    .image-post img { height: 197px;}
     .format-audio .stack { height: 60px; }
     .format-quote .stack { height: 122px; }
     .format-link .stack { height: 72px; }
@@ -1822,9 +1825,10 @@ padding-left: 23px !important;*/ }
     .image-post { width: 274px; }
     .entry-post { width: 300px; }
     .entry-post .stack { width: 256px; height: 120px; }
-    .meta-post .tags, .meta-post .comments, .meta-post .author { display: none; }	
+    .meta-post .tags, .meta-post .author { display: none; }
     .meta-post { width: 90%; }
     .image-post iframe { height: 159px; }
+    .image-post img { height: 137px;}
     .format-audio .stack { height: 60px; }
     .format-link .stack { height: 72px; }
     .format-aside .stack { height: 60px; }
@@ -1939,3 +1943,17 @@ padding-left: 23px !important;*/ }
 /*fix facebook comment to width 100% */
 .fb-comments, .fb-comments span, .fb-comments iframe[style] {width: 100% !important;}
 .hidden{display:none;}
+.popup{position:relative;}
+.popup .video{position:absolute;}
+.popup .comment{padding-left:710px;min-height:400px;}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .popup .comment{padding-left:560px;}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .popup .video{position:relative;}
+    .popup .comment{padding-left:0;padding-top:10px;min-height:auto;}
+}
+@media only screen and (max-width: 479px) {
+    .popup .video{position:relative;}
+    .popup .comment{padding-left:0;padding-top:10px;min-height:auto;}
+}

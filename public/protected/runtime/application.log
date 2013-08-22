@@ -252,3 +252,17 @@ Stack trace:
 #9 {main}
 REQUEST_URI=/thsea/public/index.php?r=site/page&view=video_1
 ---
+2013/08/22 16:50:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "video_test" was not found.' in C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php:112
+Stack trace:
+#0 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CViewAction.php(123): CViewAction->resolveView('video_test')
+#1 C:\xampp\htdocs\thsea\public\yii\framework\web\actions\CAction.php(76): CViewAction->run()
+#2 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#3 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CViewAction))
+#4 C:\xampp\htdocs\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('page')
+#6 C:\xampp\htdocs\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/page')
+#7 C:\xampp\htdocs\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\thsea\public\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/thsea/public/index.php?r=site/page&view=video_test
+---

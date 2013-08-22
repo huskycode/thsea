@@ -31,8 +31,8 @@ $this->breadcrumbs = array(
 <div class="container main-wrapper">
     <div id="main-content" class="twelve columns">
 
-        <!-- POST #3 VIDEO -->
-        <div class="entry-post format-video">
+        <!-- POST #1 VIDEO -->
+        <div class="entry-post format-image">
             <div class="info-post">
             </div><!-- info-post -->
 
@@ -44,22 +44,30 @@ $this->breadcrumbs = array(
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
-                <iframe width="654" height="368" src="//www.youtube.com/embed/gVaRj5GgOPg" frameborder="0"></iframe>
+                <a class="fb-comment-count" href="#fb-comment-1"><img src="http://img.youtube.com/vi/gVaRj5GgOPg/maxresdefault.jpg" alt="Agile Thailand 2013 : Agile in Startup" /></a>
             </div><!-- post-image -->
             <div class="text-post clearfix">
                 <div class="title-post">
                     <h6><a href="blog-post.html">Agile Thailand 2013 : วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล์</a></h6>	
                 </div>
                 <p>จาก "แบไต๋ไฮเทค: Special Report - วิกฤตการณ์โปรแกรมเมอร์ไทย" ได้เกิดการถกเถียงกันอย่างมากใน Facebook Group ของ Agile66 ถึงสาเหตุที่แท้จริงของปัญหา รวมไปถึงหนทางที่จะแก้ไข เราจึงพูดคุยกันว่าเราจะเอาเรื่องนี้มาคุย­กันใน กิจกรรมประจำปีของชาว Agile ที่มีชื่อว่า Agile Thailand 2013 ทำให้เกิดเป็น Panel Discussion Session ดราม่าแห่งปี ในชื่อ "วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล์"</p>
+                <a href="#fb-comment-1" class="button read-more fb-comment-count">Comment</a>
             </div><!-- text-post -->
             <div class="hidden">
-                <div id="fb-comment-1" class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video1"></div>
+                <div id="fb-comment-1" class="popup">
+                    <div class="image-post video">
+                        <iframe width="654" height="368" src="//www.youtube.com/embed/gVaRj5GgOPg" frameborder="0"></iframe>
+                    </div>
+                    <div class="comment">
+                        <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video1"></div>
+                    </div>
+                </div>
             </div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
 
         <!-- POST #3 VIDEO -->
-        <div class="entry-post format-video">
+        <div class="entry-post format-image">
             <div class="info-post">
             </div><!-- info-post -->
 
@@ -71,23 +79,31 @@ $this->breadcrumbs = array(
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
-                <iframe width="654" height="368" src="//www.youtube.com/embed/qYxFmmV0eA0" frameborder="0"></iframe>				   	
+                <a class="fb-comment-count" href="#fb-comment-2"><img src="http://img.youtube.com/vi/qYxFmmV0eA0/maxresdefault.jpg" alt="Agile Thailand 2013 : Agile in Startup" /></a>
             </div><!-- post-image -->
             <div class="text-post clearfix">
                 <div class="title-post">
                     <h6><a href="blog-post.html">Agile Thailand 2013 : Agile in Startup</a></h6>	
                 </div>
-                <p>No description avaiable</a>
+                <p>No description avaliable</p>
+                <a href="#fb-comment-2" class="button read-more fb-comment-count">Comment</a>
             </div><!-- text-post -->		
-            <div class="hidden">		
-                <div id="fb-comment-2" class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video2"></div>
+            <div class="hidden">
+                <div id="fb-comment-2" class="popup">
+                    <div class="image-post video">
+                        <iframe width="654" height="368" src="//www.youtube.com/embed/qYxFmmV0eA0" frameborder="0"></iframe>
+                    </div>
+                    <div class="comment">
+                        <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video2"></div>
+                    </div>
+                </div>
             </div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
 
 
         <!-- POST #3 VIDEO -->
-        <div class="entry-post format-video">
+        <div class="entry-post format-image">
             <div class="info-post">
             </div><!-- info-post -->
 
@@ -99,22 +115,30 @@ $this->breadcrumbs = array(
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
-                <iframe width="654" height="368" src="//www.youtube.com/embed/ZM7PYrJ0MCE" frameborder="0"></iframe>				   	
+                <a class="fb-comment-count" href="#fb-comment-3"><img src="http://img.youtube.com/vi/ZM7PYrJ0MCE/maxresdefault.jpg" alt="Agile Thailand 2013 : Agile vs Lean" /></a>
             </div><!-- post-image -->
             <div class="text-post clearfix">
                 <div class="title-post">
                     <h6><a href="blog-post.html">Agile Thailand 2013 : Agile vs Lean</a></h6>	
                 </div>
-                <p>Welcome to the lean entrepreneur</a>
+                <p>Welcome to the lean entrepreneur</p>
+                <a href="#fb-comment-3" class="button read-more fb-comment-count">Comment</a>
             </div><!-- text-post -->				
             <div class="hidden">
-                <div id="fb-comment-3" class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video3" data-width="470"></div>
+                <div id="fb-comment-3" class="popup">
+                    <div class="image-post video">
+                        <iframe width="654" height="368" src="//www.youtube.com/embed/ZM7PYrJ0MCE" frameborder="0"></iframe>
+                    </div>
+                    <div class="comment">
+                        <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video3"></div>
+                    </div>
+                </div>
             </div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
 
-        <!-- POST #3 VIDEO -->
-        <div class="entry-post format-video">
+        <!-- POST #4 VIDEO -->
+        <div class="entry-post format-image">
             <div class="info-post">
             </div><!-- info-post -->
 
@@ -126,55 +150,27 @@ $this->breadcrumbs = array(
                 </div><!-- meta-post -->
             </div><!-- stack -->
             <div class="image-post">
-                <iframe width="654" height="368" src="//www.youtube.com/embed/aD6eYjK36fA" frameborder="0"></iframe>				   	
+                <a class="fb-comment-count" href="#fb-comment-4"><img src="http://img.youtube.com/vi/aD6eYjK36fA/maxresdefault.jpg" alt="Agile Thailand 2013 : Kamon's Rules" /></a>
             </div><!-- post-image -->
             <div class="text-post clearfix">
                 <div class="title-post">
                     <h6><a href="blog-post.html">Agile Thailand 2013 : Kamon's Rules</a></h6>	
                 </div>
-                <p>สร้างกฏไว้เยอะเกินจนงง ดู NCIS แล้วเค้ามี Gibbs' Rules เลยคิดว่าต้องทำบ้างแล้ว http://korn4d.wordpress.com/kamon-rules/</a>
+                <p>สร้างกฏไว้เยอะเกินจนงง ดู NCIS แล้วเค้ามี Gibbs' Rules เลยคิดว่าต้องทำบ้างแล้ว <a href="http://korn4d.wordpress.com/kamon-rules/">http://korn4d.wordpress.com/kamon-rules</a></p>
+                <a href="#fb-comment-3" class="button read-more fb-comment-count">Comment</a>
             </div><!-- text-post -->				
             <div class="hidden">
-                <div id="fb-comment-4" class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video4" data-width="470"></div>
+                <div id="fb-comment-4" class="popup">
+                    <div class="image-post video">
+                        <iframe width="654" height="368" src="//www.youtube.com/embed/aD6eYjK36fA" frameborder="0"></iframe>
+                    </div>
+                    <div class="comment">
+                        <div class="fb-comments" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video4"></div>
+                    </div>
+                </div>
             </div>
             <div class="divider-blog-1px"></div>
         </div><!-- entry-post -->
-
-
-        <!-- POST #3 VIDEO -->
-        <!--<div class="entry-post format-video">-->
-        <!--	<div class="info-post">-->
-        <!--		<div class="ribbon-wrapper">-->
-        <!--			<div class="ribbon-front">-->
-        <!--				<a href="blog-post.html" title="Video Post Type"><span class="blog-post-format"></span></a>-->
-        <!--			</div>-->
-        <!--			<div class="ribbon-edge-bottomleft"></div>-->
-        <!--</div>-->
-        <!--</div>-->
-
-        <!--	<div class="stack">-->
-        <!--		<div class="meta-post">-->
-        <!--			<div class="date" title="Posted Date"><span>May 19, 2012</span></div>-->
-        <!--			<div class="tags" title="Tags"><span><a href="#">Business</a>, <a href="#">Chart</a></span></div>-->
-        <!--			<div class="comments" title="Comments"><span><a href="#">5</a></span></div>-->
-        <!--			<div class="author" title="Author"><span><a href="#">Slimbet</a></span></div>-->
-                                <!--<div class="tweets" title="Tweet this"><span><a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20Video&amp;url=http://html.color-theme.com/photomin/blog.html&amp;via=zesky">Tweet</a></span></div>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--	<div class="image-post">-->
-        <!--	   	<iframe src="http://player.vimeo.com/video/40255993?title=0&amp;byline=0&amp;portrait=0&amp;color=ff7e00" width="654" height="368"></iframe>-->
-        <!--</div>-->
-        <!--	<div class="text-post clearfix">-->
-        <!--			<div class="title-post">-->
-        <!--			<h6><a href="blog-post.html">In Particles (Video)</a></h6>	-->
-        <!--			</div>-->
-        <!--	   	<p>Adobe After Effects project file. You can buy it from here: <a href="http://videohive.net/item/in-particles/2092596?ref=zerge">videohive.net/item/in-particles/2092596</a></p>-->
-        <!--		<a href="blog-post.html" class="button read-more">Read more</a>-->
-        <!--</div>				-->
-        <!--	<div class="divider-blog-1px"></div>-->
-        <!--</div>-->
-
-
         <!-- START PAGINATION-->
         <div id="nav-pagination">
             <ul class="nav-pagination clearfix">
@@ -198,7 +194,7 @@ $this->breadcrumbs = array(
 <script type="text/javascript">
     jQuery.noConflict()(function($) {
         $(document).ready(function() {
-            $('.fb-comment-count').colorbox({inline: true, maxWidth:700, width:"100%", height: "90%"});
+            $('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 470, width: "100%", height: "90%"});
         });
     });
 </script>

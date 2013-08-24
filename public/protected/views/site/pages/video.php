@@ -48,7 +48,7 @@ $this->breadcrumbs = array(
             </div><!-- post-image -->
             <div class="text-post clearfix">
                 <div class="title-post">
-                    <h6>Agile Thailand 2013 : วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล</h6>
+                    <h6><a class="fb-comment-count" href="#fb-comment-1">Agile Thailand 2013 : วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล</a></h6>
                 </div>
                 <p>จาก "แบไต๋ไฮเทค: Special Report - วิกฤตการณ์โปรแกรมเมอร์ไทย" ได้เกิดการถกเถียงกันอย่างมากใน Facebook Group ของ Agile66 ถึงสาเหตุที่แท้จริงของปัญหา รวมไปถึงหนทางที่จะแก้ไข เราจึงพูดคุยกันว่าเราจะเอาเรื่องนี้มาคุย­กันใน กิจกรรมประจำปีของชาว Agile ที่มีชื่อว่า Agile Thailand 2013 ทำให้เกิดเป็น Panel Discussion Session ดราม่าแห่งปี ในชื่อ "วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล์"</p>
                 <a href="#fb-comment-1" class="button read-more fb-comment-count">Comment</a>
@@ -84,7 +84,7 @@ $this->breadcrumbs = array(
             </div><!-- post-image -->
             <div class="text-post clearfix">
                 <div class="title-post">
-                    <h6><a href="blog-post.html">Agile Thailand 2013 : Agile in Startup</a></h6>	
+                    <h6><a class="fb-comment-count" href="#fb-comment-2">Agile Thailand 2013 : Agile in Startup</a></h6>	
                 </div>
                 <p>No description avaliable</p>
                 <a href="#fb-comment-2" class="button read-more fb-comment-count">Comment</a>
@@ -121,7 +121,7 @@ $this->breadcrumbs = array(
             </div><!-- post-image -->
             <div class="text-post clearfix">
                 <div class="title-post">
-                    <h6><a href="blog-post.html">Agile Thailand 2013 : Agile vs Lean</a></h6>	
+                    <h6><a class="fb-comment-count" href="#fb-comment-3">Agile Thailand 2013 : Agile vs Lean</a></h6>	
                 </div>
                 <p>Welcome to the lean entrepreneur</p>
                 <a href="#fb-comment-3" class="button read-more fb-comment-count">Comment</a>
@@ -157,7 +157,7 @@ $this->breadcrumbs = array(
             </div><!-- post-image -->
             <div class="text-post clearfix">
                 <div class="title-post">
-                    <h6>Agile Thailand 2013 : Kamon's Rules</h6>
+                    <h6><a class="fb-comment-count" href="#fb-comment-4">Agile Thailand 2013 : Kamon's Rules</a></h6>
                 </div>
                 <p>สร้างกฏไว้เยอะเกินจนงง ดู NCIS แล้วเค้ามี Gibbs' Rules เลยคิดว่าต้องทำบ้างแล้ว <a href="http://korn4d.wordpress.com/kamon-rules/">http://korn4d.wordpress.com/kamon-rules</a></p>
                 <a href="#fb-comment-3" class="button read-more fb-comment-count">Comment</a>

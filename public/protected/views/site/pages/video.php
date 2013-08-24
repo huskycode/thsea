@@ -48,7 +48,7 @@ $this->breadcrumbs = array(
             </div><!-- post-image -->
             <div class="text-post clearfix">
                 <div class="title-post">
-                    <h6><a href="blog-post.html">Agile Thailand 2013 : วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล์</a></h6>	
+                    <h6>Agile Thailand 2013 : วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล</h6>
                 </div>
                 <p>จาก "แบไต๋ไฮเทค: Special Report - วิกฤตการณ์โปรแกรมเมอร์ไทย" ได้เกิดการถกเถียงกันอย่างมากใน Facebook Group ของ Agile66 ถึงสาเหตุที่แท้จริงของปัญหา รวมไปถึงหนทางที่จะแก้ไข เราจึงพูดคุยกันว่าเราจะเอาเรื่องนี้มาคุย­กันใน กิจกรรมประจำปีของชาว Agile ที่มีชื่อว่า Agile Thailand 2013 ทำให้เกิดเป็น Panel Discussion Session ดราม่าแห่งปี ในชื่อ "วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล์"</p>
                 <a href="#fb-comment-1" class="button read-more fb-comment-count">Comment</a>
@@ -56,6 +56,7 @@ $this->breadcrumbs = array(
             <div class="hidden">
                 <div id="fb-comment-1" class="popup">
                     <div class="image-post video">
+                        <h6>Agile Thailand 2013 : วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล์</h6>
                         <iframe width="654" height="368" src="//www.youtube.com/embed/gVaRj5GgOPg" frameborder="0"></iframe>
                     </div>
                     <div class="comment">
@@ -91,6 +92,7 @@ $this->breadcrumbs = array(
             <div class="hidden">
                 <div id="fb-comment-2" class="popup">
                     <div class="image-post video">
+                        <h6>Agile Thailand 2013 : Agile in Startup</h6>
                         <iframe width="654" height="368" src="//www.youtube.com/embed/qYxFmmV0eA0" frameborder="0"></iframe>
                     </div>
                     <div class="comment">
@@ -127,6 +129,7 @@ $this->breadcrumbs = array(
             <div class="hidden">
                 <div id="fb-comment-3" class="popup">
                     <div class="image-post video">
+                        <h6>Agile Thailand 2013 : Agile vs Lean</h6>
                         <iframe width="654" height="368" src="//www.youtube.com/embed/ZM7PYrJ0MCE" frameborder="0"></iframe>
                     </div>
                     <div class="comment">
@@ -154,7 +157,7 @@ $this->breadcrumbs = array(
             </div><!-- post-image -->
             <div class="text-post clearfix">
                 <div class="title-post">
-                    <h6><a href="blog-post.html">Agile Thailand 2013 : Kamon's Rules</a></h6>	
+                    <h6>Agile Thailand 2013 : Kamon's Rules</h6>
                 </div>
                 <p>สร้างกฏไว้เยอะเกินจนงง ดู NCIS แล้วเค้ามี Gibbs' Rules เลยคิดว่าต้องทำบ้างแล้ว <a href="http://korn4d.wordpress.com/kamon-rules/">http://korn4d.wordpress.com/kamon-rules</a></p>
                 <a href="#fb-comment-3" class="button read-more fb-comment-count">Comment</a>
@@ -162,6 +165,7 @@ $this->breadcrumbs = array(
             <div class="hidden">
                 <div id="fb-comment-4" class="popup">
                     <div class="image-post video">
+                        <h6>Agile Thailand 2013 : Kamon's Rules</h6>
                         <iframe width="654" height="368" src="//www.youtube.com/embed/aD6eYjK36fA" frameborder="0"></iframe>
                     </div>
                     <div class="comment">
@@ -194,7 +198,7 @@ $this->breadcrumbs = array(
 <script type="text/javascript">
     jQuery.noConflict()(function($) {
         $(document).ready(function() {
-            $('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 470, width: "100%", height: "90%"});
+            $('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"});
         });
     });
 </script>

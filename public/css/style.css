@@ -1943,7 +1943,6 @@ padding-left: 23px !important;*/ }
 /*fix facebook comment to width 100% */
 .fb-comments, .fb-comments span, .fb-comments iframe[style] {width: 100% !important;}
 .hidden{display:none;}
-.popup{position:relative;}
 .popup .video{position:absolute;}
 .popup .comment{padding-left:710px;min-height:400px;}
 @media only screen and (min-width: 768px) and (max-width: 959px) {

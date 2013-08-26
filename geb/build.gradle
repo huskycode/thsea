@@ -1,0 +1,28 @@
+apply plugin: "groovy"
+apply plugin: "idea"
+
+repositories {
+    mavenCentral()
+}
+
+// The drivers we want to use
+dependencies {
+    def gebVersion = "0.9.0"
+    def seleniumVersion = "2.31.0"
+
+    testCompile 'org.codehaus.groovy:groovy-all:2.0.5'
+
+    testCompile 'junit:junit:4.11'
+
+    testCompile "org.gebish:geb-junit4:$gebVersion"
+    testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
+}
+
+test {
+    systemProperty "geb.build.reportsDir", reporting.file("geb")
+    systemProperty "geb.env", "firefox"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.5'
+}

@@ -38,6 +38,9 @@ $this->breadcrumbs = array(
 
             <div class="stack">
                 <div class="meta-post">
+                    <div style="right:0; position:absolute;background:none;" class="pull-right">
+                        <div class="fb-like" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#iikevideo1" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                    </div>
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
                     <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-1"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video1"/></fb:comments-count></a></span></div>
@@ -56,6 +59,9 @@ $this->breadcrumbs = array(
             <div class="hidden">
                 <div id="fb-comment-1" class="popup">
                     <div class="image-post video">
+                        <div style="float:right;" class="pull-right">
+                            <div class="fb-like" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#iikevideo1" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                        </div>
                         <h6>Agile Thailand 2013 : วิกฤติโปรแกรมเมอร์ไทย แก้ได้ด้วยอไจล์</h6>
                         <iframe width="654" height="368" src="//www.youtube.com/embed/gVaRj5GgOPg" frameborder="0"></iframe>
                     </div>
@@ -74,6 +80,9 @@ $this->breadcrumbs = array(
 
             <div class="stack">
                 <div class="meta-post">
+                    <div style="right:0; position:absolute;background:none;" class="pull-right">
+                        <div class="fb-like" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#iikevideo2" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                    </div>
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
                     <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-2"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video2"/></fb:comments-count></a></span></div>
@@ -92,6 +101,9 @@ $this->breadcrumbs = array(
             <div class="hidden">
                 <div id="fb-comment-2" class="popup">
                     <div class="image-post video">
+                        <div style="float:right;" class="pull-right">
+                            <div class="fb-like" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#iikevideo2" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                        </div>
                         <h6>Agile Thailand 2013 : Agile in Startup</h6>
                         <iframe width="654" height="368" src="//www.youtube.com/embed/qYxFmmV0eA0" frameborder="0"></iframe>
                     </div>
@@ -111,6 +123,9 @@ $this->breadcrumbs = array(
 
             <div class="stack">
                 <div class="meta-post">
+                    <div style="right:0; position:absolute;background:none;" class="pull-right">
+                        <div class="fb-like" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#iikevideo3" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                    </div>
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
                     <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-3"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video3"/></fb:comments-count></a></span></div>
@@ -129,6 +144,9 @@ $this->breadcrumbs = array(
             <div class="hidden">
                 <div id="fb-comment-3" class="popup">
                     <div class="image-post video">
+                        <div style="float:right;" class="pull-right">
+                            <div class="fb-like" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#iikevideo3" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                        </div>
                         <h6>Agile Thailand 2013 : Agile vs Lean</h6>
                         <iframe width="654" height="368" src="//www.youtube.com/embed/ZM7PYrJ0MCE" frameborder="0"></iframe>
                     </div>
@@ -147,6 +165,9 @@ $this->breadcrumbs = array(
 
             <div class="stack">
                 <div class="meta-post">
+                    <div style="right:0; position:absolute;background:none;" class="pull-right">
+                        <div class="fb-like" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#iikevideo4" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                    </div>
                     <div class="date" title="Posted Date"><span>Jul 20, 2013</span></div>
                     <div class="tags" title="Tags"><span><a href="#">AgileThailand</a>, <a href="#">2013</a></span></div>
                     <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-4"><fb:comments-count href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video4"/></fb:comments-count></a></span></div>
@@ -165,6 +186,9 @@ $this->breadcrumbs = array(
             <div class="hidden">
                 <div id="fb-comment-4" class="popup">
                     <div class="image-post video">
+                        <div style="float:right;" class="pull-right">
+                            <div class="fb-like" data-href="http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#iikevideo4" data-width="80" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                        </div>
                         <h6>Agile Thailand 2013 : Kamon's Rules</h6>
                         <iframe width="654" height="368" src="//www.youtube.com/embed/aD6eYjK36fA" frameborder="0"></iframe>
                     </div>

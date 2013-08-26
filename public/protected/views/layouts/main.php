@@ -16,7 +16,7 @@ $navItems = array(
         <meta charset="utf-8">
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         <meta name="author" content="Agile66">
-        <meta name="keywords" content="Software Enginereer, Agile, Video Tutorial, Project Management">
+        <meta name="keywords" content="Software Engineering, Agile, Video Tutorial, Project Management">
         <meta name="description" content="Thailand Software Engineering Academy">
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

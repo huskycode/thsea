@@ -126,7 +126,7 @@ $navItems = array(
                     m.parentNode.insertBefore(a, m)
                 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-                ga('create', 'UA-42629467-1', 'nfshost.com');
+                ga('create', 'UA-43492371-1', 'seacademy.in.th');
                 ga('send', 'pageview');
 
             </script>

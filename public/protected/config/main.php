@@ -20,14 +20,14 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		/*
+		
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'password'=>'gii1234',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
-		*/
+		
 	),
 
 	// application components
@@ -48,7 +48,13 @@ return array(
 		),
 		*/
 		'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
+			'connectionString' => 'mysql:host=localhost;dbname=thsea',
+			'emulatePrepare' => true,
+			'username' => 'thsea',
+			'password' => 'wzisli13',
+			'charset' => 'utf8',
+			'tablePrefix' => '',
+			'enableProfiling'=>true
 		),
 		// uncomment the following to use a MySQL database
 		/*

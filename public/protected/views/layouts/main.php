@@ -16,7 +16,7 @@ $navItems = array(
         <meta charset="utf-8">
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         <meta name="author" content="Agile66">
-        <meta name="keywords" content="Software Enginereer, Agile, Video Tutorial, Project Management">
+        <meta name="keywords" content="Software Engineering, Agile, Video Tutorial, Project Management">
         <meta name="description" content="Thailand Software Engineering Academy">
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -126,7 +126,7 @@ $navItems = array(
                     m.parentNode.insertBefore(a, m)
                 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-                ga('create', 'UA-42629467-1', 'nfshost.com');
+                ga('create', 'UA-43492371-1', 'seacademy.in.th');
                 ga('send', 'pageview');
 
             </script>

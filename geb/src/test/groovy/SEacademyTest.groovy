@@ -14,12 +14,5 @@ class SEacademyTest extends GebReportingTest {
         
 	    assert title == "Thailand Software Engineering Academy"	
     }
-
-    @Test
-    void theBuildShouldBeFault() {
-        to SEacademyPage
-        
-	    assert false	
-    }
     
 }

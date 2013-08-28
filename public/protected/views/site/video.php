@@ -27,6 +27,19 @@ function renderTags($videoTags) {
     echo implode(", ", $tags_link);
 }
 ?>
+<style type="text/css">
+    ul.yiiPager li{
+        font-size: 1.5em;
+    }
+    
+    ul.yiiPager li.next{
+        border-top: 3px solid #FF7E00;
+        width: 30px;
+        background-image: url('<?php echo Yii::app()->request->getBaseUrl(true); ?>/images/icons/sprites.png');
+        padding: 2px 0;
+        border: #cccccc solid 1px;
+    }
+</style>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -125,22 +138,14 @@ function renderTags($videoTags) {
             </div><!-- entry-post -->
 
         <?php endforeach; ?>
+            <div style="font-size: 2em;">
+              <?php $this->widget('CLinkPager', array(
+                  'pages' => $pages, 
+                  'header'=>'',
+                  'nextPageLabel'=>'>',
+                  'prevPageLabel'=>'<')); ?>  
+            </div>
 
-
-        <!-- START PAGINATION-->
-        <div id="nav-pagination">
-            <ul class="nav-pagination clearfix">
-                <li class="first"><a href="#"></a></li>
-                <li clase="current"><a href="#">1</a></li>
-                <!--<li class="current"><a href="#">2</a></li>-->
-                <!--<li><a href="#">3</a></li>-->
-                <!--<li><a href="#">4</a></li>-->
-                <!--<li><a href="#">5</a></li>-->
-                <!--<li><a href="#">6</a></li>-->
-                <!--<li><a href="#">7</a></li>-->
-                <li class="last"><a href="#"></a></li>
-            </ul>
-        </div><!-- #nav-pagination -->
     </div><!-- main-content -->
 
     <!-- START SIDEBAR -->

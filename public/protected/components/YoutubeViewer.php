@@ -5,7 +5,7 @@
  * @author Rux
  */
 class YoutubeViewer extends CWidget {
-    public $v;
+    public $url;
     public $width;
     public $height;
     public $display;
@@ -15,7 +15,7 @@ class YoutubeViewer extends CWidget {
     const DISPLAY_IMAGE = 'image';
     
     public function run() {
-        if (!isset($this->v) || $this->v==''){
+        if (!isset($this->url) || $this->url==''){
             echo "Please specify 'v'.";
             return;
         }
@@ -28,14 +28,14 @@ class YoutubeViewer extends CWidget {
     }
     
     private function getVideoId(){
-        if(strtolower(substr($this->v, 0, 4))=='http'){
+        if(strtolower(substr($this->url, 0, 4))=='http'){
              preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", 
-            $this->v, 
+            $this->url, 
             $matches);
             return $matches[0];
         }
         
-        return $this->v;
+        return $this->url;
     }
     
     private function renderVideo(){

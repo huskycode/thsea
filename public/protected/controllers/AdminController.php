@@ -2,7 +2,7 @@
 
 class AdminController extends Controller {
     
-    const PAGE_SIZE = 10;
+    const PAGE_SIZE = 2;
 
     public function actionIndex() {
         $this->render('index');
@@ -13,12 +13,13 @@ class AdminController extends Controller {
         $criteria->order = "posted_date DESC";
 
         $model = new Video();
-        $list = $model->with('videoTags')->findAll($criteria);
 
         $total = $model->count($criteria);
         $pages = new CPagination($total);
         $pages->pageSize = self::PAGE_SIZE;
         $pages->applyLimit($criteria);
+        
+        $list = $model->with('videoTags')->findAll($criteria);
 
         $this->render('video', array(
             'list' => $list,

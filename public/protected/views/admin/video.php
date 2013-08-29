@@ -43,7 +43,7 @@ $this->breadcrumbs = array(
 <?php foreach ($list as $row): ?>
 <div>
     <div class="divider-blog-1px" style="clear:both; margin-top: 0px;"></div>
-    <div style="float:left; padding: 5px;">
+    <div style="float:left; padding: 5px;padding-left: 15px;">
         <a href="<?=$row->url?>" target="_blank">
             <?php $this->widget('application.components.YoutubeViewer', array(
                 'url'=>$row->url,
@@ -54,12 +54,13 @@ $this->breadcrumbs = array(
         </a>
     </div>
     <div style="float:left; padding: 5px;">
-         <strong><?php echo$row->id; ?>. <?php echo $row->title; ?></strong><br />
+         <strong><?php echo $row->title; ?></strong><br />
          Posted date: <?php echo Yii::app()->dateFormatter->formatDateTime($row->posted_date, 'long', null)?>
     </div>
 </div>
 <?php endforeach; ?>
-<div class="divider-blog-1px"></div>
+<div class='clear'></div>
+<div class="divider-blog-1px;margin-top:0px;"></div>
 <div class='clear'></div>
 <div style='background-color: #cccccc; text-align: right;'>
     <?php $this->widget('CLinkPager', array('pages' => $pages)); ?>

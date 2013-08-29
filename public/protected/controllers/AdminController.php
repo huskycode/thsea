@@ -2,7 +2,7 @@
 
 class AdminController extends Controller {
     
-    const PAGE_SIZE = 2;
+    const PAGE_SIZE = 15;
 
     public function actionIndex() {
         $this->render('index');

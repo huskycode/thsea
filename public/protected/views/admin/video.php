@@ -35,7 +35,7 @@ $this->breadcrumbs = array(
     </select> -->
     <div style="float:left"><h5>Videos</h5></div>
     <div style="float: right">
-    <strong>View:</strong> Newest&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <strong>View:</strong> Most recent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     </div>
 </div>
 <div class="clear"> </div>

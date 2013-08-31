@@ -49,7 +49,7 @@ return array(
 		*/
                 
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=thsea',
+			'connectionString' => 'mysql:host=172.17.0.172;dbname=thsea',
 			'emulatePrepare' => true,
 			'username' => 'thsea_admin',
 			'password' => 'andaman',

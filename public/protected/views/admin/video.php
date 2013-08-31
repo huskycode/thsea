@@ -63,6 +63,6 @@ $this->breadcrumbs = array(
 <div class="divider-blog-1px;margin-top:0px;"></div>
 <div class='clear'></div>
 <div style='background-color: #cccccc; text-align: right;'>
-    <?php $this->widget('CLinkPager', array('pages' => $pages)); ?>
+    <?php //$this->widget('CLinkPager', array('pages' => $pages)); ?>
 </div>
 

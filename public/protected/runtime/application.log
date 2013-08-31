@@ -1000,3 +1000,360 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/index.php?r=adin/video
 ---
+2013/08/29 23:00:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: could not find driver' in D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Video))
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Video')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#9 D:\Software Projects\thsea\src\thsea\public\protected\controllers\AdminController.php(15): CActiveRecord->__construct()
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionVideo()
+#11 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('video')
+#15 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video')
+#16 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=admin/video
+---
+2013/08/30 00:08:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/log...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/site/index
+---
+2013/08/30 00:08:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/cli...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/clients/Agile66.jpg
+HTTP_REFERER=http://localhost:999/index.php/site/index
+---
+2013/08/30 00:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/log...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/site/index
+---
+2013/08/30 00:08:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/sli...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/sliders/camera/slide03.jpg
+HTTP_REFERER=http://localhost:999/index.php/site/index
+---
+2013/08/30 00:08:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/log...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=video
+---
+2013/08/30 00:08:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/log...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=video
+---
+2013/08/30 00:08:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/log...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=about
+---
+2013/08/30 00:08:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/abo...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/about/delivery_software.jpg
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=about
+---
+2013/08/30 00:08:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/log...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=about
+---
+2013/08/30 00:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/con...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/contributor/non.jpg
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=contributor
+---
+2013/08/30 00:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/log...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=contributor
+---
+2013/08/30 00:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/con...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/contributor/arm.jpg
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=contributor
+---
+2013/08/30 00:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/con...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/contributor/bomb.jpg
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=contributor
+---
+2013/08/30 00:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/con...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/contributor/roong.jpg
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=contributor
+---
+2013/08/30 00:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/con...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/contributor/kong.jpg
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=contributor
+---
+2013/08/30 00:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/con...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/contributor/off.jpg
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=contributor
+---
+2013/08/30 00:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/con...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/contributor/pla.jpg
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=contributor
+---
+2013/08/30 00:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/con...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/contributor/nook.png
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=contributor
+---
+2013/08/30 00:08:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/log...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=contributor
+---
+2013/08/30 00:08:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/log...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=about
+---
+2013/08/30 00:08:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/abo...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/about/delivery_software.jpg
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=about
+---
+2013/08/30 00:08:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/images/log...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/site/page?view=about
+---
+2013/08/30 13:47:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [1045] Access denied for user 'thsea'@'localhost' (using password: YES)' in D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php:381
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(438): CModule->getComponent('db')
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(623): CApplication->getDb()
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(2309): CActiveRecord->getDbConnection()
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Video))
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Video')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#9 D:\Software Projects\thsea\src\thsea\public\protected\controllers\AdminController.php(15): CActiveRecord->__construct()
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionVideo()
+#11 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#13 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('video')
+#15 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video')
+#16 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=admin/video
+---
+2013/08/30 19:06:45 [error] [php] PDO::__construct(): php_network_getaddresses: getaddrinfo failed: No such host is known.  (D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php:423)
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive()
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(438): CWebApplication->getComponent()
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(623): CWebApplication->getDb()
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(2309): Video->getDbConnection()
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(402): model()
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(77): Video->getMetaData()
+#9 D:\Software Projects\thsea\src\thsea\public\protected\controllers\AdminController.php(15): Video->__construct()
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionVideo()
+#11 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): AdminController->runAction()
+#13 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#14 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#15 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\Software Projects\thsea\src\thsea\public\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=admin/video
+in D:\Software Projects\thsea\src\thsea\public\protected\controllers\AdminController.php (15)
+in D:\Software Projects\thsea\src\thsea\public\index.php (13)
+2013/08/30 19:06:54 [error] [php] PDO::__construct(): php_network_getaddresses: getaddrinfo failed: No such host is known.  (D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php:423)
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive()
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(438): CWebApplication->getComponent()
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(623): CWebApplication->getDb()
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(2309): Video->getDbConnection()
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(402): model()
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(77): Video->getMetaData()
+#9 D:\Software Projects\thsea\src\thsea\public\protected\controllers\SiteController.php(39): Video->__construct()
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionVideo()
+#11 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): SiteController->runAction()
+#13 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#15 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\Software Projects\thsea\src\thsea\public\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/video
+in D:\Software Projects\thsea\src\thsea\public\protected\controllers\SiteController.php (39)
+in D:\Software Projects\thsea\src\thsea\public\index.php (13)
+2013/08/30 19:07:51 [error] [php] PDO::__construct(): php_network_getaddresses: getaddrinfo failed: No such host is known.  (D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php:423)
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive()
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(438): CWebApplication->getComponent()
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(623): CWebApplication->getDb()
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(2309): Video->getDbConnection()
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(402): model()
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(77): Video->getMetaData()
+#9 D:\Software Projects\thsea\src\thsea\public\protected\controllers\SiteController.php(39): Video->__construct()
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionVideo()
+#11 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): SiteController->runAction()
+#13 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#15 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 D:\Software Projects\thsea\src\thsea\public\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=site/video
+in D:\Software Projects\thsea\src\thsea\public\protected\controllers\SiteController.php (39)
+in D:\Software Projects\thsea\src\thsea\public\index.php (13)

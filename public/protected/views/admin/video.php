@@ -57,12 +57,16 @@ $this->breadcrumbs = array(
          <strong><?php echo $row->title; ?></strong><br />
          Posted date: <?php echo Yii::app()->dateFormatter->formatDateTime($row->posted_date, 'long', null)?>
     </div>
+    <div style="float:right; padding: 5px;">
+        <input type="button" value="Edit" />
+        <input type="button" value="Delete" />
+    </div>
 </div>
 <?php endforeach; ?>
 <div class='clear'></div>
 <div class="divider-blog-1px;margin-top:0px;"></div>
 <div class='clear'></div>
 <div style='background-color: #cccccc; text-align: right;'>
-    <?php //$this->widget('CLinkPager', array('pages' => $pages)); ?>
+    <?php $this->widget('CLinkPager', array('pages' => $pages)); ?>
 </div>
 

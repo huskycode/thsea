@@ -36,9 +36,11 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+		/*
 		'assetManager'=>array(
                 'class'=>'application.extensions.SafeModeAssetManager',
         ),
+        */
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(

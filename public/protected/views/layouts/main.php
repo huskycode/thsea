@@ -2,7 +2,7 @@
 /* @var $this Controller */
 $navItems = array(
     array('label' => 'Home', 'url' => array('/site/index')),
-    array('label' => 'Video', 'url' => array('/site/page', 'view' => 'video')),
+    array('label' => 'Video', 'url' => array('/site/video')),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
     array('label' => 'Contributor', 'url' => array('/site/page', 'view' => 'contributor'))
 );

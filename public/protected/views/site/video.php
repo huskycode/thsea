@@ -5,15 +5,15 @@ $this->breadcrumbs = array(
     'Video',
 );
 
-function getCommentUrl($videoTags) {
+function getCommentUrl($url) {
     //return 'http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video' . $id;
     // return $this->createAbsoluteUrl('site/video', array('#'=>'video'.$id));
-    return 'http://www.youtube.com/watch?v='.$videoTags;
+    return $url;
 }
 
-function getLikeUrl($videoTags){
+function getLikeUrl($url){
     //return 'http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#iikevideo' . $id;
-    return 'http://www.youtube.com/watch?v='.$videoTags.'&like=true';
+    return $url.'&like=true';
 }
 
 function convertUrlToLink($text) {
@@ -77,7 +77,7 @@ function renderTags($videoTags) {
                 <div class="stack">
                     <div class="meta-post">
                         <div style="right:0; position:absolute;background:none;" class="pull-right">
-                            <div class="fb-like" data-href="<?php echo getLikeUrl($row->videoTags); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                            <div class="fb-like" data-href="<?php echo getLikeUrl($row->url); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
                         </div>
                         <div class="date" title="Posted Date"><span><?php echo Yii::app()->dateFormatter->formatDateTime($row->posted_date, 'long', null) ?></span></div>
                         <div class="tags" title="Tags"><span>

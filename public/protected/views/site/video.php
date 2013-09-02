@@ -85,7 +85,7 @@ function renderTags($videoTags) {
                                 renderTags($row->videoTags);
                                 ?>
                             </span></div>
-                        <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><fb:comments-count href="<?php echo getCommentUrl($row->videoTags); ?>"/></fb:comments-count></a></span></div>
+                        <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><fb:comments-count href="<?php echo getCommentUrl($row->url); ?>"/></fb:comments-count></a></span></div>
                     </div><!-- meta-post -->
                 </div><!-- stack -->
                 <div class="image-post">
@@ -119,7 +119,7 @@ function renderTags($videoTags) {
                     <div id="fb-comment-<?php echo $row->id; ?>" class="popup">
                         <div class="image-post video">
                             <div style="float:right;" class="pull-right">
-                                <div class="fb-like" data-href="<?php echo getLikeUrl($row->videoTags); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                                <div class="fb-like" data-href="<?php echo getLikeUrl($row->url); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
                             </div>
                             <h6><?php echo $row->title; ?></h6>
                             <?php
@@ -132,7 +132,7 @@ function renderTags($videoTags) {
                             ?>
                         </div>
                         <div class="comment">
-                            <div class="fb-comments" data-href="<?php echo getCommentUrl($row->videoTags); ?>"></div>
+                            <div class="fb-comments" data-href="<?php echo getCommentUrl($row->url); ?>"></div>
                         </div>
                     </div>
                 </div>

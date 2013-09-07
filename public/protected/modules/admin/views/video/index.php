@@ -8,7 +8,7 @@ $this->breadcrumbs = array(
 <style type="text/css">
     .video-panel{
         background-color: #ebebeb; 
-        height: 30px; 
+        height: 40px; 
         line-height: 30px; 
         vertical-align: middle;
         padding-top: 10px;
@@ -33,9 +33,14 @@ $this->breadcrumbs = array(
         <option>Newest</option>
         <option>Most view</option>
     </select> -->
-    <div style="float:left"><h5>Videos</h5></div>
+    <div style="float:left">
+        <h4><strong>Videos</strong></h4s>        
+    </div>
+    <div style="float:left"></div>
     <div style="float: right">
-    <strong>View:</strong> Most recent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!--<strong>View:</strong> Most recent&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+        <input type="button" value="+ Add" onclick="window.location='<?php echo Yii::app()->createUrl('admin/video/create'); ?>'" />
+        &nbsp;&nbsp;
     </div>
 </div>
 <div class="clear"> </div>
@@ -58,8 +63,8 @@ $this->breadcrumbs = array(
          Posted date: <?php echo Yii::app()->dateFormatter->formatDateTime($row->posted_date, 'long', null)?>
     </div>
     <div style="float:right; padding: 5px;">
-        <input type="button" value="Edit" />
-        <input type="button" value="Delete" />
+        <input type="button" value="Edit" onclick="window.location='<?php echo Yii::app()->createUrl('/admin/video/update', array('id'=>$row->id)); ?>';" />
+        <input type="button" value="Delete" onclick="if(confirm('Are you sure you want to delete this item?')){window.location='<?php echo Yii::app()->createUrl('/admin/video/delete', array('id'=>$row->id)); ?>';}" />
     </div>
 </div>
 <?php endforeach; ?>

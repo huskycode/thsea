@@ -1,3 +1,5 @@
 /nbproject/private/
 /geb/build
 /geb/.gradle
+/public/assets
+/public/protected/runtime

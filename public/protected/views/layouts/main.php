@@ -1,7 +1,7 @@
 <?php
 /* @var $this Controller */
 $navItems = array(
-    array('label' => 'Home', 'url' => array('/site/index')),
+    array('label' => 'Home', 'url' => Yii::app()->request->hostInfo),
     array('label' => 'Video', 'url' => array('/site/video')),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
     array('label' => 'Contributor', 'url' => array('/site/page', 'view' => 'contributor'))
@@ -29,7 +29,8 @@ $navItems = array(
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/mediaelementplayer.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/colorbox.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />
-        <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>        
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
         <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -40,6 +41,7 @@ $navItems = array(
         <link rel="apple-touch-icon" sizes="72x72" href="<?php echo Yii::app()->request->baseUrl; ?>/images/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="<?php echo Yii::app()->request->baseUrl; ?>/images/apple-touch-icon-114x114.png">
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
     </head>
     <body>
         <!-- Primary Page Layout -->
@@ -48,7 +50,7 @@ $navItems = array(
             <div class="container">
                 <div class="four columns">
                     <div id="logo">
-                        <a href="index.php"><img src="images/logo.png" alt="Thailand Software Engineering Academy" ></a>
+                        <a href="/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo.png" alt="Thailand Software Engineering Academy" ></a>
                     </div><!-- .logo -->
                 </div><!-- four columns -->
                 <div class="twelve columns navigation">
@@ -72,7 +74,7 @@ $navItems = array(
             <div class="btop-1px"></div>
             <div class="container">
                 <div class="four columns copyright">
-                    <img src="images/logo-footer.png" alt="" />
+                    <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo-footer.png" alt="" />
                     <p class="last">@2013 All Rights Reserved.</p>
                 </div><!-- .copyright -->
                 <div class="twelve columns">

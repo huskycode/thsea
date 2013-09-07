@@ -12,14 +12,14 @@ $this->pageTitle = Yii::app()->name;
 
         <!-- start slider -->
         <div class="sixteen columns camera_wrap camera_burgundy_skin clearfix" id="camera_wrap_1">
-            <div data-src="images/sliders/camera/slide03.jpg"></div>			
-            <div data-src="images/sliders/camera/slide00.jpg"></div>
-            <div data-src="images/sliders/camera/slide01.jpg">
+            <div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide03.jpg"></div>			
+            <div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide00.jpg"></div>
+            <div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide01.jpg">
                 <div class="camera_caption fadeFromBottom">
                     Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>
                 </div>
             </div>
-            <div data-src="images/sliders/camera/slide02.jpg">
+            <div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide02.jpg">
                 <div class="camera_caption fadeFromBottom">
                     It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
                 </div>
@@ -49,7 +49,7 @@ $this->pageTitle = Yii::app()->name;
         <!-- start carousel -->
         <li><div class="four columns">
                 <div class="block">
-                    <a href="http://www.agile66.com/" target="_blank" alt="Agile66"><img src="images/clients/Agile66.jpg" alt="" /></a>
+                    <a href="http://www.agile66.com/" target="_blank" alt="Agile66"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/Agile66.jpg" alt="" /></a>
                 </div><!-- block -->  
             </div><!-- .four  --></li>
         <!--<li><div class="four columns">

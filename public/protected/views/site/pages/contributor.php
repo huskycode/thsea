@@ -28,25 +28,25 @@ $this->breadcrumbs=array(
 
 			<div class="row">				   	
 				   	<div class="four-column ">
-				   		<a class="zoom" href="./images/contributor/non.jpg"><img src="./images/contributor/non.jpg" alt="" class="border " /></a>
+				   		<a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/non.jpg"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/non.jpg" alt="" class="border " /></a>
 				   		<p class="description"> วโรกาส ภาณุสุวรรณ (นนท์)</p>
 				   		<p class="description">Varokas Panusuwan</p>
 				   		<p class="description">Product Owner</p>
 				   	</div>
 				   	<div class="four-column ">
-				   		<a class="zoom" href="./images/contributor/arm.jpg"><img src="./images/contributor/arm.jpg" alt="" class="border " /></a>
+				   		<a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/arm.jpg"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/arm.jpg" alt="" class="border " /></a>
 				   		<p class="description">อดิสรณ์ โชคอำนวย (อาร์ม)</p>
 				   		<p class="description">Adisorn Chockaumnuai (Arm)</p>
 				   		<p class="description">Scrum Master</p>
 				   	</div>
 				   	<div class="four-column">
-				   		<a class="zoom" href="./images/contributor/bomb.jpg"><img src="./images/contributor/bomb.jpg" alt="" class="border " /></a>
+				   		<a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/bomb.jpg"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/bomb.jpg" alt="" class="border " /></a>
 				   		<p class="description">กรัณย์ ศิวารัตน์ (บอมบ์)</p>
 				   		<p class="description">Karan Sivarat (Bomb)</p>
 				   		<p class="description">Scrum Master</p>
 				   	</div>
 				   	<div class="four-column column-last">
-				   		<a class="zoom" href="./images/contributor/roong.jpg"><img src="./images/contributor/roong.jpg" alt="" class="border " /></a>
+				   		<a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/roong.jpg"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/roong.jpg" alt="" class="border " /></a>
 				   		<p class="description">พิษณุ สว่างแผ้ว(รุ่ง)</p>
 				   		<p class="description">Pitsanu Swangpheaw (Roong)</p>
 				   		<p class="description">Technical Consultant</p>
@@ -55,25 +55,25 @@ $this->breadcrumbs=array(
 			</div>
 			<div class="row">
 				   	<div class="four-column ">
-				   		<a class="zoom" href="./images/contributor/kong.jpg"><img src="./images/contributor/kong.jpg" alt="" class="border " /></a>
+				   		<a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/kong.jpg"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/kong.jpg" alt="" class="border " /></a>
 				   		<p class="description">นราธิป หริจิระติวงศ์(ก้อง)</p>
 				   		<p class="description">Narathip Harijiratiwong (Kong)</p>
 				   		<p class="description">Developer</p>
 				   	</div>
 				   	<div class="four-column ">
-				   		<a class="zoom" href="./images/contributor/off.jpg"><img src="./images/contributor/off.jpg" alt="" class="border " /></a>
+				   		<a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/off.jpg"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/off.jpg" alt="" class="border " /></a>
 				   		<p class="description">วรัญช์ เจริญสุข (ออฟ)</p>
 				   		<p class="description">Warun Chareonsuk (Off)</p>
 				   		<p class="description">Developer</p>
 				   	</div>
 				   	<div class="four-column ">
-				   		<a class="zoom" href="./images/contributor/pla.jpg"><img src="./images/contributor/pla.jpg" alt="" class="border " /></a>
+				   		<a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/pla.jpg"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/pla.jpg" alt="" class="border " /></a>
 				   		<p class="description">เจนจิรา วงศ์บุญสิน (ปลา)</p>
 				   		<p class="description">Jenjira Wongboonsin (Pla)</p>
 				   		<p class="description">Developer</p>
 				   	</div>
 				   	<div class="four-column column-last ">
-				   		<a class="zoom" href="./images/contributor/nook.png"><img src="./images/contributor/nook.png" alt="" class="border " /></a>
+				   		<a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/nook.png"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/nook.png" alt="" class="border " /></a>
 				   		<p class="description">สุนัย สุขเอนก (นุก)</p>
 				   		<p class="description">Sunai Sukanake (Nook)</p>
 				   		<p class="description">Developer</p>

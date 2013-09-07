@@ -1,0 +1,752 @@
+2013/09/07 19:39:18 [error] [php] Undefined variable: model (D:\Software Projects\thsea\src\thsea\public\protected\views\admin\video\create.php:9)
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(869): VideoController->renderFile()
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(782): VideoController->renderPartial()
+#2 D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php(28): VideoController->render()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): VideoController->actionCreate()
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): VideoController->runAction()
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): VideoController->runActionWithFilters()
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): VideoController->run()
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=/admin/video/create
+in D:\Software Projects\thsea\src\thsea\public\protected\views\admin\video\create.php (9)
+in D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php (28)
+in D:\Software Projects\thsea\src\thsea\public\index.php (13)
+2013/09/07 20:15:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'recording_date' at row 1. The SQL statement executed was: INSERT INTO `video` (`title`, `url`, `posted_date`, `posted_by`, `description`, `recording_date`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php (35)
+in D:\Software Projects\thsea\src\thsea\public\index.php (13)
+2013/09/07 20:15:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'recording_date' at row 1. The SQL statement executed was: INSERT INTO `video` (`title`, `url`, `posted_date`, `posted_by`, `description`, `recording_date`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php(35): CActiveRecord->save()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): VideoController->actionCreate()
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('/admin/video/cr...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=/admin/video/create
+HTTP_REFERER=http://localhost:999/index.php?r=/admin/video/create
+---
+2013/09/07 20:15:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('view')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/vie...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=admin/video/view&id=4147
+HTTP_REFERER=http://localhost:999/index.php?r=/admin/video/create
+---
+2013/09/07 20:21:46 [error] [php] Undefined offset: 0 (D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php:35)
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(173): YoutubeViewer->run()
+#1 D:\Software Projects\thsea\src\thsea\public\protected\views\admin\video\index.php(53): VideoController->widget()
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(126): require()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(95): VideoController->renderInternal()
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(869): VideoController->renderFile()
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(782): VideoController->renderPartial()
+#6 D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php(23): VideoController->render()
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): VideoController->actionIndex()
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): VideoController->runAction()
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): VideoController->runActionWithFilters()
+#11 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): VideoController->run()
+#12 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\Software Projects\thsea\src\thsea\public\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=/admin/video&id=4147
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (35)
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (51)
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (24)
+2013/09/07 20:22:14 [error] [php] Undefined offset: 0 (D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php:35)
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(173): YoutubeViewer->run()
+#1 D:\Software Projects\thsea\src\thsea\public\protected\views\admin\video\index.php(53): VideoController->widget()
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(126): require()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(95): VideoController->renderInternal()
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(869): VideoController->renderFile()
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(782): VideoController->renderPartial()
+#6 D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php(23): VideoController->render()
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): VideoController->actionIndex()
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): VideoController->runAction()
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): VideoController->runActionWithFilters()
+#11 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): VideoController->run()
+#12 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\Software Projects\thsea\src\thsea\public\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=/admin/video
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (35)
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (51)
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (24)
+2013/09/07 20:23:15 [error] [php] Undefined offset: 0 (D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php:37)
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(173): YoutubeViewer->run()
+#1 D:\Software Projects\thsea\src\thsea\public\protected\views\admin\video\index.php(53): VideoController->widget()
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(126): require()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(95): VideoController->renderInternal()
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(869): VideoController->renderFile()
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(782): VideoController->renderPartial()
+#6 D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php(23): VideoController->render()
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): VideoController->actionIndex()
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): VideoController->runAction()
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): VideoController->runActionWithFilters()
+#11 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): VideoController->run()
+#12 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\Software Projects\thsea\src\thsea\public\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=/admin/video
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (37)
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (53)
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (24)
+2013/09/07 20:23:16 [error] [php] Undefined offset: 0 (D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php:37)
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(173): YoutubeViewer->run()
+#1 D:\Software Projects\thsea\src\thsea\public\protected\views\admin\video\index.php(53): VideoController->widget()
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(126): require()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CBaseController.php(95): VideoController->renderInternal()
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(869): VideoController->renderFile()
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(782): VideoController->renderPartial()
+#6 D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php(23): VideoController->render()
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): VideoController->actionIndex()
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): VideoController->runAction()
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): VideoController->runActionWithFilters()
+#11 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): VideoController->run()
+#12 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 D:\Software Projects\thsea\src\thsea\public\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=/admin/video
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (37)
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (53)
+in D:\Software Projects\thsea\src\thsea\public\protected\components\YoutubeViewer.php (24)
+2013/09/07 20:31:24 [error] [exception.CException] exception 'CException' with message 'VideoController cannot find the requested view "update".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:878
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#1 D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php(57): CController->render('update', Array)
+#2 [internal function]: VideoController->actionUpdate('4143')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=admin/video/update&id=4143
+HTTP_REFERER=http://localhost:999/index.php?r=/admin/video
+---
+2013/09/07 20:31:30 [error] [exception.CException] exception 'CException' with message 'VideoController cannot find the requested view "update".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:878
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#1 D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php(57): CController->render('update', Array)
+#2 [internal function]: VideoController->actionUpdate('4143')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('/admin/video/up...')
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=/admin/video/update&id=4143
+---
+2013/09/07 20:31:37 [error] [exception.CException] exception 'CException' with message 'VideoController cannot find the requested view "update".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:878
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#1 D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php(57): CController->render('update', Array)
+#2 [internal function]: VideoController->actionUpdate('4143')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('/admin/video/up...')
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=/admin/video/update&id=4143
+---
+2013/09/07 20:32:14 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:336
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('/admin/video/up...')
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/index.php?r=/admin/video/update/4143
+---
+2013/09/07 20:32:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "update?id=4143".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('update?id=4143')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update?id=4143')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('/admin/video/up...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=/admin/video/update?id=4143
+---
+2013/09/07 20:32:39 [error] [exception.CException] exception 'CException' with message 'VideoController cannot find the requested view "update".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:878
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#1 D:\Software Projects\thsea\src\thsea\public\protected\controllers\admin\VideoController.php(57): CController->render('update', Array)
+#2 [internal function]: VideoController->actionUpdate('4144')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=admin/video/update&id=4144
+HTTP_REFERER=http://localhost:999/index.php?r=/admin/video
+---
+2013/09/07 21:17:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/video".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=admin/video
+---
+2013/09/07 21:17:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/admin/video".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('/admin/video')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=/admin/video
+---
+2013/09/07 21:24:07 [error] [exception.CException] exception 'CException' with message 'VideoController cannot find the requested view "update".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:878
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(782): CController->renderPartial('update', Array, true)
+#1 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(57): CController->render('update', Array)
+#2 [internal function]: VideoController->actionUpdate('4143')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=admin/video/update&id=4143
+HTTP_REFERER=http://localhost:999/index.php?r=admin/video
+---
+2013/09/07 21:27:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'recording_date' at row 1. The SQL statement executed was: UPDATE `video` SET `id`=:yp0, `title`=:yp1, `description`=:yp2, `url`=:yp3, `recording_date`=:yp4, `posted_date`=:yp5, `posted_by`=:yp6 WHERE `video`.`id`=4143.
+in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php (51)
+in D:\Software Projects\thsea\src\thsea\public\index.php (13)
+2013/09/07 21:27:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'recording_date' at row 1. The SQL statement executed was: UPDATE `video` SET `id`=:yp0, `title`=:yp1, `description`=:yp2, `url`=:yp3, `recording_date`=:yp4, `posted_date`=:yp5, `posted_by`=:yp6 WHERE `video`.`id`=4143' in D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(1691): CDbCommand->execute()
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(1070): CActiveRecord->updateByPk('4143', Array)
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->update(NULL)
+#3 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(51): CActiveRecord->save()
+#4 [internal function]: VideoController->actionUpdate('4143')
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#11 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#12 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=admin/video/update&id=4143
+HTTP_REFERER=http://localhost:999/index.php?r=admin/video/update&id=4143
+---
+2013/09/07 21:27:11 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'recording_date' at row 1. The SQL statement executed was: UPDATE `video` SET `id`=:yp0, `title`=:yp1, `description`=:yp2, `url`=:yp3, `recording_date`=:yp4, `posted_date`=:yp5, `posted_by`=:yp6 WHERE `video`.`id`=4143.
+in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php (51)
+in D:\Software Projects\thsea\src\thsea\public\index.php (13)
+2013/09/07 21:27:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'recording_date' at row 1. The SQL statement executed was: UPDATE `video` SET `id`=:yp0, `title`=:yp1, `description`=:yp2, `url`=:yp3, `recording_date`=:yp4, `posted_date`=:yp5, `posted_by`=:yp6 WHERE `video`.`id`=4143' in D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(1691): CDbCommand->execute()
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(1070): CActiveRecord->updateByPk('4143', Array)
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->update(NULL)
+#3 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(51): CActiveRecord->save()
+#4 [internal function]: VideoController->actionUpdate('4143')
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#11 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#12 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=admin/video/update&id=4143
+HTTP_REFERER=http://localhost:999/index.php?r=admin/video/update&id=4143
+---
+2013/09/07 21:31:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('admin')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/adm...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=admin/video/admin
+HTTP_REFERER=http://localhost:999/index.php?r=admin/video/index
+---
+2013/09/07 21:32:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'recording_date' at row 1. The SQL statement executed was: INSERT INTO `video` (`title`, `url`, `posted_date`, `posted_by`, `description`, `recording_date`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php (34)
+in D:\Software Projects\thsea\src\thsea\public\index.php (13)
+2013/09/07 21:32:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'recording_date' at row 1. The SQL statement executed was: INSERT INTO `video` (`title`, `url`, `posted_date`, `posted_by`, `description`, `recording_date`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in D:\Software Projects\thsea\src\thsea\public\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(34): CActiveRecord->save()
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(49): VideoController->actionCreate()
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/cre...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=admin/video/create
+HTTP_REFERER=http://localhost:999/index.php?r=admin/video/create
+---
+2013/09/07 21:37:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('create')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=create
+HTTP_REFERER=http://localhost:999/index.php?r=admin/video
+---
+2013/09/07 21:44:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/video".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/vid...')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=admin/admin/video
+HTTP_REFERER=http://localhost:999/index.php?r=admin/video/create
+---
+2013/09/07 21:44:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "video".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('video')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('video')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/vid...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=admin/video/video
+HTTP_REFERER=http://localhost:999/index.php?r=admin/video/create
+---
+2013/09/07 21:59:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/logo.png".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/images/lo...')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/admin/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video
+---
+2013/09/07 21:59:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/logo-footer.png".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/images/lo...')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/admin/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video
+---
+2013/09/07 21:59:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/logo.png".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/images/lo...')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/admin/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video
+---
+2013/09/07 21:59:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/images/logo-footer.png".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/images/lo...')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php/admin/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video
+---
+2013/09/07 21:59:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php:87
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(53): VideoController->loadModel('images')
+#1 [internal function]: VideoController->actionUpdate('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/admin/video/update/id/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/update/id/4148
+---
+2013/09/07 21:59:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php:87
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(53): VideoController->loadModel('images')
+#1 [internal function]: VideoController->actionUpdate('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/admin/video/update/id/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/update/id/4148
+---
+2013/09/07 21:59:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/index
+---
+2013/09/07 21:59:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/index
+---
+2013/09/07 22:00:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/index
+---
+2013/09/07 22:00:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/index
+---
+2013/09/07 22:00:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php:87
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(53): VideoController->loadModel('images')
+#1 [internal function]: VideoController->actionUpdate('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/admin/video/update/id/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/update/id/4145
+---
+2013/09/07 22:00:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php:87
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(53): VideoController->loadModel('images')
+#1 [internal function]: VideoController->actionUpdate('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/admin/video/update/id/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/update/id/4145
+---
+2013/09/07 22:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/index
+---
+2013/09/07 22:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/index
+---
+2013/09/07 22:00:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "indexj".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('indexj')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('indexj')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ind...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/video/indexj
+---
+2013/09/07 22:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php:87
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(53): VideoController->loadModel('images')
+#1 [internal function]: VideoController->actionUpdate('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/admin/video/update/id/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/update/id/4148
+---
+2013/09/07 22:00:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php:87
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(53): VideoController->loadModel('images')
+#1 [internal function]: VideoController->actionUpdate('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/admin/video/update/id/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/update/id/4148
+---
+2013/09/07 22:00:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/index
+---
+2013/09/07 22:00:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/index
+---
+2013/09/07 23:02:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/create
+---
+2013/09/07 23:02:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/create
+---
+2013/09/07 23:05:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/create
+---
+2013/09/07 23:05:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(270): CController->missingAction('images')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/ima...')
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/admin/video/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/create
+---
+2013/09/07 23:05:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php:87
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(53): VideoController->loadModel('images')
+#1 [internal function]: VideoController->actionUpdate('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/admin/video/update/id/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/update/id/4148
+---
+2013/09/07 23:05:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php:87
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(53): VideoController->loadModel('images')
+#1 [internal function]: VideoController->actionUpdate('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/admin/video/update/id/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/update/id/4148
+---
+2013/09/07 23:05:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php:87
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(53): VideoController->loadModel('images')
+#1 [internal function]: VideoController->actionUpdate('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/admin/video/update/id/images/logo.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/update/id/4144
+---
+2013/09/07 23:05:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php:87
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\protected\modules\admin\controllers\VideoController.php(53): VideoController->loadModel('images')
+#1 [internal function]: VideoController->actionUpdate('images')
+#2 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(VideoController), Array)
+#3 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(VideoController), Object(ReflectionMethod), Array)
+#4 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#8 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/video/upd...')
+#9 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php/admin/video/update/id/images/logo-footer.png
+HTTP_REFERER=http://localhost:999/index.php/admin/video/update/id/4144
+---
+2013/09/07 23:24:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/list".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('video/list')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/video
+---
+2013/09/07 23:24:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/index".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('video/index')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/video/index
+---
+2013/09/07 23:24:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/list".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('video/list')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/video
+---
+2013/09/07 23:25:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/list".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('video/list')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/video
+---
+2013/09/07 23:26:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "video/list".' in D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\Software Projects\thsea\src\thsea\public\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('video/list')
+#1 D:\Software Projects\thsea\src\thsea\public\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\Software Projects\thsea\src\thsea\public\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/video
+---

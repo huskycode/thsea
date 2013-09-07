@@ -31,7 +31,7 @@ class YoutubeViewer extends CWidget {
 
     private function getVideoId() {
         if (strtolower(substr($this->url, 0, 4)) == 'http') {
-            $matches = [];
+            $matches = array();
 
             preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $this->url, $matches);
 

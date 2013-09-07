@@ -1,14 +1,10 @@
 <?php
 
-class AdminController extends Controller {
-    
+class VideoController extends Controller {
+
     const PAGE_SIZE = 15;
-
+    
     public function actionIndex() {
-        $this->render('index');
-    }
-
-    public function actionVideo() {
         $criteria = new CDbCriteria();
         $criteria->order = "posted_date DESC";
 
@@ -18,10 +14,10 @@ class AdminController extends Controller {
         $pages = new CPagination($total);
         $pages->pageSize = self::PAGE_SIZE;
         $pages->applyLimit($criteria);
-        
+
         $list = $model->with('videoTags')->findAll($criteria);
 
-        $this->render('video', array(
+        $this->render('index', array(
             'list' => $list,
             'pages' => $pages
         ));

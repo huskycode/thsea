@@ -22,7 +22,7 @@ $this->breadcrumbs = array(
                             'url' => $row->url,
                             'width' => 940,
                             'height' => 400,
-                            'display' => 'image',
+                            'display' => 'source_image',
                             'alt' => $row->title
                         ));
                         ?>"></div>

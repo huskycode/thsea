@@ -15,7 +15,23 @@ $this->breadcrumbs = array(
 
         <!-- start slider -->
         <div class="sixteen columns camera_wrap camera_burgundy_skin clearfix" id="camera_wrap_1">
-            <div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide03.jpg"></div>			
+        <?php foreach ($list as $row): ?>
+		
+			<div><a href="./video" target="_blank">
+		                <?php
+                        $this->widget('application.components.YoutubeViewer', array(
+                            'url' => $row->url,
+                            'width' => 940,
+                            'height' => 400,
+                            'display' => 'image',
+                            'alt' => $row->title
+                        ));
+                        ?>
+			</a></div>
+
+        <?php endforeach; ?>						
+		<!--
+			<div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide03.jpg"></div>			
             <div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide00.jpg"></div>
             <div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide01.jpg">
                 <div class="camera_caption fadeFromBottom">
@@ -27,7 +43,8 @@ $this->breadcrumbs = array(
                     It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
                 </div>
             </div>
-        </div><!-- #camera_wrap_1 -->
+		-->
+		</div><!-- #camera_wrap_1 -->
         <!-- end slider -->
 
     </div><!-- .container -->

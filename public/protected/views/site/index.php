@@ -17,8 +17,7 @@ $this->breadcrumbs = array(
         <div class="sixteen columns camera_wrap camera_burgundy_skin clearfix" id="camera_wrap_1">
         <?php foreach ($list as $row): ?>
 		
-			<div><a href="./video" target="_blank">
-		                <?php
+			<div data-src="<?php
                         $this->widget('application.components.YoutubeViewer', array(
                             'url' => $row->url,
                             'width' => 940,
@@ -26,11 +25,11 @@ $this->breadcrumbs = array(
                             'display' => 'image',
                             'alt' => $row->title
                         ));
-                        ?>
-			</a></div>
-
+                        ?>"></div>
         <?php endforeach; ?>						
 		<!--
+		<a href="./video" target="_blank"></a>
+		
 			<div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide03.jpg"></div>			
             <div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide00.jpg"></div>
             <div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide01.jpg">

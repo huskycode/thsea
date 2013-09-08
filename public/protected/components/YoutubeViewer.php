@@ -12,9 +12,11 @@ class YoutubeViewer extends CWidget {
     public $height;
     public $display;
     public $alt;
+	
 
     const DISPLAY_VIDEO = 'video';
     const DISPLAY_IMAGE = 'image';
+	const SOURCE_IMAGE = 'source_image';
 
     public function run() {
         if (!isset($this->url) || $this->url == '') {
@@ -24,7 +26,9 @@ class YoutubeViewer extends CWidget {
 
         if (strtolower($this->display) == self::DISPLAY_IMAGE) {
             $this->renderImage();
-        } else {
+        } else if (strtolower($this->display) == self::SOURCE_IMAGE) {
+			$this->renderSource();
+		} else {
             $this->renderVideo();
         }
     }
@@ -55,6 +59,15 @@ class YoutubeViewer extends CWidget {
         }
         echo '<img alt="' . $this->alt . '" src="http://img.youtube.com/vi/' . $this->getVideoId() . '/' . $image_name . '" border="0" width="' . $this->width . 'px" height="' . $this->height . 'px" />';
     }
+	
+    private function renderSource() {
+        $image_name = 'sddefault.jpg';
+
+        if ($this->width > 200) {
+            $image_name = 'maxresdefault.jpg';
+        }
+        echo 'http://img.youtube.com/vi/' . $this->getVideoId() . '/' . $image_name';
+    }	
 
 }
 

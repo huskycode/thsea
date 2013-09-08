@@ -1,6 +1,9 @@
-<?php
+﻿<?php
 /* @var $this SiteController */
-$this->pageTitle = Yii::app()->name;
+$this->pageTitle = Yii::app()->name . ' - Index';
+$this->breadcrumbs = array(
+    'Index',
+);
 ?>
 <!-- START SLIDER WRAPPER -->
 <div id="slider-wrapper">

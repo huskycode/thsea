@@ -3,6 +3,7 @@
 class SiteController extends Controller {
     
     const PAGE_SIZE = 10;
+	const FIRSTPAGE_SIZE = 4;
 
     /**
      * Declares class-based actions.
@@ -29,7 +30,22 @@ class SiteController extends Controller {
     public function actionIndex() {
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
-        $this->render('index');
+		$criteria = new CDbCriteria();
+        $criteria->order = "posted_date DESC";
+
+        $model = new Video();
+
+        $total = $model->count($criteria);
+        $pages = new CPagination($total);
+        $pages->pageSize = self::FIRSTPAGE_SIZE;
+        $pages->applyLimit($criteria);
+        
+        $list = $model->with('videoTags')->findAll($criteria);
+
+        $this->render('index', array(
+            'list' => $list,
+            'pages' => $pages
+        ));
     }
 
     public function actionVideo() {        

@@ -52,21 +52,14 @@ return array(
             'rules'=>array(
                 'video'=>'site/video',
                 'page'=>'site/page',
-                '<controller:\w+>'=>'<controller>/list',
+                '<controller:\w+>'=>'<controller>/index',
                 '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+                '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<id:\d+>/<title>'=>'<controller>/view',
                 '<controller:\w+>/<id:\d+>'=>'<controller>/view',
             ),
         ),
-        'db' => array(
-            'connectionString' => 'mysql:host=thsea.db;dbname=thsea_uat',
-            'emulatePrepare' => true,
-            'username' => 'thsea_admin',
-            'password' => 'andaman',
-            'charset' => 'utf8',
-            'tablePrefix' => '',
-            'enableProfiling' => true
-        ),
+        'db' => require(dirname(__FILE__).'/db.php'),
         /*
           'db'=>array(
           'connectionString'=>'sqlite:'.dirname(__FILE__).'/../data/thsea_video.db'
@@ -98,5 +91,6 @@ return array(
     'params' => array(
         // this is used in contact page
         'adminEmail' => 'webmaster@example.com',
+        'passwordFilePath' => dirname(__FILE__).'/.htpasswd',
     ),
 );

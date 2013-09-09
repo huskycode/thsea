@@ -14,7 +14,7 @@ $this->breadcrumbs = array(
         </div><!-- #cta-block -->
 
         <!-- start slider -->
-
+		<a href="/video">
         <div class="sixteen columns camera_wrap camera_burgundy_skin clearfix" id="camera_wrap_1">
         <?php foreach ($list as $row): 
 			           $this->widget('application.components.YoutubeViewer', array(
@@ -27,7 +27,7 @@ $this->breadcrumbs = array(
 			  endforeach; 
 		?>					
 		<!--
-		<a href="/video"></a>
+
 		
 			<div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide03.jpg"></div>			
             <div data-src="<?php echo Yii::app()->request->baseUrl; ?>/images/sliders/camera/slide00.jpg"></div>
@@ -43,7 +43,7 @@ $this->breadcrumbs = array(
             </div>
 		-->
 		</div>
-		
+		</a>
 		<!-- #camera_wrap_1 -->
         <!-- end slider -->
 

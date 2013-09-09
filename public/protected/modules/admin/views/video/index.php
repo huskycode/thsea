@@ -20,13 +20,6 @@ $this->breadcrumbs = array(
         clear: both;
     }
 </style>
-<script type="text/javascript">
-    $(function(){
-       
-      
-      
-    });
-</script>
 <div class="divider-blog-1px" style="clear:both"></div>
 <div class="video-panel">
     <!--<select id="video-sort" >
@@ -34,7 +27,7 @@ $this->breadcrumbs = array(
         <option>Most view</option>
     </select> -->
     <div style="float:left">
-        <h4><strong>Videos</strong></h4s>        
+        <h4><strong>Video Links</strong></h4s>        
     </div>
     <div style="float:left"></div>
     <div style="float: right">
@@ -63,8 +56,8 @@ $this->breadcrumbs = array(
          Posted date: <?php echo Yii::app()->dateFormatter->formatDateTime($row->posted_date, 'long', null)?>
     </div>
     <div style="float:right; padding: 5px;">
-        <input type="button" value="Edit" onclick="window.location='<?php echo Yii::app()->createUrl('/admin/video/update', array('id'=>$row->id)); ?>';" />
-        <input type="button" value="Delete" onclick="if(confirm('Are you sure you want to delete this item?')){window.location='<?php echo Yii::app()->createUrl('/admin/video/delete', array('id'=>$row->id)); ?>';}" />
+        <input type="button" value="Edit" onclick="window.location='<?php echo Yii::app()->createUrl('/admin/video/update/' . $row->id); ?>';" />
+        <input type="button" value="Delete" onclick="if(confirm('Are you sure you want to delete this item?')){window.location='<?php echo Yii::app()->createUrl('/admin/video/delete/' . $row->id); ?>';}" />
     </div>
 </div>
 <?php endforeach; ?>

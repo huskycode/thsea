@@ -25,22 +25,12 @@ class VideoController extends Controller {
 
     public function actionCreate() {
         $model = new Video;
-
-        // Uncomment the following line if AJAX validation is needed 
-        // $this->performAjaxValidation($model); 
-
+        $model->posted_date = date('Y-m-d H:i:s');
+        
         if (isset($_POST['Video'])) {
             $model->attributes = $_POST['Video'];
             
-            if($model->recording_date==''){
-                $model->recording_date = null;
-            }
-            
-            if($model->description==''){
-                $model->description = null;
-            }
-            
-            if ($model->save())
+            if ($this->saveVideo($model))
                 $this->redirect(array('index'));
         }
 
@@ -52,27 +42,30 @@ class VideoController extends Controller {
     public function actionUpdate($id) {
         $model = $this->loadModel($id);
 
-        // Uncomment the following line if AJAX validation is needed 
-        // $this->performAjaxValidation($model); 
-
         if (isset($_POST['Video'])) {
             $model->attributes = $_POST['Video'];
             
-            if($model->recording_date==''){
-                $model->recording_date = null;
-            }
-            
-            if($model->description==''){
-                $model->description = null;
-            }
-            
-            if ($model->save())
+            if ($this->saveVideo($model))
                 $this->redirect(array('index'));
         }
 
         $this->render('update', array(
             'model' => $model,
         ));
+    }
+    
+    private function saveVideo($model){
+        $model->posted_by = 'admin';
+            
+        if($model->recording_date==''){
+            $model->recording_date = null;
+        }
+
+        if($model->description==''){
+            $model->description = null;
+        }
+
+        return $model->save();          
     }
 
     public function actionDelete($id) {

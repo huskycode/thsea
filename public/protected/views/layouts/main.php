@@ -40,8 +40,25 @@ $navItems = array(
         <link rel="apple-touch-icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/apple-touch-icon.png">
         <link rel="apple-touch-icon" sizes="72x72" href="<?php echo Yii::app()->request->baseUrl; ?>/images/apple-touch-icon-72x72.png">
         <link rel="apple-touch-icon" sizes="114x114" href="<?php echo Yii::app()->request->baseUrl; ?>/images/apple-touch-icon-114x114.png">
+        <style type="text/css">
+            .video-panel{
+                background-color: #ebebeb; 
+                height: 40px; 
+                line-height: 30px; 
+                vertical-align: middle;
+                padding-top: 10px;
+                padding-left: 5px;
+                padding-right: 10px;
+                width:100%;
+            }
+            .clear{
+                clear: both;
+            }
+        </style>
+        
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.tubular.1.0.js"></script>
     </head>
     <body>
         <!-- Primary Page Layout -->

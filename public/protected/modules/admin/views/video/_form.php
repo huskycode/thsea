@@ -5,12 +5,9 @@
 ?>
 <script type="text/javascript">
     jQuery(function() {
-        jQuery('#Video_posted_date').datepicker({
-            dateFormat: 'yy-mm-dd'
-        });
 
         jQuery('#Video_recording_date').datepicker({
-            dateFormat: 'yy-mm-dd'
+            dateFormat: 'yy-mm-dd',
         });
 
         jQuery('#Video_url').change(function() {
@@ -51,7 +48,7 @@
         <?php echo $form->error($model, 'title'); ?>
     </div>
 
-    <div class="row">
+    <div class="row" style="white-space:nowrap">
         <?php echo $form->labelEx($model, 'description'); ?>
         <?php
         echo $form->textArea($model, 'description', array('style' => 'width:400px;',
@@ -72,8 +69,7 @@
     <div class="row">
         <?php echo $form->labelEx($model, 'recording_date'); ?>
         <?php echo $form->textField($model, 'recording_date', array('style' => 'width:70px;', 
-                                                                    'maxlength' => 10,
-                                                                    'readonly'=>'readonly')); ?>
+                                                        'maxlength' => 10)); ?>   
         <?php echo $form->error($model, 'recording_date'); ?>
     </div>
 

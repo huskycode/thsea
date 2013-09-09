@@ -54,11 +54,9 @@ $navItems = array(
             .clear{
                 clear: both;
             }
-        </style>
-        
+        </style>        
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.tubular.1.0.js"></script>
     </head>
     <body>
         <!-- Primary Page Layout -->

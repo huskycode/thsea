@@ -68,10 +68,8 @@ class YoutubeViewer extends CWidget {
         }
         //echo 'http://img.youtube.com/vi/' . $this->getVideoId() . '/' . $image_name;
 		
-		echo '<a href="/video">
-					<div data-src="http://img.youtube.com/vi/'. $this->getVideoId() . '/' . $image_name .'"></div>
-					<div class="camera_caption fadeFromBottom">'. $this->alt .'</div>
-			  </a>';
+		echo '<div data-src="http://img.youtube.com/vi/'. $this->getVideoId() . '/' . $image_name .'"></div>
+			  <div class="camera_caption fadeFromBottom">'. $this->alt .'</div>';
 		
 		
     }	

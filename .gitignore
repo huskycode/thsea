@@ -1,3 +1,4 @@
 /nbproject/private/
 /geb/build
 /geb/.gradle
+/public/protected/runtime/*.log

@@ -66,7 +66,12 @@ class YoutubeViewer extends CWidget {
         if ($this->width > 200) {
             $image_name = 'maxresdefault.jpg';
         }
-        echo 'http://img.youtube.com/vi/' . $this->getVideoId() . '/' . $image_name;
+        //echo 'http://img.youtube.com/vi/' . $this->getVideoId() . '/' . $image_name;
+		
+		echo '<div data-src="http://img.youtube.com/vi/'. $this->getVideoId() . '/' . $image_name .'">
+			  <div class="camera_caption fadeFromBottom">'. $this->alt .'</div></div>';
+		
+		
     }	
 
 }

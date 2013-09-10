@@ -77,10 +77,16 @@ $navItems = array(
                             'items' => $navItems,
                         ));
                         ?>
-                    </div>	<!-- end #menu  -->	
+                    </div>
                 </div><!-- .twelve columns -->
             </div><!-- .container -->
         </div><!-- #slider-wraper -->
+        	<!-- end #menu  -->	
+                    <div style="float:right; padding-right: 10px">
+                        <?php if(!Yii::app()->user->isGuest){?>
+                        <a href="<?php echo Yii::app()->createUrl("site/logout"); ?>">Logout (<?php echo Yii::app()->user->name; ?>)</a>
+                        <?php }?>
+                    </div>
         <!-- END MENU WRAPPER -->
         <?php echo $content; ?>
         <!-- -============== END CONTENT WRAPPER =================- -->

@@ -23,7 +23,10 @@ return array(
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('127.0.0.1', '::1'),
         ),
-        'admin'
+        'admin',
+        'user'=>array(
+            'loginUrl'=>array('login'),
+        ),
     ),
     // application components
     'components' => array(
@@ -50,7 +53,10 @@ return array(
             'urlFormat'=>'path',
             'showScriptName'=>false,
             'rules'=>array(
+                'gii'=>'gii',
                 'video'=>'site/video',
+                'login'=>'site/login',
+                'logout'=>'site/logout',
                 'page'=>'site/page',
                 '<controller:\w+>'=>'<controller>/index',
                 '<controller:\w+>/<action:\w+>'=>'<controller>/<action>',

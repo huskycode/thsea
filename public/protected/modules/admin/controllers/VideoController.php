@@ -4,6 +4,23 @@ class VideoController extends Controller {
 
     const PAGE_SIZE = 15;
 
+    public function filters() {
+        return array(
+            'accessControl', // perform access control for CRUD operations
+        );
+    }
+
+    public function accessRules() {
+        return array(
+            array('allow', // allow authenticated users to access all actions
+                'users' => array('@'),
+            ),
+            array('deny', // deny all users
+                'users' => array('*'),
+            ),
+        );
+    }
+
     public function actionIndex() {
         $criteria = new CDbCriteria();
         $criteria->order = "posted_date DESC";
@@ -26,10 +43,10 @@ class VideoController extends Controller {
     public function actionCreate() {
         $model = new Video;
         $model->posted_date = date('Y-m-d H:i:s');
-        
+
         if (isset($_POST['Video'])) {
             $model->attributes = $_POST['Video'];
-            
+
             if ($this->saveVideo($model))
                 $this->redirect(array('index'));
         }
@@ -44,7 +61,7 @@ class VideoController extends Controller {
 
         if (isset($_POST['Video'])) {
             $model->attributes = $_POST['Video'];
-            
+
             if ($this->saveVideo($model))
                 $this->redirect(array('index'));
         }
@@ -53,19 +70,19 @@ class VideoController extends Controller {
             'model' => $model,
         ));
     }
-    
-    private function saveVideo($model){
+
+    private function saveVideo($model) {
         $model->posted_by = 'admin';
-            
-        if($model->recording_date==''){
+
+        if ($model->recording_date == '') {
             $model->recording_date = null;
         }
 
-        if($model->description==''){
+        if ($model->description == '') {
             $model->description = null;
         }
 
-        return $model->save();          
+        return $model->save();
     }
 
     public function actionDelete($id) {

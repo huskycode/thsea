@@ -5,15 +5,16 @@ $this->breadcrumbs = array(
     'Video',
 );
 
-function getCommentUrl($url) {
+function getCommentUrl($id) {
     //return 'http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video' . $id;
-    // return $this->createAbsoluteUrl('site/video', array('#'=>'video'.$id));
-    return $url;
+    return $this->createAbsoluteUrl('video') . '#fb-comment-' . $id;
+    //return $url;
 }
 
-function getLikeUrl($url){
+function getLikeUrl($id) {
     //return 'http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#iikevideo' . $id;
-    return $url.'&like=true';
+    return $this->createAbsoluteUrl('video') . '#fb-like-' . $id;
+    //return $url.'&like=true';
 }
 
 function convertUrlToLink($text) {
@@ -23,7 +24,7 @@ function convertUrlToLink($text) {
 function renderTags($videoTags) {
     $tags_link = array();
     foreach ($videoTags as $tag) {
-        $tags_link[] = '<a href="#">'.$tag->tag.'</a>';
+        $tags_link[] = '<a href="#">' . $tag->tag . '</a>';
     }
 
     echo implode(", ", $tags_link);
@@ -33,7 +34,7 @@ function renderTags($videoTags) {
     ul.yiiPager li{
         font-size: 1.5em;
     }
-    
+
     ul.yiiPager li.next{
         border-top: 3px solid #FF7E00;
         width: 30px;
@@ -140,13 +141,15 @@ function renderTags($videoTags) {
             </div><!-- entry-post -->
 
         <?php endforeach; ?>
-            <div style="font-size: 2em;">
-              <?php $this->widget('CLinkPager', array(
-                  'pages' => $pages, 
-                  'header'=>'',
-                  'nextPageLabel'=>'>',
-                  'prevPageLabel'=>'<')); ?>  
-            </div>
+        <div style="font-size: 2em;">
+            <?php
+            $this->widget('CLinkPager', array(
+                'pages' => $pages,
+                'header' => '',
+                'nextPageLabel' => '>',
+                'prevPageLabel' => '<'));
+            ?>  
+        </div>
 
     </div><!-- main-content -->
 
@@ -157,7 +160,15 @@ function renderTags($videoTags) {
 <script type="text/javascript">
     jQuery.noConflict()(function($) {
         $(document).ready(function() {
+            // add facebook popup
             $('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"});
+            //show hash tag;
+            var hash = window.location.hash;
+            var hashCommentCode = "#fb-comment-";
+            var foundHashCode = hash.indexOf(hashCommentCode);
+            if (foundHashCode !== -1) {
+                console.log(hash.substr(foundHashCode + hashCommentCode.length));
+            }
         });
     });
 </script>

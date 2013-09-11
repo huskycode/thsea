@@ -168,6 +168,9 @@ function renderTags($videoTags) {
             var foundHashCode = hash.indexOf(hashCommentCode);
             if (foundHashCode !== -1) {
                 console.log(hash.substr(foundHashCode + hashCommentCode.length));
+                $.colorbox(
+                        {open: true, inline: true, href: hash, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"}
+                );
             }
         });
     });

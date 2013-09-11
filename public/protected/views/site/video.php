@@ -78,7 +78,7 @@ function renderTags($videoTags) {
                 <div class="stack">
                     <div class="meta-post">
                         <div style="right:0; position:absolute;background:none;" class="pull-right">
-                            <div class="fb-like" data-href="<?php echo getLikeUrl($row->url); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                            <div class="fb-like" data-href="<?php echo getLikeUrl($row->id); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
                         </div>
                         <div class="date" title="Posted Date"><span><?php echo Yii::app()->dateFormatter->formatDateTime($row->posted_date, 'long', null) ?></span></div>
                         <div class="tags" title="Tags"><span>
@@ -86,7 +86,7 @@ function renderTags($videoTags) {
                                 renderTags($row->videoTags);
                                 ?>
                             </span></div>
-                        <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><fb:comments-count href="<?php echo getCommentUrl($row->url); ?>"/></fb:comments-count></a></span></div>
+                        <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><fb:comments-count href="<?php echo getCommentUrl($row->id); ?>"/></fb:comments-count></a></span></div>
                     </div><!-- meta-post -->
                 </div><!-- stack -->
                 <div class="image-post">
@@ -120,7 +120,7 @@ function renderTags($videoTags) {
                     <div id="fb-comment-<?php echo $row->id; ?>" class="popup">
                         <div class="image-post video">
                             <div style="float:right;" class="pull-right">
-                                <div class="fb-like" data-href="<?php echo getLikeUrl($row->url); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                                <div class="fb-like" data-href="<?php echo getLikeUrl($row->id); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
                             </div>
                             <h6><?php echo $row->title; ?></h6>
                             <?php
@@ -133,7 +133,7 @@ function renderTags($videoTags) {
                             ?>
                         </div>
                         <div class="comment">
-                            <div class="fb-comments" data-href="<?php echo getCommentUrl($row->url); ?>"></div>
+                            <div class="fb-comments" data-href="<?php echo getCommentUrl($row->id); ?>"></div>
                         </div>
                     </div>
                 </div>
@@ -167,7 +167,6 @@ function renderTags($videoTags) {
             var hashCommentCode = "#fb-comment-";
             var foundHashCode = hash.indexOf(hashCommentCode);
             if (foundHashCode !== -1) {
-                console.log(hash.substr(foundHashCode + hashCommentCode.length));
                 $.colorbox(
                         {open: true, inline: true, href: hash, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"}
                 );

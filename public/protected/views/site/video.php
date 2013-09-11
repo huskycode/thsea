@@ -7,13 +7,13 @@ $this->breadcrumbs = array(
 
 function getCommentUrl($id) {
     //return 'http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#video' . $id;
-    return $this->createAbsoluteUrl('video') . '#fb-comment-' . $id;
+    return Yii::app()->request->getBaseUrl(true) . '/video' . '#fb-comment-' . $id;
     //return $url;
 }
 
 function getLikeUrl($id) {
     //return 'http://thsea-uat.nfshost.com/index.php?r=site/page&amp;view=video#iikevideo' . $id;
-    return $this->createAbsoluteUrl('video') . '#fb-like-' . $id;
+    return Yii::app()->request->getBaseUrl(true) . '/video' . '#fb-like-' . $id;
     //return $url.'&like=true';
 }
 

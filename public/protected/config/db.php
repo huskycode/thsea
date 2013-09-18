@@ -1,9 +1,9 @@
 <?php
 return array(
-            'connectionString' => 'mysql:host=thsea.db;dbname=thsea_uat',
+            'connectionString' => 'mysql:host=server1;dbname=db1',
             'emulatePrepare' => true,
-            'username' => 'thsea_admin',
-            'password' => 'andaman',
+            'username' => 'user_sample',
+            'password' => 'pass_sample',
             'charset' => 'utf8',
             'tablePrefix' => '',
             'enableProfiling' => true

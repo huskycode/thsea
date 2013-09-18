@@ -162,6 +162,9 @@ function renderTags($videoTags) {
         $(document).ready(function() {
             // add facebook popup
             $('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"});
+            $('.fb-comment-count').click(function(){
+                location.hash = $(this).attr('href');
+            });
             //show hash tag;
             var hash = window.location.hash;
             var hashCommentCode = "#fb-comment-";

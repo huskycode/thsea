@@ -30,8 +30,8 @@ class SiteController extends Controller {
     public function actionIndex() {
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
-		$criteria = new CDbCriteria();
-        $criteria->order = "posted_date DESC";
+	$criteria = new CDbCriteria();
+        $criteria->order = "recording_date DESC";
 
         $model = new Video();
 
@@ -50,7 +50,7 @@ class SiteController extends Controller {
 
     public function actionVideo() {        
         $criteria = new CDbCriteria();
-        $criteria->order = "posted_date DESC";
+        $criteria->order = "recording_date DESC";
 
         $model = new Video();
 

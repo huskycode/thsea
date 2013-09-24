@@ -2,3 +2,6 @@
 /geb/build
 /geb/.gradle
 /public/protected/runtime/*.log
+/public/assets/*
+/public/protected/config/db.php
+/public/protected/yiic.bat

@@ -53,7 +53,7 @@ $this->breadcrumbs = array(
     </div>
     <div style="float:left; padding: 5px;">
          <strong><?php echo $row->title; ?></strong><br />
-         Recording date: <?php echo Yii::app()->dateFormatter->formatDateTime($row->recording_date, 'long', null)?>
+         Recording date: <?php echo $row->recording_date!=null?Yii::app()->dateFormatter->formatDateTime($row->recording_date, 'long', null):'-'?>
     </div>
     <div style="float:right; padding: 5px;">
         <input type="button" value="Edit" onclick="window.location='<?php echo Yii::app()->createUrl('/admin/video/update/' . $row->id); ?>';" />

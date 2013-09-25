@@ -80,7 +80,7 @@ function renderTags($videoTags) {
                         <div style="right:0; position:absolute;background:none;" class="pull-right">
                             <div class="fb-like" data-href="<?php echo getLikeUrl($row->id); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
                         </div>
-                        <div class="date" title="Posted Date"><span><?php echo Yii::app()->dateFormatter->formatDateTime($row->posted_date, 'long', null) ?></span></div>
+                        <div class="date" title="Recording Date"><span><?php echo $row->recording_date!=null?Yii::app()->dateFormatter->formatDateTime($row->recording_date, 'long', null):'-' ?></span></div>
                         <div class="tags" title="Tags"><span>
                                 <?php
                                 renderTags($row->videoTags);

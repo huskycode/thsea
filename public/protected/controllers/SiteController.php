@@ -27,28 +27,15 @@ class SiteController extends Controller {
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.
      */
-    public function actionIndex() {
-        // renders the view file 'protected/views/site/index.php'
-        // using the default layout 'protected/views/layouts/main.php'
-	$criteria = new CDbCriteria();
-        $criteria->order = "recording_date ASC";
-
-        $model = new Video();
-
-        $total = $model->count($criteria);
-        $pages = new CPagination($total);
-        $pages->pageSize = self::FIRSTPAGE_SIZE;
-        $pages->applyLimit($criteria);
-        
-        $list = $model->with('videoTags')->findAll($criteria);
-
-        $this->render('index', array(
-            'list' => $list,
-            'pages' => $pages
-        ));
+    public function actionIndex() {        
+        $this->renderVideos(self::FIRSTPAGE_SIZE, 'index');
     }
 
-    public function actionVideo() {        
+    public function actionVideo() {                
+        $this->renderVideos(self::PAGE_SIZE, 'video');
+    }
+    
+    private function renderVideos($pageSize, $toView){
         $criteria = new CDbCriteria();
         $criteria->order = "recording_date ASC";
 
@@ -56,12 +43,12 @@ class SiteController extends Controller {
 
         $total = $model->count($criteria);
         $pages = new CPagination($total);
-        $pages->pageSize = self::PAGE_SIZE;
+        $pages->pageSize = $pageSize;
         $pages->applyLimit($criteria);
         
         $list = $model->with('videoTags')->findAll($criteria);
 
-        $this->render('video', array(
+        $this->render($toView, array(
             'list' => $list,
             'pages' => $pages
         ));

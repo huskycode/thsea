@@ -5,11 +5,12 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
-class SEacademyTest extends GebReportingTest {
+@RunWith(JUnit4)
+class HomeTest extends GebReportingTest {
 
     @Test
     void theTitleLinkShouldBeThSEA() {
-        to SEacademyPage
+        to HomePage
         
 	    assert title == "Thailand Software Engineering Academy"	
     }

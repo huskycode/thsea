@@ -9,7 +9,7 @@ class VideoTest extends GebReportingTest {
 
     @Test
     void theTitleLinkShouldBeThSEA() {
-        to SEacademyPage
+        to HomePage
         
 	    assert title == "Thailand Software Engineering Academy"	
     }

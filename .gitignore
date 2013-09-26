@@ -5,3 +5,4 @@
 /public/assets/*
 /public/protected/config/db.php
 /public/protected/yiic.bat
+/public/protected/config/db.php

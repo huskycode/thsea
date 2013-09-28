@@ -10,9 +10,13 @@ import geb.*
  * @author Rux
  */
 class HomePage extends Page  {
-    static url = "http://uat.seacademy.in.th"
+    //static url = "http://uat.seacademy.in.th"
+    static url = "http://localhost:999/"
     
     static at = { title == "Thailand Software Engineering Academy" }
    
+    static content = {
+        sponsorText { $("div.columns.lp-header h6").text() }
+    }
 }
 

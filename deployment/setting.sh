@@ -11,7 +11,7 @@ fi
 
 ## setting deployment folder permission for Yii framework
 ##  writable "runtime&assets" folder
-echo "ssh -i /home/thsea/.ssh/id_rsa $DESTINATION \"chmod -R 777 ./protected/runtime\""
-echo "ssh -i /home/thsea/.ssh/id_rsa $DESTINATION \"chmod -R 777 ./assets\""
+ssh -i /home/thsea/.ssh/id_rsa $DESTINATION "chmod -R 777 ./protected/runtime"
+ssh -i /home/thsea/.ssh/id_rsa $DESTINATION "chmod -R 777 ./assets"
 ##  Change group for WEB user
-echo "ssh -i /home/thsea/.ssh/id_rsa $DESTINATION \"chgrp -R web *\""
+ssh -i /home/thsea/.ssh/id_rsa $DESTINATION "chgrp -R web *"

@@ -13,7 +13,8 @@ class VideoTest extends GebReportingTest {
         assert title == "Thailand Software Engineering Academy - Video"
         // click the link 
         $("a.fb-comment-count", 0).click();
-        // wait for Google's javascript to redirect to Wikipedia
-        assert browser.driver.executeScript("return window.location.href;") == $("a.fb-comment-count", 0).@href;
+        def videoHref = $("a.fb-comment-count", 0).@href;
+        def windowLocation = js."window.location.href";
+        assert windowLocation == videoHref;
     }
 }

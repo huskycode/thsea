@@ -21,11 +21,13 @@ class LoginPage extends Page  {
         passwordTextField{loginForm.find("input[id=LoginForm_password]")}
         submitButton{loginForm.find(type: "submit")}
         
-        doLogin{userName, password ->
-            userNameTextField.value(userName)
-            passwordTextField.value(password)
-            submitButton.click()
-        }
+        
+    }
+    
+    void login(userName, password){
+        userNameTextField.value(userName)
+        passwordTextField.value(password)
+        submitButton.click()
     }
 }
 

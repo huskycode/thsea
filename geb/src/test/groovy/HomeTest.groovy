@@ -12,7 +12,14 @@ class HomeTest extends GebReportingTest {
     void theTitleLinkShouldBeThSEA() {
         to HomePage
         
-	    assert title == "Thailand Software Engineering Academy"	
+	assert title == "Thailand Software Engineering Academy"	
     }
     
+    @Test
+    void sponsorTextShouldBeContentSponsor(){
+        to HomePage
+        at HomePage
+        
+        assert sponsorText == "Content Sponsor"
+    }
 }

@@ -14,5 +14,8 @@ class HomePage extends Page  {
     
     static at = { title == "Thailand Software Engineering Academy" }
    
+    static content = {
+        sponsorText { $("div.columns.lp-header h6").text() }
+    }
 }
 

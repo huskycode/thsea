@@ -55,7 +55,7 @@ $this->breadcrumbs = array(
 <div class="container header-block">
     <!-- start header -->
     <div class="sixteen columns lp-header">
-        <h6>Our Clients</h6>
+        <h6>Content Sponsor</h6>
         <div class="nav-projects">
         </div><!-- .nav-projects -->
     </div><!-- .sixteen  -->

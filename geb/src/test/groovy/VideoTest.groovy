@@ -44,4 +44,14 @@ class VideoTest extends GebReportingTest {
         def windowLocation = js."window.location.href";
         assert windowLocation == videoHref;
     }
+    
+    @Test
+    void simpleTest(){
+        to VideoPage
+    }
+    
+    @Test
+    void simpleTest(){
+        to HomePage
+    }
 }

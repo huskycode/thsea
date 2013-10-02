@@ -45,10 +45,12 @@ class VideoTest extends GebReportingTest {
         assert windowLocation == videoHref;
     }*/
     
+    /*
     @Test
     void simpleTest(){
         to VideoPage
     }
+    */
     
     @Test
     void simpleTest2(){

@@ -3,8 +3,8 @@ import geb.junit4.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
-import java.util.Calendar.*
-import java.text.SimpleDateFormat
+//import java.util.Calendar.*
+//import java.text.SimpleDateFormat
 
 @RunWith(JUnit4)
 class VideoTest extends GebReportingTest {

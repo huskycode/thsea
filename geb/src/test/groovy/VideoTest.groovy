@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat
 @RunWith(JUnit4)
 class VideoTest extends GebReportingTest {
     
-    @Test
+   /* @Test
     void videoListSortByRecordDateAscending(){
         to VideoPage
         
@@ -43,7 +43,7 @@ class VideoTest extends GebReportingTest {
         def videoHref = $("a.fb-comment-count", 0).@href;
         def windowLocation = js."window.location.href";
         assert windowLocation == videoHref;
-    }
+    }*/
     
     @Test
     void simpleTest(){

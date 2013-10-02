@@ -12,5 +12,9 @@ import geb.*
 class VideoPage extends Page  {
     static url = "http://uat.seacademy.in.th/video"
     static at = { title == "Thailand Software Engineering Academy - Video" }
+    
+    static content = {
+        recordDateItems{$("div[title='Recording Date'] span")}
+    }
 }
 

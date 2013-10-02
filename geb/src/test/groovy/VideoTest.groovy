@@ -51,7 +51,7 @@ class VideoTest extends GebReportingTest {
     }
     
     @Test
-    void simpleTest(){
+    void simpleTest2(){
         to HomePage
     }
 }

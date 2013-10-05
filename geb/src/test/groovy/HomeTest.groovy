@@ -18,7 +18,5 @@ class HomeTest extends GebReportingTest {
         to HomePage
         
         assert sponsorSection.text() == "Content Sponsor"
-        
-        println "test"
     }
 }

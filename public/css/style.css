@@ -752,7 +752,7 @@ img.border, iframe.border {
 .four-column img:hover {border-bottom: 1px solid #FF7E00; opacity: .8; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=80);filter: alpha(opacity=80);}
 div.four-column {
     float: left;
-    margin-right: 20px;
+    margin-right: 45px;
     margin-bottom: 20px;
     position: relative;		
 }

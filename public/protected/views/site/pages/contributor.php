@@ -45,13 +45,18 @@ $this->breadcrumbs = array(
                 <p class="description">Karan Sivarat (Bomb)</p>
                 <p class="description">Scrum Master</p>
             </div>
-            <div class="four-column column-last">
+            <div class="four-column">
                 <a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/roong.jpg"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/roong.jpg" alt="" class="border " /></a>
                 <p class="description">พิษณุ สว่างแผ้ว(รุ่ง)</p>
                 <p class="description">Pitsanu Swangpheaw (Roong)</p>
                 <p class="description">Technical Consultant</p>
             </div>
-
+            <div class="four-column column-last">
+                <a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/mui.jpg"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/mui.jpg" alt="" class="border " /></a>
+                <p class="description">นิติศักดิ์  มูลตรีศรี (มุ้ย)</p>
+                <p class="description">Nitisak Mooltreesri (Mui)</p>
+                <p class="description">Scrum Master</p>
+            </div>
         </div>
         <div class="row">
             <div class="four-column ">
@@ -72,25 +77,17 @@ $this->breadcrumbs = array(
                 <p class="description">Jenjira Wongboonsin (Pla)</p>
                 <p class="description">Developer</p>
             </div>
-            <div class="four-column column-last ">
+            <div class="four-column">
                 <a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/nook.png"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/nook.png" alt="" class="border " /></a>
                 <p class="description">สุนัย สุขเอนก (นุก)</p>
                 <p class="description">Sunai Sukanake (Nook)</p>
                 <p class="description">Developer</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="four-column ">
+             <div class="four-column column-last">
                 <a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/rux.jpg"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/rux.jpg" alt="" class="border " /></a>
                 <p class="description">ธีระพล ม่วงยัง (รักษ์)</p>
                 <p class="description">Teerapon Muangyoung (Rux)</p>
                 <p class="description">Developer</p>
-            </div>
-            <div class="four-column ">
-                <a class="zoom" href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/mui.jpg"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/mui.jpg" alt="" class="border " /></a>
-                <p class="description">นิติศักดิ์  มูลตรีศรี (มุ้ย)</p>
-                <p class="description">Nitisak Mooltreesri (Mui)</p>
-                <p class="description">Scrum Master</p>
             </div>
         </div>
         <!-- IMAGES -->

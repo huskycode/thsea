@@ -8,7 +8,11 @@ import org.junit.runners.JUnit4
 
 @RunWith(JUnit4)
 class VideoTest extends GebReportingTest {
-    
+    @Test
+    void theTitleLinkShouldBeThSEAVideo(){
+        to VideoPage
+    }
+    /*
     @Test
     void videoListSortByRecordDateAscending(){
         to VideoPage
@@ -30,7 +34,7 @@ class VideoTest extends GebReportingTest {
             count++;
         }
     }
-    /*@Test
+    @Test
     void locationChangeWithHashTag(){
         to VideoPage
         // make sure we actually got to the page

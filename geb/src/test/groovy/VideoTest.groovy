@@ -33,17 +33,14 @@ class VideoTest extends GebReportingTest {
             }
             count++;
         }
-    }
+    }*/
     @Test
     void locationChangeWithHashTag(){
         to VideoPage
-        // make sure we actually got to the page
-        assert title == "Thailand Software Engineering Academy - Video"
-        
         // click the link 
         $("a.fb-comment-count", 0).click();
         def videoHref = $("a.fb-comment-count", 0).@href;
         def windowLocation = js."window.location.href";
         assert windowLocation == videoHref;
-    }*/
+    }
 }

@@ -33,7 +33,7 @@ class VideoTest extends GebReportingTest {
             }
             count++;
         }
-    }*/
+    }
     @Test
     void locationChangeWithHashTag(){
         to VideoPage
@@ -42,5 +42,5 @@ class VideoTest extends GebReportingTest {
         def videoHref = $("a.fb-comment-count", 0).@href;
         def windowLocation = js."window.location.href";
         assert windowLocation == videoHref;
-    }
+    }*/
 }

@@ -11,12 +11,10 @@ import geb.*
  */
 class HomePage extends Page  {
     static url = "http://uat.seacademy.in.th/"
-    
     static at = { title == "Thailand Software Engineering Academy" }
-   
     static content = {
         sponsorSection { $("div.columns.lp-header h6") }
-        recordDateItems{ $("div[title='Recording Date'] span")}
+        //recordDateItems{ $("div[title='Recording Date'] span")}
     }
 }
 

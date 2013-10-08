@@ -15,8 +15,7 @@ class HomeTest extends GebReportingTest {
     
     @Test
     void sponsorTextShouldBeContentSponsor(){
-        to HomePage
-        
+        to HomePage   
         assert sponsorSection.text() == "Content Sponsor"
     }
     /*

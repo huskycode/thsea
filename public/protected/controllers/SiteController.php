@@ -1,9 +1,9 @@
 <?php
 
 class SiteController extends Controller {
-    
+
     const PAGE_SIZE = 10;
-	const FIRSTPAGE_SIZE = 4;
+    const FIRSTPAGE_SIZE = 4;
 
     /**
      * Declares class-based actions.
@@ -27,15 +27,15 @@ class SiteController extends Controller {
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.
      */
-    public function actionIndex() {        
-        $this->renderVideos(self::FIRSTPAGE_SIZE, 'index');
+    public function actionIndex() {
+        $this->renderVideos(self::PAGE_SIZE, 'index');
     }
 
-    public function actionVideo() {                
+    public function actionVideo() {
         $this->renderVideos(self::PAGE_SIZE, 'video');
     }
-    
-    private function renderVideos($pageSize, $toView){
+
+    private function renderVideos($pageSize, $toView) {
         $criteria = new CDbCriteria();
         $criteria->order = "recording_date ASC";
 
@@ -45,7 +45,7 @@ class SiteController extends Controller {
         $pages = new CPagination($total);
         $pages->pageSize = $pageSize;
         $pages->applyLimit($criteria);
-        
+
         $list = $model->with('videoTags')->findAll($criteria);
 
         $this->render($toView, array(

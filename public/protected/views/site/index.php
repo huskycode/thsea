@@ -52,7 +52,7 @@ function renderTags($videoTags) {
     <div class="container">
         <!-- start separator -->
         <div class="sixteen columns">
-            <h4 class="page-title">The Video</h4>
+            <h4 class="page-title">HOME</h4>
         </div><!-- sixteen columns -->
     </div><!-- .container -->
     <div class="bbottom-1px"></div>

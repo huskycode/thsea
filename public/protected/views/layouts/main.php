@@ -2,7 +2,6 @@
 /* @var $this Controller */
 $navItems = array(
     array('label' => 'Home', 'url' => Yii::app()->request->hostInfo),
-    array('label' => 'Video', 'url' => array('/site/video')),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
     array('label' => 'Contributor', 'url' => array('/site/page', 'view' => 'contributor'))
 );

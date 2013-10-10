@@ -23,7 +23,7 @@ class VideoController extends Controller {
 
     public function actionIndex() {
         $criteria = new CDbCriteria();
-        $criteria->order = "recording_date ASC";
+        $criteria->order = "recording_date DESC";
 
         $model = new Video();
 

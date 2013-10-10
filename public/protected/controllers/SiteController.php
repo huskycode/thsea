@@ -37,7 +37,7 @@ class SiteController extends Controller {
 
     private function renderVideos($pageSize, $toView) {
         $criteria = new CDbCriteria();
-        $criteria->order = "recording_date ASC";
+        $criteria->order = "recording_date DESC";
 
         $model = new Video();
 

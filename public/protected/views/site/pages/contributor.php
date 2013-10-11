@@ -65,6 +65,64 @@ $this->breadcrumbs = array(
                     <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/bomb.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                 </div><!-- block -->
             </div>
+            
+            <div class="item-block four columns photography">
+                <div class="stack">
+                    <div class="title">
+                        <a class="description">นิติศักดิ์  มูลตรีศรี (มุ้ย)</a>
+                        <a class="description">Nitisak Mooltreesri (Mui)</a>
+                        <a class="description">Scrum Master</a>
+                    </div>
+                </div><!-- stack -->
+                <div class="block">
+                    <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/mui.jpg" alt="" class="border " /></div>
+                    <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/mui.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                </div><!-- block -->
+            </div>
+            
+            <div class="item-block four columns photography">
+                <div class="stack">
+                    <div class="title">
+                        <a class="description">ธนวัฒน์ ทัศนา (แอมป์)</a>
+                        <a class="description">Tanawat Tassana (Amp)</a>
+                        <a class="description">Scrum Master</a>
+                    </div>
+                </div><!-- stack -->
+                <div class="block">
+                    <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/amp.jpg" alt="" class="border " /></div>
+                    <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/amp.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                </div><!-- block -->
+            </div>
+            
+            <div class="item-block four columns photography">
+                <div class="stack">
+                    <div class="title">
+                        <a class="description">สินาภรณ์ สืบวิสัย (แป๋ม)</a>
+                        <a class="description">Sinaporn Suebvisai (Pam)</a>
+                        <a class="description">Scrum Master</a>
+                    </div>
+                </div><!-- stack -->
+                <div class="block">
+                    <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/pam.jpg" alt="" class="border " /></div>
+                    <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/pam.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                </div><!-- block -->
+            </div>
+            
+            <div class="item-block four columns photography">
+                <div class="stack">
+                    <div class="title">
+                        <a class="description">นพกฤษฏิ์ ธนสินรุจิพงษ์ (ตุลย์)</a>
+                        <a class="description" style="nowrap">Noppakrit Thanasinrujiphong (Tul)</a>
+                        <a class="description">Scrum Master</a>
+                    </div>
+                </div><!-- stack -->
+                <div class="block">
+                    <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/tul.jpg" alt="" class="border " /></div>
+                    <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/tul.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                </div><!-- block -->
+            </div>
+            
+            
 
             <div class="item-block four columns photography">
                 <div class="stack">
@@ -80,19 +138,7 @@ $this->breadcrumbs = array(
                 </div><!-- block -->
             </div>
 
-            <div class="item-block four columns photography">
-                <div class="stack">
-                    <div class="title">
-                        <a class="description">นิติศักดิ์  มูลตรีศรี (มุ้ย)</a>
-                        <a class="description">Nitisak Mooltreesri (Mui)</a>
-                        <a class="description">Scrum Master</a>
-                    </div>
-                </div><!-- stack -->
-                <div class="block">
-                    <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/mui.jpg" alt="" class="border " /></div>
-                    <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/mui.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
-                </div><!-- block -->
-            </div>
+            
 
             <div class="item-block four columns photography">
                 <div class="stack">
@@ -160,6 +206,21 @@ $this->breadcrumbs = array(
                     <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/rux.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                 </div><!-- block -->
             </div>
+            
+            <div class="item-block four columns photography">
+                <div class="stack">
+                    <div class="title">
+                        <a class="description">อิทธิพล ตีระพฤติกุลชัย (เบย์)</a>
+                        <a class="description">Ittipon Teerapruettikulchai (Bay)</a>
+                        <a class="description">Developer</a>
+                    </div>
+                </div><!-- stack -->
+                <div class="block">
+                    <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/bay.jpg" alt="" class="border " /></div>
+                    <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/bay.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                </div><!-- block -->
+            </div>
+            
         </div>
         <!-- IMAGES -->
     </div><!-- main-content -->

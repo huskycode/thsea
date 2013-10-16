@@ -3,7 +3,8 @@
 $navItems = array(
     array('label' => 'Home', 'url' => Yii::app()->request->hostInfo),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-    array('label' => 'Contributor', 'url' => array('/site/page', 'view' => 'contributor'))
+    array('label' => 'Contributor', 'url' => array('/site/page', 'view' => 'contributor')),
+    array('label' => 'Feedback', 'url'=>'https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform', 'linkOptions'=>array('target'=>'_blank'))
 );
 ?>
 ﻿<!DOCTYPE html>

@@ -44,7 +44,7 @@ $this->breadcrumbs = array(
     <div style="float:left; padding: 5px;padding-left: 15px;">
         <a href="<?=$row->url?>" target="_blank">
             <?php $this->widget('application.components.YoutubeViewer', array(
-                'url'=>$row->url,
+                'imageUrl'=>$row->thumbnail_url,
                 'width'=>80,
                 'height'=>60,
                 'display'=>'image'

@@ -8,6 +8,7 @@
  * @property string $title
  * @property string $description
  * @property string $url
+ * @property string $thumbnail_url
  * @property string $recording_date
  * @property string $posted_date
  * @property string $posted_by
@@ -47,11 +48,12 @@ class Video extends CActiveRecord
 			array('title', 'length', 'max'=>1000),
 			array('description', 'length', 'max'=>2000),
 			array('url', 'length', 'max'=>500),
+                        array('thumbnail_url', 'length', 'max'=>1000),
 			array('posted_by', 'length', 'max'=>50),
 			array('recording_date', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, description, url, recording_date, posted_date, posted_by', 'safe', 'on'=>'search'),
+			array('id, title, description, url, thumbnail_url, recording_date, posted_date, posted_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -77,6 +79,7 @@ class Video extends CActiveRecord
 			'title' => 'Title',
 			'description' => 'Description',
 			'url' => 'Url',
+                        'thumbnail_url' => 'Thumbnail Url',
 			'recording_date' => 'Recording Date',
 			'posted_date' => 'Posted Date',
 			'posted_by' => 'Posted By',
@@ -98,6 +101,7 @@ class Video extends CActiveRecord
 		$criteria->compare('title',$this->title,true);
 		$criteria->compare('description',$this->description,true);
 		$criteria->compare('url',$this->url,true);
+                $criteria->compare('thumbnail_url', $this->thumbnail_url, true);
 		$criteria->compare('recording_date',$this->recording_date,true);
 		$criteria->compare('posted_date',$this->posted_date,true);
 		$criteria->compare('posted_by',$this->posted_by,true);

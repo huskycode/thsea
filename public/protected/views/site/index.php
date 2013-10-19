@@ -86,7 +86,7 @@ function renderTags($videoTags) {
                     <a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>">
                         <?php
                         $this->widget('application.components.YoutubeViewer', array(
-                            'url' => $row->url,
+                            'imageUrl' => $row->thumbnail_url,
                             'width' => 674,
                             'height' => 337,
                             'display' => 'image',

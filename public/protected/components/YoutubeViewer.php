@@ -12,17 +12,14 @@ class YoutubeViewer extends CWidget {
     public $height;
     public $display;
     public $alt;
+    public $imageUrl;
 	
 
     const DISPLAY_VIDEO = 'video';
     const DISPLAY_IMAGE = 'image';
 	const SOURCE_IMAGE = 'source_image';
 
-    public function run() {
-        if (!isset($this->url) || $this->url == '') {
-            echo "Please specify 'v'.";
-            return;
-        }
+    public function run() {       
 
         if (strtolower($this->display) == self::DISPLAY_IMAGE) {
             $this->renderImage();
@@ -33,7 +30,7 @@ class YoutubeViewer extends CWidget {
         }
     }
 
-    private function getVideoId() {
+    private function getVideoId() {        
         if (strtolower(substr($this->url, 0, 4)) == 'http') {
             $matches = array();
 
@@ -52,12 +49,21 @@ class YoutubeViewer extends CWidget {
     }
 
     private function renderImage() {
-        $image_name = 'sddefault.jpg';
+        $image_url = '';
+        
+         if (!isset($this->imageUrl) || $this->imageUrl == '') {
+            $image_name = 'sddefault.jpg';
 
-        if ($this->width > 200) {
-            $image_name = 'maxresdefault.jpg';
+            if ($this->width > 200) {
+                $image_name = 'maxresdefault.jpg';
+            }
+            
+            $image_url = 'http://img.youtube.com/vi/' . $this->getVideoId() . '/' . $image_name;
+        } else {        
+           $image_url = $this->imageUrl;
         }
-        echo '<img alt="' . $this->alt . '" src="http://img.youtube.com/vi/' . $this->getVideoId() . '/' . $image_name . '" border="0" width="' . $this->width . 'px" height="' . $this->height . 'px" />';
+        
+        echo '<img alt="' . $this->alt . '" src="' . $image_url . '" border="0" width="' . $this->width . 'px" height="' . $this->height . 'px" />';
     }
 	
     private function renderSource() {

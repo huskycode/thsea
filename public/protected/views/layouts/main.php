@@ -125,7 +125,8 @@ $navItems = array(
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jflickrfeed.min.js"></script>
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.tweet.js"></script>
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/contact.js"></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js"></script>	
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js"></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/application.js"></script>	
             <script>
                 jQuery.noConflict()(function($) {
                     // create player

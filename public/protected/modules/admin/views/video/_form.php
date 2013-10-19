@@ -11,22 +11,81 @@
         });
 
         jQuery('#Video_url').change(function() {
-            renderVideo();
+            var videoUrl = jQuery(this).val();
+            renderVideo(videoUrl);
+            setThumbnailUrl(videoUrl);
         });
 
         if (jQuery('#Video_url').val() != '') {
-            renderVideo();
+            var videoUrl = jQuery('#Video_url').val();
+            renderVideo(videoUrl);
+            setThumbnailUrl(videoUrl);
         }
     });
 
-    function renderVideo() {
-        var url = jQuery('#Video_url').val();
-        var videoid = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+    function renderVideo(url) {
+        var videoId = getVideoId(url);        
+        var frameVideo = '<iframe width="200" height="150" src="//www.youtube.com/embed/' + videoId + '" frameborder="0"></iframe>';
+        jQuery("#youtube-player-container").html(frameVideo);       
+    }
+    
+    function getVideoId(url){
+        var videoId = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+        
+        return videoId[1];
+    }
+    
+    function setThumbnailUrl(url){
+        var thumbnailUrl = getThumbnailUrl(url);
+        
+        jQuery('#Video_thumbnail_url').val(thumbnailUrl);
+    }
+    
+    function openThumbnail(){   
+        var thumbnailUrl = jQuery('#Video_thumbnail_url').val();
+        
+        window.open(thumbnailUrl);
+    }
+    
+    function getThumbnailUrl(url){
+        var videoId = getVideoId(url);
+        var thumbnailUrl = null;
 
-        if (videoid != null) {
-            var frameVideo = '<iframe width="200" height="150" src="//www.youtube.com/embed/' + videoid[1] + '" frameborder="0"></iframe>';
-            jQuery("#youtube-player-container").html(frameVideo);
+        if (videoId===null){
+            alert('The video url does not correct format');
+            return false;
         }
+       
+       var videoInfo = application.utility.getVideoInfo(videoId); 
+       
+       if (videoInfo===null){
+           alert('This video does not exist.');
+           return false;
+       }
+       
+       var thumbnails = videoInfo.snippet.thumbnails;
+       
+       if (thumbnails){    
+           if(thumbnails.high){
+               thumbnailUrl = thumbnails.high.url;
+               
+           } else if(thumbnails.default){
+               thumbnailUrl = thumbnails.default.url;
+               
+           } else if(thumbnails.medium){
+               thumbnailUrl = thumbnails.medium.url;
+               
+           } else {
+               jQuery.each(thumbnails, function(propName, propObj){
+                   if (propObj.url){
+                       thumbnailUrl = propObj.url;
+                       return false;
+                   }
+               });
+           }   
+       }
+       
+       return thumbnailUrl;
     }
 </script>
 <div class="form">
@@ -65,6 +124,7 @@
     </div>
 
     <div id='youtube-player-container'> </div>
+    <a href="javascript:openThumbnail();">View Thumbnail</a>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'recording_date'); ?>
@@ -80,6 +140,7 @@
         <?php echo CHtml::link('Cancel', array('index')); ?>
     </div>
 
+    <?php echo $form->hiddenField($model, 'thumbnail_url')?>
     <?php $this->endWidget(); ?>
 
 </div><!-- form -->

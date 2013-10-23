@@ -79,7 +79,7 @@ function renderTags($videoTags) {
                                 renderTags($row->videoTags);
                                 ?>
                             </span></div>
-                        <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><fb:comments-count href="<?php echo getCommentUrl($row->id); ?>"/></fb:comments-count></a></span></div>
+                        <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><!--fb:comments-count href="<?php echo getCommentUrl($row->id); ?>"/></fb:comments-count-->comment count</a></span></div>
                     </div><!-- meta-post -->
                 </div><!-- stack -->
                 <div class="image-post">

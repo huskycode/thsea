@@ -42,7 +42,7 @@ function renderTags($videoTags) {
         border: #cccccc solid 1px;
     }
 </style>
-<!--div id="fb-root"></div>
+<div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id))
@@ -212,20 +212,3 @@ function renderTags($videoTags) {
     </ul><!-- #clients-carousel -->
 </div><!-- .container -->
 <!-- END CLIENTS -->
-<script type="text/javascript">
-    /***************************************************
-     Camera Slider
-     ***************************************************/
-    /*
-    jQuery.noConflict()(function($) {
-        $('#camera_wrap_1').camera({
-            thumbnails: false,
-            loader: 'bar',
-            loaderPadding: 0,
-            loaderStroke: 3,
-            pagination: true,
-            loaderColor: '#7d7d7d'
-        });
-    });
-    */
-</script>

@@ -210,6 +210,7 @@ function renderTags($videoTags) {
     /***************************************************
      Camera Slider
      ***************************************************/
+    /*
     jQuery.noConflict()(function($) {
         $('#camera_wrap_1').camera({
             thumbnails: false,
@@ -221,4 +222,5 @@ function renderTags($videoTags) {
                     loaderColor: '#7d7d7d'
         });
     });
+    */
 </script>

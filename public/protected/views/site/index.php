@@ -4,6 +4,7 @@ $this->pageTitle = Yii::app()->name;
 $this->breadcrumbs = array(
     'Index',
 );
+
 function getCommentUrl($id) {
     return Yii::app()->request->getBaseUrl(true) . '#fb-comment-' . $id;
 }
@@ -21,8 +22,8 @@ function renderTags($videoTags) {
     foreach ($videoTags as $tag) {
         $tags_link[] = '<a href="#">' . $tag->tag . '</a>';
     }
-    
-    if(count($tags_link)>0){
+
+    if (count($tags_link) > 0) {
         echo implode(", ", $tags_link);
     } else {
         echo "-";
@@ -67,7 +68,7 @@ function renderTags($videoTags) {
 <div class="container main-wrapper">
     <div id="main-content" class="twelve columns">
 
-        <?php foreach ($list as $row): ?>
+<?php foreach ($list as $row): ?>
 
             <div class="entry-post format-image">
                 <div class="info-post">
@@ -78,7 +79,7 @@ function renderTags($videoTags) {
                         <div style="right:0; position:absolute;background:none;" class="pull-right">
                             <!--div class="fb-like" data-href="<?php echo getLikeUrl($row->id); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div-->
                         </div>
-                        <div class="date" title="Recording Date"><span><?php echo $row->recording_date!=null?Yii::app()->dateFormatter->formatDateTime($row->recording_date, 'long', null):'-' ?></span></div>
+                        <div class="date" title="Recording Date"><span><?php echo $row->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($row->recording_date, 'long', null) : '-' ?></span></div>
                         <div class="tags" title="Tags"><span>
                                 <?php
                                 renderTags($row->videoTags);
@@ -121,14 +122,14 @@ function renderTags($videoTags) {
                                 <div class="fb-like" data-href="<?php echo getLikeUrl($row->id); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
                             </div>
                             <h6><?php echo $row->title; ?></h6>
-                            <?php
-                            $this->widget('application.components.YoutubeViewer', array(
-                                'url' => $row->url,
-                                'width' => 654,
-                                'height' => 368,
-                                'display' => 'video'
-                            ));
-                            ?>
+                <?php
+                $this->widget('application.components.YoutubeViewer', array(
+                    'url' => $row->url,
+                    'width' => 654,
+                    'height' => 368,
+                    'display' => 'video'
+                ));
+                ?>
                         </div>
                         <div class="comment">
                             <div class="fb-comments" data-href="<?php echo getCommentUrl($row->id); ?>"></div>
@@ -138,7 +139,7 @@ function renderTags($videoTags) {
                 <div class="divider-blog-1px"></div>
             </div><!-- entry-post -->
 
-        <?php endforeach; ?>
+            <?php endforeach; ?>
         <div style="font-size: 2em;">
             <?php
             $this->widget('CLinkPager', array(
@@ -160,7 +161,7 @@ function renderTags($videoTags) {
         $(document).ready(function() {
             // add facebook popup
             $('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"});
-            $('.fb-comment-count').click(function(){
+            $('.fb-comment-count').click(function() {
                 location.hash = $(this).attr('href');
             });
             //show hash tag;
@@ -215,15 +216,16 @@ function renderTags($videoTags) {
     /***************************************************
      Camera Slider
      ***************************************************/
+    /*
     jQuery.noConflict()(function($) {
         $('#camera_wrap_1').camera({
             thumbnails: false,
-            pagination: false,
             loader: 'bar',
             loaderPadding: 0,
             loaderStroke: 3,
             pagination: true,
-                    loaderColor: '#7d7d7d'
+            loaderColor: '#7d7d7d'
         });
     });
+    */
 </script>

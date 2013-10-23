@@ -109,12 +109,12 @@ function renderTags($videoTags) {
                     </p>
                     <a href="#fb-comment-<?php echo $row->id; ?>" class="button read-more fb-comment-count">Comment</a>
                 </div><!-- text-post -->
-                <div class="hidden">
+                <!--div class="hidden">
                     <div id="fb-comment-<?php echo $row->id; ?>" class="popup">
                         <div class="image-post video">
-                            <!--div style="float:right;" class="pull-right">
+                            <div style="float:right;" class="pull-right">
                                 <div class="fb-like" data-href="<?php echo getLikeUrl($row->id); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
-                            </div-->
+                            </div>
                             <h6><?php echo $row->title; ?></h6>
                             <?php
                             $this->widget('application.components.YoutubeViewer', array(
@@ -126,10 +126,10 @@ function renderTags($videoTags) {
                             ?>
                         </div>
                         <div class="comment">
-                            <!--div class="fb-comments" data-href="<?php echo getCommentUrl($row->id); ?>"></div-->
+                            <div class="fb-comments" data-href="<?php echo getCommentUrl($row->id); ?>"></div>
                         </div>
                     </div>
-                </div>
+                </div-->
                 <div class="divider-blog-1px"></div>
             </div><!-- entry-post -->
 

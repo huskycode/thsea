@@ -21,7 +21,12 @@ function renderTags($videoTags) {
     foreach ($videoTags as $tag) {
         $tags_link[] = '<a href="#">' . $tag->tag . '</a>';
     }
-    echo implode(", ", $tags_link);
+    
+    if (count($tags_link)>0){
+        echo implode(", ", $tags_link);
+    } else {
+        echo "-";
+    }
 }
 ?>
 <style type="text/css">

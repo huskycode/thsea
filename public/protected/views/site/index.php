@@ -21,12 +21,7 @@ function renderTags($videoTags) {
     foreach ($videoTags as $tag) {
         $tags_link[] = '<a href="#">' . $tag->tag . '</a>';
     }
-    
-    if (count($tags_link)>0){
-        echo implode(", ", $tags_link);
-    } else {
-        echo "-";
-    }
+    echo implode(", ", $tags_link);
 }
 ?>
 <style type="text/css">
@@ -41,7 +36,7 @@ function renderTags($videoTags) {
         border: #cccccc solid 1px;
     }
 </style>
-<div id="fb-root"></div>
+<!--div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id))
@@ -76,7 +71,7 @@ function renderTags($videoTags) {
                 <div class="stack">
                     <div class="meta-post">
                         <div style="right:0; position:absolute;background:none;" class="pull-right">
-                            <div class="fb-like" data-href="<?php echo getLikeUrl($row->id); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                            <!--div class="fb-like" data-href="<?php echo getLikeUrl($row->id); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div-->
                         </div>
                         <div class="date" title="Recording Date"><span><?php echo $row->recording_date!=null?Yii::app()->dateFormatter->formatDateTime($row->recording_date, 'long', null):'-' ?></span></div>
                         <div class="tags" title="Tags"><span>
@@ -84,7 +79,7 @@ function renderTags($videoTags) {
                                 renderTags($row->videoTags);
                                 ?>
                             </span></div>
-                        <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><fb:comments-count href="<?php echo getCommentUrl($row->id); ?>"/></fb:comments-count></a></span></div>
+                        <!--div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><fb:comments-count href="<?php echo getCommentUrl($row->id); ?>"/></fb:comments-count></a></span></div-->
                     </div><!-- meta-post -->
                 </div><!-- stack -->
                 <div class="image-post">
@@ -114,7 +109,7 @@ function renderTags($videoTags) {
                     </p>
                     <a href="#fb-comment-<?php echo $row->id; ?>" class="button read-more fb-comment-count">Comment</a>
                 </div><!-- text-post -->
-                <div class="hidden">
+                <!--div class="hidden">
                     <div id="fb-comment-<?php echo $row->id; ?>" class="popup">
                         <div class="image-post video">
                             <div style="float:right;" class="pull-right">
@@ -134,7 +129,7 @@ function renderTags($videoTags) {
                             <div class="fb-comments" data-href="<?php echo getCommentUrl($row->id); ?>"></div>
                         </div>
                     </div>
-                </div>
+                </div-->
                 <div class="divider-blog-1px"></div>
             </div><!-- entry-post -->
 

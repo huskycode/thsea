@@ -1,0 +1,13 @@
+#video-list .item { width: 25%; position:relative;}
+#video-list .item.w2 { width: 50%; }
+#video-list .box-shadow{
+    margin:10px auto;
+    width:95%;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    background: #ffffff;
+    overflow: hidden;
+}
+.title-post{
+    padding:5px 10px 50px 10px;
+}

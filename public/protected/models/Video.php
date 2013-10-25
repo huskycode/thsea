@@ -46,7 +46,7 @@ class Video extends CActiveRecord
 		return array(
 			array('title, url, posted_date, posted_by', 'required'),
 			array('title', 'length', 'max'=>1000),
-			array('description', 'length', 'max'=>2000),
+			array('description', 'length', 'max'=>5000),
 			array('url', 'length', 'max'=>500),
                         array('thumbnail_url', 'length', 'max'=>1000),
 			array('posted_by', 'length', 'max'=>50),

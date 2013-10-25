@@ -11,82 +11,95 @@
         });
 
         jQuery('#Video_url').change(function() {
-            var videoUrl = jQuery(this).val();
-            renderVideo(videoUrl);
-            setThumbnailUrl(videoUrl);
+            var videoUrlElement = jQuery(this);
+            renderVideo(videoUrlElement);            
+            loadYoutubeInfo(videoUrlElement);            
         });
 
-        if (jQuery('#Video_url').val() != '') {
-            var videoUrl = jQuery('#Video_url').val();
-            renderVideo(videoUrl);
-            setThumbnailUrl(videoUrl);
+        if (jQuery('#Video_url').val() !== '') {
+            var videoUrlElement = jQuery('#Video_url');
+            renderVideo(videoUrlElement);
+            
+            if (jQuery('#Video_thumbnail_url').val()===''){
+                loadYoutubeInfo(videoUrlElement);
+            }
         }
     });
 
-    function renderVideo(url) {
-        var videoId = getVideoId(url);        
+    function renderVideo(videoUrlElement) {
+        var videoId = getVideoId(videoUrlElement.val());
         var frameVideo = '<iframe width="200" height="150" src="//www.youtube.com/embed/' + videoId + '" frameborder="0"></iframe>';
-        jQuery("#youtube-player-container").html(frameVideo);       
+        jQuery("#youtube-player-container").html(frameVideo);
     }
-    
-    function getVideoId(url){
+
+    function getVideoId(url) {
         var videoId = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
         
-        return videoId[1];
+        if (videoId && videoId.length===2){
+            return videoId[1];
+        } else {
+            return null;
+        }
     }
-    
-    function setThumbnailUrl(url){
-        var thumbnailUrl = getThumbnailUrl(url);
-        
-        jQuery('#Video_thumbnail_url').val(thumbnailUrl);
-    }
-    
-    function openThumbnail(){   
-        var thumbnailUrl = jQuery('#Video_thumbnail_url').val();
-        
-        window.open(thumbnailUrl);
-    }
-    
-    function getThumbnailUrl(url){
-        var videoId = getVideoId(url);
-        var thumbnailUrl = null;
 
-        if (videoId===null){
+    function loadYoutubeInfo(videoUrlElement) {
+        var videoId = getVideoId(videoUrlElement.val());
+
+        if (videoId === null) {
             alert('The video url does not correct format');
+            videoUrlElement.val('');
             return false;
         }
-       
-       var videoInfo = application.utility.getVideoInfo(videoId); 
-       
-       if (videoInfo===null){
-           alert('This video does not exist.');
-           return false;
-       }
-       
-       var thumbnails = videoInfo.snippet.thumbnails;
-       
-       if (thumbnails){    
-           if(thumbnails.high){
-               thumbnailUrl = thumbnails.high.url;
-               
-           } else if(thumbnails.default){
-               thumbnailUrl = thumbnails.default.url;
-               
-           } else if(thumbnails.medium){
-               thumbnailUrl = thumbnails.medium.url;
-               
-           } else {
-               jQuery.each(thumbnails, function(propName, propObj){
-                   if (propObj.url){
-                       thumbnailUrl = propObj.url;
-                       return false;
-                   }
-               });
-           }   
-       }
-       
-       return thumbnailUrl;
+
+        var videoInfo = application.utility.getVideoInfo(videoId);
+
+        if (videoInfo === null) {
+            alert('This video does not exist.');
+            videoUrlElement.val('');
+            return false;
+        }
+        
+        var thumbnailUrl = getThumbnailUrl(videoInfo);
+        jQuery('#Video_thumbnail_url').val(thumbnailUrl);
+
+        jQuery('#Video_title').val(videoInfo.snippet.title);
+        jQuery('#Video_description').val(videoInfo.snippet.description);
     }
+
+    function getThumbnailUrl(videoInfo) {
+        var thumbnailUrl = null;
+        var thumbnails = videoInfo.snippet.thumbnails;
+
+        if (thumbnails) {
+            if (thumbnails.high) {
+                thumbnailUrl = thumbnails.high.url;
+
+            } else if (thumbnails.default) {
+                thumbnailUrl = thumbnails.default.url;
+
+            } else if (thumbnails.medium) {
+                thumbnailUrl = thumbnails.medium.url;
+
+            } else {
+                jQuery.each(thumbnails, function(propName, propObj) {
+                    if (propObj.url) {
+                        thumbnailUrl = propObj.url;
+                        return false;
+                    }
+                });
+            }
+        }
+
+        return thumbnailUrl;
+    }
+
+    function openThumbnail() {
+        var thumbnailUrl = jQuery('#Video_thumbnail_url').val();
+
+        window.open(thumbnailUrl);
+    }
+
+
 </script>
 <div class="form">
 
@@ -101,6 +114,13 @@
 
     <?php //echo $form->errorSummary($model);  ?>
 
+
+    <div class="row">
+        <?php echo $form->labelEx($model, 'url'); ?>
+        <?php echo $form->textField($model, 'url', array('style' => 'width:400px;')); ?>
+        <?php echo $form->error($model, 'url'); ?>
+    </div>
+    
     <div class="row">
         <?php echo $form->labelEx($model, 'title'); ?>
         <?php echo $form->textField($model, 'title', array('style' => 'width: 400px;')); ?>
@@ -117,30 +137,25 @@
         <?php echo $form->error($model, 'description'); ?>
     </div>
 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'url'); ?>
-        <?php echo $form->textField($model, 'url', array('style' => 'width:400px;')); ?>
-        <?php echo $form->error($model, 'url'); ?>
-    </div>
-
     <div id='youtube-player-container'> </div>
     <a href="javascript:openThumbnail();">View Thumbnail</a>
 
     <div class="row">
         <?php echo $form->labelEx($model, 'recording_date'); ?>
-        <?php echo $form->textField($model, 'recording_date', array('style' => 'width:70px;', 
-                                                        'maxlength' => 10)); ?>   
-        <?php echo $form->error($model, 'recording_date'); ?>
+        <?php echo $form->textField($model, 'recording_date', array('style' => 'width:70px;',
+            'maxlength' => 10));
+        ?>   
+<?php echo $form->error($model, 'recording_date'); ?>
     </div>
 
 
     <div class="row buttons">
         <?php echo CHtml::submitButton('Submit'); ?>
         &nbsp;&nbsp;
-        <?php echo CHtml::link('Cancel', array('index')); ?>
+<?php echo CHtml::link('Cancel', array('index')); ?>
     </div>
 
-    <?php echo $form->hiddenField($model, 'thumbnail_url')?>
-    <?php $this->endWidget(); ?>
+    <?php echo $form->hiddenField($model, 'thumbnail_url') ?>
+<?php $this->endWidget(); ?>
 
 </div><!-- form -->

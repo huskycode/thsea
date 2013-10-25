@@ -13,7 +13,8 @@ function getLikeUrl($id) {
     return Yii::app()->request->getBaseUrl(true) . '#fb-like-' . $id;
 }
 
-function convertUrlToLink($text) {
+function displayContent($text) {
+    $text = nl2br($text);
     return preg_replace("#((http|https|ftp)://(\S*?\.\S*?))(\s|\;|\)|\]|\[|\{|\}|,|\"|'|:|\<|$|\.\s)#ie", "'<a href=\"$1\" target=\"_blank\">$3</a>$4'", $text);
 }
 
@@ -109,7 +110,7 @@ function renderTags($videoTags) {
                         if ($row->description == null) {
                             echo 'No description avaliable';
                         } else {
-                            echo convertUrlToLink($row->description);
+                            echo displayContent($row->description);
                         }
                         ?>
                     </p>

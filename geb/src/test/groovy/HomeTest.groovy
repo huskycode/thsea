@@ -18,10 +18,10 @@ class HomeTest extends GebReportingTest {
         to HomePage   
         assert sponsorSection.text() == "Content Sponsor"
     }
-    /*
+    
     @Test
     void videoListSortByRecordDateAscending(){
-        to VideoPage
+        to HomePage
         
         int count = 0;
         def dateFormat = new java.text.SimpleDateFormat("MMMM dd, yyyy", Locale.US)
@@ -42,11 +42,11 @@ class HomeTest extends GebReportingTest {
     }
     @Test
     void locationChangeWithHashTag(){
-        to VideoPage
+        to HomePage
         // click the link 
         $("a.fb-comment-count", 0).click();
         def videoHref = $("a.fb-comment-count", 0).@href;
         def windowLocation = js."window.location.href";
         assert windowLocation == videoHref;
-    }*/
+    }
 }

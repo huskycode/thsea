@@ -124,12 +124,12 @@ function renderTags($videoTags) {
                             </div>
                             <h6><?php echo $row->title; ?></h6>
                             <?php
-                            $this->widget('application.components.YoutubeViewer', array(
+                            /*$this->widget('application.components.YoutubeViewer', array(
                                 'url' => $row->url,
                                 'width' => 654,
                                 'height' => 368,
                                 'display' => 'video'
-                            ));
+                            ));*/
                             ?>
                         </div>
                         <div class="comment">
@@ -159,6 +159,7 @@ function renderTags($videoTags) {
 </div><!-- .container -->
 <script type="text/javascript">
     jQuery.noConflict()(function($) {
+        
         $(document).ready(function() {
             // add facebook popup
             $('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"});

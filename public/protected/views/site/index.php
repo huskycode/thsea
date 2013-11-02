@@ -70,11 +70,10 @@ function renderTags($videoTags) {
     <div id="main-content" class="twelve columns">
 
         <?php foreach ($list as $row): ?>
-
+            <div id="fb-comment-<?php echo $row->id; ?>" data-id="<?php echo $row->id; ?>" data-title="<?php echo $row->title; ?>" data-video="<?php echo $row->url; ?>"></div>
             <div class="entry-post format-image">
                 <div class="info-post">
                 </div><!-- info-post -->
-
                 <div class="stack">
                     <div class="meta-post">
                         <div style="right:0; position:absolute;background:none;" class="pull-right">
@@ -116,27 +115,6 @@ function renderTags($videoTags) {
                     </p>
                     <a href="#fb-comment-<?php echo $row->id; ?>" class="button read-more fb-comment-count">Comment</a>
                 </div><!-- text-post -->
-                <div class="hidden">
-                    <div id="fb-comment-<?php echo $row->id; ?>" class="popup">
-                        <div class="image-post video">
-                            <div style="float:right;" class="pull-right">
-                                <div class="fb-like" data-href="<?php echo getLikeUrl($row->id); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
-                            </div>
-                            <h6><?php echo $row->title; ?></h6>
-                            <?php
-                            /*$this->widget('application.components.YoutubeViewer', array(
-                                'url' => $row->url,
-                                'width' => 654,
-                                'height' => 368,
-                                'display' => 'video'
-                            ));*/
-                            ?>
-                        </div>
-                        <div class="comment">
-                            <div class="fb-comments" data-href="<?php echo getCommentUrl($row->id); ?>"></div>
-                        </div>
-                    </div>
-                </div>
                 <div class="divider-blog-1px"></div>
             </div><!-- entry-post -->
 
@@ -162,20 +140,43 @@ function renderTags($videoTags) {
         
         $(document).ready(function() {
             // add facebook popup
-            $('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"});
+            //$('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"});
             $('.fb-comment-count').click(function() {
                 location.hash = $(this).attr('href');
+                openFromHashTag();
             });
             //show hash tag;
+            openFromHashTag();
+        });
+        function openFromHashTag(){
             var hash = window.location.hash;
             var hashCommentCode = "#fb-comment-";
             var foundHashCode = hash.indexOf(hashCommentCode);
             if (foundHashCode !== -1) {
-                $.colorbox(
-                        {open: true, inline: true, href: hash, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"}
-                );
+                setTimeout(function(){openPopup($(hash).data('id'), $(hash).data('title'), $(hash).data('video'));},200);
             }
-        });
+        }
+        function openPopup(id, title, video){
+            $.colorbox({
+                open: true,
+                html:'\n\
+                        <div class="image-post video">\n\
+                            <div style="float:right;" class="pull-right">\n\
+                                <div class="fb-like" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-like-'; ?>'+id+'" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>\n\
+                            </div>\n\
+                            <h6>'+title+'</h6>\n\
+                            <iframe width="654" height="368" src="//www.youtube.com/embed/gVaRj5GgOPg" frameborder="0"></iframe>\n\
+                        </div>\n\
+                        <div class="comment">\n\
+                            <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-comment-'; ?>'+id+'"></div>\n\
+                        </div>\n\
+                        ',
+                maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%",
+                onClosed: function(){
+                    history.pushState("", document.title, window.location.pathname + window.location.search);
+                }
+            });
+        }
     });
 </script>
 <!-- END BLOG WRAPPER -->

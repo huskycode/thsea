@@ -1,9 +1,9 @@
 <?php
 return array(
-            'connectionString' => 'mysql:host=server1;dbname=db1',
+            'connectionString' => 'mysql:host=server1;dbname=thsea',
             'emulatePrepare' => true,
-            'username' => 'user_sample',
-            'password' => 'pass_sample',
+            'username' => 'root',
+            'password' => '',
             'charset' => 'utf8',
             'tablePrefix' => '',
             'enableProfiling' => true

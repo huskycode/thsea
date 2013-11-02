@@ -18,7 +18,7 @@ class HomeTest extends GebReportingTest {
         to HomePage   
         assert sponsorSection.text() == "Content Sponsor"
     }
-    /*
+    
     @Test
     void videoListSortByRecordDateAscending(){
         to HomePage
@@ -49,5 +49,5 @@ class HomeTest extends GebReportingTest {
         def windowLocation = js."window.location.href";
         assert windowLocation == videoHref;
     }
-    */
+    
 }

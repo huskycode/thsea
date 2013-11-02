@@ -132,6 +132,7 @@ function renderTags($videoTags) {
             return;
         js = d.createElement(s);
         js.id = id;
+        js.async = true;
         js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=416497271802249";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));

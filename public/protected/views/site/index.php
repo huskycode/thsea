@@ -170,7 +170,7 @@ function renderTags($videoTags) {
                                 <div class="fb-like" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-like-'; ?>' + id + '" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>\n\
                             </div>\n\
                             <h6>' + title + '</h6>\n\
-                            <iframe width="654" height="368" src="//www.youtube.com/embed/'+video+'" frameborder="0"></iframe>\n\
+                            <iframe width="654" height="368" src="'+video+'" frameborder="0"></iframe>\n\
                         </div>\n\
                         <div class="comment">\n\
                             <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-comment-'; ?>' + id + '"></div>\n\

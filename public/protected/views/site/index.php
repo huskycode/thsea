@@ -165,7 +165,6 @@ function renderTags($videoTags) {
         var re = /https?:\/\/(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube\.com\S*[^\w\-\s])([\w\-]{11})(?=[^\w\-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/ig;
         video =  video.replace(re,'//www.youtube.com/embed/$1');
             $.colorbox({
-                open: true,
                 html: '\n\
                         <div class="popup">\n\
                         <div class="image-post video">\n\
@@ -180,7 +179,8 @@ function renderTags($videoTags) {
                         </div>\n\
                         </div>\n\
                         ',
-                maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%",
+                width: "100%", 
+                height: "100%",
                 onClosed: function() {
                     history.pushState("", document.title, window.location.pathname + window.location.search);
                 }
@@ -189,6 +189,13 @@ function renderTags($videoTags) {
                 FB.XFBML.parse();
             } catch (ex) {
             }
+        }
+        window.onresize = function(){
+            $.colorbox.resize({
+                    width: '100%',
+                    height: '100%'
+                });
+            console.log("call resize");
         }
     });
 </script>

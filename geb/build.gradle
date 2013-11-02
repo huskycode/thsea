@@ -14,13 +14,13 @@ dependencies {
     testCompile 'junit:junit:4.11'
 
     testCompile "org.gebish:geb-junit4:$gebVersion"
-    testCompile "org.seleniumhq.selenium:selenium-chrome-driver:$seleniumVersion"
+    testCompile "org.seleniumhq.selenium:selenium-firefox-driver:$seleniumVersion"
 }
 
 test {
     systemProperty "geb.build.reportsDir", reporting.file("geb")
-    systemProperty "geb.env", "chrome"
-    systemProperty "webdriver.chrome.driver","/home/thsea/webdriver/chromedriver"
+    systemProperty "geb.env", "firefox"
+    //systemProperty "webdriver.chrome.driver","/home/thsea/webdriver/chromedriver"
 }
 
 task wrapper(type: Wrapper) {

@@ -44,16 +44,6 @@ function renderTags($videoTags) {
     }
 </style>
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id))
-            return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=416497271802249";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-<!-- START SEPARATOR  -->
 <div id="separator">
     <div class="btop-1px"></div>
     <div class="container">
@@ -135,9 +125,21 @@ function renderTags($videoTags) {
     <div id="sidebar" class="four columns">	
     </div><!-- sidebar -->
 </div><!-- .container -->
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id))
+            return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=416497271802249";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- START SEPARATOR  -->
 <script type="text/javascript">
     jQuery.noConflict()(function($) {
-        
+
         $(document).ready(function() {
             // add facebook popup
             //$('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"});
@@ -148,34 +150,40 @@ function renderTags($videoTags) {
             //show hash tag;
             openFromHashTag();
         });
-        function openFromHashTag(){
+        function openFromHashTag() {
             var hash = window.location.hash;
             var hashCommentCode = "#fb-comment-";
             var foundHashCode = hash.indexOf(hashCommentCode);
             if (foundHashCode !== -1) {
-                setTimeout(function(){openPopup($(hash).data('id'), $(hash).data('title'), $(hash).data('video'));},200);
+                setTimeout(function() {
+                    openPopup($(hash).data('id'), $(hash).data('title'), $(hash).data('video'));
+                }, 200);
             }
         }
-        function openPopup(id, title, video){
+        function openPopup(id, title, video) {
             $.colorbox({
                 open: true,
-                html:'\n\
+                html: '\n\
                         <div class="image-post video">\n\
                             <div style="float:right;" class="pull-right">\n\
-                                <div class="fb-like" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-like-'; ?>'+id+'" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>\n\
+                                <div class="fb-like" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-like-'; ?>' + id + '" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>\n\
                             </div>\n\
-                            <h6>'+title+'</h6>\n\
+                            <h6>' + title + '</h6>\n\
                             <iframe width="654" height="368" src="//www.youtube.com/embed/gVaRj5GgOPg" frameborder="0"></iframe>\n\
                         </div>\n\
                         <div class="comment">\n\
-                            <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-comment-'; ?>'+id+'"></div>\n\
+                            <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-comment-'; ?>' + id + '"></div>\n\
                         </div>\n\
                         ',
                 maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%",
-                onClosed: function(){
+                onClosed: function() {
                     history.pushState("", document.title, window.location.pathname + window.location.search);
                 }
             });
+            try {
+                FB.XFBML.parse();
+            } catch (ex) {
+            }
         }
     });
 </script>

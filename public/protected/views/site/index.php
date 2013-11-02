@@ -162,9 +162,12 @@ function renderTags($videoTags) {
             }
         }
         function openPopup(id, title, video) {
+        var re = /https?:\/\/(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube\.com\S*[^\w\-\s])([\w\-]{11})(?=[^\w\-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/ig;
+        video =  video.replace(re,'//www.youtube.com/embed/$1');
             $.colorbox({
                 open: true,
                 html: '\n\
+                        <div class="popup">\n\
                         <div class="image-post video">\n\
                             <div style="float:right;" class="pull-right">\n\
                                 <div class="fb-like" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-like-'; ?>' + id + '" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>\n\
@@ -174,6 +177,7 @@ function renderTags($videoTags) {
                         </div>\n\
                         <div class="comment">\n\
                             <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-comment-'; ?>' + id + '"></div>\n\
+                        </div>\n\
                         </div>\n\
                         ',
                 maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%",

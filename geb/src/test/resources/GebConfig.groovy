@@ -5,7 +5,7 @@
 */
 
 waiting {
-	timeout = 120
+	timeout = 2
 }
 
 // To run the tests with all browsers just run “./gradlew test”

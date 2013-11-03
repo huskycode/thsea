@@ -10,7 +10,7 @@ import geb.*
  * @author Rux
  */
 class HomePage extends Page  {
-    static url = "http://ruxcom.com/thsea/"
+    static url = "http://thsea-uat.nfshost.com/"
     static at = { title == "Thailand Software Engineering Academy" }
     static content = {
         sponsorSection { $("div.columns.lp-header h6") }

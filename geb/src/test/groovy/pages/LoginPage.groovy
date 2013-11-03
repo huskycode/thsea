@@ -10,7 +10,7 @@ import geb.*
  * @author Rux
  */
 class LoginPage extends Page  {
-    static url = "http://uat.seacademy.in.th/login"
+    static url = "http://ruxcom.com/thsea/login"
     
     static at = { title == "Thailand Software Engineering Academy - Login" }
     

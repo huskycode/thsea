@@ -10,7 +10,8 @@ import geb.*
  * @author Rux
  */
 class LoginPage extends Page  {
-    static url = "http://thsea-uat.nfshost.com/login"
+    //static url = "http://thsea-uat.nfshost.com/login"
+    static url = "login"
     
     static at = { title == "Thailand Software Engineering Academy - Login" }
     

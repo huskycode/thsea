@@ -10,7 +10,7 @@ import geb.*
  * @author Rux
  */
 class AdminVideoPage extends Page  {
-    static url = "http://thsea-uat.nfshost.com/admin/video"
+    static url = "admin/video"
     static at = {title=="Thailand Software Engineering Academy - Video Manager"}
 }
 

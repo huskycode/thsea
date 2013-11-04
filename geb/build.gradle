@@ -20,7 +20,8 @@ dependencies {
 test {
     systemProperty "geb.build.reportsDir", reporting.file("geb")
     systemProperty "geb.env", "firefox"
-    //systemProperty "webdriver.chrome.driver","/home/thsea/webdriver/chromedriver"
+    systemProperty "webdriver.chrome.driver","/home/thsea/webdriver/chromedriver"
+    systemProperty "geb.build.baseUrl", "http://thsea-uat.nfshost.com/"
 }
 
 task wrapper(type: Wrapper) {

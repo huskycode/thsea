@@ -1,3 +1,3 @@
 waiting {
-	timeout = 15
+	timeout = 10
 }

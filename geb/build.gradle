@@ -7,8 +7,8 @@ repositories {
 
 // The drivers we want to use
 dependencies {
-    def gebVersion = "0.9.0"
-    def seleniumVersion = "2.31.0"
+    def gebVersion = "0.9.1"
+    def seleniumVersion = "2.35.0"
     testCompile 'org.codehaus.groovy:groovy-all:2.0.5'
 
     testCompile 'junit:junit:4.11'

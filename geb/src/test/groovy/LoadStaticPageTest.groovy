@@ -15,5 +15,11 @@ class LoadStaticPageTest extends GebReportingTest  {
     void loadContributorPageSuccess(){
         to ContributorPage
     }
+    
+    @Test
+    void loadGooglePageSuccess(){
+        to GooglePage
+    }
+    
 }
 

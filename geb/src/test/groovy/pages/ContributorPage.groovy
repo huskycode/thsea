@@ -8,7 +8,7 @@ import geb.*
  * @author Rux
  */
 class ContributorPage extends Page  {
-    static url = "page?view=contributor"
+    static url = "http://uat.seacademy.in.th/page?view=contributor"
     static at = {title=="Thailand Software Engineering Academy - Contributor"}
 }
 

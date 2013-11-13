@@ -20,7 +20,7 @@ class LoginTest extends GebReportingTest  {
     void loginToAdminPageFailure(){
         to LoginPage
         
-        login("admin", "xxxxx")        
+        login("admin", "xxx")        
         
         at LoginPage 
     }

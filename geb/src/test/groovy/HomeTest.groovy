@@ -18,14 +18,14 @@ class HomeTest extends GebReportingTest {
         to HomePage   
         assert sponsorSection.text() == "Content Sponsor"
     }
-    /*
+    
     @Test
     void videoListSortByRecordDateAscending(){
         to HomePage
         
         int count = 0;
         def dateFormat = new java.text.SimpleDateFormat("MMMM dd, yyyy", Locale.US)
-        def previousDate = dateFormat.parse("January 01, 1900")        
+        def previousDate = dateFormat.parse("January 01, 3000")        
         
         recordDateItems.each{
             Date currentDate
@@ -33,13 +33,14 @@ class HomeTest extends GebReportingTest {
             if (it.text() != "-"){
                 currentDate = dateFormat.parse(it.text())
                 
-                assert currentDate>=previousDate
+                assert currentDate<=previousDate
                 
                 previousDate = currentDate
             }
             count++;
         }
     }
+    /*
     @Test
     void locationChangeWithHashTag(){
         to HomePage
@@ -50,4 +51,5 @@ class HomeTest extends GebReportingTest {
         assert windowLocation == videoHref;
     }
     */
+    
 }

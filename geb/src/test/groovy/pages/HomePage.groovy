@@ -15,7 +15,7 @@ class HomePage extends Page  {
     static content = {
         sponsorSection { $("div.columns.lp-header h6") }
         recordDateItems{ $("div[title='Recording Date'] span")}
-		videoSection { $("div[data-video]").length }
+		videoSection { $("div[data-video]").size() }
 		
     }
 }

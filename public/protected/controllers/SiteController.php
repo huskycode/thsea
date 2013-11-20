@@ -2,7 +2,7 @@
 
 class SiteController extends Controller {
 
-    const PAGE_SIZE = 50;
+    const PAGE_SIZE = 3;
     const FIRSTPAGE_SIZE = 4;
 
     /**

@@ -51,5 +51,14 @@ class HomeTest extends GebReportingTest {
         assert windowLocation == videoHref;
     }
     */
+	
+	@Test
+    void videoShouldDisplayThreeClipPerPage(){
+        to HomePage   
+
+		assert videoSection.length == 3
+		
+    }
+    
     
 }

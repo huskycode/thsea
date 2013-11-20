@@ -56,7 +56,7 @@ class HomeTest extends GebReportingTest {
     void videoShouldDisplayThreeClipPerPage(){
         to HomePage   
 
-		assert videoSection.length == 3
+		assert videoSection == 3
 		
     }
     

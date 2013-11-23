@@ -190,8 +190,8 @@ $this->breadcrumbs = array(
                     </div>
                 </div><!-- stack -->
                 <div class="block">
-                    <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/nook.png" alt="" class="border " /></div>
-                    <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/nook.png" data-rel="zoom-img" class="zoom-icon"></a></div>
+                    <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/nook.jpg" alt="" class="border " /></div>
+                    <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/nook.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                 </div><!-- block -->
             </div>
 

@@ -40,6 +40,7 @@ class HomeTest extends GebReportingTest {
             count++;
         }
     }
+    /*
     @Test
     void locationChangeWithHashTag(){
         to HomePage
@@ -49,5 +50,15 @@ class HomeTest extends GebReportingTest {
         def windowLocation = js."window.location.href";
         assert windowLocation == videoHref;
     }
+    */
+	
+	@Test
+    void videoShouldDisplayThreeClipPerPage(){
+        to HomePage   
+
+		assert videoSection == 3
+		
+    }
+    
     
 }

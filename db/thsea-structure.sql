@@ -2,7 +2,8 @@
 SQLyog Ultimate v9.02 
 MySQL - 5.5.29-log : Database - thsea
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -16,15 +17,6 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`thsea` /*!40100 DEFAULT CHARACTER SET t
 
 USE `thsea`;
 
-/*Table structure for table `tbl_migration` */
-
-DROP TABLE IF EXISTS `tbl_migration`;
-
-CREATE TABLE `tbl_migration` (
-  `version` varchar(255) NOT NULL,
-  `apply_time` int(11) DEFAULT NULL,
-  PRIMARY KEY (`version`)
-) ENGINE=InnoDB DEFAULT CHARSET=tis620;
 
 /*Table structure for table `user` */
 

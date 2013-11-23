@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v9.02 
-MySQL - 5.5.29 : Database - thsea
+MySQL - 5.5.29-log : Database - thsea
 *********************************************************************
 */
 
@@ -16,6 +16,28 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/`thsea` /*!40100 DEFAULT CHARACTER SET t
 
 USE `thsea`;
 
+/*Table structure for table `tbl_migration` */
+
+DROP TABLE IF EXISTS `tbl_migration`;
+
+CREATE TABLE `tbl_migration` (
+  `version` varchar(255) NOT NULL,
+  `apply_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=tis620;
+
+/*Table structure for table `user` */
+
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(20) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `full_name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=tis620;
+
 /*Table structure for table `video` */
 
 DROP TABLE IF EXISTS `video`;
@@ -23,13 +45,14 @@ DROP TABLE IF EXISTS `video`;
 CREATE TABLE `video` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Video ID',
   `title` varchar(200) NOT NULL COMMENT 'Video title',
-  `description` varchar(2000) DEFAULT NULL COMMENT 'Video description',
+  `description` varchar(5000) DEFAULT NULL COMMENT 'Video description',
   `url` varchar(500) NOT NULL COMMENT 'Video url',
+  `thumbnail_url` varchar(1000) DEFAULT NULL COMMENT 'Thumbnail url',
   `recording_date` date DEFAULT NULL COMMENT 'Recording date',
   `posted_date` datetime NOT NULL COMMENT 'Posted date',
   `posted_by` varchar(50) NOT NULL COMMENT 'Posted by',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4147 DEFAULT CHARSET=tis620 COMMENT='Video';
+) ENGINE=InnoDB AUTO_INCREMENT=4178 DEFAULT CHARSET=tis620 COMMENT='Video';
 
 /*Table structure for table `video_tag` */
 

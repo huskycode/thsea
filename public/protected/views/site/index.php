@@ -175,7 +175,7 @@ function renderTags($videoTags) {
                             <iframe width="654" height="368" src="'+video+'" frameborder="0"></iframe>\n\
                         </div>\n\
                         <div class="comment">\n\
-                            <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) .'site?page='.echo Yii::app()->request->getCurrentPage(true) . '#fb-comment-'; ?>' + id + '"></div>\n\
+                            <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-comment-'; ?>' + id + '"></div>\n\
                         </div>\n\
                         </div>\n\
                         ',

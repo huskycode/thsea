@@ -16,5 +16,5 @@ ssh -i /home/thsea/.ssh/id_rsa $DESTINATION "chmod -R 777 ./assets"
 ##  Change group for WEB user
 ssh -i /home/thsea/.ssh/id_rsa $DESTINATION "chgrp -R web *"
 ##  database migration
-ssh -i /home/thsea/.ssh/id_rsa $DESTINATION "cd ./protected; php yiic migrate --interactive=0"
+#ssh -i /home/thsea/.ssh/id_rsa $DESTINATION "cd ./protected; php yiic migrate --interactive=0"
 

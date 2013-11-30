@@ -2,9 +2,6 @@
 
 class SiteController extends Controller {
 
-    const PAGE_SIZE = 3;
-    const FIRSTPAGE_SIZE = 4;
-
     /**
      * Declares class-based actions.
      */
@@ -28,11 +25,7 @@ class SiteController extends Controller {
      * when an action is not explicitly requested by users.
      */
     public function actionIndex() {
-        $this->renderVideos(self::PAGE_SIZE, 'index');
-    }
-
-    public function actionVideo() {
-        $this->renderVideos(self::PAGE_SIZE, 'video');
+        $this->renderVideos(Yii::app()->params['videoListPageSize'], 'index');
     }
 
     private function renderVideos($pageSize, $toView) {

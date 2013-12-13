@@ -6,6 +6,7 @@ import org.junit.runners.JUnit4
 
 @RunWith(JUnit4)
 class LoginTest extends GebReportingTest  {
+    /*
     @Test
     void loginToAdminPageSuccess(){
         to LoginPage
@@ -24,5 +25,6 @@ class LoginTest extends GebReportingTest  {
         
         at LoginPage 
     }
+    */
 }
 

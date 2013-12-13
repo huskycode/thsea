@@ -7,7 +7,7 @@ import org.junit.runners.JUnit4
 
 @RunWith(JUnit4)
 class HomeTest extends GebReportingTest {
-
+    /*
     @Test
     void theTitleLinkShouldBeThSEA() {
         to HomePage
@@ -40,6 +40,7 @@ class HomeTest extends GebReportingTest {
             count++;
         }
     }
+    */
     /*
     @Test
     void locationChangeWithHashTag(){
@@ -55,8 +56,8 @@ class HomeTest extends GebReportingTest {
 	@Test
     void videoShouldDisplayThreeClipPerPage(){
         to HomePage   
-
-		assert videoSection == 3
+        
+        assert videoSection == 3
 		
     }
     

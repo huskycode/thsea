@@ -26,5 +26,10 @@ class LoginTest extends GebReportingTest  {
         at LoginPage 
     }
     */
+   
+    @Test
+    void dummyTest(){
+        
+    }
 }
 

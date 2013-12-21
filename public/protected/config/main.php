@@ -98,6 +98,6 @@ return array(
     'params' => array(
         // this is used in contact page
         'adminEmail' => 'webmaster@seacademy.in.th',
-        'videoListPageSize' => '15'
+        'videoListPageSize' => '3'
     ),
 );

@@ -56,10 +56,10 @@ class HomeTest extends GebReportingTest {
     */
 	
     @Test
-    void videoShouldDisplayThreeClipPerPage(){
+    void videoShouldDisplayFifteenClipPerPage(){
         to HomePage   
         
-        assert videoSection == 3
+        assert videoSection == 15
 		
     }
     

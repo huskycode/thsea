@@ -9,25 +9,25 @@ class LoginTest extends GebReportingTest  {
     
     @Test
     void loginToAdminPageSuccess(){
-        /*
+        
         to LoginPage
 
         login("admin", "seath66")
         at HomePage
 
         to AdminVideoPage
-        */
+        
     }
         
     @Test
     void loginToAdminPageFailure(){
-        /*
+        
         to LoginPage
         
         login("admin", "xxx")        
         
         at LoginPage 
-        */
+        
     }
 }
 

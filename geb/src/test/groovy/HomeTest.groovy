@@ -10,18 +10,18 @@ class HomeTest extends GebReportingTest {
     
     @Test
     void theTitleLinkShouldBeThSEA() {
-        //to HomePage
+        to HomePage
     }
     
     @Test
     void sponsorTextShouldBeContentSponsor(){
-        //to HomePage   
-        //assert sponsorSection.text() == "Content Sponsor"
+        to HomePage   
+        assert sponsorSection.text() == "Content Sponsor"
     }
     
     @Test
     void videoListSortByRecordDateAscending(){
-        /*
+        
         to HomePage
         
         int count = 0;
@@ -40,7 +40,7 @@ class HomeTest extends GebReportingTest {
             }
             count++;
         }
-        */
+        
     }
     
     /*

@@ -149,7 +149,14 @@ function renderTags($videoTags) {
                 openFromHashTag();
             });
             //show hash tag;
-            openFromHashTag();
+            //openFromHashTag();
+            
+            var hash = window.location.hash;
+            var id = hash.replace('#fb-comment-', '');
+                
+            jQuery.getJSON( "/api/video/"+id, function( data ) {    
+                openPopup(data.id, data.title, data.url);
+            });
         });
         function openFromHashTag() {
             var hash = window.location.hash;

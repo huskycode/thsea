@@ -23,6 +23,17 @@
         #Misc */
 
 
+@font-face{
+    font-family: 'supermarketregular';
+    src: url('supermarket-webfont.eot');
+    src: url('supermarket-webfont.eot?#iefix') format('embedded-opentype'),
+         url('supermarket-webfont.woff') format('woff'),
+         url('supermarket-webfont.tff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /* #Reset & Basics (Inspired by E. Meyers)
 ================================================== */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -107,7 +118,7 @@ img { max-width: 100%; height: auto; }
 ================================================== */
 body {
     background: #fff;
-    font: 14px/23px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 18px/23px "supermarketregular","HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #6a6a6a;
     -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
     -webkit-text-size-adjust: 100%;
@@ -118,18 +129,18 @@ body {
 ================================================== */
 h1, h2, h3, h4, h5, h6 {
     color: #333;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "supermarketregular", Helvetica, Arial, sans-serif;
     font-weight: normal; }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-h1 { font-size: 48px; line-height: 50px; margin-bottom: 14px;}
-h2 { font-size: 37px; line-height: 40px; margin-bottom: 10px; }
-h3 { font-size: 30px; line-height: 34px; margin-bottom: 8px; }
-h4 { font-size: 23px; line-height: 30px; margin-bottom: 4px; }
-h5 { font-size: 19px; line-height: 24px; }
-h6 { font-size: 16px; line-height: 21px; }
+h1 { font-size: 62px; line-height: 50px; margin-bottom: 14px;}
+h2 { font-size: 48px; line-height: 40px; margin-bottom: 10px; }
+h3 { font-size: 39px; line-height: 34px; margin-bottom: 8px; }
+h4 { font-size: 30px; line-height: 30px; margin-bottom: 4px; }
+h5 { font-size: 25px; line-height: 24px; }
+h6 { font-size: 20px; line-height: 21px; }
 .subheader { color: #777; }
 
-p { margin: 0 0 20px 0; }
+p { margin: 0 0 26px 0; }
 p img { margin: 0; }
 p.lead { font-size: 23px; line-height: 27px; color: #777;  }
 
@@ -138,9 +149,9 @@ strong { font-weight: bold; color: #333; }
 small { font-size: 80%; }
 
 /*	Blockquotes  */
-blockquote, blockquote p { font-size: 19px; line-height: 24px; color: #777; font-style: italic; }
+blockquote, blockquote p { font-size: 25px; line-height: 24px; color: #777; font-style: italic; }
 blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
-blockquote cite { display: block; font-size: 14px; color: #555; }
+blockquote cite { display: block; font-size: 18px; color: #555; }
 blockquote cite:before { content: "\2014 \0020"; }
 blockquote cite a, blockquote cite a:visited, blockquote cite a:visited { color: #555; }
 
@@ -193,7 +204,7 @@ img.scale-with-grid {
     background-color:white;
     color: #6A6A6A;
     display: inline-block;
-    font-size: 13px;
+    font-size: 14px;
     text-decoration: none;
     cursor: pointer;
     padding: 8px 10px;
@@ -211,7 +222,7 @@ a.button:hover, input[type=submit]:hover { color: #4D4C4C; text-decoration:none;
 .viewall { position:absolute; padding: 3px 13px; margin-left: 46.5%; top:-14px;}
 .view-testimonials { padding: 3px 13px; float:right; font-style:normal;}
 a.read-more { padding: 3px 13px; float:left; font-style:normal;}
-a.cta-button { padding: 5px 17px; font-style:normal; color: #FF7E00; font-size: 14px; font-weight: bold; }
+a.cta-button { padding: 5px 17px; font-style:normal; color: #FF7E00; font-size: 18px; font-weight: bold; }
 a.tag-button { padding: 0 5px; float:left; font-style:normal;}
 
 .button:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
@@ -315,7 +326,7 @@ input[type=text], input[type=password], input[type=email], textarea, select {
     /*		-moz-border-radius: 2px;
                     -webkit-border-radius: 2px;
                     border-radius: 2px;*/
-    font-size: 11px;		
+    font-size: 14px;		
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     /*		font: 13px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
     color: #777;
@@ -361,7 +372,7 @@ label,
 legend {
     display: block;
     font-weight: bold;
-    font-size: 13px;  }
+    font-size: 17px;  }
 select {
     width: 220px; }
 input[type=checkbox] {
@@ -369,7 +380,7 @@ input[type=checkbox] {
 label span,
 legend span {
     font-weight: normal;
-    font-size: 13px;
+    font-size: 17px;
     color: #444; }
 
 /* #Misc

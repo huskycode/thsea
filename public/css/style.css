@@ -143,10 +143,10 @@ p.last { margin-bottom:0; }
 #top-panel .email { background-position:0 -569px; }
 #top-panel .skype { background-position:0 -649px; }
 
-#top-panel h4 {	margin-bottom:17px;	font-size:18px; border-bottom: 1px solid #E7E7E7; line-height:46px }
+#top-panel h4 {	margin-bottom:17px;	font-size:23px; border-bottom: 1px solid #E7E7E7; line-height:46px }
 #top-panel h6 {
     margin-bottom: 17px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     border-bottom: 1px solid #E7E7E7;
     line-height: 30px;
@@ -217,7 +217,7 @@ ul.sf-menu li.active a { color:#4d4c4c!important; }
 ul.sf-menu li.active { border: 1px solid #cacbcb; -webkit-box-shadow:  2px 2px 0px 0px #e2e4e4; -moz-box-shadow:  2px 2px 0px 0px #e2e4e4; box-shadow:  2px 2px 0px 0px #e2e4e4; }
 .sf-menu a, .sf-menu a:visited  { }
 .sf-menu li ul li a {
-    font-size: 11px !important; 
+    font-size: 14px !important; 
     text-transform:capitalize !important;
     width:140px;
 }
@@ -253,7 +253,7 @@ ul.sf-menu li.active { border: 1px solid #cacbcb; -webkit-box-shadow:  2px 2px 0
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
-.sf-menu li ul li a { font-size:11px; color:#868787; padding: 0px; }
+.sf-menu li ul li a { font-size:14px; color:#868787; padding: 0px; }
 
 
 .fix-fish-menu select {
@@ -278,7 +278,7 @@ ul.sf-menu li.active { border: 1px solid #cacbcb; -webkit-box-shadow:  2px 2px 0
 #info-block ul { float: left; margin-bottom:0; }
 #info-block ul li { float: left; margin-right: 20px; }
 #info-block ul li > div { float: left; height: 85px; width: 295px; }
-#info-block ul li h4 { font-size: 18px; line-height: 24px; margin-bottom: 0px; }
+#info-block ul li h4 { font-size: 23px; line-height: 24px; margin-bottom: 0px; }
 #info-block ul li p { padding-left: 30px; }
 
 /******************* TESTIMONIALS ****************/
@@ -297,9 +297,9 @@ ul.sf-menu li.active { border: 1px solid #cacbcb; -webkit-box-shadow:  2px 2px 0
 }
 #testimonials-block .content-author { float: left; width: 100%; }
 #testimonials-block .content-author h4 a { text-decoration: none; color:#6A6A6A; }
-#testimonials-block .content-author h4 { font-size: 12px; color:#6A6A6A; }
+#testimonials-block .content-author h4 { font-size: 17px; color:#6A6A6A; }
 #testimonials-block .content-author h4::before { content: "— "; }
-#testimonials-block .content-author  h4 span { display: block; font-size: 11px; line-height: 14px; text-indent: 15px; }
+#testimonials-block .content-author  h4 span { display: block; font-size: 14px; line-height: 14px; text-indent: 15px; }
 
 
 /******************* LATEST PROJECTS ****************/
@@ -347,7 +347,7 @@ ul.sf-menu li.active { border: 1px solid #cacbcb; -webkit-box-shadow:  2px 2px 0
     vertical-align:text-top; 
     position:absolute; 
     color:#FF7E00; 
-    font-size:24px; 
+    font-size:31px; 
     text-decoration:none; 
     text-transform:uppercase; 
     padding-top:0px; 
@@ -641,8 +641,8 @@ ul.sf-menu li.active { border: 1px solid #cacbcb; -webkit-box-shadow:  2px 2px 0
     width:100%;
     height:auto;
 }
-#footer .copyright { color:#ababab;	font-size:11px; }
-#footer .copyright a { color :#ababab; font-size:11px; }
+#footer .copyright { color:#ababab;	font-size:14px; }
+#footer .copyright a { color :#ababab; font-size:14px; }
 #footer .copyright a:hover { color :#5D5D5D; }
 #footer .copyright img { margin-bottom:10px; }
 #footer .container { padding:30px 0; }
@@ -768,7 +768,7 @@ div.column-last { margin-right: 0; }
     transition: all 0.4s linear;	
 }
 .four-column .description {
-    font-size: 13px;
+    font-size: 17px;
     color: #ABABAB;	
     margin-bottom: 0;
     margin-top: 6px;
@@ -827,7 +827,7 @@ div.column-last { margin-right: 0; }
 .info-post .ribbon-front { background-color: #ff7e00; height: 30px; width: 30px; position: relative; left: 0; z-index: 2; }
 .info-post .ribbon-edge-bottomleft { top: 30px; left: 0;}
 
-.meta-post { position: absolute; bottom:0; left:15px; width:95.5%; font-size: 11px; padding: 9px 0; }
+.meta-post { position: absolute; bottom:0; left:15px; width:95.5%; font-size: 14px; padding: 9px 0; }
 .meta-post > div { display: inline-block; padding-right:20px; background-image:url('../images/icons/sprites.png'); background-repeat:no-repeat; padding-left:20px; }
 .tag-meta-post > div { display: inline-block; background-image:url('../images/icons/sprites.png'); background-repeat:no-repeat; padding-left:20px;}
 .tag-meta-post .tags { background-position: -268px 0; }
@@ -857,7 +857,7 @@ div.column-last { margin-right: 0; }
     width: 656px;
     padding: 15px;
 }
-.single-post .tag-meta-post { width:100%; font-size: 11px; padding: 9px 0; border-bottom: 1px dotted #E7E7E7; border-top: 1px dotted #E7E7E7; }
+.single-post .tag-meta-post { width:100%; font-size: 14px; padding: 9px 0; border-bottom: 1px dotted #E7E7E7; border-top: 1px dotted #E7E7E7; }
 .single-post .share-post { float: right; }
 
 .format-video .stack { height: 363px; }
@@ -903,7 +903,7 @@ div.column-last { margin-right: 0; }
 .format-link .divider-blog-1px { margin-top:34px; }
 .format-link .image-post { height: 90px; }
 .format-link .link-text { margin: 15px; height: 60px; }
-.format-link .link-text a { padding-left: 20px; padding-top: 10px; font-size: 17px;  text-decoration: none; display: inline-block; }
+.format-link .link-text a { padding-left: 20px; padding-top: 10px; font-size: 22px;  text-decoration: none; display: inline-block; }
 .format-link .link-text span { padding-left:20px; color:#ABABAB; display:block; }
 
 .format-audio .image-post { height: 78px; }
@@ -928,7 +928,7 @@ div.column-last { margin-right: 0; }
 #sidebar .widget li a, #sidebar-left .widget li a { text-decoration: none; }
 .widget h6 {
     margin-bottom: 17px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     border-bottom: 1px solid #E7E7E7;
     line-height: 30px;
@@ -966,7 +966,7 @@ div.column-last { margin-right: 0; }
 #comments-block { position: relative; display: block; /*width:680px;*/ margin-bottom:50px; }
 .comments-title h6 {
     margin-bottom: 17px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     border-bottom: 1px solid #E7E7E7;
     line-height: 30px;
@@ -1010,7 +1010,7 @@ div.column-last { margin-right: 0; }
 .comment-info .italic {
     font-style:italic;
     color:#ABABAB;
-    font-size: 11px;
+    font-size: 14px;
 }
 .comment-text .comment {
     margin: 5px 15px 0 15px;
@@ -1073,7 +1073,7 @@ ul.nav-pagination li.dots { line-height:25px; cursor:auto; text-align:center; bo
     border: 1px solid #CACBCB;
     margin: 0 10px 3px 0;
     padding: 0 10px;
-    font-size: 11px;
+    font-size: 14px;
     line-height:19px;
     display: inline-block;
     text-decoration: none;
@@ -1146,7 +1146,7 @@ ul#stage { width: 100%; padding-left:0; margin-bottom: 9px;}*/
     vertical-align:text-top; 
     position:absolute; 
     color:#FF7E00; 
-    font-size:24px; 
+    font-size:31px; 
     text-decoration:none; 
     text-transform:uppercase; 
     padding-top:0px; 
@@ -1262,7 +1262,7 @@ ul#stage { width: 100%; padding-left:0; margin-bottom: 9px;}*/
 .items-info {
     color: #ABABAB;
     display: block;
-    font-size: 11px;
+    font-size: 14px;
     line-height: 34px;
     width: 164px;
     text-align: center;
@@ -1311,7 +1311,7 @@ padding-left: 23px !important;*/ }
 #twitter-widget .tweet_list .tweet_first{ /*padding-top:0 !important;*/ }
 #twitter-widget .tweet_list .tweet_avatar { padding-right: .5em; float: left; }
 #twitter-widget .tweet_list .tweet_avatar img { vertical-align: middle;	}
-#twitter-widget .tweet_list .tweet_time { display:block; font-size: 11px; }
+#twitter-widget .tweet_list .tweet_time { display:block; font-size: 14px; }
 #twitter-widget .tweet_list .tweet_time a { font-style:italic; color: #ABABAB; text-decoration: none; }
 #twitter-widget img { display: block; float:left; margin-right: 10px; }
 #twitter-widget h3 { float:left; margin-right: 20px; line-height: 40px; }
@@ -1407,7 +1407,7 @@ padding-left: 23px !important;*/ }
     margin-top: 10px;
     padding-left:25px;
     border: 1px solid #E6E5E5;
-    font-size: 12px;
+    font-size: 16px;
     color: #555;
     -webkit-transition: background-color 0.3s linear;
     -moz-transition: background-color 0.3s linear;

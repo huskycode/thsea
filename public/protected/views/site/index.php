@@ -45,14 +45,6 @@ function renderTags($videoTags) {
 </style>
 <div id="fb-root"></div>
 <div id="separator">
-    <div class="btop-1px"></div>
-    <div class="container">
-        <!-- start separator -->
-        <div class="sixteen columns">
-            <h4 class="page-title">HOME</h4>
-        </div><!-- sixteen columns -->
-    </div><!-- .container -->
-    <div class="bbottom-1px"></div>
 </div><!-- #separator -->
 <!-- END SEPARATOR -->	
 <!-- START BLOG WRAPPER -->

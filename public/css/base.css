@@ -31,6 +31,7 @@
          url('supermarket-webfont.tff') format('truetype');
     font-weight: normal;
     font-style: normal;
+	letter-spacing: 0.1em;
 }
 
 

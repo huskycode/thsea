@@ -46,13 +46,35 @@ class VideoController extends Controller {
 
         if (isset($_POST['Video'])) {
             $model->attributes = $_POST['Video'];
+            
+            try {
+                $this->saveVideo($model);
+                
+                if(isset($_POST['tags']) && $_POST['tags']!=''){
+                    $tags = CJSON::decode($_POST['tags']);
+                    $command = Yii::app()->db->createCommand();  
+                    
+                    for($i=0; $i<count($tags); $i++) {
+                        $tag = $tags[$i];
 
-            if ($this->saveVideo($model))
-                $this->redirect(array('index'));
+                        $command->insert('video_tag', array(
+                            'video_id'=>$model->id,
+                            'tag'=>$tag
+                        ));
+
+                        $command->reset(); 
+                    }
+                }
+            } catch (Exception $e) {
+                echo 'Caught exception: ',  $e->getMessage(), "\n";
+            }
+
+            $this->redirect(array('index'));
         }
 
         $this->render('create', array(
             'model' => $model,
+            'jsonTags' => CJSON::encode($this->getTags())
         ));
     }
 
@@ -61,13 +83,39 @@ class VideoController extends Controller {
 
         if (isset($_POST['Video'])) {
             $model->attributes = $_POST['Video'];
+            
+            try {
+                $this->saveVideo($model);
 
-            if ($this->saveVideo($model))
+                $command = Yii::app()->db->createCommand();
+                $command->delete('video_tag', 'video_id=:id', array(':id'=>$id));   
+                $command->reset(); 
+
+                if(isset($_POST['tags']) && $_POST['tags']!=''){
+                    $tags = CJSON::decode($_POST['tags']);
+
+                    for($i=0; $i<count($tags); $i++) {
+                        $tag = $tags[$i];
+
+                        $command->insert('video_tag', array(
+                            'video_id'=>$id,
+                            'tag'=>$tag
+                        ));
+
+                        $command->reset(); 
+                    }
+                }
+
                 $this->redirect(array('index'));
+            
+            } catch (Exception $e) {
+                echo 'Caught exception: ',  $e->getMessage(), "\n";
+            }
         }
 
         $this->render('update', array(
             'model' => $model,
+            'jsonTags' => CJSON::encode($this->getTags())
         ));
     }
 
@@ -84,6 +132,22 @@ class VideoController extends Controller {
 
         return $model->save();
     }
+    
+    private function getTags(){
+        $tags=  VideoTag::model()->findAll(array(
+            'select'=>'tag',
+            'group'=>'tag',
+            'distinct'=>true,
+        ));
+       
+        $arr_tags = array();
+        
+        foreach($tags as $tag){
+            $arr_tags[] = $tag->tag;
+        }
+       
+        return $arr_tags;
+    }
 
     public function actionDelete($id) {
         $this->loadModel($id)->delete();
@@ -92,7 +156,8 @@ class VideoController extends Controller {
     }
 
     private function loadModel($id) {
-        $model = Video::model()->findByPk($id);
+        $model = Video::model()->with('videoTags')->findByPk($id);
+        
         if ($model === null)
             throw new CHttpException(404, 'The requested page does not exist.');
         return $model;

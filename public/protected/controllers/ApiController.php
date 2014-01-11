@@ -19,6 +19,10 @@ class ApiController extends Controller {
          
          echo CJSON::encode($video);
     }
+    
+    public function actionTags(){
+        echo CJSON::encode(["php", "java", "c++"]);
+    }
 }
 
 ?>

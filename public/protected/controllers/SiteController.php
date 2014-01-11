@@ -30,6 +30,27 @@ class SiteController extends Controller {
 
     private function renderVideos($pageSize, $toView) {
         $criteria = new CDbCriteria();
+        
+        if (isset($_GET['tag']) && $_GET['tag']!=''){
+            $videoTags=  VideoTag::model()->findAll(array(
+                'select'=>'video_id',
+                'condition'=>sprintf("tag='%s'", $_GET['tag']),
+                'group'=>'video_id',
+                'distinct'=>true,
+            ));
+ 
+            if(count($videoTags)>0){
+                $videoIds = array();
+                
+                for($i=0; $i<count($videoTags); $i++){
+                    $videoIds[] = $videoTags[$i]->video_id;
+                }
+                
+                $criteria->condition=sprintf("id IN ('%s')", implode("','", $videoIds));
+            }
+            
+        }
+        
         $criteria->order = "recording_date DESC";
 
         $model = new Video();
@@ -38,9 +59,9 @@ class SiteController extends Controller {
         $pages = new CPagination($total);
         $pages->pageSize = $pageSize;
         $pages->applyLimit($criteria);
-
-        $list = $model->with('videoTags')->findAll($criteria);
-
+        
+        $list = $model->with("videoTags")->findAll($criteria);
+        
         $this->render($toView, array(
             'list' => $list,
             'pages' => $pages

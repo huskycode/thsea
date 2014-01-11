@@ -16,5 +16,5 @@ $this->breadcrumbs = array(
     </div>
 </div>
 <div style="padding-left: 20px">
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php echo $this->renderPartial('_form', array('model'=>$model, 'jsonTags'=>$jsonTags)); ?>
 </div>

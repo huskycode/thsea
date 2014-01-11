@@ -24,7 +24,52 @@
                 loadYoutubeInfo(videoUrlElement);
             }
         }
+        
+        jQuery('form').submit(function(){
+            var textTags = jQuery('#tags').textext()[0].hiddenInput().val();
+            var tags = JSON.parse(textTags);
+            //jQuery('#tags').val(tags.join());
+            //jQuery('#tags_text').val(tags.join());
+            //jQuery('#tags').html('test,aaaa,bbbb')
+            //alert(jQuery('#tags_text').val());
+        });
+        
+        var tags = JSON.parse('<?php echo $jsonTags; ?>');
+ 
+        jQuery('#tags')
+            .textext({
+                plugins : 'tags focus autocomplete',                
+            })
+            .bind('getSuggestions', function(e, data)
+            {                
+                textext = jQuery(e.target).textext()[0],
+                query = (data ? data.query : '') || '';
+
+                jQuery(this).trigger(
+                    'setSuggestions',
+                    { result : textext.itemManager().filter(tags, query) }
+                );        
+            });
+            
+        bindTags();
     });
+    
+    function bindTags(){
+        <?php           
+        
+            if($model){
+                $tags = array();
+            
+                foreach($model->videoTags as $tag){
+                    $tags[] = $tag->tag;
+                }
+                
+                $json = CJSON::encode($tags);
+                
+                echo "jQuery('#tags').textext()[0].tags().addTags(".$json.");";
+            }
+        ?>
+    }
 
     function renderVideo(videoUrlElement) {
         var videoId = getVideoId(videoUrlElement.val());
@@ -99,10 +144,9 @@
         window.open(thumbnailUrl);
     }
 
-
 </script>
 <div class="form">
-
+ 
     <?php
     $form = $this->beginWidget('CActiveForm', array(
         'id' => 'video-create-form',
@@ -142,11 +186,17 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'recording_date'); ?>
-        <?php echo $form->textField($model, 'recording_date', array('style' => 'width:70px;',
+        <?php echo $form->textField($model, 'recording_date', array('style' => 'width:80px;',
             'maxlength' => 10));
         ?>   
-<?php echo $form->error($model, 'recording_date'); ?>
+        <?php echo $form->error($model, 'recording_date'); ?>
     </div>
+    
+    <div class="row">
+        Tags
+        <textarea id="tags" name="tags" rows="3" cols="60" style="min-width:400px;"></textarea>
+        <input type="hidden" name="tags_text" id="tags_text" />
+    
 
 
     <div class="row buttons">

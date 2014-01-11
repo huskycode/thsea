@@ -30,6 +30,13 @@ $navItems = array(
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />
         <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>        
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.core.css" type="text/css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.tags.css" type="text/css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.autocomplete.css" type="text/css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.focus.css" type="text/css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.prompt.css" type="text/css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.arrow.css" type="text/css" />
+		
         <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -55,6 +62,16 @@ $navItems = array(
         </style>        
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.core.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.tags.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.autocomplete.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.suggestions.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.filter.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.focus.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.prompt.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.ajax.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.arrow.js" type="text/javascript" charset="utf-8"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/json2.js" type="text/javascript" charset="utf-8"></script>
     </head>
     <body>
         <!-- Primary Page Layout -->

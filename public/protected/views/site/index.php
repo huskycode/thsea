@@ -21,7 +21,8 @@ function displayContent($text) {
 function renderTags($videoTags) {
     $tags_link = array();
     foreach ($videoTags as $tag) {
-        $tags_link[] = '<a href="#">' . $tag->tag . '</a>';
+        $url = Yii::app()->createUrl('site/index',array('tag'=>$tag->tag));
+        $tags_link[] = sprintf('<a href="%s">%s</a>', $url, $tag->tag);
     }
 
     if (count($tags_link) > 0) {

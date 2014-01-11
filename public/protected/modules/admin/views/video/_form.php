@@ -38,7 +38,7 @@
  
         jQuery('#tags')
             .textext({
-                plugins : 'tags focus autocomplete',                
+                plugins : 'tags focus autocomplete arrow',                
             })
             .bind('getSuggestions', function(e, data)
             {                

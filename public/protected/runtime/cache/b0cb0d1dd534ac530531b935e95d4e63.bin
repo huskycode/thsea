@@ -1,18 +1,10 @@
-<?php
-/* @var $this SiteController */
-
-$this->pageTitle = Yii::app()->name . ' - About';
-$this->breadcrumbs = array(
-    'About',
-);
-?>
-<?php if ($this->beginCache('com.seacademy.about', array('duration' => 30))) { ?>
-    <div id="separator"></div>
+a:2:{i:0;a:2:{i:0;s:20970:"    <div id="separator"></div>
 
     <!-- START PAGE WRAPPER -->
     <div class="container main-wrapper">
         <div id="main-content" >
-            <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/about/delivery_software.jpg" alt="" class="border alignright" title="Align Right" width="200" />
+            In Main Content
+            <img src="/thsea/public/images/about/delivery_software.jpg" alt="" class="border alignright" title="Align Right" width="200" />
             <p>Software Engineering หรือ วิศวกรรมซอฟต์แวร์ คือการศึกษาที่เกี่ยวกับปัญหาและแนวทางการแก้ไขปัญหาต่างๆ ที่เกิดขึ้นกับการพัฒนาระบบเทคโนโลยีสารสนเทศ โดยเฉพาะซอฟต์แวร์ในองค์กร ที่ผ่านมารายงานด้านปัญหาต่างๆที่เกิดขึ้นโดยการศึกษาในต่างประเทศพบว่าโอกาสที่โครงการพัฒนาซอฟต์แวร์จะประสบความสำเร็จนั้นมีเพียงประมาณ 20-30% เท่านั้น ซึ่งอัตราส่วนความสำเร็จดังกล่าวแทบจะไม่ได้รับการแก้ไขได้เลยในระยะเวลา 4-5 ปีที่ผ่านมาของการทำวิจัย ไม่ว่าเราจะมีความก้าวหน้าด้านเทคโนโลยีไปมากแค่ไหนก็ตาม</p>
             <p>จากปัญหาดังกล่าวได้มีกลุ่มผู้ประกอบการ กลุ่มผู้เชี่ยวชาญที่อยู่ในทั้งบริษัทเอกชน และในมหาวิทยาลัยหลายๆแห่งทั่วโลก ได้พยายามแก้ไขปัญหา โดยการเสนอแนวทางและเครื่องมือต่างๆ สิ่งที่น่าสนใจคือไม่ว่าจะมีผลงานวิจัยถูกเสนอมากแค่ไหน ก็ไม่สามารถที่จะแก้ไขปัญหาให้ลดลงอย่างที่เราเห็นในสถิติที่ผ่านมา</p>
             <div class="divider-page-small-1px"></div>	
@@ -48,8 +40,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/non.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/non.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/non.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/non.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
                 <div class="item-block four columns photography">
@@ -61,8 +53,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/arm.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/arm.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/arm.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/arm.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
                 <div class="item-block four columns photography">
@@ -74,8 +66,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/bomb.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/bomb.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/bomb.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/bomb.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
 
@@ -88,8 +80,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/mui.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/mui.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/mui.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/mui.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
 
@@ -102,8 +94,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/amp.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/amp.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/amp.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/amp.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
 
@@ -116,8 +108,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/pam.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/pam.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/pam.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/pam.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
 
@@ -130,8 +122,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/tul.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/tul.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/tul.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/tul.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
 
@@ -146,8 +138,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/roong.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/roong.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/roong.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/roong.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
 
@@ -162,8 +154,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/kong.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/kong.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/kong.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/kong.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
                 <div class="item-block four columns photography">
@@ -175,8 +167,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/off.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/off.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/off.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/off.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
                 <div class="item-block four columns photography">
@@ -188,8 +180,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/pla.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/pla.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/pla.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/pla.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
                 <div class="item-block four columns photography">
@@ -201,8 +193,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/nook.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/nook.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/nook.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/nook.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
 
@@ -215,8 +207,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/rux.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/rux.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/rux.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/rux.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
 
@@ -229,8 +221,8 @@ $this->breadcrumbs = array(
                         </div>
                     </div><!-- stack -->
                     <div class="block">
-                        <div class="mask-img"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/bay.jpg" alt="" class="border " /></div>
-                        <div class="mask"><a href="<?php echo Yii::app()->request->baseUrl; ?>/images/contributor/bay.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
+                        <div class="mask-img"><img src="/thsea/public/images/contributor/bay.jpg" alt="" class="border " /></div>
+                        <div class="mask"><a href="/thsea/public/images/contributor/bay.jpg" data-rel="zoom-img" class="zoom-icon"></a></div>
                     </div><!-- block -->
                 </div>
 
@@ -255,6 +247,4 @@ $this->breadcrumbs = array(
             });
         });
     </script>
-    <?php
-    $this->endCache();
-}
+    ";i:1;N;}i:1;N;}

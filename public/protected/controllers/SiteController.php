@@ -19,12 +19,6 @@ class SiteController extends Controller {
             ),
         );
     }
-    public function filters(){
-        return array(array(
-            'COutputCache + index',
-            'duration'=>30
-        ));
-    }
 
     /**
      * This is the default 'index' action that is invoked

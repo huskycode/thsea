@@ -34,6 +34,9 @@ return array(
             // enable cookie-based authentication
             'allowAutoLogin' => true,
         ),
+        'cache'=>array(
+            'class' => 'system.caching.CFileCache',
+        ),
         /*
         'assetManager' => array(
             'class' => 'application.extensions.SafeModeAssetManager',

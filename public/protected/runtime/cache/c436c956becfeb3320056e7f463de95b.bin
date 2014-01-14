@@ -1,0 +1,307 @@
+a:2:{i:0;a:2:{i:0;s:15304:"﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/thsea/public/assets/da03acef/pager.css" />
+<title>Thailand Software Engineering Academy</title>
+        <meta name="author" content="Agile66">
+        <meta name="keywords" content="Software Engineering, Agile, Video Tutorial, Project Management">
+        <meta name="description" content="Thailand Software Engineering Academy">
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!-- CSS -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <link rel="stylesheet" type="text/css" href="/thsea/public/css/base.css" />
+        <link rel="stylesheet" type="text/css" href="/thsea/public/css/skeleton.css" />
+        <link rel="stylesheet" type="text/css" href="/thsea/public/css/style.css" />
+        <!--link rel="stylesheet" type="text/css" href="/thsea/public/css/camera.css" /-->
+        <!--link rel="stylesheet" type="text/css" href="/thsea/public/css/mediaelementplayer.min.css" /-->
+	<link rel="stylesheet" type="text/css" href="/thsea/public/css/colorbox.css" />
+	<link rel="stylesheet" type="text/css" href="/thsea/public/css/jquery-ui.css" />
+        <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>        
+        <link rel="stylesheet" type="text/css" href="/thsea/public/css/form.css" />
+        <link rel="stylesheet" href="/thsea/public/css/textext.core.css" type="text/css" />
+        <link rel="stylesheet" href="/thsea/public/css/textext.plugin.tags.css" type="text/css" />
+        <link rel="stylesheet" href="/thsea/public/css/textext.plugin.autocomplete.css" type="text/css" />
+        <link rel="stylesheet" href="/thsea/public/css/textext.plugin.focus.css" type="text/css" />
+        <link rel="stylesheet" href="/thsea/public/css/textext.plugin.prompt.css" type="text/css" />
+        <link rel="stylesheet" href="/thsea/public/css/textext.plugin.arrow.css" type="text/css" />
+		
+        <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!-- Favicons -->
+        <link rel="shortcut icon" href="/thsea/public/images/favicon.ico">
+        <link rel="apple-touch-icon" href="/thsea/public/images/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/thsea/public/images/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/thsea/public/images/apple-touch-icon-114x114.png">
+        <style type="text/css">
+            .video-panel{
+                background-color: #ebebeb; 
+                height: 40px; 
+                line-height: 30px; 
+                vertical-align: middle;
+                padding-top: 10px;
+                padding-left: 5px;
+                padding-right: 10px;
+                width:100%;
+            }
+            .clear{
+                clear: both;
+            }
+        </style>        
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script src="/thsea/public/js/textext.core.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/thsea/public/js/textext.plugin.tags.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/thsea/public/js/textext.plugin.autocomplete.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/thsea/public/js/textext.plugin.suggestions.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/thsea/public/js/textext.plugin.filter.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/thsea/public/js/textext.plugin.focus.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/thsea/public/js/textext.plugin.prompt.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/thsea/public/js/textext.plugin.ajax.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/thsea/public/js/textext.plugin.arrow.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/thsea/public/js/json2.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body>
+        <!-- Primary Page Layout -->
+        <!-- START MENU WRAPPER -->
+        <div id="menu-wrapper">
+            <div class="container">
+                <div class="four columns">
+                    <div id="logo">
+                        <a href="/"><img src="/thsea/public/images/logo.png" alt="Thailand Software Engineering Academy" ></a>
+                    </div><!-- .logo -->
+                </div><!-- four columns -->
+                <div class="twelve columns navigation">
+                    <div id="menu" class="fix-fish-menu">
+                        <ul class="sf-menu" id="nav">
+<li class="active"><a href="/thsea/public/site">Home</a></li>
+<li><a href="/thsea/public/page?view=about">About</a></li>
+<li><a target="_blank" href="https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform">Leave a Feedback</a></li>
+</ul>                    </div>
+                </div><!-- .twelve columns -->
+            </div><!-- .container -->
+        </div><!-- #slider-wraper -->
+        	<!-- end #menu  -->	
+                    <div style="float:right; padding-right: 10px">
+                                            </div>
+        <!-- END MENU WRAPPER -->
+        <div id="content">
+	﻿<style type="text/css">
+    ul.yiiPager li{
+        font-size: 1.5em;
+    }
+    ul.yiiPager li.next{
+        border-top: 3px solid #FF7E00;
+        width: 30px;
+        background-image: url('http://localhost:8888/thsea/public/images/icons/sprites.png');
+        padding: 2px 0;
+        border: #cccccc solid 1px;
+    }
+</style>
+<div id="fb-root"></div>
+<div id="separator">
+</div><!-- #separator -->
+<!-- END SEPARATOR -->	
+<!-- START BLOG WRAPPER -->
+<div class="container main-wrapper">
+    <div id="main-content" class="twelve columns">
+
+                <div style="font-size: 2em;">
+              
+        </div>
+
+    </div><!-- main-content -->
+
+    <!-- START SIDEBAR -->
+    <div id="sidebar" class="four columns">	
+    </div><!-- sidebar -->
+</div><!-- .container -->
+<script>
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id))
+            return;
+        js = d.createElement(s);
+        js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=416497271802249";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- START SEPARATOR  -->
+<script type="text/javascript">
+    jQuery.noConflict()(function($) {
+
+        $(document).ready(function() {
+            // add facebook popup
+            //$('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"});
+            $('.fb-comment-count').click(function() {
+                location.hash = $(this).attr('href');
+                openFromHashTag();
+            });
+            //show hash tag;
+            //openFromHashTag();
+            
+            var hash = window.location.hash;
+            var id = hash.replace('#fb-comment-', '');
+                
+            jQuery.getJSON( "/api/video/"+id, function( data ) {    
+                openPopup(data.id, data.title, data.url);
+            });
+        });
+        function openFromHashTag() {
+            var hash = window.location.hash;
+            var hashCommentCode = "#fb-comment-";
+            var foundHashCode = hash.indexOf(hashCommentCode);
+            if (foundHashCode !== -1) {
+                setTimeout(function() {
+                    openPopup($(hash).data('id'), $(hash).data('title'), $(hash).data('video'));
+                }, 200);
+            }
+        }
+        function openPopup(id, title, video) {
+        var re = /https?:\/\/(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube\.com\S*[^\w\-\s])([\w\-]{11})(?=[^\w\-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/ig;
+        video =  video.replace(re,'//www.youtube.com/embed/$1');
+            $.colorbox({
+                html: '\n\
+                        <div class="popup">\n\
+                        <div class="image-post video">\n\
+                            <div style="float:right;" class="pull-right">\n\
+                                <div class="fb-like" data-href="http://localhost:8888/thsea/public#fb-like-' + id + '" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>\n\
+                            </div>\n\
+                            <h6>' + title + '</h6>\n\
+                            <iframe width="654" height="368" src="'+video+'" frameborder="0"></iframe>\n\
+                        </div>\n\
+                        <div class="comment">\n\
+                            <div class="fb-comments" data-href="http://localhost:8888/thsea/public#fb-comment-' + id + '"></div>\n\
+                        </div>\n\
+                        </div>\n\
+                        ',
+                width: "100%", 
+                height: "100%",
+                onClosed: function() {
+                    history.pushState("", document.title, window.location.pathname + window.location.search);
+                }
+            });
+            try {
+                FB.XFBML.parse();
+            } catch (ex) {
+            }
+        }
+        window.onresize = function(){
+            $.colorbox.resize({
+                    width: '100%',
+                    height: '100%'
+                });
+            console.log("call resize");
+        }
+    });
+</script>
+<!-- END BLOG WRAPPER -->
+
+<!-- CLIENTS -->
+<div class="container header-block">
+    <!-- start header -->
+    <div class="sixteen columns lp-header">
+        <h6>Content Sponsor</h6>
+        <div class="nav-projects">
+        </div><!-- .nav-projects -->
+    </div><!-- .sixteen  -->
+    <!-- end header -->
+</div><!-- .container -->
+
+<div id="clients" class="container">
+    <ul id="clients-carousel" class="jcarousel-skin-tango" >
+        <!-- start carousel -->
+        <li><div class="four columns">
+                <div class="block">
+                    <a href="http://www.agile66.com/" target="_blank" alt="Agile66"><img src="/thsea/public/images/clients/Agile66.jpg" alt="" /></a>
+                </div><!-- block -->  
+            </div><!-- .four  --></li>
+        <!--<li><div class="four columns">
+                <div class="block">
+                    <a href="http://www.welovebug.com/" target="_blank" alt="We love Bug"><img src="images/clients/WeLoveBug.PNG" alt="" /></a>
+                </div>   
+            </div></li>
+
+        <li><div class="four columns">
+                <div class="block">
+                    <a href="http://www.swpark.or.th/" target="_blank" alt="Software Park Thailand"><img src="images/clients/SoftwarePark.jpg" alt="" /></a>
+                </div>  
+            </div></li>-->
+
+    </ul><!-- #clients-carousel -->
+</div><!-- .container -->
+<!-- END CLIENTS --></div><!-- content -->
+        <!-- -============== END CONTENT WRAPPER =================- -->
+        <!-- START FOOTER -->
+        <div id="footer">
+            <div class="btop-1px"></div>
+            <div class="container">
+                <div class="four columns copyright">
+                    <img src="/thsea/public/images/logo-footer.png" alt="" />
+                    <p class="last">@2013 All Rights Reserved.</p>
+                </div><!-- .copyright -->
+                <div class="twelve columns">
+                    <div id="secondary-nav" class="clearfix">
+                        <ul class="clearfix" id="yw2">
+<li class="active"><a href="/thsea/public/site">Home</a></li>
+<li><a href="/thsea/public/page?view=about">About</a></li>
+<li><a target="_blank" href="https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform">Leave a Feedback</a></li>
+</ul>                        <div class="gray-dash-3px"></div>
+                    </div><!-- #secondary-nav -->
+                </div><!-- container -->
+            </div><!-- #footer -->
+            <!-- END FOOTER -->
+
+            <!-- JS -->
+            <script type="text/javascript" src="/thsea/public/js/jquery.easing.1.3.js"></script>	
+            <script type="text/javascript" src="/thsea/public/js/superfish.js"></script>
+            <!--script type="text/javascript" src="/thsea/public/js/camera.min.js"></script-->
+            <script type="text/javascript" src="/thsea/public/js/jquery.mobile.customized.min.js"></script>	
+            <script type="text/javascript" src="/thsea/public/js/jcarousel.min.js"></script>
+            <script type="text/javascript" src="/thsea/public/js/mediaelement-and-player.min.js"></script>
+            <script type="text/javascript" src="/thsea/public/js/scrolltopcontrol.js"></script>
+            <script type="text/javascript" src="/thsea/public/js/jquery.colorbox-min.js"></script>
+            <script type="text/javascript" src="/thsea/public/js/jquery.isotope.min.js"></script>
+            <!--script type="text/javascript" src="/thsea/public/js/jflickrfeed.min.js"></script-->
+            <!--script type="text/javascript" src="/thsea/public/js/jquery.tweet.js"></script-->
+            <!--script type="text/javascript" src="/thsea/public/js/contact.js"></script-->
+            <script type="text/javascript" src="/thsea/public/js/custom.js"></script>
+            <script type="text/javascript" src="/thsea/public/js/application.js"></script>	
+            <script>
+                jQuery.noConflict()(function($) {
+                    // create player
+                    $('#player2').mediaelementplayer({
+                        // add desired features in order
+                        // I've put the loop function second,
+                        features: ['playpause', 'loop', 'current', 'progress', 'duration']
+                    });
+                });
+            </script>
+            <script>
+                (function(i, s, o, g, r, a, m) {
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function() {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                            m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                ga('create', 'UA-43492371-1', 'seacademy.in.th');
+                ga('send', 'pageview');
+
+            </script>
+            <!-- End Document
+            ================================================== -->
+    </body>
+</html>";i:1;a:1:{i:0;a:3:{i:0;s:12:"clientScript";i:1;s:15:"registerCssFile";i:2;a:1:{i:0;s:39:"/thsea/public/assets/da03acef/pager.css";}}}}i:1;N;}

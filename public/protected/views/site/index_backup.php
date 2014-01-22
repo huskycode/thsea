@@ -16,7 +16,7 @@ $this->breadcrumbs = array(
         <!-- start slider -->
 		<div class="sixteen columns camera_wrap camera_burgundy_skin clearfix" id="camera_wrap_1">
         <?php foreach ($list as $row): 
-			           $this->widget('application.components.YoutubeViewer', array(
+			           $this->widget('ext.YoutubeViewer', array(
                             'url' => $row->url,
                             'width' => 940,
                             'height' => 400,

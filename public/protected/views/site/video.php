@@ -92,7 +92,7 @@ function renderTags($videoTags) {
                 <div class="image-post">
                     <a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>">
                         <?php
-                        $this->widget('application.components.YoutubeViewer', array(
+                        $this->widget('ext.YoutubeViewer', array(
                             'url' => $row->url,
                             'width' => 674,
                             'height' => 337,
@@ -124,7 +124,7 @@ function renderTags($videoTags) {
                             </div>
                             <h6><?php echo $row->title; ?></h6>
                             <?php
-                            $this->widget('application.components.YoutubeViewer', array(
+                            $this->widget('ext.YoutubeViewer', array(
                                 'url' => $row->url,
                                 'width' => 654,
                                 'height' => 368,

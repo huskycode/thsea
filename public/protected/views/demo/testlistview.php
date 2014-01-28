@@ -1,3 +1,3 @@
 <?php
-    $this->widget('ext.ListView', array('dataSource'=>array('One', 'Two', 'Three', 'Four')));
+    $this->widget('ext.Demo.ListView', array('dataSource'=>array('One', 'Two', 'Three', 'Four')));
 ?>

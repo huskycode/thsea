@@ -139,27 +139,16 @@ function renderTags($videoTags) {
             //$('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"});
             $('.fb-comment-count').click(function() {
                 location.hash = $(this).attr('href');
-                openFromHashTag();
+                OpenFromJSON();
             });
-            //show hash tag;
-            //openFromHashTag();
-            
+            OpenFromJSON();
+        });
+        function OpenFromJSON(){
             var hash = window.location.hash;
-            var id = hash.replace('#fb-comment-', '');
-                
+            var id = hash.replace('#fb-comment-', '');     
             jQuery.getJSON( "/api/video/"+id, function( data ) {    
                 openPopup(data.id, data.title, data.url);
             });
-        });
-        function openFromHashTag() {
-            var hash = window.location.hash;
-            var hashCommentCode = "#fb-comment-";
-            var foundHashCode = hash.indexOf(hashCommentCode);
-            if (foundHashCode !== -1) {
-                setTimeout(function() {
-                    openPopup($(hash).data('id'), $(hash).data('title'), $(hash).data('video'));
-                }, 200);
-            }
         }
         function openPopup(id, title, video) {
         var re = /https?:\/\/(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube\.com\S*[^\w\-\s])([\w\-]{11})(?=[^\w\-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/ig;

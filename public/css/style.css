@@ -1966,7 +1966,8 @@ padding-left: 23px !important;*/ }
 }
 
 .video-info .date{
-    background-position: -149px 0;
+    /*background-position: -149px 0;*/
+    color: #999;
 }
 
 .video-info .author{

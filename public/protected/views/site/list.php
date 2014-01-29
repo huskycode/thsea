@@ -18,19 +18,6 @@ function displayContent($text) {
     return preg_replace("#((http|https|ftp)://(\S*?\.\S*?))(\s|\;|\)|\]|\[|\{|\}|,|\"|'|:|\<|$|\.\s)#ie", "'<a href=\"$1\" target=\"_blank\">$3</a>$4'", $text);
 }
 
-function renderTags($videoTags) {
-    $tags_link = array();
-    foreach ($videoTags as $tag) {
-        $url = Yii::app()->createUrl('site/index',array('tag'=>$tag->tag));
-        $tags_link[] = sprintf('<a href="%s">%s</a>', $url, $tag->tag);
-    }
-
-    if (count($tags_link) > 0) {
-        echo implode(", ", $tags_link);
-    } else {
-        echo "-";
-    }
-}
 ?>
 <style type="text/css">
     ul.yiiPager li{
@@ -65,9 +52,7 @@ function renderTags($videoTags) {
                         </div>
                         <div class="date" title="Recording Date"><span><?php echo $row->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($row->recording_date, 'long', null) : '-' ?></span></div>
                         <div class="tags" title="Tags"><span>
-                                <?php
-                                renderTags($row->videoTags);
-                                ?>
+                                <?php echo WebHelper::renderTags($row->videoTags); ?>
                             </span></div>
                         <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><fb:comments-count href="<?php echo getCommentUrl($row->id); ?>"/></fb:comments-count></a></span></div>
                     </div><!-- meta-post -->

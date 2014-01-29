@@ -18,19 +18,6 @@ function displayContent($text) {
     return preg_replace("#((http|https|ftp)://(\S*?\.\S*?))(\s|\;|\)|\]|\[|\{|\}|,|\"|'|:|\<|$|\.\s)#ie", "'<a href=\"$1\" target=\"_blank\">$3</a>$4'", $text);
 }
 
-function renderTags($videoTags) {
-    $tags_link = array();
-    foreach ($videoTags as $tag) {
-        $url = Yii::app()->createUrl('site/index',array('tag'=>$tag->tag));
-        $tags_link[] = sprintf('<a href="%s">%s</a>', $url, $tag->tag);
-    }
-
-    if (count($tags_link) > 0) {
-        echo implode(", ", $tags_link);
-    } else {
-        echo "-";
-    }
-}
 ?>
 <style type="text/css">
     ul.yiiPager li{
@@ -142,7 +129,6 @@ function renderTags($videoTags) {
     </div><!-- .sixteen  -->
     <!-- end header -->
 </div><!-- .container -->
-
 <div id="clients" class="container">
     <ul id="clients-carousel" class="jcarousel-skin-tango" >
         <!-- start carousel -->

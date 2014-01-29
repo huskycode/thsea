@@ -22,7 +22,13 @@
                             #<span class="tags">
                                 <?php echo WebHelper::renderTags($this->Videos[0]->videoTags); ?>
                             </span><br />
-                            <span><?php echo $this->Videos[0]->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($this->Videos[0]->recording_date, 'long', null) : '-' ?></span>
+                            <span class="view-counter">
+                                <?php echo number_format($this->Videos[0]->view_counter); ?> views
+                            </span>
+                            <span>
+                                <?php //echo DateTimeHelper::TimeAgo($this->Videos[0]->recording_date) ?>
+                            </span>
+                            <span class="date"><?php echo $this->Videos[0]->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($this->Videos[0]->recording_date, 'long', null) : '-' ?></span>
                         </div>  
                 </div>
         </div>
@@ -63,7 +69,10 @@
                         #<span class="tags">
                             <?php echo WebHelper::renderTags($this->Videos[$i]->videoTags); ?>
                         </span><br />
-                        <span><?php echo $this->Videos[$i]->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($this->Videos[$i]->recording_date, 'long', null) : '-' ?></span>
+                            <span class="view-counter">
+                                <?php echo number_format($this->Videos[$i]->view_counter); ?> views
+                            </span>
+                        <span class="date"><?php echo $this->Videos[$i]->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($this->Videos[$i]->recording_date, 'long', null) : '-' ?></span>
                         
                     </div>
             </div><!-- end video-text -->

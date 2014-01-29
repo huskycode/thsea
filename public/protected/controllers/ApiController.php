@@ -13,9 +13,7 @@
 class ApiController extends Controller {
 
     public function filters() {
-        return array(
-            'accessControl', // perform access control for CRUD operations
-        );
+        return array('accessControl');
     }
 
     public function actionVideo($id) {
@@ -42,5 +40,3 @@ class ApiController extends Controller {
     }
 
 }
-
-?>

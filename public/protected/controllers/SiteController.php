@@ -19,13 +19,21 @@ class SiteController extends Controller {
             ),
         );
     }
+    
+    public function actionIndex(){
+        $recentlyVideos = Video::model()->recently(4)->findAll();
+        
+        $this->render('index', array(
+            'recentlyVideos'=>$recentlyVideos
+        ));
+    }
 
     /**
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.
      */
-    public function actionIndex() {
-        $this->renderVideos(Yii::app()->params['videoListPageSize'], 'index');
+    public function actionList() {
+        $this->renderVideos(Yii::app()->params['videoListPageSize'], 'list');
     }
 
     private function renderVideos($pageSize, $toView) {

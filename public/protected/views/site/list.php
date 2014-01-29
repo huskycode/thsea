@@ -50,16 +50,74 @@ function renderTags($videoTags) {
 <!-- END SEPARATOR -->	
 <!-- START BLOG WRAPPER -->
 <div class="container main-wrapper">
-   
-    <div id="video-most-recent-section">
-  
-        <?php $this->widget('ext.VideoSection.MostRecentSection', array('Videos'=>$recentlyVideos)); ?>
+    <div id="main-content" class="twelve columns">
+        <h4># <?php echo isset($_GET['tag']) && $_GET['tag']!=''?$_GET['tag']:'All'; ?></h4>
         
-    </div>  
-<hr />
-    
+        <?php foreach ($list as $row): ?>
+            <div id="fb-comment-<?php echo $row->id; ?>" data-id="<?php echo $row->id; ?>" data-title="<?php echo $row->title; ?>" data-video="<?php echo $row->url; ?>"></div>
+            <div class="entry-post format-image">
+                <div class="info-post">
+                </div><!-- info-post -->
+                <div class="stack">
+                    <div class="meta-post">
+                        <div style="right:0; position:absolute;background:none;" class="pull-right">
+                            <div class="fb-like" data-href="<?php echo getLikeUrl($row->id); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+                        </div>
+                        <div class="date" title="Recording Date"><span><?php echo $row->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($row->recording_date, 'long', null) : '-' ?></span></div>
+                        <div class="tags" title="Tags"><span>
+                                <?php
+                                renderTags($row->videoTags);
+                                ?>
+                            </span></div>
+                        <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><fb:comments-count href="<?php echo getCommentUrl($row->id); ?>"/></fb:comments-count></a></span></div>
+                    </div><!-- meta-post -->
+                </div><!-- stack -->
+                <div class="image-post">
+                    <a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>">
+                        <?php
+                        $this->widget('ext.YoutubeViewer', array(
+                            'imageUrl' => $row->thumbnail_url,
+                            'width' => 674,
+                            'height' => 337,
+                            'display' => 'image',
+                            'alt' => $row->title
+                        ));
+                        ?>
+                    </a>
+                </div><!-- post-image -->
+                <div class="text-post clearfix">
+                    <div class="title-post">
+                        <h6><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><?php echo $row->title ?></a></h6>
+                    </div>
+                    <p><?php
+                        if ($row->description == null) {
+                            echo 'No description avaliable';
+                        } else {
+                            echo displayContent($row->description);
+                        }
+                        ?>
+                    </p>
+                    <a href="#fb-comment-<?php echo $row->id; ?>" class="button read-more fb-comment-count">Comment</a>
+                </div><!-- text-post -->
+                <div class="divider-blog-1px"></div>
+            </div><!-- entry-post -->
 
-    
+        <?php endforeach; ?>
+        <div style="font-size: 2em;">
+            <?php
+            $this->widget('CLinkPager', array(
+                'pages' => $pages,
+                'header' => '',
+                'nextPageLabel' => '>',
+                'prevPageLabel' => '<'));
+            ?>  
+        </div>
+
+    </div><!-- main-content -->
+
+    <!-- START SIDEBAR -->
+    <div id="sidebar" class="four columns">	
+    </div><!-- sidebar -->
 </div><!-- .container -->
 <script>
     (function(d, s, id) {
@@ -73,7 +131,7 @@ function renderTags($videoTags) {
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
-
+<!-- START SEPARATOR  -->
 <script type="text/javascript">
     jQuery.noConflict()(function($) {
 
@@ -131,6 +189,7 @@ function renderTags($videoTags) {
         }
     });
 </script>
+<!-- END BLOG WRAPPER -->
 
 <!-- CLIENTS -->
 <div class="container header-block">

@@ -13,6 +13,7 @@ return array(
     'import' => array(
         'application.models.*',
         'application.components.*',
+        'ext.*',
     ),
     'modules' => array(
         // uncomment the following to enable the Gii tool
@@ -57,7 +58,7 @@ return array(
             'showScriptName'=>false,
             'rules'=>array(
                 'gii'=>'gii',
-                'video'=>'site/video',
+                'list'=>'site/list',
                 'login'=>'site/login',
                 'logout'=>'site/logout',
                 'page'=>'site/page',

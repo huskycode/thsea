@@ -1,4 +1,4 @@
-    <div class="six columns" >
+    <div class="seven columns" >
         
         <div class="video-block" style="height:315px">
                 <div class="video-thumbnail-large">
@@ -35,7 +35,7 @@
         
     </div>
 
-    <div class="ten columns column-last" >
+    <div class="nine columns column-last" >
     
     <?php
        $displayVideoCount = 3;

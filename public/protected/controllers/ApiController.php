@@ -25,6 +25,10 @@ class ApiController extends Controller {
         echo CJSON::encode($video);
     }
 
+    public function actionTags() {
+        echo CJSON::encode(["php", "java", "c++"]);
+    }
+    
     private function addViewCounter($id) {
         $model = Video::model()->findByPk($id);
         if ($model === null){
@@ -33,10 +37,6 @@ class ApiController extends Controller {
         $model->view_counter = $model->view_counter+1;
         $model->view_counter;
         $model->save();
-    }
-
-    public function actionTags() {
-        echo CJSON::encode(["php", "java", "c++"]);
     }
 
 }

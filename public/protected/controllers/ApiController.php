@@ -26,7 +26,7 @@ class ApiController extends Controller {
     }
 
     public function actionTags() {
-        echo CJSON::encode(["php", "java", "c++"]);
+        //echo CJSON::encode(["php", "java", "c++"]);
     }
     
     private function addViewCounter($id) {

@@ -36,7 +36,7 @@ function displayContent($text) {
 </div><!-- #separator -->
 <!-- END SEPARATOR -->	
 <!-- START BLOG WRAPPER -->
-<div class="container main-wrapper">
+<div class="container video-wrapper" >
   
     <?php $this->widget('ext.VideoSection.MostRecentSection', array('Videos'=>$recentlyVideos)); ?>
     <hr />

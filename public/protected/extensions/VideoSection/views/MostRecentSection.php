@@ -1,14 +1,12 @@
     <div class="seven columns" >
         
         <div  style="border-right: #cccccc solid 1px;padding-right: 20px">
-            <div class="video-block" style="height:315px">
+            <div class="video-block" >
                     <div class="video-thumbnail-large">
                         <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[0]->id; ?>">
                             <?php
                             $this->widget('ext.YoutubeViewer', array(
                                 'imageUrl' => $this->Videos[0]->thumbnail_url,
-                                'width' => 430,
-                                'height' => 180,
                                 'display' => 'image',
                                 'alt' => $this->Videos[0]->title
                             ));
@@ -17,7 +15,9 @@
                     </div>
                     <div class="video-text clearfix">
                             <div class="video-title">
-                                <h6><a href="#"><?php echo $this->Videos[0]->title; ?></a></h6>
+                                    <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[0]->id; ?>">
+                                        <?php echo $this->Videos[0]->title; ?>
+                                    </a>
                             </div>
                             <div class="video-info">
                                 #<span class="tags">
@@ -29,7 +29,8 @@
                                 <span>
                                     <?php //echo DateTimeHelper::TimeAgo($this->Videos[0]->recording_date) ?>
                                 </span>
-                                <span class="date"><?php echo $this->Videos[0]->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($this->Videos[0]->recording_date, 'long', null) : '-' ?></span>
+                                <span class="date"><?php echo $this->Videos[0]->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($this->Videos[0]->recording_date, 'long', null) : '-' ?></span><br/>
+                                <span class="description" title="<?php echo htmlentities ($this->Videos[0]->description); ?>"><?php echo TextHelper::limitText($this->Videos[0]->description); ?></span>
                             </div>  
                     </div>
             </div>
@@ -45,13 +46,11 @@
     ?>
  
     <div class="video-block">
-            <div class="video-thumbnail">
+            <div class="video-thumbnail-small">
                     <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[$i]->id; ?>">
                         <?php
                         $this->widget('ext.YoutubeViewer', array(
                             'imageUrl' => $this->Videos[$i]->thumbnail_url,
-                            'width' => 156,
-                            'height' => 86,
                             'display' => 'image',
                             'alt' => $this->Videos[$i]->title
                         ));
@@ -60,11 +59,11 @@
             </div>
             <div class="video-text clearfix">
                     <div class="video-title">
-                        <h6>
+                       
                             <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[$i]->id; ?>">
                                 <?php echo $this->Videos[$i]->title; ?>
                             </a>
-                        </h6>
+                        
                     </div>
                     <div class="video-info">
                         #<span class="tags">
@@ -73,8 +72,8 @@
                             <span class="view-counter">
                                 <?php echo number_format($this->Videos[$i]->view_counter); ?> views
                             </span>
-                        <span class="date"><?php echo $this->Videos[$i]->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($this->Videos[$i]->recording_date, 'long', null) : '-' ?></span>
-                        
+                        <span class="date"><?php echo $this->Videos[$i]->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($this->Videos[$i]->recording_date, 'long', null) : '-' ?></span><br/>
+                        <span class="description" title="<?php echo htmlentities($this->Videos[$i]->description); ?>"><?php echo TextHelper::limitText($this->Videos[$i]->description); ?></span>
                     </div>
             </div>
     </div>

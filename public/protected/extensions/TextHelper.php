@@ -29,6 +29,10 @@ class TextHelper {
         
         return $newText;
     }
+    
+    public static function htmlEncode($text){
+        return htmlentities($text, ENT_QUOTES | ENT_XHTML, "UTF-8");
+    }
 }
 
 ?>

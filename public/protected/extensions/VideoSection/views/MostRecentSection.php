@@ -30,7 +30,7 @@
                                     <?php //echo DateTimeHelper::TimeAgo($this->Videos[0]->recording_date) ?>
                                 </span>
                                 <span class="date"><?php echo $this->Videos[0]->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($this->Videos[0]->recording_date, 'long', null) : '-' ?></span><br/>
-                                <span class="description" title="<?php echo htmlentities ($this->Videos[0]->description); ?>"><?php echo TextHelper::limitText($this->Videos[0]->description); ?></span>
+                                <span class="description" title="<?php echo TextHelper::htmlEncode($this->Videos[0]->description); ?>"><?php echo TextHelper::limitText($this->Videos[0]->description); ?></span>
                             </div>  
                     </div>
             </div>
@@ -73,7 +73,7 @@
                                 <?php echo number_format($this->Videos[$i]->view_counter); ?> views
                             </span>
                         <span class="date"><?php echo $this->Videos[$i]->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($this->Videos[$i]->recording_date, 'long', null) : '-' ?></span><br/>
-                        <span class="description" title="<?php echo htmlentities($this->Videos[$i]->description); ?>"><?php echo TextHelper::limitText($this->Videos[$i]->description); ?></span>
+                        <span class="description" title="<?php echo TextHelper::htmlEncode($this->Videos[$i]->description); ?>"><?php echo TextHelper::limitText($this->Videos[$i]->description); ?></span>
                     </div>
             </div>
     </div>

@@ -1943,7 +1943,7 @@ padding-left: 23px !important;*/ }
     margin-bottom:5px;
     font-size: 0.9em;
     line-height: 20px;
-    border: #ccc solid 1px;
+    /*border: #ccc solid 1px;*/
     
    padding: 6px;
 }

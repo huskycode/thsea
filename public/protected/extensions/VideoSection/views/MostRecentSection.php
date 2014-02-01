@@ -38,7 +38,10 @@
     
     <?php
        $displayVideoCount = 3;
-       
+       $totalVideo = count($this->Videos);
+       if($totalVideo < $displayVideoCount){
+           $displayVideoCount = $totalVideo;
+       }
        for($i=1; $i<=$displayVideoCount; $i++):
     ?>
  

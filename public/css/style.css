@@ -1915,10 +1915,10 @@ padding-left: 23px !important;*/ }
 .video-wrapper { 
     border-left: #cccccc solid 1px;
     border-right: #cccccc solid 1px;
-    border-bottom: #cccccc solid 1px;
     margin-top: 0px;
+    margin-bottom: -50px;
     padding-top:10px;
-    padding-bottom: 10px;
+    padding-bottom: 10px;    
 }
 
 .video-wrapper .columns{

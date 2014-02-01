@@ -39,11 +39,41 @@ function displayContent($text) {
 <div class="container video-wrapper" >
   
     <?php $this->widget('ext.VideoSection.MostRecentSection', array('Videos'=>$recentlyVideos)); ?>
-    <hr />
+  
     
+
+
+    <div class="clearfix"></div>
+
+<!-- CLIENTS -->
+<div class="container header-block" style="margin-top: 30px;">
+    <!-- start header -->
+    <div class="sixteen columns lp-header">
+        <h6>Content Sponsor</h6>
+        <div class="nav-projects">
+        </div><!-- .nav-projects -->
+    </div><!-- .sixteen  -->
+    <!-- end header -->
+</div><!-- .container -->
+<div id="clients" class="container">
+    <ul id="clients-carousel" class="jcarousel-skin-tango" >
+        <!-- start carousel -->
+        <li><div class="four columns">
+                <div class="block">
+                    <a href="http://www.agile66.com/" target="_blank" alt="Agile66"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/Agile66.jpg" alt="" /></a>
+                </div><!-- block -->  
+            </div><!-- .four  --></li>
+
+    </ul><!-- #clients-carousel -->
+</div><!-- .container -->
+<!-- END CLIENTS -->
+
+
 
     
 </div><!-- .container -->
+
+
 <script>
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -114,37 +144,3 @@ function displayContent($text) {
         }
     });
 </script>
-
-<!-- CLIENTS -->
-<div class="container header-block">
-    <!-- start header -->
-    <div class="sixteen columns lp-header">
-        <h6>Content Sponsor</h6>
-        <div class="nav-projects">
-        </div><!-- .nav-projects -->
-    </div><!-- .sixteen  -->
-    <!-- end header -->
-</div><!-- .container -->
-<div id="clients" class="container">
-    <ul id="clients-carousel" class="jcarousel-skin-tango" >
-        <!-- start carousel -->
-        <li><div class="four columns">
-                <div class="block">
-                    <a href="http://www.agile66.com/" target="_blank" alt="Agile66"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/Agile66.jpg" alt="" /></a>
-                </div><!-- block -->  
-            </div><!-- .four  --></li>
-        <!--<li><div class="four columns">
-                <div class="block">
-                    <a href="http://www.welovebug.com/" target="_blank" alt="We love Bug"><img src="images/clients/WeLoveBug.PNG" alt="" /></a>
-                </div>   
-            </div></li>
-
-        <li><div class="four columns">
-                <div class="block">
-                    <a href="http://www.swpark.or.th/" target="_blank" alt="Software Park Thailand"><img src="images/clients/SoftwarePark.jpg" alt="" /></a>
-                </div>  
-            </div></li>-->
-
-    </ul><!-- #clients-carousel -->
-</div><!-- .container -->
-<!-- END CLIENTS -->

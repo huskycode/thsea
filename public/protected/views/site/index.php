@@ -96,10 +96,13 @@ function displayContent($text) {
         });
         function OpenFromJSON() {
             var hash = window.location.hash;
-            var id = hash.replace('#fb-comment-', '');
-            jQuery.getJSON("/api/video/" + id, function(data) {
-                openPopup(data.id, data.title, data.url);
-            });
+            
+            if(hash){
+                var id = hash.replace('#fb-comment-', '');
+                jQuery.getJSON("/api/video/" + id, function(data) {
+                    openPopup(data.id, data.title, data.url);
+                });
+            }
         }
         function openPopup(id, title, video) {
             var re = /https?:\/\/(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube\.com\S*[^\w\-\s])([\w\-]{11})(?=[^\w\-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/ig;

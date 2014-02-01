@@ -1,0 +1,41 @@
+#home-popular{
+    display:block;
+    clear:both;
+    position:relative;
+    h2{
+        font-size:20px;
+        padding:0 10px;
+        margin:0;
+    }
+    .video-block{
+        display:block;
+        float:left;
+        width:30%;
+    }
+    &:after{
+        content: ' ';
+        display:block;
+        clear:both;
+        position:relative;
+    }
+}
+@media only screen and (min-width: 768px){
+    #home-popular{
+        .video-block{
+            .video-thumbnail-small{
+                float: none;
+                img{
+                    width:100%;
+                    height:auto;
+                }
+            }   
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    #home-popular{
+        .video-block{
+            width:100%;
+        }
+    }
+}

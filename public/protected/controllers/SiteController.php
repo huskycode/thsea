@@ -22,9 +22,11 @@ class SiteController extends Controller {
     
     public function actionIndex(){
         $recentlyVideos = Video::model()->recently(4)->findAll();
+        $topViewVideos =  Video::model()->topview(3)->findAll();
         
         $this->render('index', array(
-            'recentlyVideos'=>$recentlyVideos
+            'recentlyVideos'=>$recentlyVideos,
+            'topViewVideos'=>$topViewVideos,
         ));
     }
 

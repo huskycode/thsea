@@ -1,0 +1,15 @@
+/* line 1, ../sass/home-popular.scss */
+#home-popular { display: block; clear: both; position: relative; }
+/* line 5, ../sass/home-popular.scss */
+#home-popular h2 { font-size: 20px; padding: 0 10px; margin: 0; }
+/* line 10, ../sass/home-popular.scss */
+#home-popular .video-block { display: block; float: left; width: 30%; }
+/* line 15, ../sass/home-popular.scss */
+#home-popular:after { content: ' '; display: block; clear: both; position: relative; }
+
+@media only screen and (min-width: 768px) { /* line 25, ../sass/home-popular.scss */
+  #home-popular .video-block .video-thumbnail-small { float: none; }
+  /* line 27, ../sass/home-popular.scss */
+  #home-popular .video-block .video-thumbnail-small img { width: 100%; height: auto; } }
+@media only screen and (max-width: 767px) { /* line 37, ../sass/home-popular.scss */
+  #home-popular .video-block { width: 100%; } }

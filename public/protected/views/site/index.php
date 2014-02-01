@@ -17,7 +17,6 @@ function displayContent($text) {
     $text = nl2br($text);
     return preg_replace("#((http|https|ftp)://(\S*?\.\S*?))(\s|\;|\)|\]|\[|\{|\}|,|\"|'|:|\<|$|\.\s)#ie", "'<a href=\"$1\" target=\"_blank\">$3</a>$4'", $text);
 }
-
 ?>
 <style type="text/css">
     ul.yiiPager li{
@@ -37,12 +36,9 @@ function displayContent($text) {
 <!-- END SEPARATOR -->	
 <!-- START BLOG WRAPPER -->
 <div class="container video-wrapper" >
-  
-    <?php $this->widget('ext.VideoSection.MostRecentSection', array('Videos'=>$recentlyVideos)); ?>
+    <?php $this->widget('ext.VideoSection.MostRecentSection', array('Videos' => $recentlyVideos)); ?>
     <hr />
-    
-
-    
+    <?php $this->widget('ext.VideoSection.TopViewSection', array('Videos' => $topViewVideos)); ?>
 </div><!-- .container -->
 <script>
     (function(d, s, id) {
@@ -69,16 +65,16 @@ function displayContent($text) {
             });
             OpenFromJSON();
         });
-        function OpenFromJSON(){
+        function OpenFromJSON() {
             var hash = window.location.hash;
-            var id = hash.replace('#fb-comment-', '');     
-            jQuery.getJSON( "/api/video/"+id, function( data ) {    
+            var id = hash.replace('#fb-comment-', '');
+            jQuery.getJSON("/api/video/" + id, function(data) {
                 openPopup(data.id, data.title, data.url);
             });
         }
         function openPopup(id, title, video) {
-        var re = /https?:\/\/(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube\.com\S*[^\w\-\s])([\w\-]{11})(?=[^\w\-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/ig;
-        video =  video.replace(re,'//www.youtube.com/embed/$1');
+            var re = /https?:\/\/(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube\.com\S*[^\w\-\s])([\w\-]{11})(?=[^\w\-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/ig;
+            video = video.replace(re, '//www.youtube.com/embed/$1');
             $.colorbox({
                 html: '\n\
                         <div class="popup">\n\
@@ -87,14 +83,14 @@ function displayContent($text) {
                                 <div class="fb-like" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-like-'; ?>' + id + '" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>\n\
                             </div>\n\
                             <h6>' + title + '</h6>\n\
-                            <iframe width="654" height="368" src="'+video+'" frameborder="0"></iframe>\n\
+                            <iframe width="654" height="368" src="' + video + '" frameborder="0"></iframe>\n\
                         </div>\n\
                         <div class="comment">\n\
                             <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-comment-'; ?>' + id + '"></div>\n\
                         </div>\n\
                         </div>\n\
                         ',
-                width: "100%", 
+                width: "100%",
                 height: "100%",
                 onClosed: function() {
                     history.pushState("", document.title, window.location.pathname + window.location.search);
@@ -105,11 +101,11 @@ function displayContent($text) {
             } catch (ex) {
             }
         }
-        window.onresize = function(){
+        window.onresize = function() {
             $.colorbox.resize({
-                    width: '100%',
-                    height: '100%'
-                });
+                width: '100%',
+                height: '100%'
+            });
             console.log("call resize");
         }
     });

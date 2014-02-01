@@ -122,4 +122,11 @@ class Video extends CActiveRecord
             ));
             return $this;
         }
+        public function topview($limit=5){
+            $this->getDbCriteria()->mergeWith(array(
+                'order'=>'view_counter DESC',
+                'limit'=>$limit,
+            ));
+            return $this;
+        }
 }

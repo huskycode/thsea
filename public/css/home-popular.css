@@ -3,7 +3,7 @@
 /* line 5, ../sass/home-popular.scss */
 #home-popular h2 { font-size: 20px; padding: 0 10px; margin: 0; }
 /* line 10, ../sass/home-popular.scss */
-#home-popular .video-block { display: block; float: left; width: 30%; }
+#home-popular .video-block { display: block; float: left; width: 32%; }
 /* line 15, ../sass/home-popular.scss */
 #home-popular:after { content: ' '; display: block; clear: both; position: relative; }
 

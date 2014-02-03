@@ -19,14 +19,21 @@ class SiteController extends Controller {
             ),
         );
     }
-    
-    public function actionIndex(){
+
+    public function actionIndex() {
         $recentlyVideos = Video::model()->recently(4)->findAll();
-        $topViewVideos =  Video::model()->topview(3)->findAll();
-        
+        $topViewVideos = Video::model()->topview(3)->findAll();
+        $arrListVideoTag = array();
+        $arrVideoTag = array('Workshop', 'Exp-Sharing', 'Technical');
+        for ($i = 0; $i < count($arrVideoTag); $i++) {
+            $videoList = $this->getVideosByTag($arrVideoTag[$i], 3);
+            $arrVideoTagList[] = array('videoTagName' => $arrVideoTag[$i], 'videoList' => $videoList);
+        }
+
         $this->render('index', array(
-            'recentlyVideos'=>$recentlyVideos,
-            'topViewVideos'=>$topViewVideos,
+            'recentlyVideos' => $recentlyVideos,
+            'topViewVideos' => $topViewVideos,
+            'arrListVideoTag' => $arrVideoTagList
         ));
     }
 
@@ -38,29 +45,52 @@ class SiteController extends Controller {
         $this->renderVideos(Yii::app()->params['videoListPageSize'], 'list');
     }
 
-    private function renderVideos($pageSize, $toView) {
+    private function getVideosByTag($tag = '', $amount = 3) {
         $criteria = new CDbCriteria();
-        
-        if (isset($_GET['tag']) && $_GET['tag']!=''){
-            $videoTags=  VideoTag::model()->findAll(array(
-                'select'=>'video_id',
-                'condition'=>sprintf("tag='%s'", $_GET['tag']),
-                'group'=>'video_id',
-                'distinct'=>true,
+        if (isset($tag) && $tag != '') {
+            $videoTags = VideoTag::model()->findAll(array(
+                'select' => 'video_id',
+                'condition' => sprintf("tag='%s'", $tag),
+                'group' => 'video_id',
+                'distinct' => true,
             ));
- 
-            if(count($videoTags)>0){
+            if (count($videoTags) > 0) {
                 $videoIds = array();
-                
-                for($i=0; $i<count($videoTags); $i++){
+                $countVideoTags = count($videoTags);
+                for ($i = 0; $i < $countVideoTags; $i++) {
                     $videoIds[] = $videoTags[$i]->video_id;
                 }
-                
-                $criteria->condition=sprintf("id IN ('%s')", implode("','", $videoIds));
+                $criteria->condition = sprintf("id IN ('%s')", implode("','", $videoIds));
             }
-            
         }
-        
+        $criteria->order = "recording_date DESC";
+        $criteria->limit = $amount;
+        $model = new Video();
+        return $model->with("videoTags")->findAll($criteria);
+    }
+
+    private function renderVideos($pageSize, $toView) {
+        $criteria = new CDbCriteria();
+
+        if (isset($_GET['tag']) && $_GET['tag'] != '') {
+            $videoTags = VideoTag::model()->findAll(array(
+                'select' => 'video_id',
+                'condition' => sprintf("tag='%s'", $_GET['tag']),
+                'group' => 'video_id',
+                'distinct' => true,
+            ));
+
+            if (count($videoTags) > 0) {
+                $videoIds = array();
+
+                for ($i = 0; $i < count($videoTags); $i++) {
+                    $videoIds[] = $videoTags[$i]->video_id;
+                }
+
+                $criteria->condition = sprintf("id IN ('%s')", implode("','", $videoIds));
+            }
+        }
+
         $criteria->order = "recording_date DESC";
 
         $model = new Video();
@@ -69,9 +99,9 @@ class SiteController extends Controller {
         $pages = new CPagination($total);
         $pages->pageSize = $pageSize;
         $pages->applyLimit($criteria);
-        
+
         $list = $model->with("videoTags")->findAll($criteria);
-        
+
         $this->render($toView, array(
             'list' => $list,
             'pages' => $pages

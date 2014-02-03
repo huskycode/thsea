@@ -9,13 +9,13 @@ import geb.*
  *
  * @author Rux
  */
-class HomePage extends Page  {
-    static url = "http://uat.seacademy.in.th/list/"
+class VideoListPage extends Page  {
+    static url = "http://uat.seacademy.in.th/"
     static at = { title == "Thailand Software Engineering Academy" }
     static content = {
         sponsorSection { $("div.columns.lp-header h6") }
         recordDateItems{ $("div[title='Recording Date'] span")}
-	videoSection { $("div[data-video]").size() }
+		videoSection { $("div[data-video]").size() }
 		
     }
 }

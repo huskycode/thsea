@@ -40,6 +40,13 @@ function displayContent($text) {
     <?php $this->widget('ext.VideoSection.MostRecentSection', array('Videos'=>$recentlyVideos)); ?>    
     <hr />
     <?php $this->widget('ext.VideoSection.TopViewSection', array('Videos' => $topViewVideos)); ?>
+    <?php 
+    $countVideoListHorizontal = count($arrVideoTagHorizontalList);
+    for($i = 0; $i< $countVideoListHorizontal; $i++){ 
+        $objHorizontal = $countVideoListHorizontal[$i];
+        ?>
+    <?php $this->widget('ext.VideoSection.VideoListHorizonSection', array('HeaderName'=>$objHorizontal['videoTagName'],'Videos' => $objHorizontal['videoList'])); ?>
+    <?php } ?>
 
     <div class="clearfix"></div>
 

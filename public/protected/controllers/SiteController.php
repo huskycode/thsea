@@ -23,17 +23,17 @@ class SiteController extends Controller {
     public function actionIndex() {
         $recentlyVideos = Video::model()->recently(4)->findAll();
         $topViewVideos = Video::model()->topview(3)->findAll();
-        $arrListVideoTag = array();
+        $arrVideoTagHorizontalList = array();
         $arrVideoTag = array('Workshop', 'Exp-Sharing', 'Technical');
         for ($i = 0; $i < count($arrVideoTag); $i++) {
             $videoList = $this->getVideosByTag($arrVideoTag[$i], 3);
-            $arrVideoTagList[] = array('videoTagName' => $arrVideoTag[$i], 'videoList' => $videoList);
+            $arrVideoTagHorizontalList[] = array('videoTagName' => $arrVideoTag[$i], 'videoList' => $videoList);
         }
 
         $this->render('index', array(
             'recentlyVideos' => $recentlyVideos,
             'topViewVideos' => $topViewVideos,
-            'arrListVideoTag' => $arrVideoTagList
+            'arrVideoTagHorizontalList' => $arrVideoTagHorizontalList
         ));
     }
 

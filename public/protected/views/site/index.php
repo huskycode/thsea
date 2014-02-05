@@ -42,6 +42,7 @@ function displayContent($text) {
     <?php $this->widget('ext.VideoSection.TopViewSection', array('Videos' => $topViewVideos)); ?>
     <?php 
     $countVideoListHorizontal = count($arrVideoTagHorizontalList);
+    echo $countVideoListHorizontal;
     for($i = 0; $i< $countVideoListHorizontal; $i++){ 
         $objHorizontal = $countVideoListHorizontal[$i];
         ?>

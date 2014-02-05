@@ -6,41 +6,17 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4)
-class HomeTest extends GebReportingTest {
+class VideoListTest extends GebReportingTest {
     
     @Test
     void theTitleLinkShouldBeThSEA() {
-        to HomePage
+        to VideoListPage
     }
     
     @Test
     void sponsorTextShouldBeContentSponsor(){
-        to HomePage   
+        to VideoListPage   
         assert sponsorSection.text() == "Content Sponsor"
-    }
-    
-    @Test
-    void videoListSortByRecordDateAscending(){
-        
-        to HomePage
-        
-        int count = 0;
-        def dateFormat = new java.text.SimpleDateFormat("MMMM dd, yyyy", Locale.US)
-        def previousDate = dateFormat.parse("January 01, 3000")        
-        
-        recordDateItems.each{
-            Date currentDate
-            
-            if (it.text() != "-"){
-                currentDate = dateFormat.parse(it.text())
-                
-                assert currentDate<=previousDate
-                
-                previousDate = currentDate
-            }
-            count++;
-        }
-        
     }
     
     /*
@@ -55,13 +31,42 @@ class HomeTest extends GebReportingTest {
     }
     */
 	
-    @Test
-    void videoShouldDisplayThreeClipPerPage(){
-        to HomePage   
-        
-        assert videoSection == 3
+	@Test
+	void  videoListShouldDisplayMostRecentSection() {
+        to VideoListPage   	
 		
-    }
+		//main most recent video section
+		assert $("div",class:"seven columns").size() == 1;
+		assert $("div",class:"video-thumbnail-large").size() == 1;
+		//right side most recent video section
+		assert $("div",class:"nine columns column-last").size() == 1;
+
+	}
+	
+	/*
+	@Test
+	void  mostRecentVideoShouldDisplayAtMostRecentSection() {
+	    to VideoListPage   	
+		// Most Recent -> Recording Date
+	
+	}
+	*/
+
+	@Test	
+	void  tagInfoShouldFoundOnEachVideoClip() {
+	    to VideoListPage   	
+
+		assert $("span",class:"tags").size() == $("div", class:"video-block").size();
+                    
+	}	
+
+	@Test	
+	void  viewCounterShouldFoundOnEachVideoClip() {
+	    to VideoListPage   	
+
+		assert $("span",class:"view-counter").size() == $("div", class:"video-block").size();
+                    
+	}	
     
     
 }

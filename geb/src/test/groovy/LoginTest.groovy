@@ -13,7 +13,7 @@ class LoginTest extends GebReportingTest  {
         to LoginPage
 
         login("admin", "seath66")
-        at HomePage
+        at VideoListPage
 
         to AdminVideoPage
         

@@ -42,10 +42,8 @@ function displayContent($text) {
     <?php $this->widget('ext.VideoSection.TopViewSection', array('Videos' => $topViewVideos)); ?>
     <?php 
     $countVideoListHorizontal = count($arrVideoTagHorizontalList);
-    echo $countVideoListHorizontal;
     for($i = 0; $i< $countVideoListHorizontal; $i++){ 
         $objHorizontal = $arrVideoTagHorizontalList[$i];
-        echo "<h2>".$objHorizontal['videoTagName']."</h2>";
         ?>
     <?php $this->widget('ext.VideoSection.VideoListHorizonSection', array('HeaderName'=>$objHorizontal['videoTagName'],'Videos' => $objHorizontal['videoList'])); ?>
     <?php } ?>

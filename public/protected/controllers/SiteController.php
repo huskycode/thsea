@@ -24,7 +24,8 @@ class SiteController extends Controller {
         $recentlyVideos = Video::model()->recently(4)->findAll();
         $topViewVideos = Video::model()->topview(3)->findAll();
         $arrVideoTagHorizontalList = array();
-        $arrVideoTag = array('Workshop', 'Exp-Sharing', 'Technical');
+        //$arrVideoTag = array('Workshop', 'Exp-Sharing', 'Technical');
+        $arrVideoTag = array('Agile Thailand 2013', 'Lean', 'Technical');
         for ($i = 0; $i < count($arrVideoTag); $i++) {
             $videoList = $this->getVideosByTag($arrVideoTag[$i], 3);
             $arrVideoTagHorizontalList[] = array('videoTagName' => $arrVideoTag[$i], 'videoList' => $videoList);

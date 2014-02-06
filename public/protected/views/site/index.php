@@ -36,42 +36,42 @@ function displayContent($text) {
 <!-- END SEPARATOR -->	
 <!-- START BLOG WRAPPER -->
 <div class="container video-wrapper" >
-  
-    <?php $this->widget('ext.VideoSection.MostRecentSection', array('Videos'=>$recentlyVideos)); ?>    
+
+    <?php $this->widget('ext.VideoSection.MostRecentSection', array('Videos' => $recentlyVideos)); ?>    
     <hr />
     <?php $this->widget('ext.VideoSection.TopViewSection', array('Videos' => $topViewVideos)); ?>
-    <?php 
+    <?php
     $countVideoListHorizontal = count($arrVideoTagHorizontalList);
-    for($i = 0; $i< $countVideoListHorizontal; $i++){ 
+    for ($i = 0; $i < $countVideoListHorizontal; $i++) {
         $objHorizontal = $arrVideoTagHorizontalList[$i];
-        ?>
-    <?php $this->widget('ext.VideoSection.VideoListHorizonSection', array('HeaderName'=>$objHorizontal['videoTagName'],'Videos' => $objHorizontal['videoList'])); ?>
-    <?php } ?>
+        $this->widget('ext.VideoSection.VideoListHorizonSection', array('HeaderName' => '#' . $objHorizontal['videoTagName'], 'Videos' => $objHorizontal['videoList']));
+    }
+    ?>
 
     <div class="clearfix"></div>
 
-<!-- CLIENTS -->
-<div class="container header-block" style="margin-top: 30px;">
-    <!-- start header -->
-    <div class="sixteen columns lp-header">
-        <h6>Content Sponsor</h6>
-        <div class="nav-projects">
-        </div><!-- .nav-projects -->
-    </div><!-- .sixteen  -->
-    <!-- end header -->
-</div><!-- .container -->
-<div id="clients" class="container">
-    <ul id="clients-carousel" class="jcarousel-skin-tango" >
-        <!-- start carousel -->
-        <li><div class="four columns">
-                <div class="block">
-                    <a href="http://www.agile66.com/" target="_blank" alt="Agile66"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/Agile66.jpg" alt="" /></a>
-                </div><!-- block -->  
-            </div><!-- .four  --></li>
+    <!-- CLIENTS -->
+    <div class="container header-block" style="margin-top: 30px;">
+        <!-- start header -->
+        <div class="sixteen columns lp-header">
+            <h6>Content Sponsor</h6>
+            <div class="nav-projects">
+            </div><!-- .nav-projects -->
+        </div><!-- .sixteen  -->
+        <!-- end header -->
+    </div><!-- .container -->
+    <div id="clients" class="container">
+        <ul id="clients-carousel" class="jcarousel-skin-tango" >
+            <!-- start carousel -->
+            <li><div class="four columns">
+                    <div class="block">
+                        <a href="http://www.agile66.com/" target="_blank" alt="Agile66"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/Agile66.jpg" alt="" /></a>
+                    </div><!-- block -->  
+                </div><!-- .four  --></li>
 
-    </ul><!-- #clients-carousel -->
-</div><!-- .container -->
-<!-- END CLIENTS -->
+        </ul><!-- #clients-carousel -->
+    </div><!-- .container -->
+    <!-- END CLIENTS -->
 
 </div><!-- .container -->
 
@@ -103,8 +103,8 @@ function displayContent($text) {
         });
         function OpenFromJSON() {
             var hash = window.location.hash;
-            
-            if(hash){
+
+            if (hash) {
                 var id = hash.replace('#fb-comment-', '');
                 jQuery.getJSON("/api/video/" + id, function(data) {
                     openPopup(data.id, data.title, data.url);

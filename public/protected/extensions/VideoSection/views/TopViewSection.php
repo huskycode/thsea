@@ -1,4 +1,4 @@
-<div id="home-popular">
+<div id="home-popular" class="horizontal-list">
     <h2>Popular</h2>
     <div>
         <?php

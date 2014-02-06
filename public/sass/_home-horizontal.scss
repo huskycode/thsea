@@ -1,4 +1,4 @@
-#home-popular{
+.horizontal-list{
     display:block;
     clear:both;
     position:relative;
@@ -20,7 +20,7 @@
     }
 }
 @media only screen and (min-width: 768px){
-    #home-popular{
+    .horizontal-list{
         .video-block{
             .video-thumbnail-small{
                 float: none;

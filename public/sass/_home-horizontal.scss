@@ -1,3 +1,4 @@
+
 .horizontal-list{
     display:block;
     clear:both;
@@ -17,6 +18,9 @@
         display:block;
         clear:both;
         position:relative;
+    }
+    .video-thumbnail-small img:hover {
+        border-bottom: none;
     }
 }
 @media only screen and (min-width: 768px){

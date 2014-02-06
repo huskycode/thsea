@@ -1,15 +1,17 @@
-/* line 1, ../sass/_home-horizontal.scss */
+/* line 2, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
 .horizontal-list { display: block; clear: both; position: relative; }
-/* line 5, ../sass/_home-horizontal.scss */
+/* line 6, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
 .horizontal-list h2 { font-size: 20px; padding: 0 10px; margin: 0; }
-/* line 10, ../sass/_home-horizontal.scss */
+/* line 11, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
 .horizontal-list .video-block { display: block; float: left; width: 31.5%; }
-/* line 15, ../sass/_home-horizontal.scss */
+/* line 16, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
 .horizontal-list:after { content: ' '; display: block; clear: both; position: relative; }
+/* line 22, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
+.horizontal-list .video-thumbnail-small img:hover { border-bottom: none; }
 
-@media only screen and (min-width: 768px) { /* line 25, ../sass/_home-horizontal.scss */
+@media only screen and (min-width: 768px) { /* line 29, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
   .horizontal-list .video-block .video-thumbnail-small { float: none; }
-  /* line 27, ../sass/_home-horizontal.scss */
+  /* line 31, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
   .horizontal-list .video-block .video-thumbnail-small img { width: 100%; height: auto; } }
-@media only screen and (max-width: 767px) { /* line 37, ../sass/_home-horizontal.scss */
+@media only screen and (max-width: 767px) { /* line 41, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
   #home-popular .video-block { width: 100%; } }

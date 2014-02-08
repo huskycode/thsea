@@ -50,7 +50,15 @@ function displayContent($text) {
             }
             ?>
         </div>
-        <div class="group-vertical"></div>
+        <div class="group-vertical">
+            <?php
+                $countVideoListVertical = count($arrVideoTagVerticalList);
+                for ($i = 0; $i < $countVideoListVertical; $i++) {
+                    $objVertical = $arrVideoTagVerticalList[$i];
+                    $this->widget('ext.VideoSection.VideoListVerticalSection', array('HeaderName' => $objVertical['videoTagName'], 'Videos' => $objVertical['videoList']));
+                }
+            ?>
+        </div>
     </div>
     <div class="clearfix"></div>
 

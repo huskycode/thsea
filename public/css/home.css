@@ -1,17 +1,34 @@
-/* line 2, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
+/* line 4, ../sass/home.scss */
+.video-group .group-horizontal, .video-group .group-vertical { display: block; float: left; margin: 0; padding: 0; }
+/* line 10, ../sass/home.scss */
+.video-group .group-horizontal { width: 560px; }
+/* line 13, ../sass/home.scss */
+.video-group .group-vertical { width: 400px; }
+/* line 16, ../sass/home.scss */
+.video-group:after { content: ' '; display: block; clear: both; }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) { /* line 24, ../sass/home.scss */
+  .video-group .group-horizontal { width: 460px; }
+  /* line 27, ../sass/home.scss */
+  .video-group .group-vertical { width: 310px; } }
+@media only screen and (max-width: 767px) { /* line 34, ../sass/home.scss */
+  .video-group .group-horizontal { width: 100%; }
+  /* line 37, ../sass/home.scss */
+  .video-group .group-vertical { width: 100%; } }
+/* line 2, ../sass/_home-horizontal.scss */
 .horizontal-list { display: block; clear: both; position: relative; }
-/* line 6, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
+/* line 6, ../sass/_home-horizontal.scss */
 .horizontal-list h2 { font-size: 20px; padding: 0 10px; margin: 0; }
-/* line 11, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
+/* line 11, ../sass/_home-horizontal.scss */
 .horizontal-list .video-block { display: block; float: left; width: 31.5%; }
-/* line 16, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
+/* line 16, ../sass/_home-horizontal.scss */
 .horizontal-list:after { content: ' '; display: block; clear: both; position: relative; }
-/* line 22, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
+/* line 22, ../sass/_home-horizontal.scss */
 .horizontal-list .video-thumbnail-small img:hover { border-bottom: none; }
 
-@media only screen and (min-width: 768px) { /* line 29, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
+@media only screen and (min-width: 768px) { /* line 29, ../sass/_home-horizontal.scss */
   .horizontal-list .video-block .video-thumbnail-small { float: none; }
-  /* line 31, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
+  /* line 31, ../sass/_home-horizontal.scss */
   .horizontal-list .video-block .video-thumbnail-small img { width: 100%; height: auto; } }
-@media only screen and (max-width: 767px) { /* line 41, /Applications/MAMP/htdocs/thsea/public/sass/_home-horizontal.scss */
-  #home-popular .video-block { width: 100%; } }
+@media only screen and (max-width: 767px) { /* line 41, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block { width: 100%; } }

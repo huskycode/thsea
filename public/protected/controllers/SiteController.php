@@ -40,7 +40,7 @@ class SiteController extends Controller {
     }
     
     private function getVideoTagVerticalList(){    
-        $arrVideoTagVerticalList = [];
+        $arrVideoTagVerticalList = array();
         $tags = Yii::app()->params['videoTagVerticalList'];
         
         foreach($tags as $tagName=>$videoCount){

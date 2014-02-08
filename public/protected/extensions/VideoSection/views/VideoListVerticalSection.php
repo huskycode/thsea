@@ -1,7 +1,7 @@
 <div class="vertical-list">
     <h2><?php 
         $url = Yii::app()->createUrl('site/list',array('tag'=>$this->HeaderName));
-        echo '<a href="'.$url.'">'.$this->HeaderName.'</a>';
+        echo '<a href="'.$url.'">#&nbsp;'.$this->HeaderName.'</a>';
         ?></h2>
     <?php
        for ($i = 0; $i < count($this->Videos); $i++):

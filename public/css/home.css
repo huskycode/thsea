@@ -1,3 +1,6 @@
+/* line 6, ../sass/home.scss */
+.clear-both { display: block; clear: both; }
+
 /* line 1, ../sass/_home-group.scss */
 .video-group { border-top: #cccccc solid 1px; }
 /* line 3, ../sass/_home-group.scss */

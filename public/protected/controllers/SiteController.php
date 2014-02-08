@@ -31,18 +31,24 @@ class SiteController extends Controller {
             $arrVideoTagHorizontalList[] = array('videoTagName' => $arrVideoTag[$i], 'videoList' => $videoList);
         }
         
-        $verticalVideoTags = array('Agile Thailand 2013', 'Lean', 'Technical');
-        for ($i = 0; $i < count($verticalVideoTags); $i++) {
-            $videoList = $this->getVideosByTag($verticalVideoTags[$i], 3);
-            $arrVideoTagVerticalList[] = array('videoTagName' => $verticalVideoTags[$i], 'videoList' => $videoList);
-        }
-
         $this->render('index', array(
             'recentlyVideos' => $recentlyVideos,
             'topViewVideos' => $topViewVideos,
             'arrVideoTagHorizontalList' => $arrVideoTagHorizontalList,
-            'arrVideoTagVerticalList' => $arrVideoTagVerticalList,
+            'arrVideoTagVerticalList' => $this->getVideoTagVerticalList(),
         ));
+    }
+    
+    private function getVideoTagVerticalList(){    
+        $arrVideoTagVerticalList = [];
+        $tags = Yii::app()->params['videoTagVerticalList'];
+        
+        foreach($tags as $tagName=>$videoCount){
+            $videoList = $this->getVideosByTag($tagName, $videoCount);
+            $arrVideoTagVerticalList[] = array('videoTagName' => $tagName, 'videoList' => $videoList);
+        }
+        
+        return $arrVideoTagVerticalList;
     }
 
     /**

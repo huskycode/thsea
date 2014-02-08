@@ -19,7 +19,7 @@
                     </a>
                 </div>
                 <div class="video-info">
-                    #<span class="tags">
+                    <span class="tags">
                         <?php echo WebHelper::renderTags($this->Videos[0]->videoTags); ?>
                     </span><br />
                     <span class="view-counter">
@@ -64,7 +64,7 @@
 
                 </div>
                 <div class="video-info">
-                    #<span class="tags">
+                    <span class="tags">
                         <?php echo WebHelper::renderTags($this->Videos[$i]->videoTags); ?>
                     </span><br />
                     <span class="view-counter">

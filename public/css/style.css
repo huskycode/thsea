@@ -2026,9 +2026,10 @@ padding-left: 23px !important;*/ }
 }
 
 .video-info .tags{
-    background-position: -268px 0;
-    max-width: 200px;
-    font-size: 0.9em;
+    background-image: url('../images/icons/sprites.png');
+    background-repeat: no-repeat;
+    background-position: -268px 0px;
+    padding-left: 20px;
 }
 
 .video-info .date{
@@ -2038,5 +2039,20 @@ padding-left: 23px !important;*/ }
 
 .video-info .description{
 }
-
-.vertical-list h2 { font-size: 20px; padding: 0 10px; margin: 0; }
+.vertical-list{
+    padding-bottom: 8px;
+}
+.vertical-list h2 { 
+    font-size: 20px; padding: 0 10px; margin: 0; 
+    line-height: 40px;
+    vertical-align: middle;
+}
+.vertical-list .tag{   
+    margin-left: 5px;
+    float:left;
+    width: 20px;
+    height: 30px;
+    background-image: url('../images/icons/sprites.png');
+    background-repeat: no-repeat;
+    background-position: -268px 10px;
+}

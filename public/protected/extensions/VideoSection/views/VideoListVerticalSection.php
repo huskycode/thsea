@@ -1,5 +1,5 @@
 <div class="vertical-list">
-    <h2><?php 
+    <span class="tag">&nbsp;</span><h2><?php 
         $url = Yii::app()->createUrl('site/list',array('tag'=>$this->HeaderName));
         echo '<a href="'.$url.'">'.$this->HeaderName.'</a>';
         ?></h2>

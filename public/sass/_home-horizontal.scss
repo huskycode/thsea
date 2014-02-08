@@ -11,7 +11,7 @@
     .video-block{
         display:block;
         float:left;
-        width:31.5%;
+        width:30.7%;
     }
     &:after{
         content: ' ';
@@ -23,7 +23,7 @@
         border-bottom: none;
     }
 }
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: $step-width-2){
     .horizontal-list{
         .video-block{
             .video-thumbnail-small{
@@ -36,7 +36,7 @@
         }
     }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: $step-width-2 - 1px) {
     .horizontal-list{
         .video-block{
             width:100%;

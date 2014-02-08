@@ -1,42 +1,6 @@
+$step-width-1:960px;
+$step-width-2:768px;
 $home-horizon-960 : 560px;
 $home-horizon-770 : 460px;
-.video-group{
-    .group-horizontal, .group-vertical{
-        display:block;
-        float:left;
-        margin:0;
-        padding:0;
-    }
-    .group-horizontal{
-        width:$home-horizon-960;
-    }
-    .group-vertical{
-        width:960px - $home-horizon-960;
-    }
-    &:after{
-        content:' ';
-        display:block;
-        clear:both;
-    }
-}
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-    .video-group{
-        .group-horizontal{
-            width:$home-horizon-770;
-        }
-        .group-vertical{
-            width:770px - $home-horizon-770;
-        }
-    }
-}
-@media only screen and (max-width: 767px) {
-    .video-group{
-        .group-horizontal{
-            width:100%;
-        }
-        .group-vertical{
-            width:100%;
-        }
-    }
-}
+$border-value: #cccccc solid 1px;
 @import "home-horizontal";

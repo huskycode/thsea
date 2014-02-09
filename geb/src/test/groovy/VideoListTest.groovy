@@ -36,10 +36,17 @@ class VideoListTest extends GebReportingTest {
         to VideoListPage   	
 		
 		//main most recent video section
-		assert $("div",class:"seven columns").size() == 1;
-		assert $("div",class:"video-thumbnail-large").size() == 1;
+		assert $("div",class:"video-most-recent-leftside").size() == 1;
 		//right side most recent video section
 		assert $("div",class:"nine columns column-last").size() == 1;
+
+	}
+
+	@Test
+	void  videoListShouldDisplayPopularSection() {
+        to VideoListPage   	
+		
+		assert $("div",id:"home-popular").size() == 1;
 
 	}
 	
@@ -53,11 +60,28 @@ class VideoListTest extends GebReportingTest {
 	*/
 
 	@Test	
-	void  tagInfoShouldFoundOnEachVideoClip() {
+	void  tagInfoShouldFoundOnEachVideoClipAtMostRecentSection() {
 	    to VideoListPage   	
 
-		assert $("span",class:"tags").size() == $("div", class:"video-block").size();
-                    
+	    def totalTagInfoOnLeftSide = mostRecentSectionLeftSide.find("span.tags").size();
+	    def totalVideoClipOnLeftSide = mostRecentSectionLeftSide.find("div.video-block").size();
+	    def totalTagInfoOnRightSide = mostRecentSectionRightSide.find("span.tags").size();
+	    def totalVideoClipOnRightSide = mostRecentSectionRightSide.find("div.video-block").size();
+
+	    assert totalTagInfoOnLeftSide == totalVideoClipOnLeftSide;
+	    assert totalTagInfoOnRightSide == totalVideoClipOnRightSide;
+                     
+	}	
+
+	@Test	
+	void  tagInfoShouldFoundOnEachVideoClipAtPoppularSection() {
+	    to VideoListPage   	
+
+	    def totalTagInfo = popularSection.find("span.tags").size();
+	    def totalVideoClip = popularSection.find("div.video-block").size();
+
+	    assert totalTagInfo == totalVideoClip;
+
 	}	
 
 	@Test	

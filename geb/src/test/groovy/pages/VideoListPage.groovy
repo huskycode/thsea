@@ -16,7 +16,10 @@ class VideoListPage extends Page  {
         sponsorSection { $("div.columns.lp-header h6") }
         recordDateItems{ $("div[title='Recording Date'] span")}
 		videoSection { $("div[data-video]").size() }
-		
+		mostRecentSectionLeftSide { $("div.video-most-recent-leftside") }
+		mostRecentSectionRightSide { $("div",class:"nine columns column-last") }
+		popularSection { $("div",id:"home-popular") }
+
     }
 }
 

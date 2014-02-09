@@ -61,3 +61,5 @@
   .horizontal-list .video-block { width: 100%; }
   /* line 86, ../sass/_home-horizontal.scss */
   .horizontal-list .video-block .video-text { max-width: 285px; float: left; } }
+@media only screen and (max-width: 477) { /* line 96, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block .video-text { max-width: 165px; } }

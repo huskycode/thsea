@@ -38,13 +38,13 @@
 .horizontal-list .video-thumbnail-small img:hover { border-bottom: none; }
 
 @media only screen and (min-width: 768px) { /* line 41, ../sass/_home-horizontal.scss */
-  .horizontal-list.video-span-1 { width: 153px; }
+  .horizontal-list.video-span-1 { width: 152px; }
   /* line 44, ../sass/_home-horizontal.scss */
-  .horizontal-list.video-span-2 { width: 307px; }
+  .horizontal-list.video-span-2 { width: 306px; }
   /* line 47, ../sass/_home-horizontal.scss */
-  .horizontal-list.video-span-3 { width: 460px; }
+  .horizontal-list.video-span-3 { width: 459px; }
   /* line 50, ../sass/_home-horizontal.scss */
-  .horizontal-list .video-block { width: 133px; }
+  .horizontal-list .video-block { width: 132px; }
   /* line 52, ../sass/_home-horizontal.scss */
   .horizontal-list .video-block .video-thumbnail-small { float: none; }
   /* line 54, ../sass/_home-horizontal.scss */

@@ -38,7 +38,17 @@
 }
 @media only screen and (min-width: $step-width-2){
     .horizontal-list{
+        &.video-span-1{
+            width:153px;
+        }
+        &.video-span-2{
+            width:307px;
+        }
+        &.video-span-3{
+            width: 460px;
+        }
         .video-block{
+            width:133px;
             .video-thumbnail-small{
                 float: none;
                 img{
@@ -51,6 +61,9 @@
 }
 @media only screen and (max-width: $step-width-2 - 1px) {
     .horizontal-list{
+        &.video-span-1,&.video-span-2,&.video-span-3{
+            width: 100%;
+        }
         .video-block{
             width:100%;
         }

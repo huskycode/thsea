@@ -102,6 +102,11 @@ return array(
     'params' => array(
         // this is used in contact page
         'adminEmail' => 'webmaster@seacademy.in.th',
-        'videoListPageSize' => '3'
+        'videoListPageSize' => '3',
+        'arrHorizonVideList'=>array(
+            array('videoTag'=>'Lean','videoAmount'=>1),
+            array('videoTag'=>'Technical','videoAmount'=>2),
+            array('videoTag'=>'Agile Thailand 2013','videoAmount'=>3),
+        )
     ),
 );

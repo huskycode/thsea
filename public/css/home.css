@@ -15,7 +15,7 @@
 @media only screen and (min-width: 768px) and (max-width: 959px) { /* line 24, ../sass/_home-group.scss */
   .video-group .group-horizontal { width: 460px; }
   /* line 27, ../sass/_home-group.scss */
-  .video-group .group-vertical { width: 310px; } }
+  .video-group .group-vertical { width: 307px; } }
 @media only screen and (max-width: 767px) { /* line 34, ../sass/_home-group.scss */
   .video-group .group-horizontal { width: 100%; border-right: none; }
   /* line 38, ../sass/_home-group.scss */

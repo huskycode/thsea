@@ -31,14 +31,15 @@ if($displayVideoCount > 0) {
                             </a>
                         </div>
                         <div class="video-info">
+                            <?php if(false){ ?>
                             #<span class="tags">
                                 <?php echo WebHelper::renderTags($this->Videos[$i]->videoTags); ?>
                             </span><br />
+                            <?php } ?>
                             <span class="view-counter">
                                 <?php echo number_format($this->Videos[$i]->view_counter); ?> views
                             </span>
                             <span class="date"><?php echo DateTimeHelper::TimeAgo($this->Videos[$i]->recording_date) ?></span><br/>
-                            <span class="description" title="<?php echo TextHelper::htmlEncode($this->Videos[$i]->description); ?>"><?php echo TextHelper::limitText($this->Videos[$i]->description); ?></span>
                         </div>
                     </div>
                 </div>

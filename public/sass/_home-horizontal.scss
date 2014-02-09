@@ -38,24 +38,31 @@
 }
 @media only screen and (min-width: $step-width-2){
     .horizontal-list{
-        &.video-span-1{
-            width:152px;
-        }
-        &.video-span-2{
-            width:306px;
-        }
-        &.video-span-3{
-            width: 459px;
-        }
         .video-block{
-            width:132px;
             .video-thumbnail-small{
                 float: none;
                 img{
                     width:100%;
                     height:auto;
                 }
-            }   
+            }
+        }
+    }
+}
+@media only screen and (min-width: $step-width-2) and (max-width: $step-width-1 - 1px) {
+    .horizontal-list{
+        &.video-span-1{
+            width:152px;
+        }
+        &.video-span-2{
+            width:305px;
+        }
+        &.video-span-3{
+            width: 459px;
+        }
+        .video-block{
+            width:132px;
+            height:210px;
         }
     }
 }

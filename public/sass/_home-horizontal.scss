@@ -6,7 +6,7 @@
     border-left: $border-value;
     padding: 10px 0;
     &.video-span-1{
-        width:186px;
+        width:185px;
     }
     &.video-span-2{
         width:372px;
@@ -22,7 +22,7 @@
     .video-block{
         display:block;
         float:left;
-        width:166px;
+        width:165px;
         padding: 0 10px;
         span{
             font-size:0.8em;
@@ -41,6 +41,7 @@
 @media only screen and (min-width: $step-width-2){
     .horizontal-list{
         .video-block{
+            min-height:210px;
             .video-thumbnail-small{
                 float: none;
                 img{
@@ -64,7 +65,6 @@
         }
         .video-block{
             width:132px;
-            min-height:210px;
         }
     }
 }

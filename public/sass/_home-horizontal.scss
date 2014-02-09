@@ -27,6 +27,12 @@
         span{
             font-size:0.8em;
         }
+        &:after{
+            content: ' ';
+            display:block;
+            clear:both;
+            position:relative;
+        }
     }
     &:after{
         content: ' ';
@@ -41,7 +47,8 @@
 @media only screen and (min-width: $step-width-2){
     .horizontal-list{
         .video-block{
-            min-height:210px;
+            height:210px;
+            overflow:hidden;
             .video-thumbnail-small{
                 float: none;
                 img{
@@ -75,6 +82,11 @@
         }
         .video-block{
             width:100%;
+
+            .video-text{
+                max-width:285px;
+                float:left;
+            }
         }
     }
 }

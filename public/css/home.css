@@ -34,26 +34,30 @@
 .horizontal-list .video-block { display: block; float: left; width: 165px; padding: 0 10px; }
 /* line 27, ../sass/_home-horizontal.scss */
 .horizontal-list .video-block span { font-size: 0.8em; }
-/* line 31, ../sass/_home-horizontal.scss */
-.horizontal-list:after { content: ' '; display: block; clear: both; position: relative; }
+/* line 30, ../sass/_home-horizontal.scss */
+.horizontal-list .video-block:after { content: ' '; display: block; clear: both; position: relative; }
 /* line 37, ../sass/_home-horizontal.scss */
+.horizontal-list:after { content: ' '; display: block; clear: both; position: relative; }
+/* line 43, ../sass/_home-horizontal.scss */
 .horizontal-list .video-thumbnail-small img:hover { border-bottom: none; }
 
-@media only screen and (min-width: 768px) { /* line 43, ../sass/_home-horizontal.scss */
-  .horizontal-list .video-block { min-height: 210px; }
-  /* line 45, ../sass/_home-horizontal.scss */
+@media only screen and (min-width: 768px) { /* line 49, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block { height: 210px; overflow: hidden; }
+  /* line 52, ../sass/_home-horizontal.scss */
   .horizontal-list .video-block .video-thumbnail-small { float: none; }
-  /* line 47, ../sass/_home-horizontal.scss */
+  /* line 54, ../sass/_home-horizontal.scss */
   .horizontal-list .video-block .video-thumbnail-small img { width: 100%; height: auto; } }
-@media only screen and (min-width: 768px) and (max-width: 959px) { /* line 57, ../sass/_home-horizontal.scss */
+@media only screen and (min-width: 768px) and (max-width: 959px) { /* line 64, ../sass/_home-horizontal.scss */
   .horizontal-list.video-span-1 { width: 152px; }
-  /* line 60, ../sass/_home-horizontal.scss */
+  /* line 67, ../sass/_home-horizontal.scss */
   .horizontal-list.video-span-2 { width: 305px; }
-  /* line 63, ../sass/_home-horizontal.scss */
+  /* line 70, ../sass/_home-horizontal.scss */
   .horizontal-list.video-span-3 { width: 459px; }
-  /* line 66, ../sass/_home-horizontal.scss */
+  /* line 73, ../sass/_home-horizontal.scss */
   .horizontal-list .video-block { width: 132px; } }
-@media only screen and (max-width: 767px) { /* line 73, ../sass/_home-horizontal.scss */
+@media only screen and (max-width: 767px) { /* line 80, ../sass/_home-horizontal.scss */
   .horizontal-list.video-span-1, .horizontal-list.video-span-2, .horizontal-list.video-span-3 { width: 100%; }
-  /* line 76, ../sass/_home-horizontal.scss */
-  .horizontal-list .video-block { width: 100%; } }
+  /* line 83, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block { width: 100%; }
+  /* line 86, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block .video-text { max-width: 285px; float: left; } }

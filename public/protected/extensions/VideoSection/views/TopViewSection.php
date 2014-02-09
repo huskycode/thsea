@@ -28,9 +28,7 @@
                         </a>
                     </div>
                     <div class="video-info">
-                        #<span class="tags">
-                            <?php echo WebHelper::renderTags($this->Videos[$i]->videoTags); ?>
-                        </span><br />
+                        <span class="tags"><?php echo WebHelper::renderTags($this->Videos[$i]->videoTags); ?></span><br />
                         <span class="view-counter">
                             <?php echo number_format($this->Videos[$i]->view_counter); ?> views
                         </span>

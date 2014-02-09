@@ -24,7 +24,7 @@
                 <div class="video-text clearfix">
                     <div class="video-title">
                         <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[$i]->id; ?>">
-                            <?php echo $this->Videos[$i]->title; ?>
+                            <?php echo TextHelper::limitText($this->Videos[$i]->title); ?>
                         </a>
                     </div>
                     <div class="video-info">
@@ -34,8 +34,7 @@
                         <span class="view-counter">
                             <?php echo number_format($this->Videos[$i]->view_counter); ?> views
                         </span>
-                        <span class="date"><?php echo DateTimeHelper::TimeAgo($this->Videos[$i]->recording_date) ?></span><br/>
-                        <span class="description" title="<?php echo TextHelper::htmlEncode($this->Videos[$i]->description); ?>"><?php echo TextHelper::limitText($this->Videos[$i]->description); ?></span>
+                        <span class="date"><?php echo DateTimeHelper::TimeAgo($this->Videos[$i]->recording_date) ?></span>
                     </div>
                 </div>
             </div>

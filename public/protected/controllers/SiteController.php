@@ -30,21 +30,22 @@ class SiteController extends Controller {
             'arrVideoTagVerticalList' => $this->getVideoTagVerticalList(),
         ));
     }
-    
-    private function getVideoTagHorizontalList(){
+
+    private function getVideoTagHorizontalList() {
         $arrVideoTagHorizontalList = array();
         $tags = Yii::app()->params['videoTagHorizontalList'];
-        foreach($tags as $tagName=>$videoCount){
+        foreach ($tags as $tagName => $videoCount) {
             $videoList = $this->getVideosByTag($tagName, $videoCount);
             $arrVideoTagHorizontalList[] = array('videoTagName' => $tagName, 'videoList' => $videoList);
         }
-        
+
         return $arrVideoTagHorizontalList;
     }
-    private function getVideoTagVerticalList(){    
+
+    private function getVideoTagVerticalList() {
         $arrVideoTagVerticalList = array();
         $tags = Yii::app()->params['videoTagVerticalList'];
-        foreach($tags as $tagName=>$videoCount){
+        foreach ($tags as $tagName => $videoCount) {
             $videoList = $this->getVideosByTag($tagName, $videoCount);
             $arrVideoTagVerticalList[] = array('videoTagName' => $tagName, 'videoList' => $videoList);
         }
@@ -61,6 +62,7 @@ class SiteController extends Controller {
 
     private function getVideosByTag($tag = '', $amount = 3) {
         $criteria = new CDbCriteria();
+        $videoTags = array();
         if (isset($tag) && $tag != '') {
             $videoTags = VideoTag::model()->findAll(array(
                 'select' => 'video_id',
@@ -68,19 +70,21 @@ class SiteController extends Controller {
                 'group' => 'video_id',
                 'distinct' => true,
             ));
-            if (count($videoTags) > 0) {
-                $videoIds = array();
-                $countVideoTags = count($videoTags);
-                for ($i = 0; $i < $countVideoTags; $i++) {
-                    $videoIds[] = $videoTags[$i]->video_id;
-                }
-                $criteria->condition = sprintf("id IN ('%s')", implode("','", $videoIds));
-            }
         }
-        $criteria->order = "recording_date DESC";
-        $criteria->limit = $amount;
-        $model = new Video();
-        return $model->with("videoTags")->findAll($criteria);
+        if (count($videoTags) > 0) {
+            $videoIds = array();
+            $countVideoTags = count($videoTags);
+            for ($i = 0; $i < $countVideoTags; $i++) {
+                $videoIds[] = $videoTags[$i]->video_id;
+            }
+            $criteria->condition = sprintf("id IN ('%s')", implode("','", $videoIds));
+            $criteria->order = "recording_date DESC";
+            $criteria->limit = $amount;
+            $model = new Video();
+            return $model->with("videoTags")->findAll($criteria);
+        } else {
+            return array();
+        }
     }
 
     private function renderVideos($pageSize, $toView) {

@@ -24,17 +24,31 @@ class SiteController extends Controller {
         $recentlyVideos = Video::model()->recently(4)->findAll();
         $topViewVideos = Video::model()->topview(3)->findAll();
         $arrVideoTagHorizontalList = array();
-        $arrVideoHorizonList = Yii::app()->params['arrHorizonVideList'];
-        for ($i = 0; $i < count($arrVideoHorizonList); $i++) {
-            $videoHorizonList = $arrVideoHorizonList[$i];
-            $videoList = $this->getVideosByTag($videoHorizonList['videoTag'], $videoHorizonList['videoAmount']);
-            $arrVideoTagHorizontalList[] = array('videoTagName' => $videoHorizonList['videoTag'], 'videoList' => $videoList);
+        //$arrVideoTag = array('Workshop', 'Exp-Sharing', 'Technical');
+        $arrVideoTag = array('Agile Thailand 2013', 'Lean', 'Technical');
+        for ($i = 0; $i < count($arrVideoTag); $i++) {
+            $videoList = $this->getVideosByTag($arrVideoTag[$i], 3);
+            $arrVideoTagHorizontalList[] = array('videoTagName' => $arrVideoTag[$i], 'videoList' => $videoList);
         }
+        
         $this->render('index', array(
             'recentlyVideos' => $recentlyVideos,
             'topViewVideos' => $topViewVideos,
-            'arrVideoTagHorizontalList' => $arrVideoTagHorizontalList
+            'arrVideoTagHorizontalList' => $arrVideoTagHorizontalList,
+            'arrVideoTagVerticalList' => $this->getVideoTagVerticalList(),
         ));
+    }
+    
+    private function getVideoTagVerticalList(){    
+        $arrVideoTagVerticalList = array();
+        $tags = Yii::app()->params['videoTagVerticalList'];
+        
+        foreach($tags as $tagName=>$videoCount){
+            $videoList = $this->getVideosByTag($tagName, $videoCount);
+            $arrVideoTagVerticalList[] = array('videoTagName' => $tagName, 'videoList' => $videoList);
+        }
+        
+        return $arrVideoTagVerticalList;
     }
 
     /**
@@ -47,7 +61,6 @@ class SiteController extends Controller {
 
     private function getVideosByTag($tag = '', $amount = 3) {
         $criteria = new CDbCriteria();
-        $videoTags = array();
         if (isset($tag) && $tag != '') {
             $videoTags = VideoTag::model()->findAll(array(
                 'select' => 'video_id',
@@ -55,21 +68,19 @@ class SiteController extends Controller {
                 'group' => 'video_id',
                 'distinct' => true,
             ));
-        }
-        if (count($videoTags) > 0) {
-            $videoIds = array();
-            $countVideoTags = count($videoTags);
-            for ($i = 0; $i < $countVideoTags; $i++) {
-                $videoIds[] = $videoTags[$i]->video_id;
+            if (count($videoTags) > 0) {
+                $videoIds = array();
+                $countVideoTags = count($videoTags);
+                for ($i = 0; $i < $countVideoTags; $i++) {
+                    $videoIds[] = $videoTags[$i]->video_id;
+                }
+                $criteria->condition = sprintf("id IN ('%s')", implode("','", $videoIds));
             }
-            $criteria->condition = sprintf("id IN ('%s')", implode("','", $videoIds));
-            $criteria->order = "recording_date DESC";
-            $criteria->limit = $amount;
-            $model = new Video();
-            return $model->with("videoTags")->findAll($criteria);
-        }else{
-            return array();
         }
+        $criteria->order = "recording_date DESC";
+        $criteria->limit = $amount;
+        $model = new Video();
+        return $model->with("videoTags")->findAll($criteria);
     }
 
     private function renderVideos($pageSize, $toView) {

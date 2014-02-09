@@ -82,10 +82,17 @@
         }
         .video-block{
             width:100%;
-
+            .video-text{
+                float:left;
+            }
+        }
+    }
+}
+@media only screen and (min-width:478) and (max-width: $step-width-2 - 1px) {
+    .horizontal-list{
+        .video-block{
             .video-text{
                 max-width:285px;
-                float:left;
             }
         }
     }

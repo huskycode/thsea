@@ -6,7 +6,7 @@ if ($lastVideoIndex < $displayVideoCount) {
 }
 if($displayVideoCount > 0) {
     ?>
-    <div class="horizontal-list">
+    <div class="horizontal-list video-span-<?php echo $displayVideoCount; ?>">
         <h2><?php echo $this->HeaderName; ?></h2>
         <div>
             <?php

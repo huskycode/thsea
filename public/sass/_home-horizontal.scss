@@ -1,9 +1,19 @@
 
 .horizontal-list{
     display:block;
-    clear:both;
     position:relative;
+    float:left;
     border-bottom: $border-value;
+    padding: 0 10px;
+    &.video-span-1{
+        width:186px;
+    }
+    &.video-span-2{
+        width:373px;
+    }
+    &.video-span-3{
+        width: 559px;
+    }
     h2{
         font-size:20px;
         padding:0 10px;
@@ -12,7 +22,8 @@
     .video-block{
         display:block;
         float:left;
-        width:30.7%;
+        width:166px;
+        padding: 0 10px;
     }
     &:after{
         content: ' ';

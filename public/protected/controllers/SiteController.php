@@ -23,31 +23,31 @@ class SiteController extends Controller {
     public function actionIndex() {
         $recentlyVideos = Video::model()->recently(4)->findAll();
         $topViewVideos = Video::model()->topview(3)->findAll();
-        $arrVideoTagHorizontalList = array();
-        //$arrVideoTag = array('Workshop', 'Exp-Sharing', 'Technical');
-        $arrVideoTag = array('Agile Thailand 2013', 'Lean', 'Technical');
-        for ($i = 0; $i < count($arrVideoTag); $i++) {
-            $videoList = $this->getVideosByTag($arrVideoTag[$i], 3);
-            $arrVideoTagHorizontalList[] = array('videoTagName' => $arrVideoTag[$i], 'videoList' => $videoList);
-        }
-        
         $this->render('index', array(
             'recentlyVideos' => $recentlyVideos,
             'topViewVideos' => $topViewVideos,
-            'arrVideoTagHorizontalList' => $arrVideoTagHorizontalList,
+            'arrVideoTagHorizontalList' => $this->getVideoTagHorizontalList(),
             'arrVideoTagVerticalList' => $this->getVideoTagVerticalList(),
         ));
     }
     
+    private function getVideoTagHorizontalList(){
+        $arrVideoTagHorizontalList = array();
+        $tags = Yii::app()->params['videoTagHorizontalList'];
+        foreach($tags as $tagName=>$videoCount){
+            $videoList = $this->getVideosByTag($tagName, $videoCount);
+            $arrVideoTagHorizontalList[] = array('videoTagName' => $tagName, 'videoList' => $videoList);
+        }
+        
+        return $arrVideoTagHorizontalList;
+    }
     private function getVideoTagVerticalList(){    
         $arrVideoTagVerticalList = array();
         $tags = Yii::app()->params['videoTagVerticalList'];
-        
         foreach($tags as $tagName=>$videoCount){
             $videoList = $this->getVideosByTag($tagName, $videoCount);
             $arrVideoTagVerticalList[] = array('videoTagName' => $tagName, 'videoList' => $videoList);
         }
-        
         return $arrVideoTagVerticalList;
     }
 

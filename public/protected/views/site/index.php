@@ -46,7 +46,7 @@ function displayContent($text) {
             $countVideoListHorizontal = count($arrVideoTagHorizontalList);
             for ($i = 0; $i < $countVideoListHorizontal; $i++) {
                 $objHorizontal = $arrVideoTagHorizontalList[$i];
-                $this->widget('ext.VideoSection.VideoListHorizonSection', array('HeaderName' => '#' . $objHorizontal['videoTagName'], 'Videos' => $objHorizontal['videoList']));
+                $this->widget('ext.VideoSection.VideoListHorizonSection', array('HeaderName' => $objHorizontal['videoTagName'], 'Videos' => $objHorizontal['videoList']));
             }
             ?>
         </div>
@@ -55,7 +55,7 @@ function displayContent($text) {
                 $countVideoListVertical = count($arrVideoTagVerticalList);
                 for ($i = 0; $i < $countVideoListVertical; $i++) {
                     $objVertical = $arrVideoTagVerticalList[$i];
-                    $this->widget('ext.VideoSection.VideoListVerticalSection', array('HeaderName' => '#' . $objVertical['videoTagName'], 'Videos' => $objVertical['videoList']));
+                    $this->widget('ext.VideoSection.VideoListVerticalSection', array('HeaderName' => $objVertical['videoTagName'], 'Videos' => $objVertical['videoList']));
                 }
             ?>
         </div>

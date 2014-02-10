@@ -55,7 +55,7 @@ function displayContent($text) {
                 $countVideoListVertical = count($arrVideoTagVerticalList);
                 for ($i = 0; $i < $countVideoListVertical; $i++) {
                     $objVertical = $arrVideoTagVerticalList[$i];
-                    $this->widget('ext.VideoSection.VideoListVerticalSection', array('HeaderName' => $objVertical['videoTagName'], 'Videos' => $objVertical['videoList']));
+                    $this->widget('ext.VideoSection.VideoListVerticalSection', array('HeaderName' => '#' . $objVertical['videoTagName'], 'Videos' => $objVertical['videoList']));
                 }
             ?>
         </div>

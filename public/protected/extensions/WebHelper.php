@@ -13,6 +13,11 @@ class WebHelper {
             echo "-";
         }
     }
+    
+    public static function displayContent($text) {
+        $text = nl2br($text);
+        return preg_replace("#((http|https|ftp)://(\S*?\.\S*?))(\s|\;|\)|\]|\[|\{|\}|,|\"|'|:|\<|$|\.\s)#ie", "'<a href=\"$1\" target=\"_blank\">$3</a>$4'", $text);
+    }
 }
 
 ?>

@@ -13,10 +13,7 @@ function getLikeUrl($id) {
     return Yii::app()->request->getBaseUrl(true) . '#fb-like-' . $id;
 }
 
-function displayContent($text) {
-    $text = nl2br($text);
-    return preg_replace("#((http|https|ftp)://(\S*?\.\S*?))(\s|\;|\)|\]|\[|\{|\}|,|\"|'|:|\<|$|\.\s)#ie", "'<a href=\"$1\" target=\"_blank\">$3</a>$4'", $text);
-}
+
 
 ?>
 <style type="text/css">
@@ -78,7 +75,7 @@ function displayContent($text) {
                         if ($row->description == null) {
                             echo 'No description avaliable';
                         } else {
-                            echo displayContent($row->description);
+                            echo WebHelper::displayContent($row->description);
                         }
                         ?>
                     </p>

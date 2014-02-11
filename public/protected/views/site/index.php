@@ -102,6 +102,12 @@ function displayContent($text) {
 </script>
 
 <script type="text/javascript">
+    function nl2br (str, is_xhtml) {
+        var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br ' + '/>' : '<br>'; // Adjust comment to avoid issue on phpjs.org display
+
+        return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+    }
+    
     jQuery.noConflict()(function($) {
 
         $(document).ready(function() {
@@ -119,13 +125,21 @@ function displayContent($text) {
             if (hash) {
                 var id = hash.replace('#fb-comment-', '');
                 jQuery.getJSON("/api/video/" + id, function(data) {
-                    openPopup(data.id, data.title, data.url);
+                    openPopup(data.id, data.title, data.url, data.description);
                 });
             }
         }
-        function openPopup(id, title, video) {
+        function openPopup(id, title, video, description) {
             var re = /https?:\/\/(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube\.com\S*[^\w\-\s])([\w\-]{11})(?=[^\w\-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/ig;
             video = video.replace(re, '//www.youtube.com/embed/$1');
+            
+            if (description){
+                description = nl2br(description);
+
+            } else {
+                description = 'No description avaliable';
+            }
+            
             $.colorbox({
                 html: '\n\
                         <div class="popup">\n\
@@ -134,7 +148,8 @@ function displayContent($text) {
                                 <div class="fb-like" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-like-'; ?>' + id + '" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>\n\
                             </div>\n\
                             <h6>' + title + '</h6>\n\
-                            <iframe width="654" height="368" src="' + video + '" frameborder="0"></iframe>\n\
+                            <iframe width="654" height="368" src="' + video + '" frameborder="0"></iframe>\
+                            ' + description  + '\
                         </div>\n\
                         <div class="comment">\n\
                             <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-comment-'; ?>' + id + '"></div>\n\

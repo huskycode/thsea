@@ -22,9 +22,9 @@
                <div class="video-text clearfix">
                    <div class="video-title">
 
-                       <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[$i]->id; ?>">
-                           <?php echo TextHelper::limitText($this->Videos[$i]->title,40); ?>
-
+                       <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[$i]->id; ?>"
+                          title="<?php echo $this->Videos[$i]->title; ?>">
+                           <?php echo TextHelper::limitText($this->Videos[$i]->title,35); ?>
                        </a>
 
                    </div>

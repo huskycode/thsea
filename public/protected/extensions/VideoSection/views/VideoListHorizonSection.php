@@ -29,7 +29,8 @@ if($displayVideoCount > 0) {
                     </div>
                     <div class="video-text clearfix">
                         <div class="video-title">
-                            <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[$i]->id; ?>">
+                            <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[$i]->id; ?>"
+                               title="<?php echo $this->Videos[$i]->title; ?>">
                                 <?php echo TextHelper::limitText($this->Videos[$i]->title); ?>
                             </a>
                         </div>

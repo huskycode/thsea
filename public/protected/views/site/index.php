@@ -42,7 +42,8 @@ function displayContent($text) {
     <div class="video-group">
         <div class="group-horizontal">
             <?php 
-            $this->widget('ext.VideoSection.TopViewSection', array('Videos' => $topViewVideos));
+            //$this->widget('ext.VideoSection.TopViewSection', array('Videos' => $topViewVideos));
+            $this->widget('ext.VideoSection.VideoListHorizonSection', array('HeaderName' => 'Popular', 'Videos' => $topViewVideos, 'tagId'=>'home-popular','isTag'=>false));
             $countVideoListHorizontal = count($arrVideoTagHorizontalList);
             for ($i = 0; $i < $countVideoListHorizontal; $i++) {
                 $objHorizontal = $arrVideoTagHorizontalList[$i];

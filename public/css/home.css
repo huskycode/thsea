@@ -4,21 +4,21 @@
 /* line 1, ../sass/_home-group.scss */
 .video-group { border-top: #cccccc solid 1px; }
 /* line 3, ../sass/_home-group.scss */
-.video-group .group-horizontal, .video-group .group-vertical { display: block; float: left; margin: 0; padding: 0; }
-/* line 9, ../sass/_home-group.scss */
+.video-group .group-horizontal, .video-group .group-vertical { display: block; float: left; margin: 0; padding: 0; margin-left: -1px; }
+/* line 10, ../sass/_home-group.scss */
 .video-group .group-horizontal { width: 559px; border-right: #cccccc solid 1px; }
-/* line 13, ../sass/_home-group.scss */
+/* line 14, ../sass/_home-group.scss */
 .video-group .group-vertical { width: 400px; }
-/* line 16, ../sass/_home-group.scss */
+/* line 17, ../sass/_home-group.scss */
 .video-group:after { content: ' '; display: block; clear: both; }
 
-@media only screen and (min-width: 768px) and (max-width: 959px) { /* line 24, ../sass/_home-group.scss */
+@media only screen and (min-width: 768px) and (max-width: 959px) { /* line 25, ../sass/_home-group.scss */
   .video-group .group-horizontal { width: 460px; }
-  /* line 27, ../sass/_home-group.scss */
+  /* line 28, ../sass/_home-group.scss */
   .video-group .group-vertical { width: 307px; } }
-@media only screen and (max-width: 767px) { /* line 34, ../sass/_home-group.scss */
+@media only screen and (max-width: 767px) { /* line 35, ../sass/_home-group.scss */
   .video-group .group-horizontal { width: 100%; border-right: none; }
-  /* line 38, ../sass/_home-group.scss */
+  /* line 39, ../sass/_home-group.scss */
   .video-group .group-vertical { width: 100%; } }
 /* line 1, ../sass/_home-horizontal.scss */
 .horizontal-list { display: block; position: relative; float: left; border-bottom: #cccccc solid 1px; border-left: #cccccc solid 1px; padding: 10px 0; }
@@ -42,7 +42,7 @@
 .horizontal-list .video-thumbnail-small img:hover { border-bottom: none; }
 
 @media only screen and (min-width: 768px) { /* line 49, ../sass/_home-horizontal.scss */
-  .horizontal-list .video-block { height: 210px; overflow: hidden; }
+  .horizontal-list .video-block { min-height: 210px; overflow: hidden; }
   /* line 52, ../sass/_home-horizontal.scss */
   .horizontal-list .video-block .video-thumbnail-small { float: none; }
   /* line 54, ../sass/_home-horizontal.scss */

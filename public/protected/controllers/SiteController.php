@@ -26,32 +26,19 @@ class SiteController extends Controller {
         $this->render('index', array(
             'recentlyVideos' => $recentlyVideos,
             'topViewVideos' => $topViewVideos,
-            'arrVideoTagHorizontalList' => $this->getVideoTagHorizontalList(),
-            'arrVideoTagVerticalList' => $this->getVideoTagVerticalList(),
+            'arrVideoTagHorizontalList' => $this->getVideoTagList('videoTagHorizontalList'),
+            'arrVideoTagVerticalList' => $this->getVideoTagList('videoTagVerticalList'),
         ));
     }
-
-    private function getVideoTagHorizontalList() {
-        $arrVideoTagHorizontalList = array();
-        $tags = Yii::app()->params['videoTagHorizontalList'];
+    private function getVideoTagList($tagListName){
+        $arrVideoTagList = array();
+        $tags = Yii::app()->params[$tagListName];
         foreach ($tags as $tagName => $videoCount) {
             $videoList = $this->getVideosByTag($tagName, $videoCount);
-            $arrVideoTagHorizontalList[] = array('videoTagName' => $tagName, 'videoList' => $videoList);
+            $arrVideoTagList[] = array('videoTagName' => $tagName, 'videoList' => $videoList);
         }
-
-        return $arrVideoTagHorizontalList;
+        return $arrVideoTagList;
     }
-
-    private function getVideoTagVerticalList() {
-        $arrVideoTagVerticalList = array();
-        $tags = Yii::app()->params['videoTagVerticalList'];
-        foreach ($tags as $tagName => $videoCount) {
-            $videoList = $this->getVideosByTag($tagName, $videoCount);
-            $arrVideoTagVerticalList[] = array('videoTagName' => $tagName, 'videoList' => $videoList);
-        }
-        return $arrVideoTagVerticalList;
-    }
-
     /**
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.

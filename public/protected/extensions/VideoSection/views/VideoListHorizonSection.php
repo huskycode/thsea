@@ -6,10 +6,14 @@ if ($lastVideoIndex < $displayVideoCount) {
 }
 if($displayVideoCount > 0) {
     ?>
-    <div class="horizontal-list video-span-<?php echo $displayVideoCount; ?>">
-        <h2>#<?php 
-        $url = Yii::app()->createUrl('site/list',array('tag'=>$this->HeaderName));
-        echo '<a href="'.$url.'">'.$this->HeaderName.'</a>';
+    <div <?php echo ($this->tagId != '')?'id="'.$this->tagId.'"':''; ?> class="horizontal-list video-span-<?php echo $displayVideoCount; ?>">
+        <h2><?php 
+        if($this->isTag){    
+            $url = Yii::app()->createUrl('site/list',array('tag'=>$this->HeaderName));
+            echo '#<a href="'.$url.'">'.$this->HeaderName.'</a>';
+        }else{
+            echo $this->HeaderName;
+        }
         ?></h2>
         <div>
             <?php
@@ -35,7 +39,7 @@ if($displayVideoCount > 0) {
                             </a>
                         </div>
                         <div class="video-info">
-                            <?php if(false){ ?>
+                            <?php if(!$this->isTag){ ?>
                             #<span class="tags">
                                 <?php echo WebHelper::renderTags($this->Videos[$i]->videoTags); ?>
                             </span><br />

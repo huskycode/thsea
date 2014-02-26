@@ -35,7 +35,7 @@ if($displayVideoCount > 0) {
                             </a>
                         </div>
                         <div class="video-info">
-                            <?php if(false){ ?>
+                            <?php if($showTag){ ?>
                             #<span class="tags">
                                 <?php echo WebHelper::renderTags($this->Videos[$i]->videoTags); ?>
                             </span><br />

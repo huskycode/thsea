@@ -8,7 +8,7 @@ import geb.*
  * @author Rux
  */
 class AboutPage extends Page  {
-    static url = "http://uat.seacademy.in.th/page?view=about"
+    static url = System.properties['geb.build.baseUrl'] + "page?view=about" 
     static at = {title=="Thailand Software Engineering Academy - About"}
 }
 

@@ -10,7 +10,7 @@ import geb.*
  * @author Rux
  */
 class AdminVideoPage extends Page  {
-    static url = "http://uat.seacademy.in.th/admin/video"
+    static url = System.properties['geb.build.baseUrl'] + "admin/video"
     static at = {title=="Thailand Software Engineering Academy - Video Manager"}
 }
 

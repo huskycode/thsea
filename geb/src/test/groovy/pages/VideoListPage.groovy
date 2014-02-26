@@ -10,7 +10,7 @@ import geb.*
  * @author Rux
  */
 class VideoListPage extends Page  {
-    static url = "http://uat.seacademy.in.th/"
+    static url = System.properties['geb.build.baseUrl']
     static at = { title == "Thailand Software Engineering Academy" }
     static content = {
         sponsorSection { $("div.columns.lp-header h6") }

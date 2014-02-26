@@ -21,7 +21,8 @@ test {
     systemProperty "geb.build.reportsDir", reporting.file("geb")
     systemProperty "geb.env", "htmlunit"
     systemProperty "webdriver.chrome.driver","/home/thsea/webdriver/chromedriver"
-    //systemProperty "geb.build.baseUrl", "http://uat.seacademy.in.th/"
+    systemProperty "geb.build.baseUrl", "$baseUrl"
+
 }
 
 task wrapper(type: Wrapper) {

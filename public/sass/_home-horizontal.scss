@@ -47,7 +47,7 @@
 @media only screen and (min-width: $step-width-2){
     .horizontal-list{
         .video-block{
-            height:210px;
+            min-height:210px;
             overflow:hidden;
             .video-thumbnail-small{
                 float: none;

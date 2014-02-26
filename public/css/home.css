@@ -42,7 +42,7 @@
 .horizontal-list .video-thumbnail-small img:hover { border-bottom: none; }
 
 @media only screen and (min-width: 768px) { /* line 49, ../sass/_home-horizontal.scss */
-  .horizontal-list .video-block { height: 210px; overflow: hidden; }
+  .horizontal-list .video-block { min-height: 210px; overflow: hidden; }
   /* line 52, ../sass/_home-horizontal.scss */
   .horizontal-list .video-block .video-thumbnail-small { float: none; }
   /* line 54, ../sass/_home-horizontal.scss */

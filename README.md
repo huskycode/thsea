@@ -1,7 +1,7 @@
 Thailand Software Engineering Academy
 
 ### Build Status
-* Acceptance Test ![Acceptance Test](http://teamcity3.huskycode.com/app/rest/builds/buildType:bt11/statusIcon)
+* Acceptance Test ![UAT](http://teamcity3.huskycode.com/app/rest/builds/buildType:bt11/statusIcon) ![Production](http://teamcity3.huskycode.com/app/rest/builds/buildType:bt13/statusIcon)
 
 ### Working Environment
 * UAT domain : http://thsea-uat.nfshost.com/, http://uat.seacademy.in.th/

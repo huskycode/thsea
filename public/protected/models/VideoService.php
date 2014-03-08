@@ -1,5 +1,5 @@
 <?php
-class VideoService extends CFormModel {
+class VideoService extends CModel {
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }

@@ -5,7 +5,7 @@ class VideoService extends CModel {
         return array();
     }
 
-    public function countAllVideoTag($tagName) {
+    public static function countAllVideoTag($tagName) {
         $criteria = new CDbCriteria();
         if (isset($tagName) && $tagName != '') {
             $videoTags = VideoTag::model()->findAll(array(

@@ -1,5 +1,5 @@
 <?php
-class VideoService extends CActiveRecord {
+class VideoService extends CFormModel {
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }

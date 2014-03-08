@@ -4,18 +4,18 @@ $lastVideoIndex = count($this->Videos);
 if ($lastVideoIndex < $displayVideoCount) {
     $displayVideoCount = $lastVideoIndex;
 }
-if($displayVideoCount > 0) {
+if ($displayVideoCount > 0) {
     ?>
-    <div <?php echo ($this->tagId != '')?'id="'.$this->tagId.'"':''; ?> class="horizontal-list video-span-<?php echo $displayVideoCount; ?>">
-        <h2><?php 
-        $url = '';
-        if($this->isTag){
-            $url = Yii::app()->createUrl('site/list',array('tag'=>$this->HeaderName));
-            echo '#<a href="'.$url.'">'.$this->HeaderName.'('.VideoService::countAllVideoTag($this->HeaderName).')</a>';
-        }else{
-            echo $this->HeaderName;
-        }
-        ?></h2>
+    <div <?php echo ($this->tagId != '') ? 'id="' . $this->tagId . '"' : ''; ?> class="horizontal-list video-span-<?php echo $displayVideoCount; ?>">
+        <h2><?php
+            $url = '';
+            if ($this->isTag) {
+                $url = Yii::app()->createUrl('site/list', array('tag' => $this->HeaderName));
+                echo '#<a href="' . $url . '">' . $this->HeaderName . '(' . VideoService::countAllVideoTag($this->HeaderName) . ')</a>';
+            } else {
+                echo $this->HeaderName;
+            }
+            ?></h2>
         <div>
             <?php
             for ($i = 0; $i < $displayVideoCount; $i++):
@@ -36,14 +36,14 @@ if($displayVideoCount > 0) {
                         <div class="video-title">
                             <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[$i]->id; ?>"
                                title="<?php echo $this->Videos[$i]->title; ?>">
-                                <?php echo TextHelper::limitText($this->Videos[$i]->title); ?>
+                                   <?php echo TextHelper::limitText($this->Videos[$i]->title); ?>
                             </a>
                         </div>
                         <div class="video-info">
-                            <?php if(!$this->isTag){ ?>
-                            #<span class="tags">
-                                <?php echo WebHelper::renderTags($this->Videos[$i]->videoTags); ?>
-                            </span><br />
+                            <?php if (!$this->isTag) { ?>
+                                #<span class="tags">
+                                    <?php echo WebHelper::renderTags($this->Videos[$i]->videoTags); ?>
+                                </span><br />
                             <?php } ?>
                             <span class="view-counter">
                                 <?php echo number_format($this->Videos[$i]->view_counter); ?> views
@@ -55,7 +55,9 @@ if($displayVideoCount > 0) {
             <?php endfor; ?>
         </div>
         <?php
-        echo '<a href="'.$url.'" class="readmore">READ MORE</a>';
+        if ($this->isTag) {
+            echo '<a href="' . $url . '" class="readmore">read more</a>';
+        }
         ?>
     </div>
 <?php } ?>

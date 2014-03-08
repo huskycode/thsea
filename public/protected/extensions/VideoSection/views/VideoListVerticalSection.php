@@ -38,6 +38,6 @@
                </div>
            </div>
     <?php endfor;
-    echo '<a href="'.$url.'" class="readmore">'.$this->HeaderName.'</a>';
+    echo '<a href="'.$url.'" class="readmore">read more</a>';
     ?>
 </div>

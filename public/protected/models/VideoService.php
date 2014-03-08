@@ -3,6 +3,10 @@ class VideoService extends CModel {
     public static function model($className = __CLASS__) {
         return parent::model($className);
     }
+    
+    function attributeNames(){
+        return array();
+    }
 
     public function countAllVideoTag($tagName) {
         $criteria = new CDbCriteria();

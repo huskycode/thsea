@@ -34,57 +34,37 @@ function getLikeUrl($id) {
 <!-- END SEPARATOR -->	
 <!-- START BLOG WRAPPER -->
 <div class="container main-wrapper">
-    <div id="main-content" class="twelve columns">
-        <h4># <?php echo isset($_GET['tag']) && $_GET['tag']!=''?$_GET['tag']:'All'; ?></h4>
-        
+    <div id="main-content" class="sixteen columns">
+        <h4 style="padding-bottom: 20px"># <?php echo isset($_GET['tag']) && $_GET['tag']!=''?$_GET['tag']:'All'; ?></h4>
+    
         <?php foreach ($list as $row): ?>
-            <div id="fb-comment-<?php echo $row->id; ?>" data-id="<?php echo $row->id; ?>" data-title="<?php echo $row->title; ?>" data-video="<?php echo $row->url; ?>"></div>
-            <div class="entry-post format-image">
-                <div class="info-post">
-                </div><!-- info-post -->
-                <div class="stack">
-                    <div class="meta-post">
-                        <div style="right:0; position:absolute;background:none;" class="pull-right">
-                            <div class="fb-like" data-href="<?php echo getLikeUrl($row->id); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
-                        </div>
-                        <div class="date" title="Recording Date"><span><?php echo $row->recording_date != null ? Yii::app()->dateFormatter->formatDateTime($row->recording_date, 'long', null) : '-' ?></span></div>
-                        <div class="tags" title="Tags"><span>
-                                <?php echo WebHelper::renderTags($row->videoTags); ?>
-                            </span></div>
-                        <div class="comments" title="Comments"><span><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><fb:comments-count href="<?php echo getCommentUrl($row->id); ?>"/></fb:comments-count></a></span></div>
-                    </div><!-- meta-post -->
-                </div><!-- stack -->
-                <div class="image-post">
-                    <a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>">
-                        <?php
-                        $this->widget('ext.YoutubeViewer', array(
-                            'imageUrl' => $row->thumbnail_url,
-                            'width' => 674,
-                            'height' => 337,
-                            'display' => 'image',
-                            'alt' => $row->title
-                        ));
-                        ?>
-                    </a>
-                </div><!-- post-image -->
-                <div class="text-post clearfix">
-                    <div class="title-post">
-                        <h6><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><?php echo $row->title ?></a></h6>
-                    </div>
-                    <p><?php
-                        if ($row->description == null) {
-                            echo 'No description avaliable';
-                        } else {
-                            echo WebHelper::displayContent($row->description);
-                        }
-                        ?>
-                    </p>
-                    <a href="#fb-comment-<?php echo $row->id; ?>" class="button read-more fb-comment-count">Comment</a>
-                </div><!-- text-post -->
-                <div class="divider-blog-1px"></div>
-            </div><!-- entry-post -->
-
-        <?php endforeach; ?>
+        <div id="fb-comment-<?php echo $row->id; ?>">
+            <div class="divider-blog-1px" style="clear:both; margin-top: 0px;"></div>
+            <div style="float:left; padding: 5px;padding-left: 15px;">
+                <a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>" >
+                    <?php $this->widget('ext.YoutubeViewer', array(
+                        'imageUrl'=>$row->thumbnail_url,
+                        'width'=>120,
+                        'height'=>100,
+                        'display'=>'image'
+                    )); ?>
+                </a>
+            </div>
+            <div style="float:left; padding: 5px;" class="video-info">
+                 <strong><a class="fb-comment-count" href="#fb-comment-<?php echo $row->id; ?>"><?php echo $row->title ?></a></strong><br />
+                 <span class="tags">
+                        <?php echo WebHelper::renderTags($row->videoTags); ?>
+                    </span><br />
+                 <span class="view-counter">
+                        <?php echo number_format($row->view_counter); ?> views
+                 </span>
+                 <span class="date" ><?php echo DateTimeHelper::TimeAgo($row->recording_date) ?></span>
+                 
+            </div>        
+        </div>
+        <?php endforeach; ?>  
+       <div class="clear-both divider-blog-1px"></div>
+            
         <div style="font-size: 2em;">
             <?php
             $this->widget('CLinkPager', array(
@@ -172,38 +152,3 @@ function getLikeUrl($id) {
     });
 </script>
 <!-- END BLOG WRAPPER -->
-
-<!-- CLIENTS -->
-<div class="container header-block">
-    <!-- start header -->
-    <div class="sixteen columns lp-header">
-        <h6>Content Sponsor</h6>
-        <div class="nav-projects">
-        </div><!-- .nav-projects -->
-    </div><!-- .sixteen  -->
-    <!-- end header -->
-</div><!-- .container -->
-
-<div id="clients" class="container">
-    <ul id="clients-carousel" class="jcarousel-skin-tango" >
-        <!-- start carousel -->
-        <li><div class="four columns">
-                <div class="block">
-                    <a href="http://www.agile66.com/" target="_blank" alt="Agile66"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/clients/Agile66.jpg" alt="" /></a>
-                </div><!-- block -->  
-            </div><!-- .four  --></li>
-        <!--<li><div class="four columns">
-                <div class="block">
-                    <a href="http://www.welovebug.com/" target="_blank" alt="We love Bug"><img src="images/clients/WeLoveBug.PNG" alt="" /></a>
-                </div>   
-            </div></li>
-
-        <li><div class="four columns">
-                <div class="block">
-                    <a href="http://www.swpark.or.th/" target="_blank" alt="Software Park Thailand"><img src="images/clients/SoftwarePark.jpg" alt="" /></a>
-                </div>  
-            </div></li>-->
-
-    </ul><!-- #clients-carousel -->
-</div><!-- .container -->
-<!-- END CLIENTS -->

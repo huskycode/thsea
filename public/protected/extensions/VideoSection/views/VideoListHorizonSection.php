@@ -56,7 +56,7 @@ if ($displayVideoCount > 0) {
         </div>
         <?php
         if ($this->isTag) {
-            echo '<a href="' . $url . '" class="readmore">read more</a>';
+            echo '<a href="' . $url . '" class="viewmore">view more</a>';
         }
         ?>
     </div>

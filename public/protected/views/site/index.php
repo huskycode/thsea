@@ -103,12 +103,7 @@ function displayContent($text) {
 </script>
 
 <script type="text/javascript">
-    function nl2br (str, is_xhtml) {
-        var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br ' + '/>' : '<br>'; // Adjust comment to avoid issue on phpjs.org display
-
-        return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
-    }
-    
+       
     jQuery.noConflict()(function($) {
 
         $(document).ready(function() {
@@ -135,7 +130,7 @@ function displayContent($text) {
             video = video.replace(re, '//www.youtube.com/embed/$1');
             
             if (description){
-                description = nl2br(description);
+                description = application.utility.nl2br(description);
 
             } else {
                 description = 'No description avaliable';

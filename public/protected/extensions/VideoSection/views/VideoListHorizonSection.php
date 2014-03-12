@@ -11,7 +11,7 @@ if ($displayVideoCount > 0) {
             $url = '';
             if ($this->isTag) {
                 $url = Yii::app()->createUrl('site/list', array('tag' => $this->HeaderName));
-                echo '#<a href="' . $url . '">' . $this->HeaderName . '(' . VideoService::countAllVideoTag($this->HeaderName) . ')</a>';
+                echo '#<a href="' . $url . '">' . $this->HeaderName . ' (' . VideoService::countAllVideoTag($this->HeaderName) . ')</a>';
             } else {
                 echo $this->HeaderName;
             }

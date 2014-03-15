@@ -1,5 +1,5 @@
 <phpunit bootstrap="bootstrap.php"
-		colors="false"
+		colors="true"
 		convertErrorsToExceptions="true"
 		convertNoticesToExceptions="true"
 		convertWarningsToExceptions="true"
@@ -9,5 +9,8 @@
 		<browser name="Internet Explorer" browser="*iexplore" />
 		<browser name="Firefox" browser="*firefox" />
 	</selenium>
-
+    <logging>
+        <log type="coverage-html" target="./report/CodeCoverage/"/>
+        <log type="junit" target="./report/junit.xml"/>
+    </logging>
 </phpunit>

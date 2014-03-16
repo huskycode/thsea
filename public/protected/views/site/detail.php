@@ -17,7 +17,7 @@ $this->breadcrumbs = array(
                 <div class="fb-like" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-like-' . $video->id; ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
             </div>
             <h6><?php echo $video->title; ?></h6>
-            <iframe width="654" height="368" src="' + video + '" frameborder="0"></iframe>
+            <iframe width="654" height="368" src="<?php echo $video->url; ?>" frameborder="0"></iframe>
             <?php echo $video->description; ?>
         </div>
         <div class="comment">

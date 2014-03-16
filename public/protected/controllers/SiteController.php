@@ -39,6 +39,14 @@ class SiteController extends Controller {
         }
         return $arrVideoTagList;
     }
+    public function actionDetail($id) {
+        $video = Video::model()->findByPk($id);
+        if ($video === null){
+            throw new CHttpException(404, 'The video does not exist.');
+        }
+        $this->addViewCounter($id);
+        $this->render('detail', array('video' => $video));
+    }
     /**
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.

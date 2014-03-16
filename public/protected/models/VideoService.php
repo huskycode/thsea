@@ -1,10 +1,9 @@
 <?php
-class VideoService
-{
-    public static function countAllVideoTag($tagName)
-    {
-        if (isset($tagName) && $tagName != '') 
-        {
+
+class VideoService {
+
+    public static function countAllVideoTag($tagName) {
+        if (isset($tagName) && $tagName != '') {
             $videoTags = VideoTag::model()->findAll(array(
                 'select' => 'video_id',
                 'condition' => sprintf("tag='%s'", $tagName),
@@ -15,13 +14,13 @@ class VideoService
         }
         return 0;
     }
-    
+
     public static function addViewCounter($id) {
         $model = Video::model()->findByPk($id);
-        if ($model === null){
+        if ($model === null) {
             throw new CHttpException(404, 'The requested page does not exist.');
         }
-        $model->view_counter = $model->view_counter+1;
+        $model->view_counter = $model->view_counter + 1;
         $model->view_counter;
         $model->save();
     }

@@ -44,7 +44,7 @@ class SiteController extends Controller {
         if ($video === null){
             throw new CHttpException(404, 'The video does not exist.');
         }
-        $this->addViewCounter($id);
+        VideoService::addViewCounter($id);
         $this->render('detail', array('video' => $video));
     }
     /**

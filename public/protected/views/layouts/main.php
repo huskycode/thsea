@@ -26,7 +26,7 @@ $navItems = array(
             <meta property="og:title" content="<?php echo $this->metaSocialName ?>" />
             <meta property="og:description" content="<?php echo $this->metaSocialDetail; ?>" />
             <meta property="og:type" content="article" />
-            <meta property="og:url" content="<?php echo $this->current_Url; ?>"/>
+            <meta property="og:url" content="<?php echo $this->currentUrl; ?>"/>
         <?php } ?>
         <!-- SOCIAL META END -->
         <!-- Mobile Specific Metas -->

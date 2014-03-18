@@ -1,0 +1,73 @@
+/* line 6, ../sass/sass.scss */
+.clear-both { display: block; clear: both; }
+
+/* line 1, ../sass/_home-group.scss */
+.video-group { border-top: #cccccc solid 1px; }
+/* line 3, ../sass/_home-group.scss */
+.video-group .group-horizontal, .video-group .group-vertical { display: block; float: left; margin: 0; padding: 0; margin-left: -1px; }
+/* line 10, ../sass/_home-group.scss */
+.video-group .group-horizontal { width: 559px; border-right: #cccccc solid 1px; }
+/* line 14, ../sass/_home-group.scss */
+.video-group .group-vertical { width: 400px; }
+/* line 17, ../sass/_home-group.scss */
+.video-group .viewmore { display: block; clear: both; float: right; margin-right: 10px; font-size: 16px; color: #468aca; }
+/* line 25, ../sass/_home-group.scss */
+.video-group:after { content: ' '; display: block; clear: both; }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) { /* line 33, ../sass/_home-group.scss */
+  .video-group .group-horizontal { width: 460px; }
+  /* line 36, ../sass/_home-group.scss */
+  .video-group .group-vertical { width: 307px; } }
+@media only screen and (max-width: 767px) { /* line 43, ../sass/_home-group.scss */
+  .video-group .group-horizontal { width: 100%; border-right: none; }
+  /* line 47, ../sass/_home-group.scss */
+  .video-group .group-vertical { width: 100%; } }
+/* line 1, ../sass/_home-horizontal.scss */
+.horizontal-list { display: block; position: relative; float: left; border-bottom: #cccccc solid 1px; border-left: #cccccc solid 1px; padding: 10px 0; }
+/* line 8, ../sass/_home-horizontal.scss */
+.horizontal-list.video-span-1 { width: 185px; }
+/* line 11, ../sass/_home-horizontal.scss */
+.horizontal-list.video-span-2 { width: 372px; }
+/* line 14, ../sass/_home-horizontal.scss */
+.horizontal-list.video-span-3 { width: 559px; }
+/* line 17, ../sass/_home-horizontal.scss */
+.horizontal-list h2 { font-size: 20px; padding: 0 10px; margin: 0; }
+/* line 22, ../sass/_home-horizontal.scss */
+.horizontal-list .video-block { display: block; float: left; width: 165px; padding: 0 10px; }
+/* line 27, ../sass/_home-horizontal.scss */
+.horizontal-list .video-block span { font-size: 0.8em; }
+/* line 30, ../sass/_home-horizontal.scss */
+.horizontal-list .video-block:after { content: ' '; display: block; clear: both; position: relative; }
+/* line 37, ../sass/_home-horizontal.scss */
+.horizontal-list:after { content: ' '; display: block; clear: both; position: relative; }
+/* line 43, ../sass/_home-horizontal.scss */
+.horizontal-list .video-thumbnail-small img:hover { border-bottom: none; }
+
+@media only screen and (min-width: 768px) { /* line 49, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block { min-height: 210px; overflow: hidden; }
+  /* line 52, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block .video-thumbnail-small { float: none; }
+  /* line 54, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block .video-thumbnail-small img { width: 100%; height: auto; } }
+@media only screen and (min-width: 768px) and (max-width: 959px) { /* line 64, ../sass/_home-horizontal.scss */
+  .horizontal-list.video-span-1 { width: 152px; }
+  /* line 67, ../sass/_home-horizontal.scss */
+  .horizontal-list.video-span-2 { width: 305px; }
+  /* line 70, ../sass/_home-horizontal.scss */
+  .horizontal-list.video-span-3 { width: 459px; }
+  /* line 73, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block { width: 132px; } }
+@media only screen and (max-width: 767px) { /* line 80, ../sass/_home-horizontal.scss */
+  .horizontal-list.video-span-1, .horizontal-list.video-span-2, .horizontal-list.video-span-3 { width: 100%; }
+  /* line 83, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block { width: 100%; }
+  /* line 85, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block .video-text { float: left; } }
+@media only screen and (min-width: 478) and (max-width: 767px) { /* line 94, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block .video-text { max-width: 285px; } }
+@media only screen and (max-width: 477) { /* line 103, ../sass/_home-horizontal.scss */
+  .horizontal-list .video-block .video-text { max-width: 165px; } }
+/*  Created on : Mar 18, 2014, 10:44:11 PM Author     : gong
+*/
+/* line 6, ../sass/_video-detail.scss */
+#video-detail .image-post { width: auto; margin: 9px; }

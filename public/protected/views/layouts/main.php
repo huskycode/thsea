@@ -3,7 +3,7 @@
 $navItems = array(
     array('label' => 'Home', 'url' => array('site/index')),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-    array('label' => 'Leave a Feedback', 'url'=>'https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform', 'linkOptions'=>array('target'=>'_blank'))
+    array('label' => 'Leave a Feedback', 'url' => 'https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform', 'linkOptions' => array('target' => '_blank'))
 );
 ?>
 ﻿<!DOCTYPE html>
@@ -17,6 +17,18 @@ $navItems = array(
         <meta name="author" content="Agile66">
         <meta name="keywords" content="Software Engineering, Agile, Video Tutorial, Project Management">
         <meta name="description" content="Thailand Software Engineering Academy">
+        <!-- SOCIAL META START -->
+        <?php if (isset($this->metaSocialName)) { ?>
+            <meta property="og:site_name" content="SEAcademy.in.th" />
+            <meta itemprop="name" content="<?php echo $this->metaSocialName ?>">
+            <meta itemprop="description" content="<?php echo $this->metaSocialDetail; ?>">
+            <meta property="og:image" content="<?php echo $this->metaSocialImage; ?>" />
+            <meta property="og:title" content="<?php echo $this->metaSocialName ?>" />
+            <meta property="og:description" content="<?php echo $this->metaSocialDetail; ?>" />
+            <meta property="og:type" content="article" />
+            <meta property="og:url" content="<?php echo $this->current_Url; ?>"/>
+        <?php } ?>
+        <!-- SOCIAL META END -->
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <!-- CSS -->
@@ -24,13 +36,14 @@ $navItems = array(
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/base.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/skeleton.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
-        
+
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/home.css" />
-        
-        <!--link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/camera.css" /-->
-        <!--link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/mediaelementplayer.min.css" /-->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/colorbox.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/sass.css" />
+
+<!--link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/camera.css" /-->
+<!--link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/mediaelementplayer.min.css" /-->
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/colorbox.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />
         <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>        
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.core.css" type="text/css" />
@@ -39,7 +52,7 @@ $navItems = array(
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.focus.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.prompt.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.arrow.css" type="text/css" />
-		
+
         <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -99,12 +112,12 @@ $navItems = array(
                 </div><!-- .twelve columns -->
             </div><!-- .container -->
         </div><!-- #slider-wraper -->
-        	<!-- end #menu  -->	
-                    <div style="float:right; padding-right: 10px">
-                        <?php if(!Yii::app()->user->isGuest){?>
-                        <a href="<?php echo Yii::app()->createUrl("site/logout"); ?>">Logout (<?php echo Yii::app()->user->name; ?>)</a>
-                        <?php }?>
-                    </div>
+        <!-- end #menu  -->	
+        <div style="float:right; padding-right: 10px">
+            <?php if (!Yii::app()->user->isGuest) { ?>
+                <a href="<?php echo Yii::app()->createUrl("site/logout"); ?>">Logout (<?php echo Yii::app()->user->name; ?>)</a>
+            <?php } ?>
+        </div>
         <!-- END MENU WRAPPER -->
         <?php echo $content; ?>
         <!-- -============== END CONTENT WRAPPER =================- -->

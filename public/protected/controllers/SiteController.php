@@ -2,6 +2,11 @@
 
 class SiteController extends Controller {
 
+    public $metaSocialName;
+    public $metaSocialDetail;
+    public $metaSocialImage;
+    public $currentUrl;
+
     /**
      * Declares class-based actions.
      */
@@ -30,7 +35,8 @@ class SiteController extends Controller {
             'arrVideoTagVerticalList' => $this->getVideoTagList('videoTagVerticalList'),
         ));
     }
-    private function getVideoTagList($tagListName){
+
+    private function getVideoTagList($tagListName) {
         $arrVideoTagList = array();
         $tags = Yii::app()->params[$tagListName];
         foreach ($tags as $tagName => $videoCount) {
@@ -39,14 +45,16 @@ class SiteController extends Controller {
         }
         return $arrVideoTagList;
     }
+
     public function actionDetail($id) {
         $video = Video::model()->findByPk($id);
-        if ($video === null){
+        if ($video === null) {
             throw new CHttpException(404, 'The video does not exist.');
         }
         VideoService::addViewCounter($id);
         $this->render('detail', array('video' => $video));
     }
+
     /**
      * This is the default 'index' action that is invoked
      * when an action is not explicitly requested by users.

@@ -18,7 +18,7 @@ $this->currentUrl = Yii::app()->request->baseUrl.'/site/detail/'.$video->id;
 <!-- END SEPARATOR -->	
 <!-- START BLOG WRAPPER -->
 <div class="container video-wrapper" >
-    <div class="video-detail">
+    <div id="video-detail">
         <div class="image-post video">
             <div style="float:right;" class="pull-right">
                 <div class="fb-like" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-like-' . $video->id; ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>

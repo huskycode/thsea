@@ -70,4 +70,15 @@
 /*  Created on : Mar 18, 2014, 10:44:11 PM Author     : gong
 */
 /* line 6, ../sass/_video-detail.scss */
-#video-detail .image-post { width: auto; margin: 9px; }
+#video-detail .image-post, #video-detail .comment { display: block; float: left; }
+/* line 10, ../sass/_video-detail.scss */
+#video-detail .image-post { width: 600px; margin-right: 10px; }
+/* line 14, ../sass/_video-detail.scss */
+#video-detail .comment { width: 320px; }
+
+@media only screen and (min-width: 768px) and (max-width: 959px) { /* line 20, ../sass/_video-detail.scss */
+  #video-detail .image-post { width: 405px; margin-right: 10px; } }
+@media only screen and (max-width: 767px) { /* line 28, ../sass/_video-detail.scss */
+  #video-detail .image-post { width: auto; float: none; }
+  /* line 32, ../sass/_video-detail.scss */
+  #video-detail .comment { max-width: 320px; width: 100%; float: none; margin: auto; } }

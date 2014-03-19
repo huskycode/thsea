@@ -10,7 +10,7 @@ $url = preg_replace($search, $replace, $video->url);
 $this->metaSocialName = $video->title;
 $this->metaSocialDetail = $video->description;
 $this->metaSocialImage = $video->thumbnail_url;
-$this->currentUrl = Yii::app()->request->baseUrl.'/site/detail/'.$video->id;
+$this->currentUrl = Yii::app()->request->getBaseUrl(true) . '/site/detail/' . $video->id;
 ?>
 <div id="fb-root"></div>
 <div id="separator">
@@ -25,7 +25,7 @@ $this->currentUrl = Yii::app()->request->baseUrl.'/site/detail/'.$video->id;
             </div>
             <h6><?php echo $video->title; ?></h6>
             <iframe width="654" height="368" src="<?php echo $url; ?>" frameborder="0"></iframe>
-<?php echo $video->description; ?>
+            <?php echo $video->description; ?>
         </div>
         <div class="comment">
             <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-comment-' . $video->id; ?>" data-width="320"></div>

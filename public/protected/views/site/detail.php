@@ -17,19 +17,17 @@ $this->currentUrl = Yii::app()->request->getBaseUrl(true) . '/site/detail/' . $v
 </div><!-- #separator -->
 <!-- END SEPARATOR -->	
 <!-- START BLOG WRAPPER -->
-<div class="container video-wrapper" >
-    <div id="video-detail">
-        <div class="image-post video">
-            <div style="float:right;" class="pull-right">
-                <div class="fb-like" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-like-' . $video->id; ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
-            </div>
-            <h6><?php echo $video->title; ?></h6>
-            <iframe width="654" height="368" src="<?php echo $url; ?>" frameborder="0"></iframe>
-            <?php echo $video->description; ?>
+<div id="video-detail" class="container" >
+    <div class="image-post video">
+        <div style="float:right;" class="pull-right">
+            <div class="fb-like" data-href="<?php echo $this->currentUrl; ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
         </div>
-        <div class="comment">
-            <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-comment-' . $video->id; ?>" data-width="320"></div>
-        </div>
+        <h6><?php echo $video->title; ?></h6>
+        <iframe width="654" height="368" src="<?php echo $url; ?>" frameborder="0"></iframe>
+        <p><?php echo $video->description; ?></p>
+    </div>
+    <div class="comment">
+        <div class="fb-comments" data-href="<?php echo $this->currentUrl; ?>" data-width="320"></div>
     </div>
 </div><!-- .container -->
 <script>

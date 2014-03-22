@@ -57,8 +57,9 @@ return array(
             'urlFormat'=>'path',
             'showScriptName'=>false,
             'rules'=>array(
+                ''=>'site/index',
                 'gii'=>'gii',
-                'video/<id:\d+>'=>'site/detail',
+                'video/<id:\w+>'=>'site/detail',
                 'list'=>'site/list',
                 'login'=>'site/login',
                 'logout'=>'site/logout',

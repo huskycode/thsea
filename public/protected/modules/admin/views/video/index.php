@@ -1,8 +1,8 @@
 <?php
 /* @var $this SiteController */
-$this->pageTitle = Yii::app()->name . ' - Video Manager';
+$this->pageTitle = Yii::app()->name . ' - Video Link Manager';
 $this->breadcrumbs = array(
-    'Video Manager',
+    'Video Link Manager',
 );
 ?>
 <style type="text/css">

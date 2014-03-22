@@ -11,6 +11,6 @@ import geb.*
  */
 class AdminVideoPage extends Page  {
     static url = System.properties['geb.build.baseUrl'] + "admin/video"
-    static at = {title=="Thailand Software Engineering Academy - Video Manager"}
+    static at = {title=="Thailand Software Engineering Academy - Video Link Manager"}
 }
 

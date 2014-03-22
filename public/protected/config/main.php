@@ -58,6 +58,7 @@ return array(
             'showScriptName'=>false,
             'rules'=>array(
                 'gii'=>'gii',
+                'video/<id:\d+>'=>'site/detail',
                 'list'=>'site/list',
                 'login'=>'site/login',
                 'logout'=>'site/logout',

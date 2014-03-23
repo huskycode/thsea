@@ -50,7 +50,8 @@ class Video extends CActiveRecord
 			array('title', 'length', 'max'=>200),
 			array('description', 'length', 'max'=>5000),
 			array('url', 'length', 'max'=>500),
-			array('url_name', 'length', 'max'=>100),
+			//array('url_name', 'length', 'max'=>100),
+			array('url_name', 'existingUrlName'),
 			array('thumbnail_url', 'length', 'max'=>1000),
 			array('posted_by', 'length', 'max'=>50),
 			array('view_counter', 'length', 'max'=>20),
@@ -118,6 +119,15 @@ class Video extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+        
+        public function existingUrlName($attribute, $params){
+            $video = $this->find('url_name=:url_name AND id<>:id', array(':url_name'=>$this->url_name,
+                                                                       ':id'=>$this->id));
+            
+            if($video!=null){
+                $this->addError($attribute, 'Duplicate permalink.');
+            }
+        }
         
         public function recently($limit=5) {
             $this->getDbCriteria()->mergeWith(array(

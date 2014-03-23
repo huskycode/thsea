@@ -27,7 +27,7 @@ $this->breadcrumbs = array(
         <option>Most view</option>
     </select> -->
     <div style="float:left">
-        <h4><strong>Video Links</strong></h4s>        
+        <h4><strong>Video Link Manager</strong></h4>        
     </div>
     <div style="float:left"></div>
     <div style="float: right">

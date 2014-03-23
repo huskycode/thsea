@@ -18,6 +18,10 @@ class WebHelper {
         $text = nl2br($text);
         return preg_replace("#((http|https|ftp)://(\S*?\.\S*?))(\s|\;|\)|\]|\[|\{|\}|,|\"|'|:|\<|$|\.\s)#ie", "'<a href=\"$1\" target=\"_blank\">$3</a>$4'", $text);
     }
+    
+    public static function permalize($input) {
+	return str_replace(' ','-',strtolower(trim(preg_replace("/[^a-zA-Z0-9 ]/", '', $input))));
+    }
 }
 
 ?>

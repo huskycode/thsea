@@ -29,6 +29,11 @@ class ApiController extends Controller {
         echo CJSON::encode(array("php", "java", "c++"));
     }
     
+    public function actionPermalize(){
+        $title = Yii::app()->request->getPost('title');
+        echo CJSON::encode(WebHelper::permalize($title));
+    }
+    
     private function addViewCounter($id) {
         $model = Video::model()->findByPk($id);
         if ($model === null){

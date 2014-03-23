@@ -46,30 +46,32 @@ class VideoController extends Controller {
 
         if (isset($_POST['Video'])) {
             $model->attributes = $_POST['Video'];
-            
-            try {
-                $this->saveVideo($model);
-                
-                if(isset($_POST['tags']) && $_POST['tags']!=''){
-                    $tags = CJSON::decode($_POST['tags']);
-                    $command = Yii::app()->db->createCommand();  
-                    
-                    for($i=0; $i<count($tags); $i++) {
-                        $tag = $tags[$i];
+           
+            if($model->validate()){            
+                try {
+                    $this->saveVideo($model);
 
-                        $command->insert('video_tag', array(
-                            'video_id'=>$model->id,
-                            'tag'=>$tag
-                        ));
+                    if(isset($_POST['tags']) && $_POST['tags']!=''){
+                        $tags = CJSON::decode($_POST['tags']);
+                        $command = Yii::app()->db->createCommand();  
 
-                        $command->reset(); 
+                        for($i=0; $i<count($tags); $i++) {
+                            $tag = $tags[$i];
+
+                            $command->insert('video_tag', array(
+                                'video_id'=>$model->id,
+                                'tag'=>$tag
+                            ));
+
+                            $command->reset(); 
+                        }
                     }
+                } catch (Exception $e) {
+                    echo 'Caught exception: ',  $e->getMessage(), "\n";
                 }
-            } catch (Exception $e) {
-                echo 'Caught exception: ',  $e->getMessage(), "\n";
-            }
 
-            $this->redirect(array('index'));
+                $this->redirect(array('index'));
+            }
         }
 
         $this->render('create', array(
@@ -84,32 +86,35 @@ class VideoController extends Controller {
         if (isset($_POST['Video'])) {
             $model->attributes = $_POST['Video'];
             
-            try {
-                $this->saveVideo($model);
-
-                $command = Yii::app()->db->createCommand();
-                $command->delete('video_tag', 'video_id=:id', array(':id'=>$id));   
-                $command->reset(); 
-
-                if(isset($_POST['tags']) && $_POST['tags']!=''){
-                    $tags = CJSON::decode($_POST['tags']);
-
-                    for($i=0; $i<count($tags); $i++) {
-                        $tag = $tags[$i];
-
-                        $command->insert('video_tag', array(
-                            'video_id'=>$id,
-                            'tag'=>$tag
-                        ));
-
-                        $command->reset(); 
-                    }
-                }
-
-                $this->redirect(array('index'));
+            if($model->validate()){
             
-            } catch (Exception $e) {
-                echo 'Caught exception: ',  $e->getMessage(), "\n";
+                try {
+                    $this->saveVideo($model);
+
+                    $command = Yii::app()->db->createCommand();
+                    $command->delete('video_tag', 'video_id=:id', array(':id'=>$id));   
+                    $command->reset(); 
+
+                    if(isset($_POST['tags']) && $_POST['tags']!=''){
+                        $tags = CJSON::decode($_POST['tags']);
+
+                        for($i=0; $i<count($tags); $i++) {
+                            $tag = $tags[$i];
+
+                            $command->insert('video_tag', array(
+                                'video_id'=>$id,
+                                'tag'=>$tag
+                            ));
+
+                            $command->reset(); 
+                        }
+                    }
+
+                    $this->redirect(array('index'));
+
+                } catch (Exception $e) {
+                    echo 'Caught exception: ',  $e->getMessage(), "\n";
+                }
             }
         }
 

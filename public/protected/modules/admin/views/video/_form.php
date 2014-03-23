@@ -12,20 +12,39 @@
 
         jQuery('#Video_url').change(function() {
             var videoUrlElement = jQuery(this);
-            renderVideo(videoUrlElement);            
-            loadYoutubeInfo(videoUrlElement);            
+            renderVideo(videoUrlElement);
+            loadYoutubeInfo(videoUrlElement);
+        });
+    
+        jQuery('#Video_title').blur(function(){
+            var title = jQuery(this).val();
+         
+            jQuery.ajax({
+                url: '<?php echo Yii::app()->createUrl('/api/permalize') ?>',
+                type: "POST",
+                dataType: 'json',
+                data: {title: title},
+                async: true,
+                success: function(data) {
+                    var urlName = jQuery('#Video_url_name');
+                    
+                    if(urlName.val()==''){
+                        urlName.val(data);
+                    }
+                }
+            });
         });
 
         if (jQuery('#Video_url').val() !== '') {
             var videoUrlElement = jQuery('#Video_url');
             renderVideo(videoUrlElement);
-            
-            if (jQuery('#Video_thumbnail_url').val()===''){
+
+            if (jQuery('#Video_thumbnail_url').val() === '') {
                 loadYoutubeInfo(videoUrlElement);
             }
         }
-        
-        jQuery('form').submit(function(){
+
+        jQuery('form').submit(function() {
             var textTags = jQuery('#tags').textext()[0].hiddenInput().val();
             var tags = JSON.parse(textTags);
             //jQuery('#tags').val(tags.join());
@@ -33,42 +52,41 @@
             //jQuery('#tags').html('test,aaaa,bbbb')
             //alert(jQuery('#tags_text').val());
         });
-        
-        var tags = JSON.parse('<?php echo $jsonTags; ?>');
- 
-        jQuery('#tags')
-            .textext({
-                plugins : 'tags focus autocomplete arrow',                
-            })
-            .bind('getSuggestions', function(e, data)
-            {                
-                textext = jQuery(e.target).textext()[0],
-                query = (data ? data.query : '') || '';
 
-                jQuery(this).trigger(
+        var tags = JSON.parse('<?php echo $jsonTags; ?>');
+
+        jQuery('#tags')
+                .textext({
+            plugins: 'tags focus autocomplete arrow',
+        })
+                .bind('getSuggestions', function(e, data)
+        {
+            textext = jQuery(e.target).textext()[0],
+                    query = (data ? data.query : '') || '';
+
+            jQuery(this).trigger(
                     'setSuggestions',
-                    { result : textext.itemManager().filter(tags, query) }
-                );        
-            });
-            
+                    {result: textext.itemManager().filter(tags, query)}
+            );
+        });
+
         bindTags();
     });
-    
-    function bindTags(){
-        <?php           
-        
-            if($model){
-                $tags = array();
-            
-                foreach($model->videoTags as $tag){
-                    $tags[] = $tag->tag;
-                }
-                
-                $json = CJSON::encode($tags);
-                
-                echo "jQuery('#tags').textext()[0].tags().addTags(".$json.");";
-            }
-        ?>
+
+    function bindTags() {
+<?php
+if ($model) {
+    $tags = array();
+
+    foreach ($model->videoTags as $tag) {
+        $tags[] = $tag->tag;
+    }
+
+    $json = CJSON::encode($tags);
+
+    echo "jQuery('#tags').textext()[0].tags().addTags(" . $json . ");";
+}
+?>
     }
 
     function renderVideo(videoUrlElement) {
@@ -79,8 +97,8 @@
 
     function getVideoId(url) {
         var videoId = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
-        
-        if (videoId && videoId.length===2){
+
+        if (videoId && videoId.length === 2) {
             return videoId[1];
         } else {
             return null;
@@ -103,7 +121,7 @@
             videoUrlElement.val('');
             return false;
         }
-        
+
         var thumbnailUrl = getThumbnailUrl(videoInfo);
         jQuery('#Video_thumbnail_url').val(thumbnailUrl);
 
@@ -146,7 +164,7 @@
 
 </script>
 <div class="form">
- 
+
     <?php
     $form = $this->beginWidget('CActiveForm', array(
         'id' => 'video-create-form',
@@ -156,7 +174,7 @@
 
     <p class="note">Fields with <span class="required">*</span> are required.</p>
 
-    <?php //echo $form->errorSummary($model);  ?>
+    <?php //echo $form->errorSummary($model);   ?>
 
 
     <div class="row">
@@ -164,11 +182,17 @@
         <?php echo $form->textField($model, 'url', array('style' => 'width:400px;')); ?>
         <?php echo $form->error($model, 'url'); ?>
     </div>
-    
+
     <div class="row">
         <?php echo $form->labelEx($model, 'title'); ?>
         <?php echo $form->textField($model, 'title', array('style' => 'width: 400px;')); ?>
         <?php echo $form->error($model, 'title'); ?>
+    </div>    
+    
+    <div class="row" style="font-size: 0.9em">        
+        <strong style="color:#6a6a6a">Permalink:</strong> 
+        <?php echo Yii::app()->request->hostInfo; ?>/<?php echo $form->textField($model, 'url_name', array('style' => 'display:inline;width:197px;height:5px')); ?>
+        <?php echo $form->error($model, 'url_name'); ?>
     </div>
 
     <div class="row" style="white-space:nowrap">
@@ -186,26 +210,27 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'recording_date'); ?>
-        <?php echo $form->textField($model, 'recording_date', array('style' => 'width:80px;',
+        <?php
+        echo $form->textField($model, 'recording_date', array('style' => 'width:80px;',
             'maxlength' => 10));
         ?>   
         <?php echo $form->error($model, 'recording_date'); ?>
     </div>
-    
+
     <div class="row">
         Tags
         <textarea id="tags" name="tags" rows="3" cols="60" style="min-width:400px;"></textarea>
         <input type="hidden" name="tags_text" id="tags_text" />
-    
 
 
-    <div class="row buttons">
-        <?php echo CHtml::submitButton('Submit'); ?>
-        &nbsp;&nbsp;
-<?php echo CHtml::link('Cancel', array('index')); ?>
-    </div>
 
-    <?php echo $form->hiddenField($model, 'thumbnail_url') ?>
-<?php $this->endWidget(); ?>
+        <div class="row buttons">
+            <?php echo CHtml::submitButton('Submit'); ?>
+            &nbsp;&nbsp;
+            <?php echo CHtml::link('Cancel', array('index')); ?>
+        </div>
 
-</div><!-- form -->
+        <?php echo $form->hiddenField($model, 'thumbnail_url') ?>
+        <?php $this->endWidget(); ?>
+
+    </div><!-- form -->

@@ -24,5 +24,11 @@ class VideoService {
         $model->view_counter;
         $model->save();
     }
+    public static function getVideoDetailUrl($video){
+        return Yii::app()->request->getBaseUrl(true) . '/site/detail/' . $video->url_name;
+    }
+    public static function getVideoLikeUrl($video){
+        return $this->getVideoDetailUrl($video).'#like';
+    }
 
 }

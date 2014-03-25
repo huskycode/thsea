@@ -9,7 +9,7 @@
 
         <div class="video-block">
             <div class="video-thumbnail-smaller">
-                <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[$i]->id; ?>">
+                <a class="fb-comment-count" href="<?php echo Yii::app()->createurl('/video/'.$this->Videos[$i]->getUrlName()); ?>">
                     <?php
                     $this->widget('ext.YoutubeViewer', array(
                         'imageUrl' => $this->Videos[$i]->thumbnail_url,
@@ -22,7 +22,7 @@
             <div class="video-text clearfix">
                 <div class="video-title">
 
-                    <a class="fb-comment-count" href="#fb-comment-<?php echo $this->Videos[$i]->id; ?>"
+                    <a class="fb-comment-count" href="<?php echo Yii::app()->createurl('/video/'.$this->Videos[$i]->getUrlName()); ?>"
                        title="<?php echo $this->Videos[$i]->title; ?>">
                            <?php echo TextHelper::limitText($this->Videos[$i]->title, 35); ?>
                     </a>

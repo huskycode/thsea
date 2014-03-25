@@ -144,5 +144,8 @@ class Video extends CActiveRecord {
         ));
         return $this;
     }
-
+    
+    public function getUrlName(){
+        return $this->url_name?$this->url_name:$this->id;
+    }
 }

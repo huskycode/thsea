@@ -105,70 +105,7 @@ function displayContent($text) {
 <script type="text/javascript">
        
     jQuery.noConflict()(function($) {
-
-        $(document).ready(function() {
-            // add facebook popup
-            //$('.fb-comment-count').colorbox({inline: true, maxWidth: 1200, maxHeight: 490, width: "100%", height: "90%"});
-            $('.fb-comment-count').click(function() {
-                location.hash = $(this).attr('href');
-                OpenFromJSON();
-            });
-            OpenFromJSON();
-        });
-        function OpenFromJSON() {
-            var hash = window.location.hash;
-
-            if (hash) {
-                var id = hash.replace('#fb-comment-', '');
-                jQuery.getJSON("/api/video/" + id, function(data) {
-                    openPopup(data.id, data.title, data.url, data.description);
-                });
-            }
-        }
-        function openPopup(id, title, video, description) {
-            var re = /https?:\/\/(?:[0-9A-Z-]+\.)?(?:youtu\.be\/|youtube\.com\S*[^\w\-\s])([\w\-]{11})(?=[^\w\-]|$)(?![?=&+%\w.-]*(?:['"][^<>]*>|<\/a>))[?=&+%\w.-]*/ig;
-            video = video.replace(re, '//www.youtube.com/embed/$1');
-            
-            if (description){
-                description = application.utility.nl2br(description);
-
-            } else {
-                description = 'No description avaliable';
-            }
-            
-            $.colorbox({
-                html: '\n\
-                        <div class="popup">\n\
-                        <div class="image-post video">\n\
-                            <div style="float:right;" class="pull-right">\n\
-                                <div class="fb-like" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-like-'; ?>' + id + '" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>\n\
-                            </div>\n\
-                            <h6>' + title + '</h6>\n\
-                            <iframe width="654" height="368" src="' + video + '" frameborder="0"></iframe>\
-                            ' + description  + '\
-                        </div>\n\
-                        <div class="comment">\n\
-                            <div class="fb-comments" data-href="<?php echo Yii::app()->request->getBaseUrl(true) . '#fb-comment-'; ?>' + id + '"></div>\n\
-                        </div>\n\
-                        </div>\n\
-                        ',
-                width: "100%",
-                height: "100%",
-                onClosed: function() {
-                    history.pushState("", document.title, window.location.pathname + window.location.search);
-                }
-            });
-            try {
-                FB.XFBML.parse();
-            } catch (ex) {
-            }
-        }
-        window.onresize = function() {
-            $.colorbox.resize({
-                width: '100%',
-                height: '100%'
-            });
-            console.log("call resize");
-        }
+  
+       
     });
 </script>

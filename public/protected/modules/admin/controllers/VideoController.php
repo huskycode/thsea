@@ -46,8 +46,10 @@ class VideoController extends Controller {
 
         if (isset($_POST['Video'])) {
             $model->attributes = $_POST['Video'];
-           
-            if($model->validate()){            
+            $model->posted_by = Yii::app()->user->userName;
+            
+            if($model->validate()){ 
+                
                 try {
                     $this->saveVideo($model);
 
@@ -67,11 +69,11 @@ class VideoController extends Controller {
                         }
                     }
                 } catch (Exception $e) {
-                    echo 'Caught exception: ',  $e->getMessage(), "\n";
+                    echo 'Caught exception: ',  $e->getMessage(), "\n";exit;
                 }
 
                 $this->redirect(array('index'));
-            }
+            } 
         }
 
         $this->render('create', array(
@@ -85,6 +87,7 @@ class VideoController extends Controller {
 
         if (isset($_POST['Video'])) {
             $model->attributes = $_POST['Video'];
+            $model->posted_by = Yii::app()->user->userName;
             
             if($model->validate()){
             
@@ -125,8 +128,6 @@ class VideoController extends Controller {
     }
 
     private function saveVideo($model) {
-        $model->posted_by = 'admin';
-
         if ($model->recording_date == '') {
             $model->recording_date = null;
         }

@@ -196,7 +196,7 @@ if ($model) {
     
     <div class="row" style="font-size: 0.9em">        
         <strong style="color:#6a6a6a">Permalink:</strong> 
-        <?php echo Yii::app()->request->hostInfo; ?>/<?php echo $form->textField($model, 'url_name', array('style' => 'display:inline;width:197px;height:5px')); ?>
+        <?php echo Yii::app()->request->hostInfo; ?>/video/<?php echo $form->textField($model, 'url_name', array('style' => 'display:inline;width:197px;height:5px')); ?>
         <?php echo $form->error($model, 'url_name'); ?>
     </div>
 

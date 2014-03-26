@@ -15,7 +15,13 @@ return CMap::mergeArray(
 			),
 			/* uncomment the following to provide test database connection
 			'db'=>array(
-				'connectionString'=>'DSN for test database',
+			    'connectionString' => 'mysql:host=localhost;dbname=thsea_dev',
+    			'emulatePrepare' => true,
+    			'username' => 'root',
+    			'password' => 'admin',
+    			'charset' => 'utf8',
+    			'tablePrefix' => '',
+    			'enableProfiling' => true
 			),
 			*/
 		),

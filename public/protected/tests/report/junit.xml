@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="." tests="3" assertions="4" failures="0" errors="1" time="1.873107">
+    <testsuite name="SiteTest" file="D:\xampp\htdocs\thsea\protected\tests\functional\SiteTest.php" tests="0" assertions="0" failures="0" errors="0" time="0.000000">
+      <testsuite name="SiteTest: Internet Explorer" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+      <testsuite name="SiteTest: Firefox" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+    </testsuite>
+    <testsuite name="ApiControllerTTest" file="D:\xampp\htdocs\thsea\protected\tests\unit\ApiControllerTTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.319018">
+      <testcase name="testResponseMyFriend" class="ApiControllerTTest" file="D:\xampp\htdocs\thsea\protected\tests\unit\ApiControllerTTest.php" line="9" assertions="1" time="0.319018"/>
+    </testsuite>
+    <testsuite name="SkywalkerTest" file="D:\xampp\htdocs\thsea\protected\tests\unit\SkywalkerTest.php" tests="1" assertions="0" failures="0" errors="1" time="1.429082">
+      <testcase name="testGetPersonName" class="SkywalkerTest" file="D:\xampp\htdocs\thsea\protected\tests\unit\SkywalkerTest.php" line="13" assertions="0" time="1.429082">
+        <error type="PHPUnit_Framework_Error_Notice">SkywalkerTest::testGetPersonName
+Trying to get property of non-object
+
+D:\xampp\htdocs\thsea\protected\tests\unit\SkywalkerTest.php:16
+D:\xampp\php\phpunit:46
+</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="VideoServiceTest" file="D:\xampp\htdocs\thsea\protected\tests\unit\VideoServiceTest.php" tests="1" assertions="3" failures="0" errors="0" time="0.125007">
+      <testcase name="testCountAllVideoTag" class="VideoServiceTest" file="D:\xampp\htdocs\thsea\protected\tests\unit\VideoServiceTest.php" line="13" assertions="3" time="0.125007"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

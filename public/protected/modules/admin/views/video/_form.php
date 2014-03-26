@@ -14,25 +14,11 @@
             var videoUrlElement = jQuery(this);
             renderVideo(videoUrlElement);
             loadYoutubeInfo(videoUrlElement);
+            createPermalink();
         });
     
-        jQuery('#Video_title').blur(function(){
-            var title = jQuery(this).val();
-         
-            jQuery.ajax({
-                url: '<?php echo Yii::app()->createUrl('/api/permalize') ?>',
-                type: "POST",
-                dataType: 'json',
-                data: {title: title},
-                async: true,
-                success: function(data) {
-                    var urlName = jQuery('#Video_url_name');
-                    
-                    if(urlName.val()==''){
-                        urlName.val(data);
-                    }
-                }
-            });
+        jQuery('#Video_title').on('blur change', function(){
+           createPermalink();
         });
 
         if (jQuery('#Video_url').val() !== '') {
@@ -72,6 +58,25 @@
 
         bindTags();
     });
+    
+    function createPermalink(){
+         var title =  jQuery('#Video_title').val();
+         
+            jQuery.ajax({
+                url: '<?php echo Yii::app()->createUrl('/api/permalize') ?>',
+                type: "POST",
+                dataType: 'json',
+                data: {title: title},
+                async: true,
+                success: function(data) {
+                    var urlName = jQuery('#Video_url_name');
+                    
+                    if(urlName.val()==''){
+                        urlName.val(data);
+                    }
+                }
+            });
+    }
 
     function bindTags() {
 <?php
@@ -189,9 +194,9 @@ if ($model) {
         <?php echo $form->error($model, 'title'); ?>
     </div>    
     
-    <div class="row" style="font-size: 0.9em">        
-        <strong style="color:#6a6a6a">Permalink:</strong> 
-        <?php echo Yii::app()->request->hostInfo; ?>/<?php echo $form->textField($model, 'url_name', array('style' => 'display:inline;width:197px;height:5px')); ?>
+    <div class="row" >        
+        <strong style="color:#6a6a6a">Permalink</strong><br />
+        <?php echo Yii::app()->request->hostInfo; ?>/video/<?php echo $form->textField($model, 'url_name', array('style' => 'display:inline;width:210px')); ?>
         <?php echo $form->error($model, 'url_name'); ?>
     </div>
 

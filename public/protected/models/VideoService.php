@@ -31,4 +31,8 @@ class VideoService {
         return $this->getVideoDetailUrl($video).'#like';
     }
 
+    public static function getVideo($idOrUrlName){;    
+        return Video::model()->find('id=:id OR url_name=:url_name', array(':id'=>$idOrUrlName,
+                                                                          ':url_name' => $idOrUrlName));
+    }
 }

@@ -116,8 +116,12 @@ class Video extends CActiveRecord {
 
     public function checkExistingUrlName($attribute, $params) {
         if ($this->url_name != '') {
-            $video = $this->find('url_name=:url_name AND id<>:id', array(':url_name' => $this->url_name,
+            if($this->id){
+                $video = $this->find('url_name=:url_name AND id<>:id', array(':url_name' => $this->url_name,
                 ':id' => $this->id));
+            } else {
+                $video = $this->find('url_name=:url_name', array(':url_name' => $this->url_name));
+            }            
 
             if ($video != null) {
                 $this->addError($attribute, 'Duplicate permalink.');
@@ -140,5 +144,8 @@ class Video extends CActiveRecord {
         ));
         return $this;
     }
-
+    
+    public function getUrlName(){
+        return $this->url_name?$this->url_name:$this->id;
+    }
 }

@@ -59,7 +59,7 @@ return array(
             'rules'=>array(
                 ''=>'site/index',
                 'gii'=>'gii',
-                'video/<id:\w+>'=>'site/detail',
+                'video/<idOrUrlName>'=>'site/detail',
                 'list'=>'site/list',
                 'login'=>'site/login',
                 'logout'=>'site/logout',

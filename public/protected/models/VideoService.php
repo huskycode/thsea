@@ -28,7 +28,7 @@ class VideoService {
         return Yii::app()->request->getBaseUrl(true) . '/site/detail/' . $video->url_name;
     }
     public static function getVideoLikeUrl($video){
-        return $this->getVideoDetailUrl($video).'#like';
+        return static::getVideoDetailUrl($video).'#like';
     }
 
     public static function getVideo($idOrUrlName){;    

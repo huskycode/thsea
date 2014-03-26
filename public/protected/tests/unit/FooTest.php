@@ -1,7 +1,11 @@
 <?php
 
 class FooTest extends CTestCase {
+
     public function testBar() {
-        $this->assertTrue("bar" == "foo");
+        $this->assertTrue("bar" != "foo");
     }
+
 }
+
+?>

@@ -69,16 +69,18 @@
   .horizontal-list .video-block .video-text { max-width: 165px; } }
 /*  Created on : Mar 18, 2014, 10:44:11 PM Author     : gong
 */
-/* line 6, ../sass/_video-detail.scss */
+/* line 5, ../sass/_video-detail.scss */
+#video-detail { padding-top: 10px; }
+/* line 7, ../sass/_video-detail.scss */
 #video-detail .image-post, #video-detail .comment { display: block; float: left; }
-/* line 10, ../sass/_video-detail.scss */
+/* line 11, ../sass/_video-detail.scss */
 #video-detail .image-post { width: 600px; margin-right: 10px; }
-/* line 14, ../sass/_video-detail.scss */
+/* line 15, ../sass/_video-detail.scss */
 #video-detail .comment { width: 320px; }
 
-@media only screen and (min-width: 768px) and (max-width: 959px) { /* line 20, ../sass/_video-detail.scss */
+@media only screen and (min-width: 768px) and (max-width: 959px) { /* line 21, ../sass/_video-detail.scss */
   #video-detail .image-post { width: 405px; margin-right: 10px; } }
-@media only screen and (max-width: 767px) { /* line 28, ../sass/_video-detail.scss */
+@media only screen and (max-width: 767px) { /* line 29, ../sass/_video-detail.scss */
   #video-detail .image-post { width: auto; float: none; }
-  /* line 32, ../sass/_video-detail.scss */
+  /* line 33, ../sass/_video-detail.scss */
   #video-detail .comment { max-width: 320px; width: 100%; float: none; margin: auto; } }

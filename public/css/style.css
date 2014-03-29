@@ -1980,22 +1980,6 @@ padding-left: 23px !important;*/ }
 .video-thumbnail-small img:hover {
     border-bottom: 1px solid #FF7E00;
 }
-
-.video-thumbnail-smaller {
-    float:left;
-    position: relative;
-}
-
-.video-thumbnail-smaller img {
-    padding-right: 5px;
-    width: 70px;
-    height: 40px;
-}
-
-.video-thumbnail-smaller img:hover {
-    border-bottom: 1px solid #FF7E00;
-}
-
 .video-thumbnail {
     float:left;
     position: relative;

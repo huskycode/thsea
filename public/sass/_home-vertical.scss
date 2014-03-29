@@ -1,0 +1,32 @@
+.vertical-list{
+    padding-bottom: 8px;
+    h2{
+        font-size: 20px;
+        padding: 0 10px;
+        margin: 0;
+        line-height: 40px;
+        vertical-align: middle;
+    }
+    .video-thumbnail-smaller{
+        float: left;
+        position: relative;
+        img{
+            padding-right: 5px;
+            max-width: 70px;
+        }
+    }
+    .video-block{
+        span {
+            font-size: 0.8em;
+        }
+    }
+}
+@media only screen and (max-width: $step-width-2 - 1px) {
+    .vertical-list{
+        .video-thumbnail-smaller{
+            img{
+                max-width:120px;
+            }
+        }
+    }
+}

@@ -67,6 +67,17 @@
   .horizontal-list .video-block .video-text { max-width: 285px; } }
 @media only screen and (max-width: 477) { /* line 103, ../sass/_home-horizontal.scss */
   .horizontal-list .video-block .video-text { max-width: 165px; } }
+/* line 1, ../sass/_home-vertical.scss */
+.vertical-list { padding-bottom: 8px; }
+/* line 3, ../sass/_home-vertical.scss */
+.vertical-list h2 { font-size: 20px; padding: 0 10px; margin: 0; line-height: 40px; vertical-align: middle; }
+/* line 10, ../sass/_home-vertical.scss */
+.vertical-list .video-thumbnail-smaller { float: left; position: relative; }
+/* line 13, ../sass/_home-vertical.scss */
+.vertical-list .video-thumbnail-smaller img { padding-right: 5px; max-width: 70px; }
+
+@media only screen and (max-width: 767px) { /* line 22, ../sass/_home-vertical.scss */
+  .vertical-list .video-thumbnail-smaller img { max-width: 120px; } }
 /*  Created on : Mar 18, 2014, 10:44:11 PM Author     : gong
 */
 /* line 5, ../sass/_video-detail.scss */

@@ -22,7 +22,7 @@ if ($displayVideoCount > 0) {
                 ?>
                 <div class="video-block">
                     <div class="video-thumbnail-small">
-                        <a class="fb-comment-count" href="<?php echo Yii::app()->createurl('/video/'.$this->Videos[$i]->getUrlName()); ?>">
+                        <a class="fb-comment-count" href="<?php echo VideoService::getVideoDetailUrl($this->Videos[$i]); ?>">
                             <?php
                             $this->widget('ext.YoutubeViewer', array(
                                 'imageUrl' => $this->Videos[$i]->thumbnail_url,
@@ -34,7 +34,7 @@ if ($displayVideoCount > 0) {
                     </div>
                     <div class="video-text clearfix">
                         <div class="video-title">
-                            <a class="fb-comment-count" href="<?php echo Yii::app()->createurl('/video/'.$this->Videos[$i]->getUrlName()); ?>"
+                            <a class="fb-comment-count" href="<?php echo VideoService::getVideoDetailUrl($this->Videos[$i]); ?>"
                                title="<?php echo $this->Videos[$i]->title; ?>">
                                    <?php echo TextHelper::limitText($this->Videos[$i]->title); ?>
                             </a>

@@ -2,7 +2,7 @@
     <div class="video-most-recent-leftside">
         <div class="video-block" >
             <div class="video-thumbnail-large">
-                <a class="fb-comment-count" href="<?php echo Yii::app()->createurl('/video/'.$this->Videos[0]->getUrlName()); ?>">
+                <a class="fb-comment-count" href="<?php echo VideoService::getVideoDetailUrl($this->Videos[0]); ?>">
                     <?php
                     $this->widget('ext.YoutubeViewer', array(
                         'imageUrl' => $this->Videos[0]->thumbnail_url,
@@ -14,7 +14,7 @@
             </div>
             <div class="video-text clearfix">
                 <div class="video-title">
-                    <a class="fb-comment-count" href="<?php echo Yii::app()->createurl('/video/'.$this->Videos[0]->getUrlName()); ?>"
+                    <a class="fb-comment-count" href="<?php echo VideoService::getVideoDetailUrl($this->Videos[0]); ?>"
                        title="<?php echo $this->Videos[0]->title; ?>">
                         <?php echo $this->Videos[0]->title; ?>
                     </a>
@@ -46,7 +46,7 @@
 
         <div class="video-block">
             <div class="video-thumbnail-small">
-                <a class="fb-comment-count" href="<?php echo Yii::app()->createurl('/video/'.$this->Videos[$i]->getUrlName()); ?>">
+                <a class="fb-comment-count" href="<?php echo VideoService::getVideoDetailUrl($this->Videos[$i]); ?>">
                     <?php
                     $this->widget('ext.YoutubeViewer', array(
                         'imageUrl' => $this->Videos[$i]->thumbnail_url,
@@ -59,7 +59,7 @@
             <div class="video-text clearfix">
                 <div class="video-title">
 
-                    <a class="fb-comment-count" href="<?php echo Yii::app()->createurl('/video/'.$this->Videos[$i]->getUrlName()); ?>"
+                    <a class="fb-comment-count" href="<?php echo VideoService::getVideoDetailUrl($this->Videos[$i]); ?>"
                        title="<?php echo $this->Videos[$i]->title; ?>">
                         <?php echo TextHelper::limitText($this->Videos[$i]->title); ?>
                     </a>

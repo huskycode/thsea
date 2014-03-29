@@ -31,7 +31,7 @@ $this->breadcrumbs = array(
         <div id="fb-comment-<?php echo $row->id; ?>">
             <div class="divider-blog-1px" style="clear:both; margin-top: 0px;"></div>
             <div style="float:left; padding: 5px;padding-left: 15px;">
-                <a class="fb-comment-count" href="<?php echo Yii::app()->createurl('/video/'.$row->getUrlName()); ?>" >
+                <a class="fb-comment-count" href="<?php echo VideoService::getVideoDetailUrl($row); ?>" >
                     <?php $this->widget('ext.YoutubeViewer', array(
                         'imageUrl'=>$row->thumbnail_url,
                         'width'=>120,
@@ -41,7 +41,7 @@ $this->breadcrumbs = array(
                 </a>
             </div>
             <div style="float:left; padding: 5px;" class="video-info" >
-                 <strong><a style='color:#468aca' class="fb-comment-count" href="<?php echo Yii::app()->createurl('/video/'.$row->getUrlName()); ?>"><?php echo $row->title ?></a></strong><br />
+                 <strong><a style='color:#468aca' class="fb-comment-count" href="<?php echo VideoService::getVideoDetailUrl($row); ?>"><?php echo $row->title ?></a></strong><br />
                  <span class="tags">
                         <?php echo WebHelper::renderTags($row->videoTags); ?>
                     </span><br />

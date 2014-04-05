@@ -24,6 +24,12 @@ class SiteControllerTest extends CTestCase {
 
     }
 
+    public function testgetVideoByNullTagShouldReturnEmptyArray() {
+
+        $this->assertEquals(array(), $this->site->getVideosByTag(null));
+
+    }
+
     public function testgetVideoTagsByTag_IfNotFoundTag_ShouldReturnEmptyArray() {
 
         $siteMock = new SiteController_WithDefinedVideoTag(array());

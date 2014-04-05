@@ -21,6 +21,8 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
     <div class="image-post video">
         <div style="float:right;" class="pull-right">
             <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $this->currentUrl; ?>" data-text="<?php echo $video->title; ?>">Tweet</a>
+        </div>
+        <div style="float:right;" class="pull-right">
             <script>!function(d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
                     if (!d.getElementById(id)) {

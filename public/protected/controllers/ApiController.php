@@ -26,7 +26,9 @@ class ApiController extends Controller {
     }
 
     public function actionTags() {
+
         echo CJSON::encode(array("php", "java", "c++"));
+
     }
     
     public function actionPermalize(){

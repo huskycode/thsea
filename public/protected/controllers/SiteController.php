@@ -36,7 +36,7 @@ class SiteController extends Controller {
         ));
     }
 
-    private function getVideoTagList($tagListName) {
+    public function getVideoTagList($tagListName) {
         $arrVideoTagList = array();
         $tags = Yii::app()->params[$tagListName];
         foreach ($tags as $tagName => $videoCount) {
@@ -65,8 +65,8 @@ class SiteController extends Controller {
         $this->renderVideos(Yii::app()->params['videoListPageSize'], 'list');
     }
 
-    private function getVideosByTag($tag = '', $amount = 3) {
-        $criteria = new CDbCriteria();
+    public function getVideoTagsByTag($tag) {
+
         $videoTags = array();
         if (isset($tag) && $tag != '') {
             $videoTags = VideoTag::model()->findAll(array(
@@ -76,6 +76,16 @@ class SiteController extends Controller {
                 'distinct' => true,
             ));
         }
+
+        return $videoTags;
+
+    } 
+
+    public function getVideosByTag($tag = '', $amount = 3) {
+        $criteria = new CDbCriteria();
+        
+        $videoTags = $this->getVideoTagsByTag($tag);
+
         if (count($videoTags) > 0) {
             $videoIds = array();
             $countVideoTags = count($videoTags);

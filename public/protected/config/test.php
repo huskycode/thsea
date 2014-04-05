@@ -13,7 +13,6 @@ return CMap::mergeArray(
 			'fixture'=>array(
 				'class'=>'system.test.CDbFixtureManager',
 			),
-			/* uncomment the following to provide test database connection
 			'db'=>array(
 			    'connectionString' => 'mysql:host=localhost;dbname=thsea_dev',
     			'emulatePrepare' => true,
@@ -23,7 +22,6 @@ return CMap::mergeArray(
     			'tablePrefix' => '',
     			'enableProfiling' => true
 			),
-			*/
 		),
 	)
 );

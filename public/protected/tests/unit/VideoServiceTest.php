@@ -2,10 +2,6 @@
 
 class VideoServiceTest extends CDbTestCase {
 
-    public $fixtures=array(
-        'fixture'=>'fixture',
-    );
-
     public function setUp() {
     	$this->video = new VideoService();
     } 

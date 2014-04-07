@@ -77,6 +77,7 @@ $navItems = array(
         </style>        
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile.customized.min.js"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.core.js" type="text/javascript" charset="utf-8"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.tags.js" type="text/javascript" charset="utf-8"></script>
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.autocomplete.js" type="text/javascript" charset="utf-8"></script>
@@ -146,7 +147,6 @@ $navItems = array(
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.easing.1.3.js"></script>	
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/superfish.js"></script>
             <!--script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/camera.min.js"></script-->
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile.customized.min.js"></script>	
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jcarousel.min.js"></script>
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/mediaelement-and-player.min.js"></script>
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/scrolltopcontrol.js"></script>

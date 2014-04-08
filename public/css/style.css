@@ -2040,3 +2040,12 @@ padding-left: 23px !important;*/ }
     background-repeat: no-repeat;
     background-position: -268px 10px;
 }
+
+.viewmore{
+    display: block;
+    clear: both;
+    float: right;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #468aca;
+}

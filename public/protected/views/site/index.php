@@ -61,6 +61,8 @@ function displayContent($text) {
             ?>
         </div>
     </div>
+    
+    <a href="<?php echo Yii::app()->createUrl("/list"); ?>" style="color:#468aca;" class="viewmore">view all</a>
     <div class="clearfix"></div>
 
     <!-- CLIENTS -->

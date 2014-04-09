@@ -48,7 +48,23 @@ class SiteControllerTest extends CTestCase {
 
         $this->assertEquals(1, count($siteMock->getVideosByTag('Workshop')));
 
-    }       
+    }     
+    
+    public function testgetVideoTagsByTag_IfFoundTagWorkshop_ShouldReturnVideoArrayTagWorkshop2(){
+        $videoTags = array();
+        $videoTags[0] = new VideoTag;
+        $videoTags[0]->video_id = '4147';
+        
+        $stub = $this->getMockBuilder('SiteController')
+                     ->disableOriginalConstructor()
+                     ->getMock();
+        
+        $stub->expects($this->any())
+             ->method('getVideoTagsByTag')
+             ->will($this->returnValue($videoTags));    
+        
+        $this->assertEquals(1, count($stub->getVideosByTag('Workshop')));
+    }
 
     public function tearDown() {
         unset($this->site);
@@ -68,7 +84,6 @@ class SiteController_WithDefinedVideoTag extends SiteController {
     }
 
     public function getVideoTagsByTag($tag) {
-
         return $this->videotag;
 
     }

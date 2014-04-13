@@ -19,7 +19,9 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
 <!-- START BLOG WRAPPER -->
 <div id="video-detail" class="container" >
     <div class="image-post video">
-        <div style="float:right;" class="pull-right">
+        <h6><?php echo $video->title; ?></h6>
+        <iframe width="654" height="368" src="<?php echo $url; ?>" frameborder="0"></iframe>
+        <div style="float:left;" class="pull-right">
             <script>!function(d, s, id) {
                     var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
                     if (!d.getElementById(id)) {
@@ -31,12 +33,12 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
                 }(document, 'script', 'twitter-wjs');</script>
             <div class="fb-like" data-href="<?php echo VideoService::getVideoLikeUrl($video); ?>" data-width="200" data-layout="button_count" data-show-faces="false" data-send="false"></div>
         </div>
-        <div style="float:right;" class="pull-right">
+        <div style="float:left;" class="pull-left">
             <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $this->currentUrl; ?>" data-text="<?php echo $video->title; ?>">Tweet</a>
         </div>
-        <h6><?php echo $video->title; ?></h6>
-        <iframe width="654" height="368" src="<?php echo $url; ?>" frameborder="0"></iframe>
-        <p><?php echo $video->description; ?></p>
+        <div style="clear: both; padding-top:20px;">
+            <p><?php echo $video->description; ?></p>
+        </div>
     </div>
     <div class="comment">
         <div class="fb-comments" data-href="<?php echo $this->currentUrl; ?>" data-width="320"></div>

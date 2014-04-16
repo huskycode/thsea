@@ -60,7 +60,7 @@ $navItems = array(
     </head>
     <body>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
         <!-- Primary Page Layout -->
         <!-- START MENU WRAPPER -->
         <div id="menu-wrapper">
@@ -118,15 +118,7 @@ $navItems = array(
 
 
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile.customized.min.js"></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.core.js" type="text/javascript" charset="utf-8"></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.tags.js" type="text/javascript" charset="utf-8"></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.autocomplete.js" type="text/javascript" charset="utf-8"></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.suggestions.js" type="text/javascript" charset="utf-8"></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.filter.js" type="text/javascript" charset="utf-8"></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.focus.js" type="text/javascript" charset="utf-8"></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.prompt.js" type="text/javascript" charset="utf-8"></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.ajax.js" type="text/javascript" charset="utf-8"></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.arrow.js" type="text/javascript" charset="utf-8"></script>
+            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.min.js" type="text/javascript" charset="utf-8"></script>
             <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/json2.js" type="text/javascript" charset="utf-8"></script>
 
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.easing.1.3.js"></script>	

@@ -32,6 +32,11 @@ $navItems = array(
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/base.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/skeleton.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/sass.css" />
         <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -168,10 +173,6 @@ $navItems = array(
             ================================================== -->
     </body>
 </html>
-<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/base.css" />
-<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/skeleton.css" />
-<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
-<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/sass.css" />
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/colorbox.css" />
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />
 <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet'>

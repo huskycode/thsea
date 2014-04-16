@@ -20,6 +20,7 @@ return array(
     'components' => array(
         'db' => require(dirname(__FILE__).'/db.php'),
         'testdb' =>array(
+          'class'=>'CDbConnection',
           'connectionString' => 'mysql:host=localhost;dbname=thsea_dev',
           'emulatePrepare' => true,
           'username' => 'thsea_dev',

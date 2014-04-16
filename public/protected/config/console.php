@@ -19,6 +19,15 @@ return array(
     // application components
     'components' => array(
         'db' => require(dirname(__FILE__).'/db.php'),
+        'testdb' =>array(
+          'connectionString' => 'mysql:host=localhost;dbname=thsea_dev',
+          'emulatePrepare' => true,
+          'username' => 'thsea_dev',
+          'password' => 'password',
+          'charset' => 'utf8',
+          'tablePrefix' => '',
+          'enableProfiling' => true
+      ),
         // uncomment the following to use a MySQL database
         /*
           'db'=>array(

@@ -16,8 +16,8 @@ return CMap::mergeArray(
 			'db'=>array(
 			    'connectionString' => 'mysql:host=localhost;dbname=thsea_dev',
     			'emulatePrepare' => true,
-    			'username' => 'root',
-    			'password' => 'admin',
+    			'username' => 'thsea_dev',
+    			'password' => 'password',
     			'charset' => 'utf8',
     			'tablePrefix' => '',
     			'enableProfiling' => true

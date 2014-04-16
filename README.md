@@ -11,7 +11,7 @@ Thailand Software Engineering Academy
 * Agile Tool : http://theeidos.com/project/THSEA/home
 * Source Code Repository : https://github.com/huskycode/thsea
 * Hosting : https:// www.nearlyfreespeech.net
-* CI : http://teamcity.huskycode.com/project.html?projectId=project4&tab=projectOverview
+* CI : http://teamcity3.huskycode.com/project.html?projectId=project4&tab=projectOverview
 * Developement Framework : http://www.yiiframework.com/
 * Test Framework? : https://github.com/varokas/geb-example-gradle 
 

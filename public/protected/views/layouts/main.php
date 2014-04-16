@@ -45,12 +45,12 @@ $navItems = array(
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />
         <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>        
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.core.css" type="text/css" />
+        <!--link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.core.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.tags.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.autocomplete.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.focus.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.prompt.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.arrow.css" type="text/css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.arrow.css" type="text/css" /-->
 
         <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

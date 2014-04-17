@@ -59,8 +59,9 @@ $navItems = array(
         </style>
     </head>
     <body>
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" async></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <!--script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" async></script-->
         <!-- Primary Page Layout -->
         <!-- START MENU WRAPPER -->
         <div id="menu-wrapper">
@@ -162,6 +163,7 @@ $navItems = array(
     </body>
 </html>
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/colorbox.css" />
-<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<!--link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" /-->
 <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet'>
 <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />

@@ -1,10 +1,10 @@
 <?php
 
 return array(
-    'connectionString' => 'mysql:host=localhost;dbname=thsea',
+    'connectionString' => 'mysql:host=localhost;dbname=thsea_uat',
     'emulatePrepare' => true,
-    'username' => 'root',
-    'password' => 'root',
+    'username' => 'thsea_uat',
+    'password' => 'password',
     'charset' => 'utf8',
     'tablePrefix' => '',
     'enableProfiling' => true

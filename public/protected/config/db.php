@@ -3,8 +3,8 @@
 return array(
     'connectionString' => 'mysql:host=localhost;dbname=thsea',
     'emulatePrepare' => true,
-    'username' => 'thsea_admin',
-    'password' => 'andaman',
+    'username' => 'root',
+    'password' => 'root',
     'charset' => 'utf8',
     'tablePrefix' => '',
     'enableProfiling' => true

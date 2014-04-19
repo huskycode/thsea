@@ -3,7 +3,7 @@
 $navItems = array(
     array('label' => 'Home', 'url' => array('/site/index')),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-    array('label' => 'Leave a Feedback', 'url' => 'https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform', 'linkOptions' => array('target' => '_blank')),
+    array('label' => 'Leave a Feedback', 'url' => 'https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform', 'linkOptions' => array('target' => '_blank'))
 );
 ?>
 ﻿<!DOCTYPE html>
@@ -31,35 +31,17 @@ $navItems = array(
         <!-- SOCIAL META END -->
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <!-- CSS -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/base.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/skeleton.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
 
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/sass.css" />
-
-<!--link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/camera.css" /-->
-<!--link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/mediaelementplayer.min.css" /-->
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/colorbox.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" />
-        <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>        
-        <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.core.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.tags.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.autocomplete.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.focus.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.prompt.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/textext.plugin.arrow.css" type="text/css" />
-
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/base.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/skeleton.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/sass.css" />
         <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
         <!-- Favicons -->
         <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico">
-        <link rel="apple-touch-icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="<?php echo Yii::app()->request->baseUrl; ?>/images/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="<?php echo Yii::app()->request->baseUrl; ?>/images/apple-touch-icon-114x114.png">
         <style type="text/css">
             .video-panel{
                 background-color: #ebebeb; 
@@ -74,22 +56,12 @@ $navItems = array(
             .clear{
                 clear: both;
             }
-        </style>        
-        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-        <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile.customized.min.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.core.js" type="text/javascript" charset="utf-8"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.tags.js" type="text/javascript" charset="utf-8"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.autocomplete.js" type="text/javascript" charset="utf-8"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.suggestions.js" type="text/javascript" charset="utf-8"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.filter.js" type="text/javascript" charset="utf-8"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.focus.js" type="text/javascript" charset="utf-8"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.prompt.js" type="text/javascript" charset="utf-8"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.ajax.js" type="text/javascript" charset="utf-8"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.plugin.arrow.js" type="text/javascript" charset="utf-8"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/json2.js" type="text/javascript" charset="utf-8"></script>
+        </style>
     </head>
     <body>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <!--script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" async></script-->
         <!-- Primary Page Layout -->
         <!-- START MENU WRAPPER -->
         <div id="menu-wrapper">
@@ -108,9 +80,9 @@ $navItems = array(
                             'items' => $navItems,
                         ));
                         ?>
-                    <div id="social" align="right">
-                        <a href="/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/social/google-plus-icon.png" alt="Thsea Google Plus" ></a>                        
-                    </div>
+                        <div id="social" align="right">
+                            <a href="/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/social/google-plus-icon.png" alt="Thsea Google Plus" ></a>                        
+                        </div>
                     </div>
                 </div><!-- .twelve columns -->
             </div><!-- .container -->
@@ -147,19 +119,21 @@ $navItems = array(
             <!-- END FOOTER -->
 
             <!-- JS -->
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.easing.1.3.js"></script>	
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/superfish.js"></script>
-            <!--script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/camera.min.js"></script-->
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jcarousel.min.js"></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/mediaelement-and-player.min.js"></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/scrolltopcontrol.js"></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.colorbox-min.js"></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.isotope.min.js"></script>
-            <!--script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jflickrfeed.min.js"></script-->
-            <!--script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.tweet.js"></script-->
-            <!--script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/contact.js"></script-->
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js"></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/application.js"></script>	
+
+
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile.customized.min.js" async></script>
+            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.min.js" type="text/javascript" charset="utf-8" async></script>
+            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/json2.js" type="text/javascript" charset="utf-8" async></script>
+
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.easing.1.3.js" async></script>	
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/superfish.js" async></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jcarousel.min.js" async></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/mediaelement-and-player.min.js" async></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/scrolltopcontrol.js" async></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.colorbox-min.js" async></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.isotope.min.js" async></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js" async></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/application.js" async></script>	
             <script>
                 jQuery.noConflict()(function($) {
                     // create player
@@ -191,3 +165,8 @@ $navItems = array(
             ================================================== -->
     </body>
 </html>
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/colorbox.css" />
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<!--link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/jquery-ui.css" /-->
+<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet'>
+<link rel="stylesheet" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />

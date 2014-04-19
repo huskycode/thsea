@@ -3,7 +3,8 @@
 $navItems = array(
     array('label' => 'Home', 'url' => array('/site/index')),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-    array('label' => 'Leave a Feedback', 'url' => 'https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform', 'linkOptions' => array('target' => '_blank'))
+    array('label' => 'Leave a Feedback', 'url' => 'https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform', 'linkOptions' => array('target' => '_blank')),
+    array('label' => 'Google+', 'url' => 'https://plus.google.com/113435353321677174981', 'linkOptions' => array('target' => '_blank', 'rel'=>'publisher'))
 );
 ?>
 ﻿<!DOCTYPE html>
@@ -73,9 +74,6 @@ $navItems = array(
                 </div><!-- four columns -->
                 <div class="twelve columns navigation">
                     <div id="menu" class="fix-fish-menu">
-                        <div id="social" align="right">
-                            <a href="https://plus.google.com/113435353321677174981" rel="publisher"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/social/google-plus-icon.png" alt="Thsea Google Plus" ></a>
-                        </div>
                         <?php
                         $this->widget('zii.widgets.CMenu', array(
                             'id' => 'nav',

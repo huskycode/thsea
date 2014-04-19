@@ -73,6 +73,9 @@ $navItems = array(
                 </div><!-- four columns -->
                 <div class="twelve columns navigation">
                     <div id="menu" class="fix-fish-menu">
+                        <div id="social" align="right">
+                            <a href="https://plus.google.com/113435353321677174981" rel="publisher"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/social/google-plus-icon.png" alt="Thsea Google Plus" ></a>
+                        </div>
                         <?php
                         $this->widget('zii.widgets.CMenu', array(
                             'id' => 'nav',
@@ -80,9 +83,6 @@ $navItems = array(
                             'items' => $navItems,
                         ));
                         ?>
-                        <div id="social" align="right">
-                            <a href="/"><img src="<?php echo Yii::app()->request->baseUrl; ?>/images/social/google-plus-icon.png" alt="Thsea Google Plus" ></a>                        
-                        </div>
                     </div>
                 </div><!-- .twelve columns -->
             </div><!-- .container -->

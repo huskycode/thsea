@@ -4,7 +4,7 @@ $navItems = array(
     array('label' => 'Home', 'url' => array('/site/index')),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
     array('label' => 'Leave a Feedback', 'url' => 'https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform', 'linkOptions' => array('target' => '_blank')),
-    array('label' => 'Google+', 'url' => 'https://plus.google.com/113435353321677174981', 'linkOptions' => array('target' => '_blank', 'rel'=>'publisher'))
+    array('label' => 'Google+', 'url' => 'https://plus.google.com/113435353321677174981', 'linkOptions' => array('target' => '_blank', 'rel' => 'publisher'))
 );
 ?>
 ﻿<!DOCTYPE html>
@@ -16,8 +16,8 @@ $navItems = array(
         <meta charset="utf-8">
         <title><?php echo CHtml::encode($this->pageTitle); ?></title>
         <meta name="author" content="Agile66">
-        <meta name="keywords" content="Software Engineering, Agile, Video Tutorial, Project Management">
-        <meta name="description" content="Thailand Software Engineering Academy">
+        <meta name="keywords" content="Software Engineering, Agile, Video Tutorial, Project Management,lean,software,อไจล์,startup,โปรแกรมเมอร์,tdd,scrum,sprint,rules,ath2012,developer,test driven development,programmer,agile thailand,agile66,pair programming">
+        <meta name="description" content="Thailand Software Engineering Group เป็นการรวมตัวกันของบริษัทและบุคคลที่ทำงานจริงในการพัฒนาระบบต่างๆของประเทศไทย เพื่อที่จะเป็นแหล่งแลกเปลี่ยนข้อมูลประสบการณ์ ความรู้และผลงานวิจัยต่างๆ ที่ถูกคิดค้นขึ้นมาเพื่อประโยชน์ต่อการพัฒนาระบบสารสนเทศภายในประเทศ">
         <!-- SOCIAL META START -->
         <?php if (isset($this->metaSocialName)) { ?>
             <meta property="og:site_name" content="SEAcademy.in.th" />

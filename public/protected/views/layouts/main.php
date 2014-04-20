@@ -14,12 +14,10 @@ $navItems = array(
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
-        <title><?php echo CHtml::encode($this->pageTitle); ?></title>
-        <meta name="author" content="Agile66">
-        <meta name="keywords" content="Software Engineering, Agile, Video Tutorial, Project Management,lean,software,อไจล์,startup,โปรแกรมเมอร์,tdd,scrum,sprint,rules,ath2012,developer,test driven development,programmer,agile thailand,agile66,pair programming">
-        <meta name="description" content="Thailand Software Engineering Group เป็นการรวมตัวกันของบริษัทและบุคคลที่ทำงานจริงในการพัฒนาระบบต่างๆของประเทศไทย เพื่อที่จะเป็นแหล่งแลกเปลี่ยนข้อมูลประสบการณ์ ความรู้และผลงานวิจัยต่างๆ ที่ถูกคิดค้นขึ้นมาเพื่อประโยชน์ต่อการพัฒนาระบบสารสนเทศภายในประเทศ">
         <!-- SOCIAL META START -->
         <?php if (isset($this->metaSocialName)) { ?>
+            <title><?php echo CHtml::encode($this->metaSocialName . ' - ' . $this->pageTitle); ?></title>
+            <meta name="description" content="<?php echo $this->metaSocialDetail; ?>">
             <meta property="og:site_name" content="SEAcademy.in.th" />
             <meta itemprop="name" content="<?php echo $this->metaSocialName ?>">
             <meta itemprop="description" content="<?php echo $this->metaSocialDetail; ?>">
@@ -28,7 +26,12 @@ $navItems = array(
             <meta property="og:description" content="<?php echo $this->metaSocialDetail; ?>" />
             <meta property="og:type" content="article" />
             <meta property="og:url" content="<?php echo $this->currentUrl; ?>"/>
+        <?php } else { ?>
+            <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+            <meta name="description" content="Thailand Software Engineering Group เป็นการรวมตัวกันของบริษัทและบุคคลที่ทำงานจริงในการพัฒนาระบบต่างๆของประเทศไทย เพื่อที่จะเป็นแหล่งแลกเปลี่ยนข้อมูลประสบการณ์ ความรู้และผลงานวิจัยต่างๆ ที่ถูกคิดค้นขึ้นมาเพื่อประโยชน์ต่อการพัฒนาระบบสารสนเทศภายในประเทศ">
         <?php } ?>
+        <meta name="author" content="Agile66">
+        <meta name="keywords" content="Software Engineering, Agile, Video Tutorial, Project Management,lean,software,อไจล์,startup,โปรแกรมเมอร์,tdd,scrum,sprint,rules,ath2012,developer,test driven development,programmer,agile thailand,agile66,pair programming">
         <!-- SOCIAL META END -->
         <!-- Mobile Specific Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

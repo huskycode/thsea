@@ -4,7 +4,7 @@ $navItems = array(
     array('label' => 'Home', 'url' => array('/site/index')),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
     array('label' => 'Leave a Feedback', 'url' => 'https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform', 'linkOptions' => array('target' => '_blank')),
-    array('label' => 'Google+', 'url' => 'https://plus.google.com/113435353321677174981', 'linkOptions' => array('target' => '_blank', 'rel' => 'publisher'))
+    array('label' => 'Google+', 'url' => 'https://plus.google.com/+SeacademyInTh', 'linkOptions' => array('target' => '_blank', 'rel' => 'publisher'))
 );
 ?>
 ﻿<!DOCTYPE html>

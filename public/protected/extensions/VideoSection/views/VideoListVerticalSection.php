@@ -1,3 +1,4 @@
+<?php if(count($this->Videos)>0):?>
 <div class="vertical-list">
     <h2>#<?php
         $url = Yii::app()->createUrl('site/list', array('tag' => $this->HeaderName));
@@ -42,3 +43,4 @@
     echo '<a href="' . $url . '" class="viewmore">view more</a>';
     ?>
 </div>
+<?php endif; ?>

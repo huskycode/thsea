@@ -106,6 +106,6 @@ return array(
         'adminEmail' => 'webmaster@seacademy.in.th',
         'videoListPageSize' => '15',
         'videoTagHorizontalList' => array('Workshop'=>1, 'Exp-Sharing'=>2,'Agile Thailand 2013'=>3),
-        'videoTagVerticalList' => array('Technical'=>2, 'Lean'=>1),
+        'videoTagVerticalList' => array('Beginner'=>2, 'Technical'=>2, 'Lean'=>1),
     ),
 );

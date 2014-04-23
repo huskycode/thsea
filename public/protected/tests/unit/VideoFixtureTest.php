@@ -37,7 +37,7 @@ class VideoFixtureTest extends CDbTestCase {
     }
     
     public function testInvokeFixtureByName_ShouldReturnRightSpecifiedFixture(){
-        $this->assertCount(1, $this->videos);
+        $this->assertCount(2, $this->videos);
         $this->assertEquals(4143, $this->videos[0]['id']);        
     }
 }

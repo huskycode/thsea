@@ -57,12 +57,13 @@ class SiteControllerTest extends CTestCase {
         
         $stub = $this->getMockBuilder('SiteController')
                      ->disableOriginalConstructor()
+                     ->setMethods(array('getVideoTagsByTag'))
                      ->getMock();
         
         $stub->expects($this->any())
              ->method('getVideoTagsByTag')
              ->will($this->returnValue($videoTags));    
-        
+     
         $this->assertEquals(1, count($stub->getVideosByTag('Workshop')));
     }
 

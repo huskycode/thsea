@@ -12,7 +12,8 @@
  */
 class VideoFixtureTest extends CDbTestCase {
     public $fixtures = array(
-            'videos'=>'Video'
+            'videos'=>'Video',
+            'videos_tag'=>'VideoTag',
     );
     
     public function testgetVideo_ByExistingId_ShouldReturnThatVideo(){        

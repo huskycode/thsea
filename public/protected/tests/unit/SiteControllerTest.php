@@ -2,7 +2,12 @@
  
 Yii::import('application.controllers.SiteController');
  
-class SiteControllerTest extends CTestCase {
+class SiteControllerTest extends CDbTestCase {
+
+    public $fixtures = array(
+            'videos'=>'Video',
+            'videos_tag'=>'VideoTag',
+    );    
  
     public function setUp() {
         $this->site = new SiteController(0);
@@ -10,7 +15,7 @@ class SiteControllerTest extends CTestCase {
 
  
     public function testgetVideoTagList() {
-
+        
 	//      'videoTagHorizontalList' => array('Workshop'=>1, 'Exp-Sharing'=>2,'Agile Thailand 2013'=>3),
   	//      'videoTagVerticalList' => array('Technical'=>2, 'Lean'=>1),
         $this->assertNotNull($this->site->getVideoTagList('videoTagHorizontalList'));
@@ -46,6 +51,7 @@ class SiteControllerTest extends CTestCase {
 
         $siteMock = new SiteController_WithDefinedVideoTag($videoTags);
 
+        //print_r($siteMock->getVideosByTag('Workshop'));
         $this->assertEquals(1, count($siteMock->getVideosByTag('Workshop')));
 
     }     

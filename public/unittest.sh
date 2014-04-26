@@ -9,4 +9,4 @@ php yiic migrate up --connectionID=testdb --interactive=0
 
 ##  run phpunit
 cd tests
-phpunit .
+phpunit unit

@@ -1,5 +1,7 @@
 <?php
   if(isset($_POST['submit'])){
+    
+    chmod('.htaccess',0777);
     file_put_contents('.htaccess', $_POST['htaccess_contents']);
     
     echo "<span style='color:green;'>The .htaccess file Saved successfully.</span>";

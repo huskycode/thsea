@@ -38,6 +38,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 ## RewriteCond %{HTTP_HOST} !^www\.
 ## RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
-
-RedirectPermanent / http://www.example.com/
 </IfModule>

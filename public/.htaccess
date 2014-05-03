@@ -36,3 +36,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # otherwise forward it to index.php
 RewriteRule . index.php
+
+
+RewriteCond %{HTTP_HOST} ^seacademy\.in\.th
+RewriteRule ^(.*)$ http://www.seacademy.in.th/$1 [R=301,L]

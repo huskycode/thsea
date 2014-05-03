@@ -28,15 +28,14 @@ Header set Cache-Control "max-age=290304000, public"
 
 
 ## EXPIRES CACHING ##
-RewriteEngine on
 
-# if a directory or a file exists, use it directly
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
-# otherwise forward it to index.php
-RewriteRule . index.php
-
-
+RewriteRule . /index.php [L]
 RewriteCond %{HTTP_HOST} ^seacademy\.in\.th
 RewriteRule ^(.*)$ http://www.seacademy.in.th/$1 [R=301,L]
+</IfModule>

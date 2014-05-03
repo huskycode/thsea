@@ -36,6 +36,6 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
-RewriteCond %{HTTP_HOST} ^seacademy\.in\.th
+RewriteCond %{HTTP_HOST} ^seacademy\.in.th
 RewriteRule ^(.*)$ http://www.seacademy.in.th/$1 [R=301,L]
 </IfModule>

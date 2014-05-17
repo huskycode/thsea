@@ -35,40 +35,40 @@ class VideoService {
         return Video::model()->find('id=:id OR url_name=:url_name', array(':id'=>$idOrUrlName,
                                                                           ':url_name' => $idOrUrlName));
     }    
-    public static function getVideosByTag($tag = '', $amount = 3) {
-        $criteria = new CDbCriteria();
-        
-        $videoTags = static::getVideoIdsByTag($tag);
-
-        if (count($videoTags) > 0) {
-            $videoIds = array();
-            $countVideoTags = count($videoTags);
-            
-            for ($i = 0; $i < $countVideoTags; $i++) {
-                $videoIds[] = $videoTags[$i]->video_id;
-            }
-            $criteria->condition = sprintf("id IN ('%s')", implode("','", $videoIds));
-            $criteria->order = "recording_date DESC";
-            $criteria->limit = $amount;
-            $model = new Video();
-            return $model->with("videoTags")->findAll($criteria);
-        } else {
+    public static function getVideosByTag($tag = '', $amount = 3) {        
+        if (static::isEmpty($tag)) {
             return array();
-        }
+        }        
+        
+        $videoTags = static::getVideoTagsByTag($tag);
+        
+        if ($videoTags == array()) {
+            return array();
+        }        
+        
+        $videoIds = array_map(
+                function($videoTag){ return $videoTag->video_id;},
+                $videoTags);
+    
+        $criteria = new CDbCriteria();
+        $criteria->condition = sprintf("id IN ('%s')", implode("','", $videoIds));
+        $criteria->order = "recording_date DESC";
+        $criteria->limit = $amount;
+        $model = new Video();
+
+        return $model->with("videoTags")->findAll($criteria);        
     }
     
-    private static function getVideoIdsByTag($tag) {
-        $videoTags = array();
-        if (isset($tag) && $tag != '') {
-            $videoTags = VideoTag::model()->findAll(array(
-                'select' => 'video_id',
-                'condition' => sprintf("tag='%s'", $tag),
-                'group' => 'video_id',
-                'distinct' => true,
-            ));
-        }
-
-        return $videoTags;
-
+    private static function isEmpty($tag){
+        return !isset($tag) || $tag == '';
+    }
+    
+    private static function getVideoTagsByTag($tag) {        
+        return VideoTag::model()->findAll(array(
+            'select' => 'video_id',
+            'condition' => sprintf("tag='%s'", $tag),
+            'group' => 'video_id',
+            'distinct' => true,
+        ));       
     } 
 }

@@ -28,20 +28,26 @@ class VideoServiceTest extends CDbTestCase {
     }
 
     public function testgetVideosByTag_IfFoundTagWorkshop_ShouldReturnVideoArrayTagWorkshop() {
-        $videoTags = array();
+ /*       $videoTags = array();
         $videoTags[0] = new VideoTag;
         $videoTags[0]->video_id = '4147';
 
         $stub = $this->getMockBuilder('VideoService')
                 ->disableOriginalConstructor()
-                ->setMethods(array('getVideoTagsByTag'))
+                ->setMethods(array('getVideoIdsByTag'))
                 ->getMock();
 
         $stub->expects($this->any())
-                ->method('getVideoTagsByTag')
+                ->method('getVideoIdsByTag')
                 ->will($this->returnValue($videoTags));
-
-        $this->assertEquals(1, count($stub->getVideosByTag('Workshop')));
+*/
+        $videos = VideoService::getVideosByTag('Workshop');
+        $this->assertEquals(1, count($videos));
+        $this->assertEquals(4147, $videos[0]->id);
+    }
+    
+    public function testgetVideosByTag_IfTagNotFound_ShouldReturnEmptyVideoArray(){
+        $this->assertEquals(array(), VideoService::getVideosByTag('ABC'));
     }
 
     public function tearDown() {

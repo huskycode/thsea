@@ -40,7 +40,7 @@ class SiteController extends Controller {
         $arrVideoTagList = array();
         $tags = Yii::app()->params[$tagListName];
         foreach ($tags as $tagName => $videoCount) {
-            $videoList = $this->getVideosByTag($tagName, $videoCount);
+            $videoList = VideoService::getVideosByTag($tagName, $videoCount);
             $arrVideoTagList[] = array('videoTagName' => $tagName, 'videoList' => $videoList);
         }
         return $arrVideoTagList;
@@ -65,42 +65,9 @@ class SiteController extends Controller {
         $this->renderVideos(Yii::app()->params['videoListPageSize'], 'list');
     }
 
-    public function getVideoTagsByTag($tag) {
+    
 
-        $videoTags = array();
-        if (isset($tag) && $tag != '') {
-            $videoTags = VideoTag::model()->findAll(array(
-                'select' => 'video_id',
-                'condition' => sprintf("tag='%s'", $tag),
-                'group' => 'video_id',
-                'distinct' => true,
-            ));
-        }
-
-        return $videoTags;
-
-    } 
-
-    public function getVideosByTag($tag = '', $amount = 3) {
-        $criteria = new CDbCriteria();
-        
-        $videoTags = $this->getVideoTagsByTag($tag);
-
-        if (count($videoTags) > 0) {
-            $videoIds = array();
-            $countVideoTags = count($videoTags);
-            for ($i = 0; $i < $countVideoTags; $i++) {
-                $videoIds[] = $videoTags[$i]->video_id;
-            }
-            $criteria->condition = sprintf("id IN ('%s')", implode("','", $videoIds));
-            $criteria->order = "recording_date DESC";
-            $criteria->limit = $amount;
-            $model = new Video();
-            return $model->with("videoTags")->findAll($criteria);
-        } else {
-            return array();
-        }
-    }
+    
 
     private function renderVideos($pageSize, $toView) {
         $criteria = new CDbCriteria();

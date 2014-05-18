@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>
-  <testsuite name="SiteControllerTest" file="D:\xampp\htdocs\thsea\protected\tests\unit\SiteControllerTest.php" tests="4" assertions="5" failures="0" errors="0" time="0.060004">
-    <testcase name="testgetVideoTagList" class="SiteControllerTest" file="D:\xampp\htdocs\thsea\protected\tests\unit\SiteControllerTest.php" line="12" assertions="2" time="0.053003"/>
-    <testcase name="testgetVideoByEmptyTagShouldReturnEmptyArray" class="SiteControllerTest" file="D:\xampp\htdocs\thsea\protected\tests\unit\SiteControllerTest.php" line="21" assertions="1" time="0.005001"/>
-    <testcase name="testgetVideoTagsByTag_IfNotFoundTag_ShouldReturnEmptyArray" class="SiteControllerTest" file="D:\xampp\htdocs\thsea\protected\tests\unit\SiteControllerTest.php" line="27" assertions="1" time="0.000000"/>
-    <testcase name="testgetVideoTagsByTag_IfFoundTagWorkshop_ShouldReturnVideoArrayTagWorkshop" class="SiteControllerTest" file="D:\xampp\htdocs\thsea\protected\tests\unit\SiteControllerTest.php" line="35" assertions="1" time="0.002000"/>
-  </testsuite>
-</testsuites>

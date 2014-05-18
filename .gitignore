@@ -1,8 +1,9 @@
 /nbproject/private/
 /geb/build
 /geb/.gradle
-/public/protected/runtime/*.log
-/public/assets/*
+/public/protected/runtime/application.log
+/public/assets/**
 /public/protected/config/db.php
 /public/protected/yiic.bat
 /public/protected/config/db.php
+/public/protected/tests/report/**

@@ -122,19 +122,19 @@ $navItems = array(
             <!-- JS -->
 
 
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile.customized.min.js" async></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.min.js" type="text/javascript" charset="utf-8" async></script>
-            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/json2.js" type="text/javascript" charset="utf-8" async></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.mobile.customized.min.js" ></script>
+            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.min.js" type="text/javascript" charset="utf-8" ></script>
+            <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/json2.js" type="text/javascript" charset="utf-8" ></script>
 
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.easing.1.3.js" async></script>	
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/superfish.js" async></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jcarousel.min.js" async></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/mediaelement-and-player.min.js" async></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/scrolltopcontrol.js" async></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.colorbox-min.js" async></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.isotope.min.js" async></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js" async></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/application.js" async></script>	
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.easing.1.3.js" ></script>	
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/superfish.js" ></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jcarousel.min.js" ></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/mediaelement-and-player.min.js" ></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/scrolltopcontrol.js" ></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.colorbox-min.js" ></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.isotope.min.js" ></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js" ></script>
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/application.js" ></script>	
             <script>
                 jQuery.noConflict()(function($) {
                     // create player

@@ -41,12 +41,9 @@
 
         var tags = JSON.parse('<?php echo $jsonTags; ?>');
 
-        jQuery('#tags')
-                .textext({
+        jQuery('#tags').textext({
             plugins: 'tags focus autocomplete arrow',
-        })
-                .bind('getSuggestions', function(e, data)
-        {
+        }).bind('getSuggestions', function(e, data){
             textext = jQuery(e.target).textext()[0],
                     query = (data ? data.query : '') || '';
 

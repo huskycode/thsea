@@ -12,6 +12,24 @@ $this->metaSocialDetail = $video->description;
 $this->metaSocialImage = $video->thumbnail_url;
 $this->currentUrl = VideoService::getVideoDetailUrl($video);
 ?>
+<style type="text/css">
+.responsive-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    padding-top: 30px; /* IE6 workaround*/
+    height: 0;
+    overflow: hidden;
+}
+.responsive-embed iframe,
+.responsive-embed object,
+.responsive-embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}    
+</style>
 <div id="fb-root"></div>
 <div id="separator">
 </div><!-- #separator -->
@@ -39,6 +57,19 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
         <div style="clear: both; padding-top:20px;">
             <p><?php echo $video->description; ?></p>
         </div>
+        <!--<div>
+            <iframe
+               src="http://www.slideshare.net/slideshow/embed_code/29422730"
+               frameborder="0"
+               marginwidth="0"
+               marginheight="0"
+               scrolling="no">
+            </iframe>
+         </div>-->
+         <?php $this->widget('ext.SlideshareViewer', array(
+            'url'=>$video->slideshare_url
+         )); ?>
+        
     </div>
     <div class="comment">
         <div class="fb-comments" data-href="<?php echo $this->currentUrl; ?>" data-width="320"></div>

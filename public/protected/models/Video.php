@@ -10,6 +10,7 @@
  * @property string $url
  * @property string $url_name
  * @property string $thumbnail_url
+ * @property string $slideshare_url
  * @property string $recording_date
  * @property string $posted_date
  * @property string $posted_by
@@ -81,6 +82,7 @@ class Video extends CActiveRecord {
             'url' => 'Url',
             'url_name' => 'Url Name',
             'thumbnail_url' => 'Thumbnail Url',
+            'slideshare_url' => 'Slideshare Url',
             'recording_date' => 'Recording Date',
             'posted_date' => 'Posted Date',
             'posted_by' => 'Posted By',
@@ -104,6 +106,7 @@ class Video extends CActiveRecord {
         $criteria->compare('url', $this->url, true);
         $criteria->compare('url_name', $this->url_name, true);
         $criteria->compare('thumbnail_url', $this->thumbnail_url, true);
+	$criteria->compare('slideshare_url',$this->slideshare_url,true);
         $criteria->compare('recording_date', $this->recording_date, true);
         $criteria->compare('posted_date', $this->posted_date, true);
         $criteria->compare('posted_by', $this->posted_by, true);

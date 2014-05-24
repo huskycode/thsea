@@ -14,4 +14,4 @@ BUILDPATH="$2""/public/*"
 
 ## deploy by rsync
 rsync -e "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/thsea/.ssh/id_rsa" -vramlHP --exclude '*.log' --exclude 'protected/config/db.php' --exclude 'protected/config/test.php' --numeric-ids --delete --delete-after --delay-updates $BUILDPATH $DESTINATION
-scp "$2""/public/.htaccess" $DESTINATION
+scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i /home/thsea/.ssh/id_rsa "$2""/public/.htaccess" $DESTINATION

@@ -30,7 +30,7 @@ class YoutubeViewer extends CWidget {
         }
     }
 
-    private function getVideoId() {        
+    public function getVideoId() {        
         if (strtolower(substr($this->url, 0, 4)) == 'http') {
             $matches = array();
 
@@ -45,7 +45,9 @@ class YoutubeViewer extends CWidget {
     }
 
     private function renderVideo() {
-        echo '<iframe width="' . $this->width . '" height="' . $this->height . '" src="//www.youtube.com/embed/' . $this->getVideoId() . '" frameborder="0"></iframe>';
+        //echo '<object width="' . $this->width . '" height="' . $this->height . '" data="http://www.youtube.com/v/' . $this->getVideoId() . '" type="application/x-shockwave-flash"><param name="src" value="http://www.youtube.com/v/' . $this->getVideoId() . '" /></object>';
+    
+        $this->render('YoutubeViewer');
     }
 
     private function renderImage() {

@@ -14,6 +14,10 @@ class DemoController extends Controller {
     public function actionTestListView(){
         $this->render('testlistview');
     }
+    
+    public function actionIndex(){
+        $this->render('index');
+    }
 }
 
 ?>

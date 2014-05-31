@@ -38,7 +38,11 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
 <div id="video-detail" class="container" >
     <div class="image-post video">
         <h6><?php echo $video->title; ?></h6>
-        <iframe width="654" height="368" src="<?php echo $url; ?>" frameborder="0"></iframe>
+        <?php $this->widget('ext.YoutubeViewer', array(
+            'url'=>$video->url,
+            'width'=>600,
+            'height'=>368,
+         )); ?>
         <div style="float:left;padding-top:2px;" class="pull-left">
             <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $this->currentUrl; ?>" data-text="<?php echo $video->title; ?>">Tweet</a>
         </div>
@@ -57,15 +61,6 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
         <div style="clear: both; padding-top:20px;">
             <p><?php echo $video->description; ?></p>
         </div>
-        <!--<div>
-            <iframe
-               src="http://www.slideshare.net/slideshow/embed_code/29422730"
-               frameborder="0"
-               marginwidth="0"
-               marginheight="0"
-               scrolling="no">
-            </iframe>
-         </div>-->
          <?php $this->widget('ext.SlideshareViewer', array(
             'url'=>$video->slideshare_url
          )); ?>
@@ -75,6 +70,7 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
         <div class="fb-comments" data-href="<?php echo $this->currentUrl; ?>" data-width="320"></div>
     </div>
 </div><!-- .container -->
+
 <script>
     (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];

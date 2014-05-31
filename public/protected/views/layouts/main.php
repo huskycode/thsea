@@ -59,6 +59,13 @@ $navItems = array(
             .clear{
                 clear: both;
             }
+            
+            @media only screen and (min-width: 768px) and (max-width: 959px) {
+                .social-section{
+                    margin-top: 25px;
+                    margin-right: 100px;
+                }
+            }
         </style>
     </head>
     <body>
@@ -88,7 +95,7 @@ $navItems = array(
             </div><!-- .container -->
         </div><!-- #slider-wraper -->
         <div class="clear"></div>
-        <div class="container">
+        <div class="container social-section">
             <div class="three columns" style="float: right;margin-top: -20px;margin-right: -20px;line-height: 35px;font-size: 0.8em">
                 Follow us&nbsp;
                 <a href="https://www.facebook.com/huskycode" target="_blank"><img width="20" style="vertical-align:middle" src="/images/facebook.png" /></a>&nbsp;&nbsp;

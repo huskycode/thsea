@@ -89,21 +89,6 @@ jQuery.noConflict()(function($) {
 //});
 
 
-/***************************************************
- Twitter
- ***************************************************/
-jQuery.noConflict()(function($) {
-    $(document).ready(function() {
-        /*---- Sidebar Twitter ----*/
-        $("#twitter-widget .tweet").tweet({
-            count: 3,
-            username: "envato",
-            loading_text: "loading twitter..."
-        });
-    });
-});
-
-
 
 /***************************************************
  jCarousel

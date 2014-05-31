@@ -1,10 +1,10 @@
 <?php
 /* @var $this Controller */
+$menuName = '<img width="32" style="vertical-align:middle" src="/images/facebook.png" alt="" />';
 $navItems = array(
     array('label' => 'Home', 'url' => array('/site/index')),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
     array('label' => 'Leave a Feedback', 'url' => 'https://docs.google.com/forms/d/1glvVFQV0vVMCKB5UflOkmx_NFaUbCC5WANtqPXHtsLM/viewform', 'linkOptions' => array('target' => '_blank')),
-    array('label' => 'Google+', 'url' => 'https://plus.google.com/+SeacademyInTh', 'linkOptions' => array('target' => '_blank', 'rel' => 'publisher'))
 );
 ?>
 ﻿<!DOCTYPE html>
@@ -82,12 +82,21 @@ $navItems = array(
                             'id' => 'nav',
                             'htmlOptions' => array('class' => 'sf-menu'),
                             'items' => $navItems,
+                             'encodeLabel' => false,
                         ));
-                        ?>
-                    </div>
+                        ?>                        
+                    </div>                    
                 </div><!-- .twelve columns -->
             </div><!-- .container -->
         </div><!-- #slider-wraper -->
+        <div class="clear"></div>
+        <div class="container">
+            <div class="three columns" style="float: right;margin-top: -20px;margin-right: -20px;line-height: 35px;font-size: 0.8em">
+                Follow us&nbsp;
+                <a href="https://www.facebook.com/huskycode" target="_blank"><img width="20" style="vertical-align:middle" src="/images/facebook.png" /></a>&nbsp;&nbsp;
+                <a href="https://plus.google.com/+SeacademyInTh" target="_blank"><img width="20" style="vertical-align:middle" src="/images/google_plus.png" /></a>
+            </div>
+        </div
         <!-- end #menu  -->	
         <div style="float:right; padding-right: 10px">
             <?php if (!Yii::app()->user->isGuest) { ?>

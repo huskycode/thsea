@@ -1,6 +1,5 @@
 <?php
 /* @var $this Controller */
-$menuName = '<img width="32" style="vertical-align:middle" src="/images/facebook.png" alt="" />';
 $navItems = array(
     array('label' => 'Home', 'url' => array('/site/index')),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
@@ -82,7 +81,6 @@ $navItems = array(
                             'id' => 'nav',
                             'htmlOptions' => array('class' => 'sf-menu'),
                             'items' => $navItems,
-                             'encodeLabel' => false,
                         ));
                         ?>                        
                     </div>                    

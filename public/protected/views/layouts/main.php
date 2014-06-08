@@ -47,9 +47,9 @@ $navItems = array(
         <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico">
         <style type="text/css">
             .video-panel{
-                background-color: #ebebeb; 
-                height: 40px; 
-                line-height: 30px; 
+                background-color: #ebebeb;
+                height: 40px;
+                line-height: 30px;
                 vertical-align: middle;
                 padding-top: 10px;
                 padding-left: 5px;
@@ -59,7 +59,7 @@ $navItems = array(
             .clear{
                 clear: both;
             }
-            
+
             @media only screen and (min-width: 768px) and (max-width: 959px) {
                 .social-section{
                     margin-top: 25px;
@@ -89,20 +89,20 @@ $navItems = array(
                             'htmlOptions' => array('class' => 'sf-menu'),
                             'items' => $navItems,
                         ));
-                        ?>                        
-                    </div>                    
+                        ?>
+                    </div>
                 </div><!-- .twelve columns -->
             </div><!-- .container -->
         </div><!-- #slider-wraper -->
         <div class="clear"></div>
         <div class="container social-section">
             <div class="three columns" style="float: right;margin-top: -20px;margin-right: -20px;line-height: 35px;font-size: 0.8em">
-                Follow us&nbsp;
+                Follow us at&nbsp;
                 <a href="https://www.facebook.com/huskycode" target="_blank"><img width="20" style="vertical-align:middle" src="/images/facebook.png" /></a>&nbsp;&nbsp;
                 <a href="https://plus.google.com/+SeacademyInTh" target="_blank"><img width="20" style="vertical-align:middle" src="/images/google_plus.png" /></a>
             </div>
         </div
-        <!-- end #menu  -->	
+        <!-- end #menu  -->
         <div style="float:right; padding-right: 10px">
             <?php if (!Yii::app()->user->isGuest) { ?>
                 <a href="<?php echo Yii::app()->createUrl("site/logout"); ?>">Logout (<?php echo Yii::app()->user->name; ?>)</a>
@@ -140,7 +140,7 @@ $navItems = array(
             <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/textext.min.js" type="text/javascript" charset="utf-8" ></script>
             <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/json2.js" type="text/javascript" charset="utf-8" ></script>
 
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.easing.1.3.js" ></script>	
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.easing.1.3.js" ></script>
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/superfish.js" ></script>
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jcarousel.min.js" ></script>
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/mediaelement-and-player.min.js" ></script>
@@ -148,7 +148,7 @@ $navItems = array(
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.colorbox-min.js" ></script>
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.isotope.min.js" ></script>
             <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/custom.js" ></script>
-            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/application.js" ></script>	
+            <script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/js/application.js" ></script>
             <script>
                 jQuery.noConflict()(function($) {
                     // create player

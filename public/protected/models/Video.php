@@ -51,6 +51,7 @@ class Video extends CActiveRecord {
             //array('url_name', 'length', 'max'=>100),
             array('url_name', 'checkExistingUrlName'),
             array('thumbnail_url', 'length', 'max' => 1000),
+            array('slideshare_url', 'length', 'max' => 1000),
             array('posted_by', 'length', 'max' => 50),
             array('view_counter', 'length', 'max' => 20),
             array('recording_date', 'safe'),

@@ -209,6 +209,12 @@ if ($model) {
 
     <div id='youtube-player-container'> </div>
     <a href="javascript:openThumbnail();">View Thumbnail</a>
+    
+    <div class="row">
+        <?php echo $form->labelEx($model, 'slideshare_url'); ?>
+        <?php echo $form->textField($model, 'slideshare_url', array('style' => 'width: 400px;')); ?>
+        <?php echo $form->error($model, 'slideshare_url'); ?>
+    </div>   
 
     <div class="row">
         <?php echo $form->labelEx($model, 'recording_date'); ?>

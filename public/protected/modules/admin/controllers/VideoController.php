@@ -47,7 +47,7 @@ class VideoController extends Controller {
         if (isset($_POST['Video'])) {
             $model->attributes = $_POST['Video'];
             $model->posted_by = Yii::app()->user->userName;
-            
+
             if($model->validate()){ 
                 
                 try {

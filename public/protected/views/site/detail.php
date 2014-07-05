@@ -64,6 +64,9 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
          <?php $this->widget('ext.SlideshareViewer', array(
             'url'=>$video->slideshare_url
          )); ?>
+        <?php if ($video->additional_content!=''): ?>
+        <div><?php echo $video->additional_content; ?></div>
+        <?php endif; ?>
         
     </div>
     <div class="comment">

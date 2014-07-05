@@ -215,6 +215,15 @@ if ($model) {
         <?php echo $form->textField($model, 'slideshare_url', array('style' => 'width: 400px;')); ?>
         <?php echo $form->error($model, 'slideshare_url'); ?>
     </div>   
+    
+    <div class="row">
+        <?php echo $form->labelEx($model, 'additional_content'); ?>
+        <?php echo $form->textArea($model, 'additional_content', array('style'=>'width: 400px;',
+                                                                       'maxlength' => 10000, 
+                                                                       'rows' => 6, 
+                                                                       'cols' => 100)); ?>
+        <?php echo $form->error($model, 'additional_content'); ?>
+    </div>   
 
     <div class="row">
         <?php echo $form->labelEx($model, 'recording_date'); ?>

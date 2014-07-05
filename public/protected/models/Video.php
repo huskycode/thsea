@@ -11,6 +11,7 @@
  * @property string $url_name
  * @property string $thumbnail_url
  * @property string $slideshare_url
+ * @property string $additional_content
  * @property string $recording_date
  * @property string $posted_date
  * @property string $posted_by
@@ -48,13 +49,12 @@ class Video extends CActiveRecord {
             array('title', 'length', 'max' => 200),
             array('description', 'length', 'max' => 5000),
             array('url', 'length', 'max' => 500),
-            //array('url_name', 'length', 'max'=>100),
             array('url_name', 'checkExistingUrlName'),
             array('thumbnail_url', 'length', 'max' => 1000),
             array('slideshare_url', 'length', 'max' => 1000),
+            array('additional_content, recording_date', 'safe'),
             array('posted_by', 'length', 'max' => 50),
             array('view_counter', 'length', 'max' => 20),
-            array('recording_date', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('id, title, description, url, url_name, thumbnail_url, recording_date, posted_date, posted_by, view_counter', 'safe', 'on' => 'search'),
@@ -84,6 +84,7 @@ class Video extends CActiveRecord {
             'url_name' => 'Url Name',
             'thumbnail_url' => 'Thumbnail Url',
             'slideshare_url' => 'Slideshare Url',
+            'additional_content' => 'Additional Content',
             'recording_date' => 'Recording Date',
             'posted_date' => 'Posted Date',
             'posted_by' => 'Posted By',

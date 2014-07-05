@@ -8,7 +8,9 @@ class VideoServiceTest extends CDbTestCase {
     );  
 
     public function setUp() {
-        $this->video = new VideoService();
+
+        parent::setUp();
+        $this->video = new VideoService(0);
     }
 
     public function testCountAllVideoTag() {
@@ -48,6 +50,34 @@ class VideoServiceTest extends CDbTestCase {
     
     public function testgetVideosByTag_IfTagNotFound_ShouldReturnEmptyVideoArray(){
         $this->assertEquals(array(), VideoService::getVideosByTag('ABC'));
+    }
+
+    public function testgetVideoByTag_ShouldOrderRecordingDate_FromLatest_ToOldest() {
+
+        $videos = VideoService::getVideosByTag('Test-Order');
+
+        $videoRecording_dates = array_map(
+                function($result_video){ return $result_video->recording_date;},
+                $videos); 
+
+        $this->validateArraySortByDescendingOrder($videoRecording_dates);
+  
+    }
+
+    public function testgetVideoByTag_ShouldLimitByAmount() {
+
+        $videos = VideoService::getVideosByTag('Test-Order',1);
+        $this->assertEquals(1, count($videos));
+  
+    }
+
+    private function validateArraySortByDescendingOrder( $array_list ) {
+
+        $originate = $array_list;
+        rsort($array_list);
+
+        $this->assertEquals($array_list, $originate); 
+
     }
 
     public function tearDown() {

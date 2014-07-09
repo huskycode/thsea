@@ -29,6 +29,11 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
     width: 100%;
     height: 100%;
 }    
+.gist{font-size:13px;line-height:18px;margin-bottom:20px;width:100%}
+.gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}
+.gist-meta{font-family:Helvetica,Arial,sans-serif;font-size:13px !important}
+.gist-meta a{color:#26a !important;text-decoration:none}
+.gist-meta a:hover{color:#0e4071 !important}
 </style>
 <div id="fb-root"></div>
 <div id="separator">

@@ -61,15 +61,20 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
         <div style="clear: both; padding-top:20px;">
             <p><?php echo $video->description; ?></p>
         </div>
-         <?php $this->widget('ext.SlideshareViewer', array(
-            'url'=>$video->slideshare_url
-         )); ?>
+         
+        
+        
+        
+        
         <?php if ($video->additional_content!=''): ?>
         <div><?php echo $video->additional_content; ?></div>
         <?php endif; ?>
         
     </div>
     <div class="comment">
+        <?php $this->widget('ext.SlideshareViewer', array(
+            'url'=>$video->slideshare_url
+         )); ?>
         <div class="fb-comments" data-href="<?php echo $this->currentUrl; ?>" data-width="320"></div>
     </div>
 </div><!-- .container -->

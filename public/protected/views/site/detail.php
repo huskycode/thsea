@@ -41,8 +41,9 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
 <!-- END SEPARATOR -->	
 <!-- START BLOG WRAPPER -->
 <div id="video-detail" class="container" >
+    <h6>&nbsp;&nbsp;<?php echo $video->title; ?></h6>
     <div class="image-post video">
-        <h6><?php echo $video->title; ?></h6>
+        
         <?php $this->widget('ext.YoutubeViewer', array(
             'url'=>$video->url,
             'width'=>600,
@@ -71,15 +72,17 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
         
         
         
-        <?php if ($video->additional_content!=''): ?>
-        <div><?php echo $video->additional_content; ?></div>
-        <?php endif; ?>
+       
         
     </div>
     <div class="comment">
+        <!--<h6>&nbsp;</h6>-->
         <?php $this->widget('ext.SlideshareViewer', array(
             'url'=>$video->slideshare_url
          )); ?>
+         <?php if ($video->additional_content!=''): ?>
+        <div><?php echo $video->additional_content; ?></div>
+        <?php endif; ?>
         <div class="fb-comments" data-href="<?php echo $this->currentUrl; ?>" data-width="320"></div>
     </div>
 </div><!-- .container -->

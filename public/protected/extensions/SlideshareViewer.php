@@ -26,6 +26,7 @@ class SlideshareViewer extends CWidget {
     private function getSlideInfo(){
         $api = 'http://www.slideshare.net/api/oembed/2?url='.$this->url.'&format=json';
         $obj = null;
+       
         $result = @file_get_contents($api);  
         
         if ($result){

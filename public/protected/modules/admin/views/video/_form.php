@@ -217,13 +217,18 @@ if ($model) {
     </div>   
     
     <div class="row">
-        <?php echo $form->labelEx($model, 'sync_time_slide'); ?>
+        <?php echo $form->labelEx($model, 'sync_time_slide', array('style'=>'display:inline')); ?>
+        <span class="note" style="font-size: 0.8em">
+            (ระบุในรูปแบบ  [วินาที],[Slide No.] ระบุได้หลายชุด แยกบรรทัดละ 1 ชุด)
+        </span>
         <?php echo $form->textArea($model, 'sync_time_slide', array('style'=>'width: 400px;',
                                                                        'maxlength' => 5000, 
                                                                        'rows' => 6, 
                                                                        'cols' => 100)); ?>
         <?php echo $form->error($model, 'sync_time_slide'); ?>
     </div> 
+    
+    
     
     <div class="row">
         <?php echo $form->labelEx($model, 'additional_content'); ?>

@@ -161,7 +161,7 @@ class Video extends CActiveRecord {
     public function getTimeSlide(){
         $result = array();
        
-        if ($this->sync_time_slide!=''){
+        if ($this->sync_time_slide!=''){                
             $times = explode("\r\n", $this->sync_time_slide);
             
             for($i=0; $i<count($times); $i++){

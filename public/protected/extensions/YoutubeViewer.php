@@ -60,7 +60,7 @@ class YoutubeViewer extends CWidget {
                 $image_name = 'maxresdefault.jpg';
             }
             
-            $image_url = 'http://img.youtube.com/vi/' . $this->getVideoId() . '/' . $image_name;
+            $image_url = 'http://img.youtube.com/vi/' . YoutubeHelper::getVideoId($this->url) . '/' . $image_name;
         } else {        
            $image_url = $this->imageUrl;
         }
@@ -76,7 +76,7 @@ class YoutubeViewer extends CWidget {
         }
         //echo 'http://img.youtube.com/vi/' . $this->getVideoId() . '/' . $image_name;
 		
-		echo '<div data-src="http://img.youtube.com/vi/'. $this->getVideoId() . '/' . $image_name .'" data-link="/video">
+		echo '<div data-src="http://img.youtube.com/vi/'. YoutubeHelper::getVideoId($this->url) . '/' . $image_name .'" data-link="/video">
 			  <div class="camera_caption fadeFromBottom">'. $this->alt .'</div></div>';
 		
     }	

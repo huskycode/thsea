@@ -46,7 +46,6 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
         
         <?php if($video->slideshare_url!='' && $video->sync_time_slide!=''): ?>
         <div id='video'></div>
-        Current Time (s): <span id="player-time">0</span>
         <?php else: ?>
         <?php $this->widget('ext.YoutubeViewer', array(
             'url'=>$video->url,
@@ -104,7 +103,7 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
 
                document.addEventListener("DOMContentLoaded", function() {
                     <?php 
-                        $script = "var popcorn = Popcorn.youtube('#video', '".$video->url."&autoplay=0')";
+                        $script = "var popcorn = Popcorn.youtube('#video', 'http://www.youtube.com/watch?v=" . YoutubeHelper::getVideoId($video->url) . "&autoplay=0&controls=1')";
                         
                         foreach($video->getTimeSlide() as $obj){
                             $script .= ".slideshare({
@@ -117,16 +116,10 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
                         }
                         
                         echo $script;
-                    ?>
-                   
-                          
-                    popcorn.on('timeupdate', function() {
-                        element('player-time').innerHTML = parseInt(popcorn.currentTime());
-                    });
+                    ?>                   
                }, false);
 
            </script>
-            
             
             
             

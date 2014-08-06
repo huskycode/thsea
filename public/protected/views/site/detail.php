@@ -44,11 +44,20 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
     <h6>&nbsp;&nbsp;<?php echo $video->title; ?></h6>
     <div class="image-post video">
         
+        <?php if($video->slideshare_url!='' && $video->sync_time_slide!=''): ?>
+        <div id='video'></div>
+        Current Time (s): <span id="player-time">0</span>
+        <?php else: ?>
         <?php $this->widget('ext.YoutubeViewer', array(
             'url'=>$video->url,
             'width'=>600,
             'height'=>368,
          )); ?>
+        <?php endif; ?>
+        
+        
+        
+        
         <div style="float:left;padding-top:2px;" class="pull-left">
             <a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $this->currentUrl; ?>" data-text="<?php echo $video->title; ?>">Tweet</a>
         </div>
@@ -76,10 +85,66 @@ $this->currentUrl = VideoService::getVideoDetailUrl($video);
         
     </div>
     <div class="comment">
-        <!--<h6>&nbsp;</h6>-->
-        <?php $this->widget('ext.SlideshareViewer', array(
-            'url'=>$video->slideshare_url
-         )); ?>
+        <?php if ($video->slideshare_url!='' && $video->sync_time_slide==''): ?>
+        
+            <?php $this->widget('ext.SlideshareViewer', array(
+                'url'=>$video->slideshare_url
+             )); ?>
+        
+        <?php elseif($video->slideshare_url!='' && $video->sync_time_slide!=''): ?>
+            <div id="slidesharediv"></div>
+            
+            
+            
+            
+            <script>
+               function element(id) {
+                   return document.getElementById(id);
+               }
+
+               document.addEventListener("DOMContentLoaded", function() {
+                    <?php 
+                        $script = "var popcorn = Popcorn.youtube('#video', '".$video->url."&autoplay=0')";
+                        
+                        foreach($video->getTimeSlide() as $obj){
+                            $script .= ".slideshare({
+                                start: ".$obj->start.",
+                                end: ".$obj->end.",
+                                slideshowurl: '".$obj->slideshowurl."',
+                                startslide: ".$obj->startslide.",
+                                target: 'slidesharediv'
+                            })";             
+                        }
+                        
+                        echo $script;
+                    ?>
+                   
+                          
+                    popcorn.on('timeupdate', function() {
+                        element('player-time').innerHTML = parseInt(popcorn.currentTime());
+                    });
+               }, false);
+
+           </script>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        <?php endif; ?>
+        
          <?php if ($video->additional_content!=''): ?>
         <div><?php echo $video->additional_content; ?></div>
         <?php endif; ?>

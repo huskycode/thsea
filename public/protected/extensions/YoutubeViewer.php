@@ -17,7 +17,7 @@ class YoutubeViewer extends CWidget {
 
     const DISPLAY_VIDEO = 'video';
     const DISPLAY_IMAGE = 'image';
-	const SOURCE_IMAGE = 'source_image';
+    const SOURCE_IMAGE = 'source_image';
 
     public function run() {       
 

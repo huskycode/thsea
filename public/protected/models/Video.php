@@ -11,6 +11,7 @@
  * @property string $url_name
  * @property string $thumbnail_url
  * @property string $slideshare_url
+ * @property string $sync_time_slide
  * @property string $additional_content
  * @property string $recording_date
  * @property string $posted_date
@@ -52,6 +53,7 @@ class Video extends CActiveRecord {
             array('url_name', 'checkExistingUrlName'),
             array('thumbnail_url', 'length', 'max' => 1000),
             array('slideshare_url', 'length', 'max' => 1000),
+            array('sync_time_slide', 'length', 'max' => 5000),
             array('additional_content, recording_date', 'safe'),
             array('posted_by', 'length', 'max' => 50),
             array('view_counter', 'length', 'max' => 20),
@@ -84,6 +86,7 @@ class Video extends CActiveRecord {
             'url_name' => 'Url Name',
             'thumbnail_url' => 'Thumbnail Url',
             'slideshare_url' => 'Slideshare Url',
+            'sync_time_slide' => 'Time Slide',
             'additional_content' => 'Additional Content',
             'recording_date' => 'Recording Date',
             'posted_date' => 'Posted Date',
@@ -109,6 +112,7 @@ class Video extends CActiveRecord {
         $criteria->compare('url_name', $this->url_name, true);
         $criteria->compare('thumbnail_url', $this->thumbnail_url, true);
 	$criteria->compare('slideshare_url',$this->slideshare_url,true);
+	$criteria->compare('sync_time_slide',$this->sync_time_slide,true);
         $criteria->compare('recording_date', $this->recording_date, true);
         $criteria->compare('posted_date', $this->posted_date, true);
         $criteria->compare('posted_by', $this->posted_by, true);
@@ -153,4 +157,48 @@ class Video extends CActiveRecord {
     public function getUrlName(){
         return $this->url_name?$this->url_name:$this->id;
     }
+    
+    public function getTimeSlide(){
+        $result = array();
+       
+        if ($this->sync_time_slide!=''){
+            $times = explode("\r\n", $this->sync_time_slide);
+            
+            for($i=0; $i<count($times); $i++){
+                $lastRound = count($times)==$i+1;
+                
+                if ($lastRound){
+                    $nextTime = $times[$i];
+                } else {
+                    $nextTime = $times[$i+1];
+                }
+                
+                $nextTimeParts = explode(',', $nextTime);
+                $currentTime = $times[$i];
+                $currentTimeParts = explode(',', $currentTime);
+                
+                $newObj = new SyncTimeSlide();
+                $newObj->start = $currentTimeParts[0];
+                $newObj->end = $nextTimeParts[0];
+                $newObj->target='slidesharediv';
+                $newObj->slideshowurl = $this->slideshare_url;
+                $newObj->startslide = $currentTimeParts[1];
+                
+                $result[] = $newObj;
+            }
+            
+            $lastIndex = count($result)-1;
+            $result[$lastIndex]->end = 10800;
+        }
+        
+        return $result;
+    }
+}
+
+class SyncTimeSlide{
+    public $start;
+    public $end;
+    public $slideshowurl;
+    public $startslide;
+    public $target;
 }

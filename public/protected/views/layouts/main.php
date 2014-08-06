@@ -71,6 +71,8 @@ $navItems = array(
     <body>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/popcorn-complete.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/js/popcorn.slideshare.js"></script>
         <!--script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js" async></script-->
         <!-- Primary Page Layout -->
         <!-- START MENU WRAPPER -->

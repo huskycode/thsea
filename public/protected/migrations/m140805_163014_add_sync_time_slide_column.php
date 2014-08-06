@@ -12,7 +12,7 @@ class m140805_163014_add_sync_time_slide_column extends CDbMigration
 
 	public function down()
 	{
-		$sql = "ALTER TABLE video DROP COLUMN sync_time_slide";
+            $sql = "ALTER TABLE video DROP COLUMN sync_time_slide";
             $this->execute($sql);
             
             return false;

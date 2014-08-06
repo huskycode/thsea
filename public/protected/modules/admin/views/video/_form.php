@@ -219,7 +219,7 @@ if ($model) {
     <div class="row">
         <?php echo $form->labelEx($model, 'sync_time_slide', array('style'=>'display:inline')); ?>
         <span class="note" style="font-size: 0.8em">
-            (ระบุในรูปแบบ  [วินาที],[Slide No.] ระบุได้หลายชุด แยกบรรทัดละ 1 ชุด)
+            (ระบุในรูปแบบ  [นาที:วินาที],[slide no.] ระบุได้หลายชุด แยกบรรทัดละ 1 ชุด)
         </span>
         <?php echo $form->textArea($model, 'sync_time_slide', array('style'=>'width: 400px;',
                                                                        'maxlength' => 5000, 

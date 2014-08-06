@@ -165,24 +165,40 @@ class Video extends CActiveRecord {
             $times = explode("\r\n", $this->sync_time_slide);
             
             for($i=0; $i<count($times); $i++){
+                $currentTimeSlide = $times[$i];
+                
+                if(!$this->isValidTimeSlide($currentTimeSlide)){
+                    continue;
+                }
+                
+                $currentTimeSlideParts = explode(',', $currentTimeSlide);                
+                $currentTimeParts = explode(':', $currentTimeSlideParts[0]);
+                $currentMinutes = intval($currentTimeParts[0]);
+                $currentSeconds = intval($currentTimeParts[1]);
+                $currentTotalSeconds = ($currentMinutes*60) + $currentSeconds;
+                
+                $currentSlide = intval($currentTimeSlideParts[1]);
+                
                 $lastRound = count($times)==$i+1;
                 
                 if ($lastRound){
-                    $nextTime = $times[$i];
+                    $nextTimeSlide = $times[$i];
                 } else {
-                    $nextTime = $times[$i+1];
+                    $nextTimeSlide = $times[$i+1];
                 }
                 
-                $nextTimeParts = explode(',', $nextTime);
-                $currentTime = $times[$i];
-                $currentTimeParts = explode(',', $currentTime);
+                $nextTimeSlideParts = explode(',', $nextTimeSlide);
+                $nextTimeParts = explode(':', $nextTimeSlideParts[0]);
+                $nextMinutes = intval($nextTimeParts[0]);
+                $nextSeconds = intval($nextTimeParts[1]);
+                $nextTotalSeconds = ($nextMinutes*60) + $nextSeconds;
                 
                 $newObj = new SyncTimeSlide();
-                $newObj->start = $currentTimeParts[0];
-                $newObj->end = $nextTimeParts[0];
+                $newObj->start = $currentTotalSeconds;
+                $newObj->end = $nextTotalSeconds;
                 $newObj->target='slidesharediv';
                 $newObj->slideshowurl = $this->slideshare_url;
-                $newObj->startslide = $currentTimeParts[1];
+                $newObj->startslide = $currentSlide;
                 
                 $result[] = $newObj;
             }
@@ -192,6 +208,26 @@ class Video extends CActiveRecord {
         }
         
         return $result;
+    }
+    
+    private function isValidTimeSlide($timeSlide){
+        $timeSlideParts = explode(',', $timeSlide);  
+        
+        if (count($timeSlideParts)!=2){
+            return false;
+        }
+        
+        $timeParts = explode(':', $timeSlideParts[0]);
+        
+        if (count($timeParts)!=2){
+            return false;
+        }
+        
+        if(!is_numeric($timeParts[0]) || !is_numeric($timeParts[1])){
+            return false;
+        }
+        
+        return true;
     }
 }
 
